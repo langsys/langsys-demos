@@ -66,7 +66,6 @@ export default function HoodDemo() {
                         <p>This page is translating itself in real time. Switch the language above and watch every word change, no rebuild and no keys file.</p>
                     </Translate>
                 </div>
-                <button className="cta ls-live">{t('Start free', 'Site')}</button>
                 <p className="hint">{t('Look under the hood', 'Site')} ↓</p>
             </section>
 
@@ -138,7 +137,6 @@ export default function HoodDemo() {
                 <pre className="install">
                     <code>npm install langsys-js-react</code>
                 </pre>
-                <button className="cta ls-live">{t('Read the docs', 'Site')}</button>
             </section>
 
             <footer className="footer">

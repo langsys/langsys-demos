@@ -41,7 +41,6 @@ const dontCode = `Powered by <DontTranslate>Langsys</DontTranslate>`;
                     <p>This page is translating itself in real time. Switch the language above and watch every word change, no rebuild and no keys file.</p>
                 </Translate>
             </div>
-            <button class="cta ls-live">{{ t('Start free', 'Site') }}</button>
             <p class="hint">{{ t('Look under the hood', 'Site') }} ↓</p>
         </section>
 
@@ -109,7 +108,6 @@ const dontCode = `Powered by <DontTranslate>Langsys</DontTranslate>`;
         <section class="ctaband">
             <h2 class="ls-live">{{ t('Add your first language in one line', 'Site') }}</h2>
             <pre class="install"><code>npm install langsys-js-vue</code></pre>
-            <button class="cta ls-live">{{ t('Read the docs', 'Site') }}</button>
         </section>
 
         <footer class="footer">
