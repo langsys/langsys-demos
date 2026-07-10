@@ -1,47 +1,119 @@
 <script setup>
+import { ref } from 'vue';
 import { DontTranslate, Phrase, Translate, useCurrentLocale, useT } from 'langsys-js-vue';
-import { LOCALES, locale } from './langsys';
+import { LOCALES, LOCALE_LABELS, locale } from './langsys';
+import Hood from './Hood.vue';
 
 const t = useT();
 const current = useCurrentLocale();
+const xray = ref(false);
+const teams = ref(1200);
+
+const tCode = `const t = useT();\n\n{{ t('Ship faster in every market', 'Site') }}`;
+const translateCode = `<Translate category="Site">\n  <p>Real-time machine translation…</p>\n</Translate>`;
+const phraseCode = `<Phrase category="Site" :params="{ count }">\n  Join %count% teams already translating with Langsys.\n</Phrase>`;
+const dontCode = `Powered by <DontTranslate>Langsys</DontTranslate>`;
 </script>
 
 <template>
-    <main>
-        <nav>
-            <button v-for="code in LOCALES" :key="code" :disabled="current === code" @click="locale.set(code)">
-                {{ code }}
+    <div class="hoodapp" :class="{ xray }">
+        <header class="topbar">
+            <div class="brand"><span class="logo">◆</span> <DontTranslate>Langsys</DontTranslate></div>
+            <nav class="locales">
+                <button
+                    v-for="code in LOCALES"
+                    :key="code"
+                    :class="current === code ? 'pill active' : 'pill'"
+                    @click="locale.set(code)"
+                >
+                    {{ LOCALE_LABELS[code] ?? code }}
+                </button>
+            </nav>
+            <button :class="xray ? 'xray-toggle on' : 'xray-toggle'" @click="xray = !xray">
+                {{ t(xray ? 'Hide the translation layer' : 'Reveal the translation layer', 'Site') }}
             </button>
-        </nav>
+        </header>
 
-        <!-- t() — the phrase is the key AND the base-language default -->
-        <h1>{{ t('Welcome to the Langsys store', 'Home') }}</h1>
+        <section class="hero">
+            <h1 class="ls-live">{{ t('Ship your app in every language', 'Site') }}</h1>
+            <div class="ls-live hero-sub">
+                <Translate category="Site">
+                    <p>This page is translating itself in real time. Switch the language above and watch every word change, no rebuild and no keys file.</p>
+                </Translate>
+            </div>
+            <button class="cta ls-live">{{ t('Start free', 'Site') }}</button>
+            <p class="hint">{{ t('Look under the hood', 'Site') }} ↓</p>
+        </section>
 
-        <!-- <Translate> — a whole content block, translated as one unit -->
-        <Translate category="Home">
-            <p>Everything on this page translates in real time as you switch locale.</p>
-        </Translate>
+        <section class="feature">
+            <h2 class="ls-live">{{ t('The phrase is the key', 'Site') }}</h2>
+            <Hood :code="tCode">
+                <span class="ls-live big">{{ t('Ship faster in every market', 'Site') }}</span>
+            </Hood>
+            <p class="cap ls-live">
+                {{ t('No keys file, no extraction step. The sentence in your code is both the key and its default.', 'Site') }}
+            </p>
+        </section>
 
-        <!-- <Phrase> — params & markup (author placeholders as %name%) -->
-        <Phrase category="Home" :params="{ name: 'Sarah', count: 3 }">
-            Hi %name%, you have %count% items in your cart.
-        </Phrase>
+        <section class="feature">
+            <h2 class="ls-live">{{ t('Translate whole blocks', 'Site') }}</h2>
+            <Hood :code="translateCode">
+                <div class="ls-live">
+                    <Translate category="Site">
+                        <p>Real-time machine translation across every locale you enable, powered by leading AI providers.</p>
+                    </Translate>
+                </div>
+            </Hood>
+            <p class="cap ls-live">{{ t('One tag localizes an entire block of markup as a single unit.', 'Site') }}</p>
+        </section>
 
-        <!-- <DontTranslate> — never translated -->
-        <p>Powered by <DontTranslate>Langsys</DontTranslate>.</p>
-    </main>
+        <section class="feature">
+            <h2 class="ls-live">{{ t('Dynamic values and plurals', 'Site') }}</h2>
+            <Hood :code="phraseCode">
+                <div class="phrase-row">
+                    <div class="ls-live">
+                        <Phrase category="Site" :params="{ count: teams }">
+                            Join %count% teams already translating with Langsys.
+                        </Phrase>
+                    </div>
+                    <div class="stepper">
+                        <button @click="teams = Math.max(1, teams - 1)">−</button>
+                        <span>{{ teams }}</span>
+                        <button @click="teams = teams + 1">+</button>
+                    </div>
+                </div>
+            </Hood>
+            <p class="cap ls-live">{{ t('Interpolation and correct plurals in every language, at render time.', 'Site') }}</p>
+        </section>
+
+        <section class="feature">
+            <h2 class="ls-live">{{ t('Keep the untouchables', 'Site') }}</h2>
+            <Hood :code="dontCode">
+                <span class="big">
+                    <span class="ls-live">{{ t('Powered by', 'Site') }}</span>
+                    <DontTranslate><span class="ls-frozen">Langsys</span></DontTranslate>
+                </span>
+            </Hood>
+            <p class="cap ls-live">{{ t('Brand names, code, and IDs stay exactly as written.', 'Site') }}</p>
+        </section>
+
+        <section class="reveal">
+            <p class="cap ls-live">
+                {{ t('Everything highlighted is translated live by Langsys. Nothing else is touched.', 'Site') }}
+            </p>
+            <button :class="xray ? 'xray-toggle on' : 'xray-toggle'" @click="xray = !xray">
+                {{ t(xray ? 'Hide the translation layer' : 'Reveal the translation layer', 'Site') }}
+            </button>
+        </section>
+
+        <section class="ctaband">
+            <h2 class="ls-live">{{ t('Add your first language in one line', 'Site') }}</h2>
+            <pre class="install"><code>npm install langsys-js-vue</code></pre>
+            <button class="cta ls-live">{{ t('Read the docs', 'Site') }}</button>
+        </section>
+
+        <footer class="footer">
+            <span>Powered by <DontTranslate>Langsys</DontTranslate></span>
+        </footer>
+    </div>
 </template>
-
-<style>
-main {
-    max-width: 640px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    font-family: system-ui, sans-serif;
-}
-nav {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 24px;
-}
-</style>

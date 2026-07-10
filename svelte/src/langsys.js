@@ -1,10 +1,23 @@
 import { writable } from 'svelte/store';
-import { LangsysApp } from 'langsys-js-svelte';
+import { LangsysApp, LangsysAppAPI } from 'langsys-js-svelte';
 
 // A standard Svelte writable is the locale store: the switcher writes it,
 // LangsysApp reads it.
 export const locale = writable('en-US');
 export const LOCALES = ['en-US', 'es-ES', 'fr-FR', 'de-DE'];
+
+// Friendly names for the locale switcher.
+export const LOCALE_LABELS = {
+    'en-US': 'English',
+    'es-ES': 'Español',
+    'fr-FR': 'Français',
+    'de-DE': 'Deutsch',
+};
+
+// Optional: point the SDK at a non-production instance (local dev). Leave unset
+// in production and it defaults to api.langsys.dev.
+const apiUrl = import.meta.env.VITE_LANGSYS_API_URL;
+if (apiUrl) LangsysAppAPI.setBaseUrl(apiUrl);
 
 // A READ-ONLY key is safe to ship in a browser app (see .env.example).
 LangsysApp.init({
