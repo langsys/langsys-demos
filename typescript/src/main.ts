@@ -1,16 +1,22 @@
 import { Phrase, Translate, currentlyLoadedLocale, t, tSignal } from 'langsys-js-typescript';
-import { LOCALES, LOCALE_LABELS, isSharedDemo, locale } from './langsys';
+import { LOCALES, LOCALE_LABELS, demoBanner, locale } from './langsys';
 import './hood.css';
 
-/* Shared-demo banner — the read-only default catalog translates existing
-   phrases only; make that limitation (and the fix) explicit. */
-if (isSharedDemo) {
+/* Demo banner — on the shared read-only project, the default catalog
+   translates existing phrases only; with no credentials at all, nothing
+   translates. Make whichever limitation applies (and the fix) explicit. */
+if (demoBanner) {
+    const message =
+        demoBanner === 'shared'
+            ? `<strong>Shared demo project (read-only)</strong> — existing phrases translate; new or edited ones won't. ` +
+              `Drop your own keys in <code>.env</code> to watch discovery register and translate your phrases live. `
+            : `<strong>No Langsys credentials configured</strong> — showing source text only, nothing translates. ` +
+              `Add your project id and key in <code>.env</code> to see it live. `;
     const banner = document.createElement('div');
     banner.className = 'demo-banner';
     banner.setAttribute('translate', 'no');
     banner.innerHTML =
-        `<strong>Shared demo project (read-only)</strong> — existing phrases translate; new or edited ones won't. ` +
-        `Drop your own keys in <code>.env</code> to watch discovery register and translate your phrases live. ` +
+        message +
         `<a href="https://docs.langsys.dev/learn/concepts/keys-and-environments" target="_blank" rel="noopener noreferrer">Get your keys →</a>`;
     document.body.prepend(banner);
 }

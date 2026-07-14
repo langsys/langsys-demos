@@ -27,9 +27,14 @@ const DEMO_KEY = '';
 
 const envProjectId = import.meta.env.VITE_LANGSYS_PROJECT_ID;
 
-// True when running on the shared demo project instead of the visitor's own —
-// drives the read-only banner in main.ts.
-export const isSharedDemo = !envProjectId && Boolean(DEMO_PROJECT_ID);
+// Which banner main.ts shows: null when the visitor supplied their own env
+// credentials, 'shared' on the public read-only demo project, 'unconfigured'
+// when neither exists (nothing will translate).
+export const demoBanner: 'shared' | 'unconfigured' | null = envProjectId
+    ? null
+    : DEMO_PROJECT_ID
+      ? 'shared'
+      : 'unconfigured';
 
 // A READ-ONLY key is safe to ship in a browser app (see .env.example).
 void LangsysApp.init({
