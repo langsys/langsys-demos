@@ -7,6 +7,7 @@ base-language default (no keys file, no extraction step).
 
 | Framework | SDK | App | Open |
 |-----------|-----|-----|------|
+| TypeScript (vanilla) | [`langsys-js-typescript`](https://github.com/langsys/langsys-js-typescript) | [`./typescript`](./typescript) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/typescript) |
 | React | [`langsys-js-react`](https://github.com/langsys/langsys-js-react) | [`./react`](./react) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/react) |
 | Svelte | [`langsys-js-svelte`](https://github.com/langsys/langsys-js-svelte) | [`./svelte`](./svelte) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/svelte) |
 | Vue | [`langsys-js-vue`](https://github.com/langsys/langsys-js-vue) | [`./vue`](./vue) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/vue) |
@@ -14,7 +15,7 @@ base-language default (no keys file, no extraction step).
 ## Run one
 
 ```bash
-cd react              # or svelte, or vue
+cd react              # or svelte, vue, or typescript (vanilla, no framework)
 npm install
 cp .env.example .env   # add a READ-ONLY Langsys key + project id
 npm run dev

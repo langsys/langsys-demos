@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Langsys × TypeScript — starter</title>
+    </head>
+    <body>
+        <!--
+            The vanilla edition: no framework, just langsys-js-typescript wiring
+            this static markup. Translatable sentences are written ONCE, here —
+            the phrase in the markup is the lookup key and the base-language
+            default. src/main.ts re-renders [data-t] text through t() and mounts
+            the Translate/Phrase DOM classes.
+        -->
+        <div id="app" class="hoodapp">
+            <header class="topbar">
+                <div class="brand"><span class="logo">◆</span> <span translate="no">Langsys</span></div>
+                <nav class="locales" id="locales"></nav>
+                <button class="xray-toggle" data-xray-toggle>Reveal the translation layer</button>
+            </header>
+
+            <section class="hero">
+                <h1 class="ls-live" data-t>Ship your app in every language</h1>
+                <div class="ls-live hero-sub" data-translate>
+                    <p>This page is translating itself in real time. Switch the language above and watch every word change, no rebuild and no keys file.</p>
+                </div>
+                <p class="hint"><span data-t>Look under the hood</span> ↓</p>
+            </section>
+
+            <section class="feature">
+                <h2 class="ls-live" data-t>The phrase is the key</h2>
+                <div class="hood">
+                    <div class="hood-code">
+                        <div class="chrome">
+                            <span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
+                            <span class="chrome-name">main.ts</span>
+                        </div>
+                        <pre><code>import { t } from 'langsys-js-typescript';
+
+t('Ship faster in every market', 'Site')</code></pre>
+                    </div>
+                    <div class="hood-arrow">renders ↓</div>
+                    <div class="hood-render">
+                        <div class="chrome browser">
+                            <span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
+                            <span class="chrome-name">live</span>
+                        </div>
+                        <div class="hood-output"><span class="ls-live big" data-t>Ship faster in every market</span></div>
+                    </div>
+                </div>
+                <p class="cap ls-live" data-t>No keys file, no extraction step. The sentence in your code is both the key and its default.</p>
+            </section>
+
+            <section class="feature">
+                <h2 class="ls-live" data-t>Translate whole blocks</h2>
+                <div class="hood">
+                    <div class="hood-code">
+                        <div class="chrome">
+                            <span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
+                            <span class="chrome-name">main.ts</span>
+                        </div>
+                        <pre><code>import { Translate } from 'langsys-js-typescript';
+
+new Translate(block, { category: 'Site' });</code></pre>
+                    </div>
+                    <div class="hood-arrow">renders ↓</div>
+                    <div class="hood-render">
+                        <div class="chrome browser">
+                            <span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
+                            <span class="chrome-name">live</span>
+                        </div>
+                        <div class="hood-output">
+                            <div class="ls-live" data-translate>
+                                <p>Real-time machine translation across every locale you enable, powered by leading AI providers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="cap ls-live" data-t>One tag localizes an entire block of markup as a single unit.</p>
+            </section>
+
+            <section class="feature">
+                <h2 class="ls-live" data-t>Dynamic values and plurals</h2>
+                <div class="hood">
+                    <div class="hood-code">
+                        <div class="chrome">
+                            <span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
+                            <span class="chrome-name">main.ts</span>
+                        </div>
+                        <pre><code>import { Phrase } from 'langsys-js-typescript';
+
+new Phrase(el, { category: 'Site', params: { count } });</code></pre>
+                    </div>
+                    <div class="hood-arrow">renders ↓</div>
+                    <div class="hood-render">
+                        <div class="chrome browser">
+                            <span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
+                            <span class="chrome-name">live</span>
+                        </div>
+                        <div class="hood-output">
+                            <div class="phrase-row">
+                                <div class="ls-live" id="teams-phrase">Join {count} teams already translating with Langsys.</div>
+                                <div class="stepper">
+                                    <button data-teams="-1">−</button>
+                                    <span id="teams-count">1200</span>
+                                    <button data-teams="+1">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="cap ls-live" data-t>Interpolation and correct plurals in every language, at render time.</p>
+            </section>
+
+            <section class="feature">
+                <h2 class="ls-live" data-t>Keep the untouchables</h2>
+                <div class="hood">
+                    <div class="hood-code">
+                        <div class="chrome">
+                            <span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
+                            <span class="chrome-name">index.html</span>
+                        </div>
+                        <pre><code>Powered by &lt;span translate="no"&gt;Langsys&lt;/span&gt;</code></pre>
+                    </div>
+                    <div class="hood-arrow">renders ↓</div>
+                    <div class="hood-render">
+                        <div class="chrome browser">
+                            <span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
+                            <span class="chrome-name">live</span>
+                        </div>
+                        <div class="hood-output">
+                            <span class="big"><span class="ls-live" data-t>Powered by</span> <span translate="no" class="ls-frozen">Langsys</span></span>
+                        </div>
+                    </div>
+                </div>
+                <p class="cap ls-live" data-t>Brand names, code, and IDs stay exactly as written.</p>
+            </section>
+
+            <section class="reveal">
+                <p class="cap ls-live" data-t>Everything highlighted is translated live by Langsys. Nothing else is touched.</p>
+                <button class="xray-toggle" data-xray-toggle>Reveal the translation layer</button>
+            </section>
+
+            <section class="ctaband">
+                <h2 class="ls-live" data-t>Add your first language in one line</h2>
+                <pre class="install"><code>npm install langsys-js-typescript</code></pre>
+            </section>
+
+            <footer class="footer">
+                <span>Powered by <span translate="no">Langsys</span></span>
+            </footer>
+        </div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
