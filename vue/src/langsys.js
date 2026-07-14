@@ -17,9 +17,21 @@ export const LOCALE_LABELS = {
 const apiUrl = import.meta.env.VITE_LANGSYS_API_URL;
 if (apiUrl) LangsysAppAPI.setBaseUrl(apiUrl);
 
+// Shared public demo project — READ-ONLY key, fixed pre-translated catalog.
+// Safe to publish: it can only fetch translations, never register or spend.
+// Changing these? Update the langsys.js in all four demo apps.
+const DEMO_PROJECT_ID = '';
+const DEMO_KEY = '';
+
+const envProjectId = import.meta.env.VITE_LANGSYS_PROJECT_ID;
+
+// True when running on the shared demo project instead of the visitor's own —
+// drives the read-only banner in App.vue.
+export const isSharedDemo = !envProjectId && Boolean(DEMO_PROJECT_ID);
+
 // A READ-ONLY key is safe to ship in a browser app (see .env.example).
 LangsysApp.init({
-    projectid: import.meta.env.VITE_LANGSYS_PROJECT_ID,
-    key: import.meta.env.VITE_LANGSYS_API_KEY,
+    projectid: envProjectId || DEMO_PROJECT_ID,
+    key: import.meta.env.VITE_LANGSYS_API_KEY || DEMO_KEY,
     UserLocaleStore: locale,
 });

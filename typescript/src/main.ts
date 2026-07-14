@@ -1,6 +1,19 @@
 import { Phrase, Translate, currentlyLoadedLocale, t, tSignal } from 'langsys-js-typescript';
-import { LOCALES, LOCALE_LABELS, locale } from './langsys';
+import { LOCALES, LOCALE_LABELS, isSharedDemo, locale } from './langsys';
 import './hood.css';
+
+/* Shared-demo banner — the read-only default catalog translates existing
+   phrases only; make that limitation (and the fix) explicit. */
+if (isSharedDemo) {
+    const banner = document.createElement('div');
+    banner.className = 'demo-banner';
+    banner.setAttribute('translate', 'no');
+    banner.innerHTML =
+        `<strong>Shared demo project (read-only)</strong> — existing phrases translate; new or edited ones won't. ` +
+        `Drop your own keys in <code>.env</code> to watch discovery register and translate your phrases live. ` +
+        `<a href="https://docs.langsys.dev/learn/concepts/keys-and-environments" target="_blank" rel="noopener noreferrer">Get your keys →</a>`;
+    document.body.prepend(banner);
+}
 
 // The "look under the hood" page, vanilla edition: the markup lives in
 // index.html and this file wires it to langsys-js-typescript directly —

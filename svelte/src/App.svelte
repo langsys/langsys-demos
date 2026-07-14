@@ -1,6 +1,6 @@
 <script>
     import { t, currentlyLoadedLocale, Translate, Phrase, DontTranslate } from 'langsys-js-svelte';
-    import { locale, LOCALES, LOCALE_LABELS } from './langsys';
+    import { locale, LOCALES, LOCALE_LABELS, isSharedDemo } from './langsys';
     import Hood from './Hood.svelte';
 
     let xray = $state(false);
@@ -11,6 +11,16 @@
     const phraseCode = `<Phrase category="Site" params={{ count }}>\n  Join %count% teams already translating with Langsys.\n</Phrase>`;
     const dontCode = `Powered by <DontTranslate>Langsys</DontTranslate>`;
 </script>
+
+{#if isSharedDemo}
+    <div class="demo-banner" translate="no">
+        <strong>Shared demo project (read-only)</strong> — existing phrases translate; new or edited ones won't. Drop
+        your own keys in <code>.env</code> to watch discovery register and translate your phrases live.
+        <a href="https://docs.langsys.dev/learn/concepts/keys-and-environments" target="_blank" rel="noopener noreferrer"
+            >Get your keys →</a
+        >
+    </div>
+{/if}
 
 <div class="hoodapp" class:xray>
     <header class="topbar">

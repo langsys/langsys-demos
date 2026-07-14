@@ -372,3 +372,27 @@ body {
 .xray .ls-frozen {
     padding: 0 0.15em;
 }
+
+/* Shared-demo banner — shown when the app runs on the public read-only
+   demo project (see langsys.js isSharedDemo). */
+.demo-banner {
+    padding: 0.6rem 1.25rem;
+    background: var(--code-bg);
+    color: var(--code-fg);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.demo-banner code {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 0.05em 0.35em;
+    border-radius: 5px;
+}
+
+.demo-banner a {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: underline;
+    white-space: nowrap;
+}

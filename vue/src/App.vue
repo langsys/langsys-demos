@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { DontTranslate, Phrase, Translate, useCurrentLocale, useT } from 'langsys-js-vue';
-import { LOCALES, LOCALE_LABELS, locale } from './langsys';
+import { LOCALES, LOCALE_LABELS, isSharedDemo, locale } from './langsys';
 import Hood from './Hood.vue';
 
 const t = useT();
@@ -16,6 +16,13 @@ const dontCode = `Powered by <DontTranslate>Langsys</DontTranslate>`;
 </script>
 
 <template>
+    <div v-if="isSharedDemo" class="demo-banner" translate="no">
+        <strong>Shared demo project (read-only)</strong> — existing phrases translate; new or edited ones won't. Drop
+        your own keys in <code>.env</code> to watch discovery register and translate your phrases live.
+        <a href="https://docs.langsys.dev/learn/concepts/keys-and-environments" target="_blank" rel="noopener noreferrer"
+            >Get your keys →</a
+        >
+    </div>
     <div class="hoodapp" :class="{ xray }">
         <header class="topbar">
             <div class="brand"><span class="logo">◆</span> <DontTranslate>Langsys</DontTranslate></div>
