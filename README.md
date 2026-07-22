@@ -24,6 +24,10 @@ Switch locale with the buttons and watch the page re-translate live. Each app
 demonstrates the same surface — a shared locale store + `LangsysApp.init()`, a
 locale switcher, and `t()` / `<Translate>` / `<Phrase>` / `<DontTranslate>`.
 
+Each app is the live version of its SDK's Learning Center page
+([docs.langsys.dev/learn/sdk/…](https://docs.langsys.dev/learn/sdk/typescript)):
+every example the docs page shows runs in the app, wired by the same code.
+
 By default the apps run on the **shared demo project** — a public read-only key
 over a fixed, pre-translated catalog (a banner in the app says so). Existing
 phrases translate; new or edited ones won't, because read-only keys can't

@@ -1,5 +1,5 @@
 import { mount } from 'svelte';
-import './hood.css';
+import './demo.css';
 import './langsys'; // initializes Langsys (side effect)
 import App from './App.svelte';
 

@@ -1,6 +1,6 @@
 import { Phrase, Translate, currentlyLoadedLocale, t, tSignal } from 'langsys-js-typescript';
 import { LOCALES, LOCALE_LABELS, demoBanner, locale } from './langsys';
-import './hood.css';
+import './demo.css';
 
 /* Demo banner — on the shared read-only project, the default catalog
    translates existing phrases only; with no credentials at all, nothing
@@ -21,41 +21,68 @@ if (demoBanner) {
     document.body.prepend(banner);
 }
 
-// The "look under the hood" page, vanilla edition: the markup lives in
-// index.html and this file wires it to langsys-js-typescript directly —
-// t() for inline strings, the Translate/Phrase DOM classes for blocks and
-// parameterized sentences, and translate="no" for the untouchables.
+// The vanilla demo app: every example on docs.langsys.dev/learn/sdk/typescript
+// running live, wired by the exact code the docs page shows.
 
-const app = document.getElementById('app')!;
+/* t() — inline string, wired to the DOM. tSignal re-emits a fresh t()
+   whenever the locale or catalog changes — subscribe once and the element
+   stays translated. */
+const greeting = document.querySelector<HTMLElement>('#greeting')!;
+const name = 'Sarah';
 
-/* t() — every [data-t] element's own text is its phrase (the key AND the
-   default). Capture it once, then re-render through t() whenever tSignal
-   re-emits (locale change, catalog load). */
-const liveText = [...document.querySelectorAll<HTMLElement>('[data-t]')];
-for (const el of liveText) el.dataset.phrase = (el.textContent ?? '').replace(/\s+/g, ' ').trim();
+tSignal.subscribe(() => {
+    greeting.textContent = t('Hello, {name}!', 'Greetings', { name });
+});
 
-/* X-ray toggle — same phrases, state-dependent label. */
-let xray = false;
-const xrayButtons = [...document.querySelectorAll<HTMLButtonElement>('[data-xray-toggle]')];
-for (const button of xrayButtons) {
-    button.addEventListener('click', () => {
-        xray = !xray;
-        app.classList.toggle('xray', xray);
-        for (const b of xrayButtons) b.classList.toggle('on', xray);
-        render();
-    });
-}
+/* t() — ICU plurals, the interactive playground's phrase. Change the count
+   and the grammar follows; every locale applies its own plural rules. */
+const inbox = document.querySelector<HTMLElement>('#inbox')!;
+const inboxCount = document.querySelector<HTMLElement>('#inbox-count')!;
+let messages = 3;
 
-function render(): void {
-    for (const el of liveText) el.textContent = t(el.dataset.phrase ?? '', 'Site');
-    for (const b of xrayButtons) {
-        b.textContent = t(xray ? 'Hide the translation layer' : 'Reveal the translation layer', 'Site');
-    }
-}
+const renderInbox = (): void => {
+    inboxCount.textContent = String(messages);
+    inbox.textContent = t(
+        'Hello, {name}! You have {count, plural, one {# new message} other {# new messages}}.',
+        'Greetings',
+        { name, count: messages },
+    );
+};
+tSignal.subscribe(renderInbox);
+document.querySelector('#inbox-minus')!.addEventListener('click', () => {
+    messages = Math.max(0, messages - 1);
+    renderInbox();
+});
+document.querySelector('#inbox-plus')!.addEventListener('click', () => {
+    messages += 1;
+    renderInbox();
+});
 
-// tSignal re-emits a fresh t() whenever translations or the loaded locale
-// change — one subscription keeps every inline string current.
-tSignal.subscribe(render);
+/* Translate — a whole content block, localized as a single unit. */
+new Translate(document.querySelector<HTMLElement>('#hero')!, { category: 'Home' });
+
+/* Phrase — one sentence with dynamic params; the element's own text holds
+   the {name}/{count} placeholders. */
+let items = 3;
+const cartCount = document.querySelector<HTMLElement>('#cart-count')!;
+const cartNote = new Phrase(document.querySelector<HTMLElement>('#cart-note')!, {
+    category: 'Cart',
+    params: { name: 'Sarah', count: items },
+});
+document.querySelector('#cart-minus')!.addEventListener('click', () => {
+    items = Math.max(0, items - 1);
+    cartCount.textContent = String(items);
+    cartNote.setParams({ name: 'Sarah', count: items });
+});
+document.querySelector('#cart-plus')!.addEventListener('click', () => {
+    items += 1;
+    cartCount.textContent = String(items);
+    cartNote.setParams({ name: 'Sarah', count: items });
+});
+
+/* translate="no" — the tokenizer and renderer skip the marked subtree, so it
+   stays verbatim while the sentence around it translates. */
+new Translate(document.querySelector<HTMLElement>('#signin')!, { category: 'Tour' });
 
 /* Locale switcher pills. */
 const nav = document.getElementById('locales')!;
@@ -67,28 +94,12 @@ for (const code of LOCALES) {
     pill.addEventListener('click', () => locale.set(code));
     nav.appendChild(pill);
 }
+
+/* Reading signals — currentlyLoadedLocale tracks the catalog actually loaded. */
+const meta = document.getElementById('locale-meta')!;
 currentlyLoadedLocale.subscribe((loaded) => {
+    meta.textContent = `loaded ${loaded || 'en-US'}`;
     for (const pill of nav.querySelectorAll<HTMLButtonElement>('.pill')) {
         pill.classList.toggle('active', pill.dataset.locale === (loaded || 'en-US'));
     }
 });
-
-/* <Translate> blocks — whole regions of markup, localized as a unit. */
-for (const block of document.querySelectorAll<HTMLElement>('[data-translate]')) {
-    new Translate(block, { category: 'Site' });
-}
-
-/* <Phrase> — one sentence with a dynamic {count}, plural-correct per locale. */
-let teams = 1200;
-const teamsCount = document.getElementById('teams-count')!;
-const teamsPhrase = new Phrase(document.getElementById('teams-phrase')!, {
-    category: 'Site',
-    params: { count: teams },
-});
-for (const button of document.querySelectorAll<HTMLButtonElement>('[data-teams]')) {
-    button.addEventListener('click', () => {
-        teams = Math.max(1, teams + (button.dataset.teams === '+1' ? 1 : -1));
-        teamsCount.textContent = String(teams);
-        teamsPhrase.setParams({ count: teams });
-    });
-}

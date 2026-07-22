@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import './hood.css';
+import './demo.css';
 import './langsys'; // initializes Langsys (side effect)
 import App from './App.vue';
 
