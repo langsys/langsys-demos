@@ -13,10 +13,11 @@ const t = useT();
 const name = 'Sarah';
 
 /* t() — ICU plurals, the interactive playground's phrase. Computed here
-   because the ICU braces (`}}`) would end a template interpolation early. */
+   because the ICU braces (`}}`) would end a template interpolation early —
+   and useT() returns a ref, so outside a template it's t.value(...). */
 const messages = ref(3);
 const inboxText = computed(() =>
-    t('Hello, {name}! You have {count, plural, one {# new message} other {# new messages}}.', 'Greetings', {
+    t.value('Hello, {name}! You have {count, plural, one {# new message} other {# new messages}}.', 'Greetings', {
         name,
         count: messages.value,
     }),
