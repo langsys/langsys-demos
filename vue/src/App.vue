@@ -12,16 +12,10 @@ const DOCS_URL = 'https://docs.langsys.dev/learn/sdk/vue';
 const t = useT();
 const name = 'Sarah';
 
-/* t() — ICU plurals, the interactive playground's phrase. Computed here
-   because the ICU braces (`}}`) would end a template interpolation early —
-   and useT() returns a ref, so outside a template it's t.value(...). */
+/* t() — ICU plurals, the interactive playground's phrase.
+   hoisted: ICU's }} clashes with {{ }} */
+const MSG = 'Hello, {name}! You have {count, plural, one {# new message} other {# new messages}}.';
 const messages = ref(3);
-const inboxText = computed(() =>
-    t.value('Hello, {name}! You have {count, plural, one {# new message} other {# new messages}}.', 'Greetings', {
-        name,
-        count: messages.value,
-    }),
-);
 
 /* Phrase — params & markup. */
 const items = ref(3);
@@ -69,7 +63,7 @@ const loadedOrDefault = computed(() => loaded.value || 'en-US');
 
         <section class="card">
             <h2><code>t()</code> — ICU plurals, from the interactive playground</h2>
-            <p class="live">{{ inboxText }}</p>
+            <p class="live">{{ t(MSG, 'Greetings', { name, count: messages }) }}</p>
             <div class="stepper" translate="no">
                 <button aria-label="Fewer" @click="messages = Math.max(0, messages - 1)">−</button>
                 <span class="count">{{ messages }}</span>
