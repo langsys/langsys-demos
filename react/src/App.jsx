@@ -150,7 +150,8 @@ export default function App() {
                     </h2>
                     <div className="live">
                         <Translate category="Home">
-                            <p>Welcome to our store. Browse the catalog in your language.</p>
+                            <h3>Welcome to our store</h3>
+                            <p>Browse the catalog in your language.</p>
                         </Translate>
                     </div>
                 </section>

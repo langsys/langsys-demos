@@ -76,7 +76,8 @@ const loadedOrDefault = computed(() => loaded.value || 'en-US');
             <h2><code>&lt;Translate&gt;</code> — content block</h2>
             <div class="live">
                 <Translate category="Home">
-                    <p>Welcome to our store. Browse the catalog in your language.</p>
+                    <h3>Welcome to our store</h3>
+                    <p>Browse the catalog in your language.</p>
                 </Translate>
             </div>
         </section>

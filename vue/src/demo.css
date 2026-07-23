@@ -114,6 +114,11 @@ body {
     margin: 0;
 }
 
+.live h3 {
+    margin: 0 0 4px;
+    font-size: 20px;
+}
+
 .hint {
     margin: 10px 0 0;
     font-size: 12.5px;
