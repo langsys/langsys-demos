@@ -172,7 +172,7 @@ export default function App() {
                     <div className="live">
                         <Translate category="Tour">
                             <p>
-                                Sign in with <DontTranslate>Langsys ID</DontTranslate> to continue.
+                                This demo uses <DontTranslate>Langsys ID</DontTranslate> for secure sign-in.
                             </p>
                         </Translate>
                     </div>

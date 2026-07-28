@@ -91,7 +91,7 @@
         <h2><code>&lt;DontTranslate&gt;</code> — never translated</h2>
         <div class="live">
             <Translate category="Tour">
-                <p>Sign in with <DontTranslate>Langsys ID</DontTranslate> to continue.</p>
+                <p>This demo uses <DontTranslate>Langsys ID</DontTranslate> for secure sign-in.</p>
             </Translate>
         </div>
     </section>
