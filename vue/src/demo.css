@@ -1,5 +1,6 @@
-/* Shared look for all four demo apps — same app, different framework.
-   Changing this? Update demo.css in typescript/react/vue/svelte alike. */
+/* Shared look for all five demo apps — same app, different stack.
+   Changing this? Update demo.css in typescript/react/vue/svelte (src/) and
+   laravel (public/) alike. */
 
 :root {
     --bg: #f6f7fb;
@@ -132,7 +133,12 @@ body {
     margin-top: 12px;
 }
 
-.stepper button {
+/* The Laravel demo's stepper is server-rendered links; same look either way. */
+.stepper button,
+.stepper a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
     height: 30px;
     border-radius: 8px;
@@ -141,6 +147,7 @@ body {
     font-size: 16px;
     cursor: pointer;
     color: var(--ink);
+    text-decoration: none;
 }
 
 .stepper .count {
