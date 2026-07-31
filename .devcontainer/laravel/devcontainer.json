@@ -1,10 +1,10 @@
 {
     "name": "Langsys × Laravel demo",
     "image": "mcr.microsoft.com/devcontainers/php:1-8.3",
-    // intl gives the demo real ICU plurals; without it the interpolator
-    // falls back to plain {name} substitution and the plural card shows
-    // the raw ICU message. Non-fatal either way, hence the || true.
-    "postCreateCommand": "sudo install-php-extensions intl || true; cd laravel && composer install --no-interaction && cp -n .env.example .env && php artisan key:generate",
+    // intl gives the demo real ICU plurals + locale-formatted dates; without
+    // it the interpolator degrades (raw ICU braces, ISO dates). Try the
+    // image's helper first, fall back to building the extension via apt.
+    "postCreateCommand": "(sudo install-php-extensions intl || (sudo apt-get update && sudo apt-get install -y libicu-dev && sudo docker-php-ext-install intl)) || true; cd laravel && composer install --no-interaction && cp -n .env.example .env && php artisan key:generate",
     // Serve on every container start, detached so startup never blocks on it.
     "postStartCommand": "bash -lc 'cd laravel && (php artisan serve --host=0.0.0.0 --port=8000 > /tmp/laravel-serve.log 2>&1 &)'",
     "forwardPorts": [8000],

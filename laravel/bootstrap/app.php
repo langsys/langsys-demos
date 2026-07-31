@@ -11,6 +11,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+        // The demo runs behind arbitrary HTTPS forwarders (Codespaces, ngrok,
+        // tunnels); trusting their headers keeps asset()/url() on https —
+        // otherwise the browser blocks demo.css as mixed content.
+        $middleware->trustProxies(at: '*');
+
         $middleware->web(append: [
             // Resolves ?locale= / cookie / session / Accept-Language, then
             // persists the visitor's choice — the locale pills are plain links.
