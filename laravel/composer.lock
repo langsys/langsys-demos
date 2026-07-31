@@ -1064,12 +1064,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/langsys/langsys-laravel",
-                "reference": "d4a070f0f4d45dec9529945702156e9a5d766135"
+                "reference": "735c1a7f0941c248ec25d7933cbacab83af5d4c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/langsys/langsys-laravel/zipball/d4a070f0f4d45dec9529945702156e9a5d766135",
-                "reference": "d4a070f0f4d45dec9529945702156e9a5d766135",
+                "url": "https://api.github.com/repos/langsys/langsys-laravel/zipball/735c1a7f0941c248ec25d7933cbacab83af5d4c4",
+                "reference": "735c1a7f0941c248ec25d7933cbacab83af5d4c4",
                 "shasum": ""
             },
             "require": {
@@ -1141,7 +1141,7 @@
                 "sdk",
                 "translation"
             ],
-            "time": "2026-07-21T03:04:21+00:00"
+            "time": "2026-07-31T03:37:55+00:00"
         },
         {
             "name": "langsys/php-sdk",
