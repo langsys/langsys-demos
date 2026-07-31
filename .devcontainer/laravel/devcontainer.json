@@ -5,8 +5,10 @@
     // failure breaks the build loudly instead of degrading the demo.
     "build": { "dockerfile": "Dockerfile" },
     "postCreateCommand": "cd laravel && composer install --no-interaction && cp -n .env.example .env && php artisan key:generate",
-    // Serve on every container start, detached so startup never blocks on it.
-    "postStartCommand": "bash -lc 'cd laravel && (php artisan serve --host=0.0.0.0 --port=8000 > /tmp/laravel-serve.log 2>&1 &)'",
+    // Serve on every container start. setsid+nohup put the server in its own
+    // session — a plain `( … & )` child gets reaped when the lifecycle
+    // command's shell exits (observed: empty log, no process).
+    "postStartCommand": "bash -lc 'cd laravel && nohup setsid php artisan serve --host=0.0.0.0 --port=8000 > /tmp/laravel-serve.log 2>&1 < /dev/null &'",
     "forwardPorts": [8000],
     "portsAttributes": {
         "8000": {
