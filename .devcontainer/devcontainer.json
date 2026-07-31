@@ -1,0 +1,23 @@
+{
+    // Repo-default dev container = the Laravel demo, so the green
+    // "Code → Create codespace" button works identically to the README
+    // badge (which pins .devcontainer/laravel/ explicitly). The JS demos
+    // don't need a container — their one-click path is StackBlitz.
+    "name": "Langsys × Laravel demo",
+    "build": { "dockerfile": "laravel/Dockerfile" },
+    "postCreateCommand": "cd laravel && composer install --no-interaction && cp -n .env.example .env && php artisan key:generate",
+    // Serve on every container start, detached so startup never blocks on it.
+    "postStartCommand": "bash -lc 'cd laravel && (php artisan serve --host=0.0.0.0 --port=8000 > /tmp/laravel-serve.log 2>&1 &)'",
+    "forwardPorts": [8000],
+    "portsAttributes": {
+        "8000": {
+            "label": "Laravel demo",
+            "onAutoForward": "openPreview"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": ["bmewburn.vscode-intelephense-client"]
+        }
+    }
+}
