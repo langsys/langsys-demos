@@ -3,9 +3,9 @@
 // Shared public demo project — READ-ONLY key, fixed pre-translated catalog.
 // Safe to publish: it can only fetch translations, never register or spend.
 // Changing these? The JS demos keep their copies in src/langsys.js/.ts — all
-// five must match.
-$sharedProjectId = '';
-$sharedKey = '';
+// six must match (typescript/react/vue/svelte/preact + this file).
+$sharedProjectId = '90455431-01d4-47c5-acb8-4fb4fdc6b4f4';
+$sharedKey = 'oacboqCFlrVPTyHE5zNEDcE7SKBePpl1b3LvMFx7Ye1oZU2oOAzKrsGM3Yl9uZt2';
 
 return [
 
