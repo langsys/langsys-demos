@@ -1,10 +1,10 @@
 {
     "name": "Langsys × Laravel demo",
-    "image": "mcr.microsoft.com/devcontainers/php:1-8.3",
-    // intl gives the demo real ICU plurals + locale-formatted dates; without
-    // it the interpolator degrades (raw ICU braces, ISO dates). Try the
-    // image's helper first, fall back to building the extension via apt.
-    "postCreateCommand": "(sudo install-php-extensions intl || (sudo apt-get update && sudo apt-get install -y libicu-dev && sudo docker-php-ext-install intl)) || true; cd laravel && composer install --no-interaction && cp -n .env.example .env && php artisan key:generate",
+    // The Dockerfile bakes ext-intl into the image (ICU plurals, locale
+    // dates) — done at build so visitors never run manual installs and a
+    // failure breaks the build loudly instead of degrading the demo.
+    "build": { "dockerfile": "Dockerfile" },
+    "postCreateCommand": "cd laravel && composer install --no-interaction && cp -n .env.example .env && php artisan key:generate",
     // Serve on every container start, detached so startup never blocks on it.
     "postStartCommand": "bash -lc 'cd laravel && (php artisan serve --host=0.0.0.0 --port=8000 > /tmp/laravel-serve.log 2>&1 &)'",
     "forwardPorts": [8000],
