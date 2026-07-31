@@ -24,7 +24,7 @@ if (apiUrl) LangsysAppAPI.setBaseUrl(apiUrl);
 // Changing these? Update all six copies: typescript/react/vue/svelte/preact
 // (src/langsys.*) and laravel (config/langsys.php).
 const DEMO_PROJECT_ID = '90455431-01d4-47c5-acb8-4fb4fdc6b4f4';
-const DEMO_KEY = 'oacboqCFlrVPTyHE5zNEDcE7SKBePpl1b3LvMFx7Ye1oZU2oOAzKrsGM3Yl9uZt2';
+const DEMO_KEY = 'vAgxOao966WHaxApSBwaLwRlWwZMABmLNHmayhpbAt7JqIpYcybGKms5VGoQ27O0';
 
 const envProjectId = import.meta.env.VITE_LANGSYS_PROJECT_ID;
 

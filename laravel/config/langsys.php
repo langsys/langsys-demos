@@ -5,7 +5,7 @@
 // Changing these? The JS demos keep their copies in src/langsys.js/.ts — all
 // six must match (typescript/react/vue/svelte/preact + this file).
 $sharedProjectId = '90455431-01d4-47c5-acb8-4fb4fdc6b4f4';
-$sharedKey = 'oacboqCFlrVPTyHE5zNEDcE7SKBePpl1b3LvMFx7Ye1oZU2oOAzKrsGM3Yl9uZt2';
+$sharedKey = 'vAgxOao966WHaxApSBwaLwRlWwZMABmLNHmayhpbAt7JqIpYcybGKms5VGoQ27O0';
 
 return [
 
