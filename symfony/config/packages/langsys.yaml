@@ -1,0 +1,5 @@
+# Everything has defaults (locale chain query → cookie → session → header,
+# cookie persistence, cache.app pool, auto_flush on). The demo overrides
+# nothing — credentials come from the client factory in services.yaml, which
+# adds the shared-demo-project fallback the bundle itself doesn't have.
+langsys: ~

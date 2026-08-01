@@ -1,0 +1,25 @@
+{
+    "name": "Langsys × Symfony demo",
+    // The Dockerfile bakes ext-intl into the image (ICU plurals, locale
+    // dates) — done at build so visitors never run manual installs and a
+    // failure breaks the build loudly instead of degrading the demo.
+    "build": { "dockerfile": "Dockerfile" },
+    "postCreateCommand": "cd symfony && composer install --no-interaction",
+    // Serve on every container start. setsid+nohup put the server in its own
+    // session — a plain `( … & )` child gets reaped when the lifecycle
+    // command's shell exits (observed on the Laravel container: empty log,
+    // no process).
+    "postStartCommand": "bash -lc 'cd symfony && nohup setsid php -S 0.0.0.0:8000 -t public > /tmp/symfony-serve.log 2>&1 < /dev/null &'",
+    "forwardPorts": [8000],
+    "portsAttributes": {
+        "8000": {
+            "label": "Symfony demo",
+            "onAutoForward": "openPreview"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": ["bmewburn.vscode-intelephense-client"]
+        }
+    }
+}

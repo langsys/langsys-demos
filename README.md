@@ -13,6 +13,7 @@ default (no keys file, no extraction step).
 | Svelte | [`langsys-js-svelte`](https://github.com/langsys/langsys-js-svelte) | [`./svelte`](./svelte) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/svelte) |
 | Vue | [`langsys-js-vue`](https://github.com/langsys/langsys-js-vue) | [`./vue`](./vue) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/vue) |
 | Laravel (server-rendered) | [`langsys/laravel-sdk`](https://github.com/langsys/langsys-laravel) | [`./laravel`](./laravel) | [Codespaces](https://codespaces.new/langsys/langsys-demos?quickstart=1&devcontainer_path=.devcontainer%2Flaravel%2Fdevcontainer.json) (StackBlitz can't run PHP) |
+| Symfony (server-rendered) | [`langsys/symfony-sdk`](https://github.com/langsys/langsys-symfony) | [`./symfony`](./symfony) | [Codespaces](https://codespaces.new/langsys/langsys-demos?quickstart=1&devcontainer_path=.devcontainer%2Fsymfony%2Fdevcontainer.json) (StackBlitz can't run PHP) |
 
 ## Run one
 
@@ -36,12 +37,21 @@ cp .env.example .env && php artisan key:generate
 php artisan serve
 ```
 
+The Symfony app is the same demo over the same PHP SDK, via the Symfony bundle:
+
+```bash
+cd symfony
+composer install
+php -S localhost:8000 -t public
+```
+
 Switch locale with the buttons and watch the page re-translate live. Each JS
 app demonstrates the same surface — a shared locale store +
 `LangsysApp.init()`, a locale switcher, and `t()` / `<Translate>` / `<Phrase>`
-/ `<DontTranslate>`. The Laravel app demonstrates the backend surface — the
-`@t` Blade directive, the `t()` helper, and the locale-detection middleware;
-its locale buttons are plain `?locale=` links the middleware persists.
+/ `<DontTranslate>`. The PHP apps demonstrate the backend surface — Laravel's
+`@t` Blade directive and `t()` helper, Symfony's `t()` Twig function and
+autowired translator, and each framework's locale detection; their locale
+buttons are plain `?locale=` links the framework integration persists.
 
 Each app is the live version of its SDK's Learning Center page
 ([docs.langsys.dev/learn/sdk/…](https://docs.langsys.dev/learn/sdk/typescript)):
@@ -56,9 +66,9 @@ register tokens. To watch discovery register and translate *your* phrases,
 shareable; read-only keys are the only kind safe to publish).
 
 Maintainers: the shared demo credentials live in each JS app's
-`src/langsys.js`/`.ts` and in the Laravel app's `config/langsys.php` — all five
-copies must match — and the demo project's catalog must contain every phrase
-the apps render. After changing demo copy, run the app once with a write key so
+`src/langsys.js`/`.ts`, in the Laravel app's `config/langsys.php`, and in the
+Symfony app's `src/Support/LangsysClientFactory.php` — all copies must match —
+and the demo project's catalog must contain every phrase the apps render. After changing demo copy, run the app once with a write key so
 the new phrases register and translate.
 
 ## Learn more

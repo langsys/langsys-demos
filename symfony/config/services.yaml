@@ -1,0 +1,20 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/Kernel.php'
+
+    # Demo-only override of the bundle's client service: adds the shared
+    # read-only demo-project fallback (the Laravel demo's config/langsys.php
+    # equivalent) and the offline stand-in when no credentials exist at all
+    # (its AppServiceProvider equivalent). A real app deletes this block and
+    # just sets LANGSYS_API_KEY / LANGSYS_PROJECT_ID.
+    langsys.client:
+        class: Langsys\SDK\Client
+        factory: ['App\Support\LangsysClientFactory', 'create']
+        arguments:
+            - '@langsys.cache_adapter'

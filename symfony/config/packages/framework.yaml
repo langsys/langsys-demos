@@ -1,0 +1,10 @@
+framework:
+    secret: '%env(APP_SECRET)%'
+    # BCP 47 form so the untouched default matches the demo's en-US locale
+    # pill (and the interpolator's number/date formatting).
+    default_locale: en-US
+    handle_all_throwables: true
+    php_errors:
+        log: true
+    # No session config on purpose: the demo persists the visitor's locale
+    # choice via cookie (the bundle's default), so it needs no session at all.
