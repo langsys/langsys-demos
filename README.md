@@ -14,6 +14,8 @@ default (no keys file, no extraction step).
 | Vue | [`langsys-js-vue`](https://github.com/langsys/langsys-js-vue) | [`./vue`](./vue) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/vue) |
 | Laravel (server-rendered) | [`langsys/laravel-sdk`](https://github.com/langsys/langsys-laravel) | [`./laravel`](./laravel) | [Codespaces](https://codespaces.new/langsys/langsys-demos?quickstart=1&devcontainer_path=.devcontainer%2Flaravel%2Fdevcontainer.json) (StackBlitz can't run PHP) |
 | Symfony (server-rendered) | [`langsys/symfony-sdk`](https://github.com/langsys/langsys-symfony) | [`./symfony`](./symfony) | [Codespaces](https://codespaces.new/langsys/langsys-demos?quickstart=1&devcontainer_path=.devcontainer%2Fsymfony%2Fdevcontainer.json) (StackBlitz can't run PHP) |
+| NestJS (server-rendered) | [`langsys-js-nestjs`](https://github.com/langsys/langsys-js-nestjs) | [`./nestjs`](./nestjs) | run locally (installs the binding from the sibling repo until it's on npm) |
+| Hono (server-rendered, edge-ready) | [`langsys-js-hono`](https://github.com/langsys/langsys-js-hono) | [`./hono`](./hono) | run locally (installs the binding from the sibling repo until it's on npm) |
 
 ## Run one
 
@@ -43,6 +45,17 @@ The Symfony app is the same demo over the same PHP SDK, via the Symfony bundle:
 cd symfony
 composer install
 php -S localhost:8000 -t public
+```
+
+The NestJS and Hono apps are the same demo translated by the Node server
+bindings — multi-locale safe (one catalog per locale, so concurrent requests
+in different locales never race). They install their binding from the sibling
+`langsys-js-nestjs` / `langsys-js-hono` checkouts until those are on npm:
+
+```bash
+cd nestjs             # or hono
+npm install
+npm start             # nestjs → :3000, hono → :3001
 ```
 
 Switch locale with the buttons and watch the page re-translate live. Each JS

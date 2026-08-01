@@ -1,0 +1,28 @@
+{
+    "name": "langsys-demo-nestjs",
+    "private": true,
+    "version": "0.1.0",
+    "description": "Langsys × NestJS demo — server-rendered realtime translation via langsys-js-nestjs.",
+    "type": "commonjs",
+    "engines": {
+        "node": ">=18"
+    },
+    "scripts": {
+        "start": "tsx src/main.ts",
+        "dev": "tsx watch src/main.ts",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@nestjs/common": "^10.4.0",
+        "@nestjs/core": "^10.4.0",
+        "@nestjs/platform-express": "^10.4.0",
+        "langsys-js-nestjs": "file:../../langsys-js-nestjs",
+        "reflect-metadata": "^0.2.2",
+        "rxjs": "^7.8.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.19.43",
+        "tsx": "^4.19.0",
+        "typescript": "^5.8.3"
+    }
+}

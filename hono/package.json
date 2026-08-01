@@ -1,0 +1,25 @@
+{
+    "name": "langsys-demo-hono",
+    "private": true,
+    "version": "0.1.0",
+    "description": "Langsys × Hono demo — server-rendered realtime translation via langsys-js-hono.",
+    "type": "module",
+    "engines": {
+        "node": ">=18"
+    },
+    "scripts": {
+        "start": "tsx src/index.ts",
+        "dev": "tsx watch src/index.ts",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@hono/node-server": "^1.13.0",
+        "hono": "^4.6.0",
+        "langsys-js-hono": "file:../../langsys-js-hono"
+    },
+    "devDependencies": {
+        "@types/node": "^20.19.43",
+        "tsx": "^4.19.0",
+        "typescript": "^5.8.3"
+    }
+}
