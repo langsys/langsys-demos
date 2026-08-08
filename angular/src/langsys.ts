@@ -2,8 +2,8 @@ import { createLocaleStore } from 'langsys-js-angular';
 import type { LangsysConfig } from 'langsys-js-angular';
 
 // One shared locale store: the switcher writes it, LangsysApp reads it.
-// `locale.locale` is an Angular signal (read it in templates); `locale.source`
-// is what the SDK subscribes to.
+// `locale.locale` is an Angular signal (read it in templates); the store itself
+// is what the SDK subscribes to, so it goes straight into the config.
 export const locale = createLocaleStore('en-US');
 export const LOCALES = ['en-US', 'es-ES', 'fr-FR', 'de-DE'];
 
@@ -51,7 +51,7 @@ export const langsysConfig: LangsysConfig = {
     projectid: envProjectId || DEMO_PROJECT_ID,
     key: env['VITE_LANGSYS_API_KEY'] || DEMO_KEY,
     apiUrl,
-    UserLocaleStore: locale.source,
+    UserLocaleStore: locale,
     initialLocale: 'en-US',
     blockUntilReady: false,
 };
