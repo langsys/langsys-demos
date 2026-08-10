@@ -16,6 +16,11 @@
                         "browser": "src/main.ts",
                         "polyfills": ["zone.js"],
                         "tsConfig": "tsconfig.json",
+                        // langsys-js-angular is installed as a file: link, so node
+                        // would resolve its @angular/core through the symlink's real
+                        // path and load a second Angular copy (NG0203 at bootstrap).
+                        // Resolving via the symlink path keeps one Angular instance.
+                        "preserveSymlinks": true,
                         "assets": [],
                         "styles": ["src/demo.css"]
                     },
