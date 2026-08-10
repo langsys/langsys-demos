@@ -12,7 +12,8 @@
         "@angular/compiler": "^17.3.0",
         "@angular/core": "^17.3.0",
         "@angular/platform-browser": "^17.3.0",
-        "langsys-js-angular": "file:../../langsys-js-angular",
+        "langsys-js-angular": "file:../../langsys-js-angular/dist",
+        "langsys-js-typescript": "^0.4.1",
         "rxjs": "^7.8.0",
         "tslib": "^2.6.0",
         "zone.js": "~0.14.4"
