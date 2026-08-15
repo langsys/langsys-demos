@@ -17,6 +17,7 @@ Each `.mp4` has a matching `-still.png` to use as its poster frame.
 
 | Video | Length | Covers |
 |---|---|---|
+| `svelte/hero.mp4` | 16.6s | The short pitch — one call, locale switch, gender agreement, every locale |
 | `svelte/key-files.mp4` | 25.6s | Why per-locale key files rot, and what replaces them |
 | `svelte/t-string.mp4` | 21.6s | `t(phrase, category, params)` — the inline call, ICU placeholders, plurals |
 | `svelte/phrase-tag.mp4` | 20.6s | `<Phrase>` — a phrase in markup, and why its params are `%name%` |
