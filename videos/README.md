@@ -12,30 +12,39 @@ Each `.mp4` has a matching `-still.png` to use as its poster frame.
 | Video | Length | What it argues |
 |---|---|---|
 | `explainer.mp4` | 75.6s | What Langsys **is**. An SDK in your app and a hosted Translation Manager, how a phrase registers itself by running, where translations come from, and what you get. Start a cold viewer here. |
-| `workflow.mp4` | 27.6s | The problem. Translation lives outside your codebase and round-trips through a pipeline; Langsys deletes the pipeline. Framework-agnostic — no SDK syntax on screen. |
 
 `explainer` is the one to lead with. Every other cut assumes you already know
 what Langsys is and shows what a single API does; this is the only one that
 answers the question a first-time viewer actually has, including the part none
 of the others cover — that a phrase registers itself the first time your code
-runs it, gets machine translated on arrival, and is corrected in place by a
-human without a deploy.
+runs it, is machine-translated on arrival, and can be sharpened in place by a
+translator without a deploy.
+
+## Tutorial track
+
+Ordered modules of the learning-center track. Watch them in this order; each one
+assumes the previous. No SDK-specific syntax on screen.
+
+| Video | Length | Covers |
+|---|---|---|
+| `tutorial/workflow.mp4` | 27.6s | The problem — translation round-trips through a pipeline, and Langsys deletes it |
+| `tutorial/key-files.mp4` | 25.6s | Why per-locale key files rot, and what replaces them |
+| `tutorial/locale-store.mp4` | 33.6s | The locale store — how the active locale is held and switched |
+| `tutorial/keys-and-environments.mp4` | 35.6s | Write keys in development, read-only keys in production |
 
 ## Svelte
 
 | Video | Length | Covers |
 |---|---|---|
 | `svelte/hero.mp4` | 16.6s | The short pitch — one call, locale switch, gender agreement, every locale |
-| `svelte/key-files.mp4` | 25.6s | Why per-locale key files rot, and what replaces them |
 | `svelte/t-string.mp4` | 42.6s | `t(phrase, category, params)` — opens on the keys-file problem, then the three arguments, ICU placeholders, plurals |
 | `svelte/phrase-tag.mp4` | 20.6s | `<Phrase>` — a phrase in markup, and why its params are `%name%` |
 | `svelte/translate-tag.mp4` | 19.6s | `<Translate>` — one tag registers a whole region as separate phrases |
 | `svelte/donttranslate.mp4` | 20.6s | `<DontTranslate>` — brand names and identifiers held back verbatim |
 
-Suggested order for a learning path: `explainer` → `workflow` → `key-files` →
-`t-string` → `phrase-tag` → `translate-tag` → `donttranslate`. The first three
-establish what Langsys is and why the old way hurts; the rest are API reference
-and can be linked directly from a docs section.
+Suggested order: `explainer` first, then the tutorial track in the order above,
+then the Svelte cuts as API reference — those can be linked directly from a docs
+section rather than watched through.
 
 ## Where these come from
 
