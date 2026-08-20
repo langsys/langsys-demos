@@ -11,7 +11,9 @@ Each `.mp4` has a matching `-still.png` to use as its poster frame.
 
 | Video | Length | What it argues |
 |---|---|---|
-| `explainer.mp4` | 75.6s | What Langsys **is**. An SDK in your app and a hosted Translation Manager, how a phrase registers itself by running, where translations come from, and what you get. Start a cold viewer here. |
+| `explainer.mp4` | 71.1s | What Langsys **is**. An SDK in your app and a hosted Translation Manager, how a phrase registers itself by running, where translations come from, and what you get. Start a cold viewer here. |
+
+| `pluralization.mp4` | 20.6s | ICU plurals — one phrase carries the count, and Russian's four categories resolve from the same line. Framework-agnostic. |
 
 `explainer` is the one to lead with. Every other cut assumes you already know
 what Langsys is and shows what a single API does; this is the only one that
@@ -41,6 +43,9 @@ assumes the previous. No SDK-specific syntax on screen.
 | `svelte/phrase-tag.mp4` | 20.6s | `<Phrase>` — a phrase in markup, and why its params are `%name%` |
 | `svelte/translate-tag.mp4` | 19.6s | `<Translate>` — one tag registers a whole region as separate phrases |
 | `svelte/donttranslate.mp4` | 20.6s | `<DontTranslate>` — brand names and identifiers held back verbatim |
+| `svelte/content-blocks.mp4` | 21.6s | `<Translate>` over a whole component — you never touch the markup inside |
+| `svelte/categories.mp4` | 25.6s | Why i18n invented keys, and what replaces them — the same word, two meanings |
+| `svelte/icu-gender.mp4` | 24.6s | Gender agreement — *Bienvenido* / *Bienvenida*, branches Langsys generates |
 
 Suggested order: `explainer` first, then the tutorial track in the order above,
 then the Svelte cuts as API reference — those can be linked directly from a docs
