@@ -47,6 +47,8 @@ assumes the previous. No SDK-specific syntax on screen.
 | `svelte/content-blocks.mp4` | 21.6s | `<Translate>` over a whole component — you never touch the markup inside |
 | `svelte/categories.mp4` | 25.6s | Why i18n invented keys, and what replaces them — the same word, two meanings |
 | `svelte/icu-gender.mp4` | 24.6s | Gender agreement — *Bienvenido* / *Bienvenida*, branches Langsys generates |
+| `svelte/attributes.mp4` | 26.6s | Placeholders, alt text and aria labels — the half of a form that has no visible text |
+| `svelte/formatting.mp4` | 25.6s | Numbers and dates per CLDR, and why an order number must be passed as a string |
 
 Suggested order: `explainer` first, then the tutorial track in the order above,
 then the Svelte cuts as API reference — those can be linked directly from a docs
