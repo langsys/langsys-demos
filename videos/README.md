@@ -33,6 +33,7 @@ assumes the previous. No SDK-specific syntax on screen.
 | `tutorial/key-files.mp4` | 25.6s | Why per-locale key files rot, and what replaces them |
 | `tutorial/locale-store.mp4` | 33.6s | The locale store — how the active locale is held and switched |
 | `tutorial/keys-and-environments.mp4` | 35.6s | Write keys in development, read-only keys in production |
+| `tutorial/adding-a-locale.mp4` | 27.6s | Reaching a new language is a project setting — new phrases translate on arrival, one run fills the rest |
 
 ## Svelte
 
