@@ -8,13 +8,16 @@ The 16×9 cuts are **1280×720, H.264 / yuv420p, 30 fps, AAC 48 kHz stereo**, wi
 `+faststart` set so they begin playing before the whole file has downloaded.
 Each has a matching `-still.png` to use as its poster frame.
 
+Every 16×9 cut now opens with the intro sting, then a **2.0s title card** naming
+what the cut covers, before its first beat. The lengths below include both.
+
 ## Start here
 
 | Video | Length | What it argues |
 |---|---|---|
-| `explainer.mp4` | 71.1s | What Langsys **is**. An SDK in your app and a hosted Translation Manager, how a phrase registers itself by running, where translations come from, and what you get. Start a cold viewer here. |
+| `explainer.mp4` | 73.1s | What Langsys **is**. An SDK in your app and a hosted Translation Manager, how a phrase registers itself by running, where translations come from, and what you get. Start a cold viewer here. |
 
-| `pluralization.mp4` | 20.6s | ICU plurals — one phrase carries the count, and Russian's four categories resolve from the same line. Framework-agnostic. |
+| `pluralization.mp4` | 50.6s | ICU plurals — why an `if (count === 1)` in your code is English grammar, what a plural category actually is, and Russian's four resolving from the same line. Framework-agnostic. |
 
 `explainer` is the one to lead with. Every other cut assumes you already know
 what Langsys is and shows what a single API does; this is the only one that
@@ -30,26 +33,26 @@ assumes the previous. No SDK-specific syntax on screen.
 
 | Video | Length | Covers |
 |---|---|---|
-| `tutorial/workflow.mp4` | 27.6s | The problem — translation round-trips through a pipeline, and Langsys deletes it |
-| `tutorial/key-files.mp4` | 25.6s | Why per-locale key files rot, and what replaces them |
-| `tutorial/locale-store.mp4` | 33.6s | The locale store — how the active locale is held and switched |
-| `tutorial/keys-and-environments.mp4` | 35.6s | Write keys in development, read-only keys in production |
-| `tutorial/adding-a-locale.mp4` | 27.6s | Reaching a new language is a project setting — new phrases translate on arrival, one run fills the rest |
+| `tutorial/workflow.mp4` | 29.6s | The problem — translation round-trips through a pipeline, and Langsys deletes it |
+| `tutorial/key-files.mp4` | 41.6s | Where a project starts, the key other i18n makes you invent, and what replaces it |
+| `tutorial/locale-store.mp4` | 35.6s | The locale store — how the active locale is held and switched |
+| `tutorial/keys-and-environments.mp4` | 37.6s | Write keys in development, read-only keys in production |
+| `tutorial/adding-a-locale.mp4` | 29.6s | Reaching a new language is a project setting — new phrases translate on arrival, one run fills the rest |
 
 ## Svelte
 
 | Video | Length | Covers |
 |---|---|---|
-| `svelte/hero.mp4` | 16.6s | The short pitch — one call, locale switch, gender agreement, every locale |
-| `svelte/t-string.mp4` | 42.6s | `t(phrase, category, params)` — opens on the keys-file problem, then the three arguments, ICU placeholders, plurals |
-| `svelte/phrase-tag.mp4` | 20.6s | `<Phrase>` — a phrase in markup, and why its params are `%name%` |
-| `svelte/translate-tag.mp4` | 19.6s | `<Translate>` — one tag registers a whole region as separate phrases |
-| `svelte/donttranslate.mp4` | 20.6s | `<DontTranslate>` — brand names and identifiers held back verbatim |
-| `svelte/content-blocks.mp4` | 21.6s | `<Translate>` over a whole component — you never touch the markup inside |
-| `svelte/categories.mp4` | 25.6s | Why i18n invented keys, and what replaces them — the same word, two meanings |
-| `svelte/icu-gender.mp4` | 24.6s | Gender agreement — *Bienvenido* / *Bienvenida*, branches Langsys generates |
-| `svelte/attributes.mp4` | 26.6s | Placeholders, alt text and aria labels — the half of a form that has no visible text |
-| `svelte/formatting.mp4` | 25.6s | Numbers and dates per CLDR, and why an order number must be passed as a string |
+| `svelte/hero.mp4` | 35.6s | The short pitch — what other i18n makes you keep in step, then one call, locale switch, gender agreement, every locale |
+| `svelte/t-string.mp4` | 44.6s | `t(phrase, category, params)` — opens on the keys-file problem, then the three arguments, ICU placeholders, plurals |
+| `svelte/phrase-tag.mp4` | 41.6s | `<Phrase>` — a sentence with markup inside it, kept as one phrase, and why its params are `%name%` |
+| `svelte/translate-tag.mp4` | 35.6s | `<Translate>` — one tag registers a whole region, and why a block beats a call per line |
+| `svelte/donttranslate.mp4` | 33.6s | `<DontTranslate>` — brand names and identifiers held back verbatim, without hoisting them out of the sentence |
+| `svelte/content-blocks.mp4` | 41.6s | What a content block *is* — one section registered as a unit, still made of individually reusable phrases |
+| `svelte/categories.mp4` | 27.6s | Why i18n invented keys, and what replaces them — the same word, two meanings |
+| `svelte/icu-gender.mp4` | 39.1s | Gender agreement — the conditional other i18n leaves in your component, and the branches Langsys generates instead |
+| `svelte/attributes.mp4` | 38.1s | Placeholders, alt text and aria labels — the half of a form that has no visible text, and fails silently |
+| `svelte/formatting.mp4` | 28.6s | Numbers and dates per CLDR, and why an order number must be passed as a string |
 
 Suggested order: `explainer` first, then the tutorial track in the order above,
 then the Svelte cuts as API reference — those can be linked directly from a docs
