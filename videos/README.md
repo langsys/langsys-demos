@@ -15,9 +15,9 @@ what the cut covers, before its first beat. The lengths below include both.
 
 | Video | Length | What it argues |
 |---|---|---|
-| `explainer.mp4` | 65.1s | What **is** Langsys? An SDK in your app and a hosted Translation Manager, how a phrase registers itself by running, and where translations come from. Start a cold viewer here. |
+| `explainer.mp4` | 62.4s | What **is** Langsys? An SDK in your app and a hosted Translation Manager, how a phrase registers itself by running, and where translations come from. Start a cold viewer here. |
 
-| `pluralization.mp4` | 69.1s | ICU plurals, from the beginning — why a sentence changes with its number at all, why the `if (count === 1)` that fixes it in English is English grammar in your code, how many forms languages actually have (Japanese 1, English 2, Russian 4, Arabic 6), and all of them resolving from one line. Framework-agnostic. |
+| `pluralization.mp4` | 73.6s | ICU plurals, from the beginning — why a sentence changes with its number at all, why the `if (count === 1)` that fixes it in English is English grammar in your code, and how writing the sentence **flat** gets you every branch in every language: translated flat first, then rebuilt in that locale's own categories (your English included). Framework-agnostic. |
 
 `explainer` is the one to lead with. Every other cut assumes you already know
 what Langsys is and shows what a single API does; this is the only one that
