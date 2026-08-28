@@ -43,16 +43,16 @@ assumes the previous. No SDK-specific syntax on screen.
 
 | Video | Length | Covers |
 |---|---|---|
-| `svelte/hero.mp4` | 35.6s | The short pitch — what other i18n makes you keep in step, then one call, locale switch, gender agreement, every locale |
-| `svelte/t-string.mp4` | 44.6s | `t(phrase, category, params)` — opens on the keys-file problem, then the three arguments, ICU placeholders, plurals |
-| `svelte/phrase-tag.mp4` | 41.6s | `<Phrase>` — a sentence with markup inside it, kept as one phrase, and why its params are `%name%` |
-| `svelte/translate-tag.mp4` | 35.6s | `<Translate>` — one tag registers a whole region, and why a block beats a call per line |
+| `svelte/hero.mp4` | 60.1s | The full walkthrough — what other i18n makes you keep in step, one call, a locale switch, why flat Spanish is wrong for half your users, and what ICU select does about it |
+| `svelte/t-string.mp4` | 69.3s | `t(phrase, category, params)` — opens on the keys-file problem, then the three arguments, ICU placeholders, plurals |
+| `svelte/phrase-tag.mp4` | 66.3s | `<Phrase>` — a sentence with markup inside it, kept as one phrase, and why its params are `%name%` |
+| `svelte/translate-tag.mp4` | 63.6s | `<Translate>` — one tag registers a whole region, and why a block beats a call per line |
 | `svelte/donttranslate.mp4` | 33.6s | `<DontTranslate>` — brand names and identifiers held back verbatim, without hoisting them out of the sentence |
 | `svelte/content-blocks.mp4` | 41.6s | What a content block *is* — one section registered as a unit, still made of individually reusable phrases |
-| `svelte/categories.mp4` | 27.6s | Why i18n invented keys, and what replaces them — the same word, two meanings |
+| `svelte/categories.mp4` | 34.1s | Why i18n invented keys, and what replaces them — the same word, two meanings, and the pairs it splits into |
 | `svelte/icu-gender.mp4` | 39.1s | Gender agreement — the conditional other i18n leaves in your component, and the branches Langsys generates instead |
-| `svelte/attributes.mp4` | 38.1s | Placeholders, alt text and aria labels — the half of a form that has no visible text, and fails silently |
-| `svelte/formatting.mp4` | 28.6s | Numbers and dates per CLDR, and why an order number must be passed as a string |
+| `svelte/attributes.mp4` | 66.8s | What an HTML attribute is, what a half-translated form looks like to the person hitting it, and how one `<Translate>` reaches placeholders, alt text and aria labels in the same pass |
+| `svelte/formatting.mp4` | 46.4s | Numbers and dates per CLDR — the branch you write by hand, why grouping is a shape and not a separator, and why an order number must be passed as a string |
 
 Suggested order: `explainer` first, then the tutorial track in the order above,
 then the Svelte cuts as API reference — those can be linked directly from a docs
