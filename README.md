@@ -73,8 +73,10 @@ every example the docs page shows runs in the app, wired by the same code.
 
 By default the apps run on the **shared demo project** — a public read-only key
 over a fixed, pre-translated catalog (a banner in the app says so). Existing
-phrases translate; new or edited ones won't, because read-only keys can't
-register tokens. To watch discovery register and translate *your* phrases,
+phrases translate; new or edited ones won't. A read-only key cannot register a
+phrase itself, and the auto-discovery path that would otherwise cover it needs a
+publicly reachable URL — which localhost and a StackBlitz sandbox are not. To
+watch discovery register and translate *your* phrases,
 `cp .env.example .env` in a **local clone** and use your project id with a
 **write** key — never paste a write key into a StackBlitz sandbox (forks are
 shareable; read-only keys are the only kind safe to publish).

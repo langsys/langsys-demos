@@ -15,7 +15,7 @@ what the cut covers, before its first beat. The lengths below include both.
 
 | Video | Length | What it argues |
 |---|---|---|
-| `explainer.mp4` | 62.4s | What **is** Langsys? An SDK in your app and a hosted Translation Manager, how a phrase registers itself by running, and where translations come from. Start a cold viewer here. |
+| `explainer.mp4` | 67.9s | What **is** Langsys? An SDK in your app and a hosted Translation Manager, how a phrase registers itself by running, and where translations come from — including the part where your own visitors are what registers new content, with no write key in production and no deploy. Start a cold viewer here. |
 
 | `pluralization.mp4` | 73.6s | ICU plurals, from the beginning — why a sentence changes with its number at all, why the `if (count === 1)` that fixes it in English is English grammar in your code, and how writing the sentence **flat** gets you every branch in every language: translated flat first, then rebuilt in that locale's own categories (your English included). Framework-agnostic. |
 
@@ -36,7 +36,7 @@ assumes the previous. No SDK-specific syntax on screen.
 | `tutorial/workflow.mp4` | 29.6s | The problem — translation round-trips through a pipeline, and Langsys deletes it |
 | `tutorial/key-files.mp4` | 41.6s | Where a project starts, the key other i18n makes you invent, and what replaces it |
 | `tutorial/locale-store.mp4` | 35.6s | The locale store — how the active locale is held and switched |
-| `tutorial/keys-and-environments.mp4` | 37.6s | Write keys in development, read-only keys in production |
+| `tutorial/keys-and-environments.mp4` | 56.6s | Write keys in development, read-only keys in production — and why shipping the one that cannot write no longer stops production from discovering. Capability and permission are two separate answers from the server |
 | `tutorial/adding-a-locale.mp4` | 29.6s | Reaching a new language is a project setting — new phrases translate on arrival, one run fills the rest |
 
 ## Svelte
