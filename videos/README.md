@@ -15,7 +15,7 @@ what the cut covers, before its first beat. The lengths below include both.
 
 | Video | Length | What it argues |
 |---|---|---|
-| `explainer.mp4` | 70.4s | What **is** Langsys? An SDK in your app and a hosted Translation Manager, how a phrase registers itself by running, and where translations come from — including the part only Langsys can claim, told against a clock: a writer publishes a blog post at 09:00 with no build and no write key, the first reader gets English at 09:01, Langsys reads and translates the page at 09:02, and a reader in Madrid gets Spanish at 09:03. Start a cold viewer here. |
+| `explainer.mp4` | 77.4s | What **is** Langsys? An SDK in your app (eighteen of them, one per framework) and a hosted Translation Manager at app.langsys.dev, how a phrase registers itself by running, and where translations come from — including the part only Langsys can claim, told against a clock: a writer publishes a blog post at 09:00 with no build and no write key, the first reader gets English at 09:01, Langsys reads and translates the page at 09:02, and a reader in Madrid gets Spanish at 09:03. Start a cold viewer here. |
 
 | `pluralization.mp4` | 73.6s | ICU plurals, from the beginning — why a sentence changes with its number at all, why the `if (count === 1)` that fixes it in English is English grammar in your code, and how writing the sentence **flat** gets you every branch in every language: translated flat first, then rebuilt in that locale's own categories (your English included). Framework-agnostic. |
 
