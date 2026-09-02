@@ -43,12 +43,14 @@ assumes the previous. No SDK-specific syntax on screen.
 
 Recordings of the real app at app.langsys.dev, driven by a scripted browser so
 every take is the same. No title card and no intro sting: these are the product,
-not the synthetic library. Narrated with the same voice as everything else.
+not the synthetic library. Each clip opens on the loaded page, one second
+before its first beat; the blank page and the app's own loading splash are
+cut. Narrated with the same voice as everything else.
 
 | Video | Length | Covers |
 |---|---|---|
-| `tour/tour-setup.mp4` | 78.0s | Dashboard to a created project: choosing the organization (which unlocks the wizard's tabs), naming it, English as the source, three target locales found by country, and auto-translate switched on deliberately because it is off by default |
-| `tour/tour-key.mp4` | 29.6s | The API Keys empty state to a live key, pausing on the Read Only / Read & Write choice. Filmed with a throwaway key that was revoked before this clip was pushed |
+| `tour/tour-setup.mp4` | 72.8s | Dashboard to a created project: choosing the organization (which unlocks the wizard's tabs), naming it, English as the source, three target locales found by country, and auto-translate switched on deliberately because it is off by default |
+| `tour/tour-key.mp4` | 24.8s | The API Keys empty state to a live key, pausing on the Read Only / Read & Write choice. Filmed with a throwaway key that was revoked before this clip was pushed |
 | `tour/smoke.mp4` | 11.2s | A rig test of the recording harness and its cursor overlay, silent. Not a scene |
 
 The key dialog in `tour-key` shows the two access types the app offers today.
