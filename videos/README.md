@@ -39,6 +39,22 @@ assumes the previous. No SDK-specific syntax on screen.
 | `tutorial/keys-and-environments.mp4` | 90.4s | Keys from the ground up: why a key that can register can never ship, why read-only is a dead end, what `ip_write` is — one key whose answer depends on where you ask from — how you list the IP addresses your team browses from and what that buys, and which key goes where (write stays on machines you own, ip-write goes into any public bundle, read-only is for bundles that must never change anything). Then the 09:00 blog post: the two questions on startup, what leaves the browser (the address, never the text), Langsys visiting from an address the key trusts, the same SDK now write-enabled, and who else registers directly |
 | `tutorial/adding-a-locale.mp4` | 29.6s | Reaching a new language is a project setting — new phrases translate on arrival, one run fills the rest |
 
+## Product tour
+
+Recordings of the real app at app.langsys.dev, driven by a scripted browser so
+every take is the same. No title card and no intro sting: these are the product,
+not the synthetic library. Narrated with the same voice as everything else.
+
+| Video | Length | Covers |
+|---|---|---|
+| `tour/tour-setup.mp4` | 78.0s | Dashboard to a created project: choosing the organization (which unlocks the wizard's tabs), naming it, English as the source, three target locales found by country, and auto-translate switched on deliberately because it is off by default |
+| `tour/tour-key.mp4` | 29.6s | The API Keys empty state to a live key, pausing on the Read Only / Read & Write choice. Filmed with a throwaway key that was revoked before this clip was pushed |
+| `tour/smoke.mp4` | 11.2s | A rig test of the recording harness and its cursor overlay, silent. Not a scene |
+
+The key dialog in `tour-key` shows the two access types the app offers today.
+`keys-and-environments.mp4` teaches a third, `ip_write`, which arrives with
+the write-key-gating release; this clip will need re-shooting then.
+
 ## Svelte
 
 | Video | Length | Covers |
