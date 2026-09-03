@@ -48,7 +48,7 @@ narrator as everything else.
 
 | Video | Length | Covers |
 |---|---|---|
-| `tour/tour.mp4` | 3:43.83 | End to end in one take: create the project (organization, name and description, English as the source locale, Spanish, French and Japanese, auto-translate switched on), the app's own jump to the new project's API Keys page, a Read & Write key created and shown once, then the SDK: one install, one init, two env lines, the demo's `App.jsx` beside the running app with `t()`, the flat plural `t()`, `<Translate>`, `<Phrase>` and `<DontTranslate>` lit one at a time while the load registers the phrases, over to the Translation Manager by its own button, the phrases filed by category with the Spanish already in, the project dashboard at full coverage, and back in the app the locale pills switching to Spanish and French with no reload |
+| `tour/tour.mp4` | 223.8s | End to end in one take: create the project (organization, name and description, English as the source locale, Spanish, French and Japanese, auto-translate switched on), the app's own jump to the new project's API Keys page, a Read & Write key created and shown once, then the SDK: one install, one init, two env lines, the demo's `App.jsx` beside the running app with `t()`, the flat plural `t()`, `<Translate>`, `<Phrase>` and `<DontTranslate>` lit one at a time while the load registers the phrases, over to the Translation Manager by its own button, the phrases filed by category with the Spanish already in, the project dashboard at full coverage, and back in the app the locale pills switching to Spanish and French with no reload |
 
 Filmed with a throwaway Read & Write key that was revoked after the take; the
 key on screen is dead. The key dialog shows the two access types the app offers
