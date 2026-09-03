@@ -17,7 +17,13 @@ what the cut covers, before its first beat. The lengths below include both.
 |---|---|---|
 | `explainer.mp4` | 77.4s | What **is** Langsys? An SDK in your app (eighteen of them, one per framework) and a hosted Translation Manager at app.langsys.dev, how a phrase registers itself by running, and where translations come from — including the part only Langsys can claim, told against a clock: a writer publishes a blog post at 09:00 with no build and no write key, the first reader gets English at 09:01, Langsys reads and translates the page at 09:02, and a reader in Madrid gets Spanish at 09:03. Start a cold viewer here. |
 
+| `getting-started.mp4` | 229.5s | End to end in one take: create the project (organization, name and description, English as the source locale, Spanish, French and Japanese, auto-translate switched on), the app's own jump to the new project's API Keys page, a Read & Write key created and shown once, then the SDK: one install, one init, two env lines, the demo's `App.jsx` beside the running app with `t()`, the flat plural `t()`, `<Translate>`, `<Phrase>` and `<DontTranslate>` lit one at a time while the load registers the phrases, over to the Translation Manager by its own button, the phrases filed by category with the Spanish already in, the project dashboard at full coverage, and back in the app the locale pills switching to Spanish and French with no reload |
 | `pluralization.mp4` | 73.6s | ICU plurals, from the beginning — why a sentence changes with its number at all, why the `if (count === 1)` that fixes it in English is English grammar in your code, and how writing the sentence **flat** gets you every branch in every language: translated flat first, then rebuilt in that locale's own categories (your English included). Framework-agnostic. |
+
+`getting-started` is a tutorial, not a synthetic cut: one continuous recording
+of the real app at app.langsys.dev and the React demo in this repo, driven by
+a scripted browser, fronted with the same intro sting and a title card like
+every other video, and narrated by the same voice. Filmed with a throwaway Read & Write key that was revoked after the take; the key on screen is dead. The key dialog shows the two access types the app offers today; `keys-and-environments.mp4` teaches a third, `ip_write`, which arrives with the write-key-gating release, and this take will need re-shooting then.
 
 `explainer` is the one to lead with. Every other cut assumes you already know
 what Langsys is and shows what a single API does; this is the only one that
@@ -38,22 +44,6 @@ assumes the previous. No SDK-specific syntax on screen.
 | `tutorial/locale-store.mp4` | 35.6s | The locale store — how the active locale is held and switched |
 | `tutorial/keys-and-environments.mp4` | 90.4s | Keys from the ground up: why a key that can register can never ship, why read-only is a dead end, what `ip_write` is — one key whose answer depends on where you ask from — how you list the IP addresses your team browses from and what that buys, and which key goes where (write stays on machines you own, ip-write goes into any public bundle, read-only is for bundles that must never change anything). Then the 09:00 blog post: the two questions on startup, what leaves the browser (the address, never the text), Langsys visiting from an address the key trusts, the same SDK now write-enabled, and who else registers directly |
 | `tutorial/adding-a-locale.mp4` | 29.6s | Reaching a new language is a project setting — new phrases translate on arrival, one run fills the rest |
-
-## Product tour
-
-One continuous recording of the real app at app.langsys.dev and the React demo
-in this repo, driven by a scripted browser so every take is the same. No title
-card and no intro sting: this is the product, not the synthetic library. Same
-narrator as everything else.
-
-| Video | Length | Covers |
-|---|---|---|
-| `tour/tour.mp4` | 223.8s | End to end in one take: create the project (organization, name and description, English as the source locale, Spanish, French and Japanese, auto-translate switched on), the app's own jump to the new project's API Keys page, a Read & Write key created and shown once, then the SDK: one install, one init, two env lines, the demo's `App.jsx` beside the running app with `t()`, the flat plural `t()`, `<Translate>`, `<Phrase>` and `<DontTranslate>` lit one at a time while the load registers the phrases, over to the Translation Manager by its own button, the phrases filed by category with the Spanish already in, the project dashboard at full coverage, and back in the app the locale pills switching to Spanish and French with no reload |
-
-Filmed with a throwaway Read & Write key that was revoked after the take; the
-key on screen is dead. The key dialog shows the two access types the app offers
-today; `keys-and-environments.mp4` teaches a third, `ip_write`, which arrives
-with the write-key-gating release, and this take will need re-shooting then.
 
 ## Svelte
 
