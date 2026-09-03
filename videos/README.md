@@ -41,21 +41,19 @@ assumes the previous. No SDK-specific syntax on screen.
 
 ## Product tour
 
-Recordings of the real app at app.langsys.dev, driven by a scripted browser so
-every take is the same. No title card and no intro sting: these are the product,
-not the synthetic library. Each clip opens on the loaded page, one second
-before its first beat; the blank page and the app's own loading splash are
-cut. Narrated with the same voice as everything else.
+One continuous recording of the real app at app.langsys.dev and the React demo
+in this repo, driven by a scripted browser so every take is the same. No title
+card and no intro sting: this is the product, not the synthetic library. Same
+narrator as everything else.
 
 | Video | Length | Covers |
 |---|---|---|
-| `tour/tour-setup.mp4` | 72.8s | Dashboard to a created project: choosing the organization (which unlocks the wizard's tabs), naming it, English as the source, three target locales found by country, and auto-translate switched on deliberately because it is off by default |
-| `tour/tour-key.mp4` | 24.8s | The API Keys empty state to a live key, pausing on the Read Only / Read & Write choice. Filmed with a throwaway key that was revoked before this clip was pushed |
-| `tour/smoke.mp4` | 11.2s | A rig test of the recording harness and its cursor overlay, silent. Not a scene |
+| `tour/tour.mp4` | 3:43.83 | End to end in one take: create the project (organization, name and description, English as the source locale, Spanish, French and Japanese, auto-translate switched on), the app's own jump to the new project's API Keys page, a Read & Write key created and shown once, then the SDK: one install, one init, two env lines, the demo's `App.jsx` beside the running app with `t()`, the flat plural `t()`, `<Translate>`, `<Phrase>` and `<DontTranslate>` lit one at a time while the load registers the phrases, over to the Translation Manager by its own button, the phrases filed by category with the Spanish already in, the project dashboard at full coverage, and back in the app the locale pills switching to Spanish and French with no reload |
 
-The key dialog in `tour-key` shows the two access types the app offers today.
-`keys-and-environments.mp4` teaches a third, `ip_write`, which arrives with
-the write-key-gating release; this clip will need re-shooting then.
+Filmed with a throwaway Read & Write key that was revoked after the take; the
+key on screen is dead. The key dialog shows the two access types the app offers
+today; `keys-and-environments.mp4` teaches a third, `ip_write`, which arrives
+with the write-key-gating release, and this take will need re-shooting then.
 
 ## Svelte
 
