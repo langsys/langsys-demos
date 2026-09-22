@@ -6,7 +6,15 @@ end to end; the social cuts do neither — see [Social cuts](#social-cuts).
 
 The 16×9 cuts are **1280×720, H.264 / yuv420p, 30 fps, AAC 48 kHz stereo**, with
 `+faststart` set so they begin playing before the whole file has downloaded.
-Each has a matching `-still.png` to use as its poster frame.
+Each has a matching `-still.png` to use as its poster frame: frame 0 of the
+master for the kit-based cuts, the title card for the app tutorials.
+
+`thumbnails/<name>.png` is a **YouTube thumbnail** (1280×720) for every 16×9
+cut: an eyebrow, a hook of at most seven words with the claim in teal, the
+Langsys mark, and the cut's own poster frame inset on the right, so the
+thumbnail and the first second of playback agree. They are rendered from
+`assets/thumbnails/` in the `langsys-demo-videos` repo; change the copy there
+and re-render rather than editing the PNGs.
 
 Every 16×9 cut now opens with the intro sting, then a **2.0s title card** naming
 what the cut covers, before its first beat. The lengths below include both.
