@@ -85,8 +85,10 @@ size.
 
 Three things differ beyond the aspect ratio. They carry **no audio track** —
 they are built to autoplay muted, and the caption on screen does the work the
-voice-over does elsewhere. They have **no `-still.png`**, so set a `poster` only
-if you generate one. And they skip the intro sting: each opens straight on its
+voice-over does elsewhere. Each has a poster per ratio — `<demo>-4x5-still.png`
+(1080×1350) and `<demo>-1x1-still.png` (1080×1080), frame 0 with the headline
+caption on screen — for the `poster` attribute and as the thumbnail a platform
+asks for at upload. And they skip the intro sting: each opens straight on its
 first beat and closes on its own outro card.
 
 | Video | Length | Covers |
