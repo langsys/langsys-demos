@@ -70,6 +70,7 @@ assumes the previous. No SDK-specific syntax on screen.
 | Video | Length | Covers |
 |---|---|---|
 | `svelte/hero.mp4` | 60.1s | The full walkthrough — what other i18n makes you keep in step, one call, a locale switch, why flat Spanish is wrong for half your users, and what ICU select does about it |
+| `svelte/presenter.mp4` | 25.0s | **Proof of concept** — the hero's pitch delivered to camera in 25 seconds: a presenter in the left column, the code and the live app on the right, six lines (one import one call, the phrase is the key, the locale switch, *Bienvenido* for Diego, no branch written). The presenter is a stylised character animated from the narration, standing in for the recorded talent or licensed avatar the slot is built for; no intro sting |
 | `svelte/t-string.mp4` | 69.3s | `t(phrase, category, params)` — opens on the keys-file problem, then the three arguments, ICU placeholders, plurals |
 | `svelte/phrase-tag.mp4` | 66.3s | `<Phrase>` — a sentence with markup inside it, kept as one phrase, and why its params are `%name%` |
 | `svelte/translate-tag.mp4` | 63.6s | `<Translate>` — one tag registers a whole region, and why a block beats a call per line |
