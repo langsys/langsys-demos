@@ -46,11 +46,11 @@
         <p class="live">{$t('Hello, {name}!', 'Greetings', { name })}</p>
     </section>
 
-    <!-- t() — ICU plurals, the interactive playground's phrase. -->
+    <!-- t() — plurals, written flat: Langsys generates the plural forms per locale; nobody types ICU. -->
     <section class="card">
-        <h2><code>t()</code> — ICU plurals, from the interactive playground</h2>
+        <h2><code>t()</code> — plurals, written flat</h2>
         <p class="live">
-            {$t('Hello, {name}! You have {count, plural, one {# new message} other {# new messages}}.', 'Greetings', {
+            {$t('Hello, {name}! You have {count} new messages.', 'Greetings', {
                 name,
                 count: messages,
             })}

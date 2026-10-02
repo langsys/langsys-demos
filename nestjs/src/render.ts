@@ -77,9 +77,9 @@ export function renderDemo({ t, locale, count, banner, framework, docsPath }: Re
         </section>
 
         <section class="card">
-            <h2><code>t()</code> — ICU plurals, from the interactive playground</h2>
+            <h2><code>t()</code> — plurals, written flat</h2>
             <div class="live">
-                <p>${t('Hello, {name}! You have {count, plural, one {# new message} other {# new messages}}.', 'Greetings', { name: 'Sarah', count })}</p>
+                <p>${t('Hello, {name}! You have {count} new messages.', 'Greetings', { name: 'Sarah', count })}</p>
                 <div class="stepper" translate="no">
                     <a aria-label="Fewer" href="?locale=${encodeURIComponent(locale)}&count=${Math.max(0, count - 1)}">−</a>
                     <span class="count">${count}</span>

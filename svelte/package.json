@@ -9,7 +9,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "langsys-js-svelte": "^3.4.0"
+        "langsys-js-svelte": "^3.6.17"
     },
     "devDependencies": {
         "@sveltejs/vite-plugin-svelte": "^4.0.0",
