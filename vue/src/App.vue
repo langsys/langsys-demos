@@ -12,9 +12,10 @@ const DOCS_URL = 'https://docs.langsys.dev/learn/sdk/vue';
 const t = useT();
 const name = 'Sarah';
 
-/* t() — ICU plurals, the interactive playground's phrase.
-   hoisted: ICU's }} clashes with {{ }} */
-const MSG = 'Hello, {name}! You have {count, plural, one {# new message} other {# new messages}}.';
+/* t() — plurals. The phrase is written flat; Langsys generates the plural
+   forms per locale (the base locale included) and the SDK picks the branch
+   from `count`. Nobody types ICU. */
+const MSG = 'Hello, {name}! You have {count} new messages.';
 const messages = ref(3);
 
 /* Phrase — params & markup. */
@@ -62,7 +63,7 @@ const loadedOrDefault = computed(() => loaded.value || 'en-US');
         </section>
 
         <section class="card">
-            <h2><code>t()</code> — ICU plurals, from the interactive playground</h2>
+            <h2><code>t()</code> — plurals, written flat</h2>
             <p class="live">{{ t(MSG, 'Greetings', { name, count: messages }) }}</p>
             <div class="stepper" translate="no">
                 <button aria-label="Fewer" @click="messages = Math.max(0, messages - 1)">−</button>

@@ -6,12 +6,11 @@
     "keywords": ["symfony", "langsys", "i18n", "localization", "demo"],
     "license": "MIT",
     "repositories": [
-        { "type": "vcs", "url": "https://github.com/langsys/langsys-symfony" },
-        { "type": "vcs", "url": "https://github.com/langsys/langsys-php" }
+        { "type": "vcs", "url": "https://github.com/langsys/langsys-php-symfony" }
     ],
     "require": {
         "php": "^8.2",
-        "langsys/symfony-sdk": "dev-main",
+        "langsys/langsys-php-symfony": "dev-main",
         "symfony/console": "^7.3",
         "symfony/dotenv": "^7.3",
         "symfony/framework-bundle": "^7.3",

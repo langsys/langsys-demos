@@ -42,7 +42,7 @@ import { LOCALES, LOCALE_LABELS, demoBanner, locale } from './langsys';
             </section>
 
             <section class="card">
-                <h2><code>t()</code> — ICU plurals, from the interactive playground</h2>
+                <h2><code>t()</code> — plurals, written flat</h2>
                 <p class="live">{{ MSG | t: 'Greetings' : { name: name, count: messages() } }}</p>
                 <div class="stepper" translate="no">
                     <button aria-label="Fewer" (click)="dec(messages)">−</button>
@@ -109,10 +109,12 @@ export class AppComponent {
     readonly locale = locale;
     readonly name = 'Sarah';
 
-    // t() — ICU plurals, the interactive playground's phrase. Held as a field so
-    // the ICU braces live in a string value, not literal template text (Angular
-    // would parse literal `{…}` in the template as an ICU message).
-    readonly MSG = 'Hello, {name}! You have {count, plural, one {# new message} other {# new messages}}.';
+    // t() — plurals. The phrase is written flat; Langsys generates the plural
+    // forms per locale (the base locale included) and the SDK picks the branch
+    // from `count`. Held as a field so its `{name}`/`{count}` braces live in a
+    // string value, not literal template text (Angular would parse literal `{…}`
+    // in the template as an ICU message).
+    readonly MSG = 'Hello, {name}! You have {count} new messages.';
     readonly messages = signal(3);
 
     // <Phrase> — params & markup.

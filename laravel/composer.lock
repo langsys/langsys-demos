@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7057c92ced945325cf28f6ed6f53b7f9",
+    "content-hash": "bfc7cefe4ceda239c0ec0c723da6ed24",
     "packages": [
         {
             "name": "brick/math",
@@ -1059,23 +1059,75 @@
             "time": "2026-07-17T13:53:03+00:00"
         },
         {
-            "name": "langsys/laravel-sdk",
-            "version": "dev-main",
+            "name": "langsys/langsys-php",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/langsys/langsys-laravel",
-                "reference": "735c1a7f0941c248ec25d7933cbacab83af5d4c4"
+                "url": "https://github.com/langsys/langsys-php.git",
+                "reference": "ca95eebece95a90f20ee1ae09c5ae68d82995879"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/langsys/langsys-laravel/zipball/735c1a7f0941c248ec25d7933cbacab83af5d4c4",
-                "reference": "735c1a7f0941c248ec25d7933cbacab83af5d4c4",
+                "url": "https://api.github.com/repos/langsys/langsys-php/zipball/ca95eebece95a90f20ee1ae09c5ae68d82995879",
+                "reference": "ca95eebece95a90f20ee1ae09c5ae68d82995879",
                 "shasum": ""
             },
             "require": {
+                "ext-curl": "*",
+                "ext-intl": "*",
+                "ext-json": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "suggest": {
+                "ext-redis": "For Redis cache support"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Langsys\\SDK\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP SDK for Langsys Translation API",
+            "homepage": "https://langsys.dev",
+            "keywords": [
+                "api",
+                "i18n",
+                "langsys",
+                "localization",
+                "translation"
+            ],
+            "support": {
+                "issues": "https://github.com/langsys/langsys-php/issues",
+                "source": "https://github.com/langsys/langsys-php/tree/v1.3.1"
+            },
+            "time": "2026-08-16T17:21:38+00:00"
+        },
+        {
+            "name": "langsys/langsys-php-laravel",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/langsys/langsys-php-laravel.git",
+                "reference": "d52df05fce93fc670a6ee3527f6b3fe556898e8d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/langsys/langsys-php-laravel/zipball/d52df05fce93fc670a6ee3527f6b3fe556898e8d",
+                "reference": "d52df05fce93fc670a6ee3527f6b3fe556898e8d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
                 "illuminate/contracts": "^10.0 || ^11.0 || ^12.0",
                 "illuminate/support": "^10.0 || ^11.0 || ^12.0",
-                "langsys/php-sdk": "dev-main",
+                "langsys/langsys-php": "^1.3",
                 "php": "^8.1"
             },
             "require-dev": {
@@ -1084,40 +1136,29 @@
                 "phpunit/phpunit": "^10.5 || ^11.0"
             },
             "suggest": {
-                "ext-intl": "Locale-aware ICU pluralization and number/date formatting in interpolated phrases",
                 "inertiajs/inertia-laravel": "Seed the JS SDKs' initialTranslations via InertiaSsrProps::share()",
                 "livewire/livewire": "Translations inside Livewire components re-resolve on every update through the same middleware"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
-                    "providers": [
-                        "Langsys\\Laravel\\LangsysServiceProvider"
-                    ],
                     "aliases": {
                         "Langsys": "Langsys\\Laravel\\Facades\\Langsys"
-                    }
+                    },
+                    "providers": [
+                        "Langsys\\Laravel\\LangsysServiceProvider"
+                    ]
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Langsys\\Laravel\\": "src/"
-                },
                 "files": [
                     "src/helpers.php"
-                ]
-            },
-            "autoload-dev": {
+                ],
                 "psr-4": {
-                    "Langsys\\Laravel\\Tests\\": "tests/"
+                    "Langsys\\Laravel\\": "src/"
                 }
             },
-            "scripts": {
-                "test": [
-                    "phpunit"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1126,8 +1167,8 @@
                     "name": "Langsys"
                 }
             ],
-            "description": "Laravel integration for the Langsys translation SDK — service provider, @t Blade directive, locale-detection middleware, Livewire support, and Inertia SSR seeding over langsys/php-sdk.",
-            "homepage": "https://github.com/langsys/langsys-laravel",
+            "description": "Laravel integration for the Langsys translation SDK — service provider, @t Blade directive, locale-detection middleware, Livewire support, and Inertia SSR seeding over langsys/langsys-php.",
+            "homepage": "https://github.com/langsys/langsys-php-laravel",
             "keywords": [
                 "blade",
                 "i18n",
@@ -1141,58 +1182,11 @@
                 "sdk",
                 "translation"
             ],
-            "time": "2026-07-31T03:37:55+00:00"
-        },
-        {
-            "name": "langsys/php-sdk",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/langsys/langsys-php",
-                "reference": "166a3cd3cac650f8254b1deadbc50d62ae92ef63"
+            "support": {
+                "issues": "https://github.com/langsys/langsys-php-laravel/issues",
+                "source": "https://github.com/langsys/langsys-php-laravel/tree/v1.0.0"
             },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/langsys/langsys-php/zipball/166a3cd3cac650f8254b1deadbc50d62ae92ef63",
-                "reference": "166a3cd3cac650f8254b1deadbc50d62ae92ef63",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.7 || ^9.0"
-            },
-            "suggest": {
-                "ext-redis": "For Redis cache support"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Langsys\\SDK\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Langsys\\SDK\\Tests\\": "tests/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "description": "PHP SDK for Langsys Translation API",
-            "homepage": "https://langsys.dev",
-            "keywords": [
-                "api",
-                "i18n",
-                "langsys",
-                "localization",
-                "translation"
-            ],
-            "time": "2026-03-10T20:35:32+00:00"
+            "time": "2026-08-16T17:02:56+00:00"
         },
         {
             "name": "laravel/framework",
@@ -8522,9 +8516,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "langsys/laravel-sdk": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

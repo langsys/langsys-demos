@@ -1,7 +1,7 @@
 # Langsys × Laravel — starter
 
 A minimal [Laravel 12](https://laravel.com) app using
-[`langsys/laravel-sdk`](https://github.com/langsys/langsys-laravel) for
+[`langsys/langsys-php-laravel`](https://github.com/langsys/langsys-php-laravel) for
 realtime, continuous translations — server-rendered, so the page arrives
 already localized (view source!). The phrase in your code is the lookup key
 **and** the base-language default — no keys file, no extraction step.
@@ -53,6 +53,6 @@ phrases register themselves in your dashboard.
 
 - Interactive explorer: the Langsys Learning Center —
   [docs.langsys.dev/learn/sdk/laravel](https://docs.langsys.dev/learn/sdk/laravel)
-- SDK: [`langsys/laravel-sdk`](https://github.com/langsys/langsys-laravel)
-  (wraps [`langsys/php-sdk`](https://github.com/langsys/langsys-php))
+- SDK: [`langsys/langsys-php-laravel`](https://github.com/langsys/langsys-php-laravel)
+  (wraps [`langsys/langsys-php`](https://github.com/langsys/langsys-php))
 - API docs: [docs.langsys.dev](https://docs.langsys.dev)

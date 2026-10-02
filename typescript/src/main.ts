@@ -34,8 +34,9 @@ tSignal.subscribe(() => {
     greeting.textContent = t('Hello, {name}!', 'Greetings', { name });
 });
 
-/* t() — ICU plurals, the interactive playground's phrase. Change the count
-   and the grammar follows; every locale applies its own plural rules. */
+/* t() — plurals. The phrase is written flat; Langsys generates the plural
+   forms per locale (the base locale included) and the SDK picks the branch
+   from `count`. Nobody types ICU. */
 const inbox = document.querySelector<HTMLElement>('#inbox')!;
 const inboxCount = document.querySelector<HTMLElement>('#inbox-count')!;
 let messages = 3;
@@ -43,7 +44,7 @@ let messages = 3;
 const renderInbox = (): void => {
     inboxCount.textContent = String(messages);
     inbox.textContent = t(
-        'Hello, {name}! You have {count, plural, one {# new message} other {# new messages}}.',
+        'Hello, {name}! You have {count} new messages.',
         'Greetings',
         { name, count: messages },
     );
