@@ -15,7 +15,8 @@ cp .env.example .env   # add a READ-ONLY Langsys key + project id
 npm run dev
 ```
 
-Then switch locale with the buttons and watch the page re-translate live.
+Then pick a language from the menu and watch the page re-translate live. The
+menu lists the languages your project serves.
 
 ## What's inside
 

@@ -1,12 +1,16 @@
-import { LOCALES, LOCALE_COOKIE } from '$lib/langsys';
+import { LANGUAGES, LOCALE_COOKIE, offeredLanguages, pickLanguage } from '$lib/langsys';
+import { getProject } from '$lib/server/project';
 
-// The visitor's locale, from the cookie the switcher writes; a first visit gets English.
-// Resolved once per request, for the load function and for <html lang>.
+// The visitor's locale, from the cookie the switcher writes if the project serves that language;
+// a first visit gets English. Resolved once per request, for the load function and for <html>.
 export async function handle({ event, resolve }) {
-    const saved = event.cookies.get(LOCALE_COOKIE);
-    event.locals.locale = LOCALES.includes(saved) ? saved : 'en-US';
+    const languages = offeredLanguages(await getProject(event.fetch));
+    const locale = pickLanguage(languages, event.cookies.get(LOCALE_COOKIE))?.code ?? 'en-US';
+    event.locals.languages = languages;
+    event.locals.locale = locale;
 
     return resolve(event, {
-        transformPageChunk: ({ html }) => html.replace('%lang%', event.locals.locale),
+        transformPageChunk: ({ html }) =>
+            html.replace('%lang%', locale).replace('%demo-dir%', pickLanguage(LANGUAGES, locale)?.dir ?? 'ltr'),
     });
 }

@@ -2,7 +2,7 @@
      running live, wired by the exact code the docs page shows. Translation
      happens on the server — view source: the HTML arrives already localized. --}}
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ $active }}" data-demo-dir="{{ $dir }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,14 +30,18 @@
             <div class="brand">
                 <span class="logo">◆</span> <span translate="no">Langsys</span> × Laravel
             </div>
-            {{-- Server-rendered locale switcher: plain links. DetectLocale picks
-                 up ?locale= and persists it (cookie), so navigation keeps it. --}}
-            <nav class="locales" translate="no">
-                @foreach ($locales as $code => $label)
-                    <a class="pill{{ $active === $code ? ' active' : '' }}"
-                        href="?{{ http_build_query(['locale' => $code, 'count' => $count]) }}">{{ $label }}</a>
-                @endforeach
-            </nav>
+            {{-- Server-rendered language picker: a GET form, so ?locale= reloads the
+                 page in that language; DetectLocale persists it (cookie), so
+                 navigation keeps it. Only the languages the project serves. --}}
+            <form class="locale-form" method="get" translate="no">
+                <input type="hidden" name="count" value="{{ $count }}">
+                <select class="locale-select" name="locale" aria-label="Language" onchange="this.form.submit()">
+                    @foreach ($locales as $code => $label)
+                        <option value="{{ $code }}" @selected($active === $code)>{{ $label }}</option>
+                    @endforeach
+                </select>
+                <noscript><button type="submit">Go</button></noscript>
+            </form>
         </header>
 
         <section class="card">

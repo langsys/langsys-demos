@@ -4,7 +4,7 @@
 
 import { createContext, useContext, useEffect } from 'react';
 import { LangsysApp, LangsysAppAPI, useLocaleStore } from 'langsys-js-react';
-import { LOCALE_COOKIE } from './langsys';
+import { LANGUAGES, LOCALE_COOKIE, pickLanguage } from './langsys';
 
 // One locale store for the whole app, threaded down rather than re-created in each tree.
 const LocaleContext = createContext(null);
@@ -13,7 +13,7 @@ export function useLocale() {
     return useContext(LocaleContext);
 }
 
-export function LangsysClient({ locale, translations, projectId, apiKey, apiUrl, banner, children }) {
+export function LangsysClient({ locale, languages, translations, projectId, apiKey, apiUrl, banner, children }) {
     const [selected, setSelected, localeStore] = useLocaleStore(locale);
 
     useEffect(() => {
@@ -31,8 +31,12 @@ export function LangsysClient({ locale, translations, projectId, apiKey, apiUrl,
     // Switching fetches the new catalog in the browser; the cookie makes the next server render match.
     const setLocale = (code) => {
         document.cookie = `${LOCALE_COOKIE}=${code}; path=/; max-age=31536000; samesite=lax`;
+        // A right-to-left language lays the demo's output out right to left (demo.css).
+        document.documentElement.dataset.demoDir = pickLanguage(LANGUAGES, code)?.dir ?? 'ltr';
         setSelected(code);
     };
 
-    return <LocaleContext.Provider value={{ selected, setLocale, banner }}>{children}</LocaleContext.Provider>;
+    return (
+        <LocaleContext.Provider value={{ selected, setLocale, languages, banner }}>{children}</LocaleContext.Provider>
+    );
 }
