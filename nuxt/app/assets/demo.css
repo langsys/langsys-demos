@@ -212,7 +212,7 @@ code {
     }
 
     .card > h2 {
-        grid-row: 1 / span 4;
+        grid-row: 1 / span 5;
     }
 
     .card > :not(h2) {
@@ -226,6 +226,31 @@ code {
     font-size: 17px;
     font-weight: 600;
     line-height: 1.4;
+}
+
+/* The call behind the output: shown above the sign, 8px from it, as the
+   Learning Center pairs code with what it renders. */
+.call {
+    margin: 0;
+    padding: 10px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    background: var(--sunken);
+    color: var(--fg);
+    font: 14px/1.55 var(--font-mono);
+    white-space: pre;
+    overflow-x: auto;
+}
+
+.call code {
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: inherit;
+}
+
+.call + .live {
+    margin-top: -4px;
 }
 
 /* Rendered output — the sign. */

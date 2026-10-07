@@ -1,0 +1,73 @@
+# Keeps the launch demos working. They have broken quietly before (a JS SDK stuck
+# on 0.4.1, a Laravel package that no longer installed), so this builds every
+# JS demo and renders the PHP ones in Spanish against the shared demo project.
+# It also runs weekly: a demo can break with no change here, when an SDK
+# release or the API moves under it.
+name: Demos
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  js:
+    name: Build ${{ matrix.demo }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        demo: [typescript, react, svelte, vue, nextjs, nuxt, sveltekit]
+    defaults:
+      run:
+        working-directory: ${{ matrix.demo }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ${{ matrix.demo }}/package-lock.json
+      - run: npm ci
+      - run: npm run build
+
+  php:
+    name: Render ${{ matrix.demo }} in Spanish
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        demo: [php, laravel]
+    defaults:
+      run:
+        working-directory: ${{ matrix.demo }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: intl, curl
+      - run: composer install --no-interaction --no-progress
+      - name: Prepare Laravel
+        if: matrix.demo == 'laravel'
+        run: cp .env.example .env && php artisan key:generate
+      - name: Serve
+        run: |
+          if [ "${{ matrix.demo }}" = laravel ]; then
+            php artisan serve --port=8000 > /tmp/serve.log 2>&1 &
+          else
+            php -S localhost:8000 -t public > /tmp/serve.log 2>&1 &
+          fi
+          for i in $(seq 1 30); do curl -sf localhost:8000/ > /dev/null && exit 0; sleep 1; done
+          cat /tmp/serve.log; exit 1
+      # The server translates, so the HTML itself must carry the Spanish, with
+      # no PHP warnings or errors in it.
+      - name: Spanish is served
+        run: |
+          html=$(curl -sf 'localhost:8000/?locale=es-419&count=1')
+          echo "$html" | grep -q '¡Hola, Sarah!'
+          echo "$html" | grep -q 'Tienes 1 mensaje nuevo'
+          ! echo "$html" | grep -qiE 'Deprecated:|Warning:|Fatal error|Exception'
