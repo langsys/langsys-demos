@@ -89,7 +89,7 @@
             </div>
             <p class="hint">
                 The category scopes the phrase, so the same words translate differently per context — in Spanish,
-                "Inicio" for the menu entry and "Hogar" for the service.
+                "Inicio" for the menu entry and "Casa" for the service.
             </p>
         </section>
 
