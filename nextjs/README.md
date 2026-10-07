@@ -14,7 +14,8 @@ npm install
 npm run dev            # http://localhost:3000, on the shared demo project
 ```
 
-Switch locale with the buttons and watch the page re-translate live. Reload:
+Pick a language from the menu (the ones the project serves, read on the
+server) and watch the page re-translate live. Reload:
 the server renders in the locale you picked (a cookie carries it).
 
 ## What's inside

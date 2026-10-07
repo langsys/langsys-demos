@@ -14,14 +14,14 @@ $link = fn (array $query) => '?' . http_build_query($query + ['locale' => $activ
 $banner = getenv('LANGSYS_PROJECT_ID') ? null : 'shared';
 
 // translate() works anywhere in PHP, not only in templates — computed here, before any output.
-$orderTitle = langsys()->translate('Order confirmed', null, 'Checkout');
-$orderBody = langsys()->translate('Your order {id} ships on {date}.', null, 'Checkout', null, [
+$orderTitle = translate('Order confirmed', 'Checkout');
+$orderBody = translate('Your order {id} ships on {date}.', 'Checkout', [
     'id' => '48213', // a string, so it skips number formatting
     'date' => new DateTimeImmutable('2026-08-15'), // locale-formatted
 ]);
 ?>
 <!doctype html>
-<html lang="<?= $active ?>">
+<html lang="<?= $active ?>" data-demo-dir="<?= demo_dir() ?>">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,12 +44,17 @@ $orderBody = langsys()->translate('Your order {id} ships on {date}.', null, 'Che
             <div class="brand">
                 <span class="logo">◆</span> <span translate="no">Langsys</span> × PHP
             </div>
-            <!-- Server-rendered locale switcher: plain links. The helper saves ?locale= in a cookie. -->
-            <nav class="locales" translate="no">
-                <?php foreach (LOCALES as $code => $label): ?>
-                    <a class="pill<?= $active === $code ? ' active' : '' ?>" href="<?= $link(['locale' => $code]) ?>"><?= $label ?></a>
-                <?php endforeach ?>
-            </nav>
+            <!-- Server-rendered language picker: a GET form, so ?locale= reloads the page in that language
+                 (the helper saves it in a cookie). Only the languages the project serves are listed. -->
+            <form class="locale-form" method="get" translate="no">
+                <input type="hidden" name="count" value="<?= $count ?>">
+                <select class="locale-select" name="locale" aria-label="Language" onchange="this.form.submit()">
+                    <?php foreach (demo_languages() as $code => $label): ?>
+                        <option value="<?= $code ?>"<?= $active === $code ? ' selected' : '' ?>><?= $label ?></option>
+                    <?php endforeach ?>
+                </select>
+                <noscript><button type="submit">Go</button></noscript>
+            </form>
         </header>
 
         <section class="card">

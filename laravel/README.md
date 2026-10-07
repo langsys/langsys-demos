@@ -26,9 +26,9 @@ php artisan serve       # http://127.0.0.1:8000
 
 No database needed — sessions and cache run on the `file` drivers.
 
-Then switch locale with the buttons (plain `?locale=` links — the
+Then pick a language from the menu (a plain `?locale=` form — the
 `DetectLocale` middleware persists your choice) and watch the page come back
-re-translated.
+re-translated. The menu lists the languages your project serves.
 
 ## What's inside
 
