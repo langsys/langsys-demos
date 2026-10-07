@@ -1,0 +1,21 @@
+{
+    "name": "langsys-sveltekit-starter",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite dev",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "langsys-js-svelte": "^3.6.17"
+    },
+    "devDependencies": {
+        "@sveltejs/adapter-auto": "^6.1.1",
+        "@sveltejs/kit": "^2.70.3",
+        "@sveltejs/vite-plugin-svelte": "^5.0.0",
+        "svelte": "^5.0.0",
+        "vite": "^6.0.0"
+    }
+}

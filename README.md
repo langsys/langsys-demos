@@ -9,10 +9,14 @@ default (no keys file, no extraction step).
 |-------|-----|-----|------|
 | TypeScript (vanilla) | [`langsys-js-typescript`](https://github.com/langsys/langsys-js-typescript) | [`./typescript`](./typescript) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/typescript) |
 | React | [`langsys-js-react`](https://github.com/langsys/langsys-js-react) | [`./react`](./react) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/react) |
+| Next.js (seeded on the server) | [`langsys-js-react`](https://github.com/langsys/langsys-js-react) | [`./nextjs`](./nextjs) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/nextjs) |
 | Preact (via `preact/compat`) | [`langsys-js-react`](https://github.com/langsys/langsys-js-react) — unchanged | [`./preact`](./preact) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/preact) |
 | Svelte | [`langsys-js-svelte`](https://github.com/langsys/langsys-js-svelte) | [`./svelte`](./svelte) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/svelte) |
+| SvelteKit (seeded on the server) | [`langsys-js-svelte`](https://github.com/langsys/langsys-js-svelte) | [`./sveltekit`](./sveltekit) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/sveltekit) |
 | Vue | [`langsys-js-vue`](https://github.com/langsys/langsys-js-vue) | [`./vue`](./vue) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/vue) |
+| Nuxt (seeded on the server) | [`langsys-js-vue`](https://github.com/langsys/langsys-js-vue) | [`./nuxt`](./nuxt) | [StackBlitz](https://stackblitz.com/github/langsys/langsys-demos/tree/main/nuxt) |
 | Angular | [`langsys-js-angular`](https://github.com/langsys/langsys-js-angular) | [`./angular`](./angular) | run locally (installs the binding from the sibling repo until it's on npm) |
+| PHP (server-rendered, no framework) | [`langsys/langsys-php`](https://github.com/langsys/langsys-php) | [`./php`](./php) | run locally (StackBlitz can't run PHP) |
 | Laravel (server-rendered) | [`langsys/langsys-php-laravel`](https://github.com/langsys/langsys-php-laravel) | [`./laravel`](./laravel) | [Codespaces](https://codespaces.new/langsys/langsys-demos?quickstart=1&devcontainer_path=.devcontainer%2Flaravel%2Fdevcontainer.json) (StackBlitz can't run PHP) |
 | Symfony (server-rendered) | [`langsys/langsys-php-symfony`](https://github.com/langsys/langsys-php-symfony) | [`./symfony`](./symfony) | [Codespaces](https://codespaces.new/langsys/langsys-demos?quickstart=1&devcontainer_path=.devcontainer%2Fsymfony%2Fdevcontainer.json) (StackBlitz can't run PHP) |
 | NestJS (server-rendered) | [`langsys-js-nestjs`](https://github.com/langsys/langsys-js-nestjs) | [`./nestjs`](./nestjs) | run locally (installs the binding from the sibling repo until it's on npm) |
@@ -26,6 +30,28 @@ The JS apps are Vite apps:
 cd react              # or svelte, vue, or typescript (vanilla, no framework)
 npm install
 npm run dev           # runs on the shared demo project by default
+```
+
+Next.js, Nuxt and SvelteKit are the same app inside each meta-framework, wired
+the way the Learning Center guides show: the server fetches the visitor's
+catalog (the server key never reaches the browser), the page carries it, and
+the SDK initializes from it in the browser instead of fetching it again. A
+cookie carries the chosen locale to the next server render. Nuxt needs Node
+22.12+:
+
+```bash
+cd nextjs             # or nuxt, or sveltekit
+npm install
+npm run dev
+```
+
+The PHP app is the plain `langsys/langsys-php` client with no framework (PHP
+8.1+ with `intl`, and Composer):
+
+```bash
+cd php
+composer install
+php -S localhost:8000 -t public
 ```
 
 The Laravel app translates on the server (PHP 8.2+ and Composer required —
@@ -82,8 +108,10 @@ watch discovery register and translate *your* phrases,
 shareable; read-only keys are the only kind safe to publish).
 
 Maintainers: the shared demo credentials live in each JS app's
-`src/langsys.js`/`.ts`, in the Laravel app's `config/langsys.php`, and in the
-Symfony app's `src/Support/LangsysClientFactory.php` — all copies must match —
+`src/langsys.js`/`.ts`, in `nextjs/app/langsys.js`, `nuxt/nuxt.config.ts` and
+`sveltekit/src/lib/langsys.js`, in the Laravel app's `config/langsys.php`, in
+`php/helpers.php`, and in the Symfony app's
+`src/Support/LangsysClientFactory.php` — all copies must match —
 and the demo project's catalog must contain every phrase the apps render. After changing demo copy, run the app once with a write key so
 the new phrases register and translate.
 
