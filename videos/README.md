@@ -107,6 +107,12 @@ first beat and closes on its own outro card.
 | `svelte/social/content-blocks-{1x1,4x5}.mp4` | 14.0s | One tag over a whole region — every text run its own phrase, the brand name held back |
 | `svelte/social/icu-plurals-{1x1,4x5}.mp4` | 14.0s | Russian's four plural forms off a single number, and English's two from the same line |
 
+Each of the four also has a **YouTube Shorts** cut, `svelte/social/<demo>-9x16.mp4`:
+**1080×1920**, same encode, same length as its master. Unlike the feed cuts it is
+**narrated** (Shorts play with sound on), with the library's voice and no intro
+sting, and its layout keeps clear of the Shorts overlay: the title bar across
+the bottom 440px and the like/comment column on the right.
+
 `icu-plurals` exists only as a social cut — there is no 16×9 version of it. The
 framework-agnostic `pluralization.mp4` above covers the same ground at length.
 
