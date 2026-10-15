@@ -3,7 +3,8 @@
     "start": "PLWLg4JgTghMM",
     "concepts": "PLKPrdrF92pUc",
     "manager": "PLL71l-NU-gbc",
-    "shorts": "PLdPzUZ8uVpFA"
+    "shorts": "PLdPzUZ8uVpFA",
+    "svelte": "PLYyEiJzE3X6U"
   },
   "videos": {
     "pluralization": {
@@ -66,6 +67,101 @@
     },
     "svelte/social/content-blocks-9x16": {
       "id": "zw9iKNfjVng",
+      "playlist": true
+    },
+    "explainer": {
+      "id": "_DFWgHZ_QQc",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "getting-started": {
+      "id": "Fo1HCybAHg0",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "catching-up-a-language": {
+      "id": "SHHt8ebaH-g",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "ai-translator-settings": {
+      "id": "PnRoVVfYmKE",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "api-keys-in-production": {
+      "id": "jZJRja7n_-c",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "one-organization-many-projects": {
+      "id": "y1kGQkoZ3_w",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "usage-and-credits": {
+      "id": "TOqn3rfDyGQ",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "plans-and-payments": {
+      "id": "3Lnmfo0T71Q",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "notifications": {
+      "id": "gpSYSKrmVp0",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/hero": {
+      "id": "y-YbRDjV4Wk",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/t-string": {
+      "id": "mqFBw6x7RZg",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/phrase-tag": {
+      "id": "r85P18fhfCU",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/translate-tag": {
+      "id": "krgkcNYw4IY",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/donttranslate": {
+      "id": "YPyWNGdaAHw",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/content-blocks": {
+      "id": "-ZMV0UyKRVk",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/categories": {
+      "id": "-P963Wj0dno",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/icu-gender": {
+      "id": "AfpNQtvugks",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/attributes": {
+      "id": "w9TNoFQ2fpM",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/formatting": {
+      "id": "Bc2h2bxaB9M",
+      "thumbnail": true,
       "playlist": true
     }
   }
