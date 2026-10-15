@@ -3,8 +3,12 @@
     python upload.py --day 1          upload every pending video planned for day 1
     python upload.py --limit 5        upload the next 5 pending videos, any day
     python upload.py --dry-run        show what would be uploaded
+    python upload.py --replace explainer
+                                      delete the uploaded explainer and upload
+                                      the current file in its place
 
-Every video goes up private (unaudited API projects can't publish), gets its
+Every video goes up private (an unaudited API project can't set another
+visibility; switching it to unlisted or public in Studio afterwards works), gets its
 thumbnail, and is added to its playlist. Progress is written to uploads.json
 after each step, so a run stopped by the daily quota resumes where it left off.
 Videos with a "hold" note are skipped until the note is removed, and
@@ -124,12 +128,33 @@ def _retry_thumbnails(state: dict, catalogue: dict) -> None:
             print(f'  {file}: thumbnail set')
 
 
+def _position(state: dict, catalogue: dict, video: dict) -> int:
+    """Where the video sits in its playlist: after the videos listed before it
+    in the catalogue that are already in, so a replacement keeps its place."""
+    earlier = []
+    for other in catalogue['videos']:
+        if other['file'] == video['file']:
+            break
+        earlier.append(other)
+    return sum(1 for other in earlier
+               if other['playlist'] == video['playlist'] and state['videos'].get(other['file'], {}).get('playlist'))
+
+
+def _forget(youtube, state: dict, file: str) -> None:
+    record = state['videos'].pop(file, None)
+    if record and record.get('id'):
+        youtube.videos().delete(id=record['id']).execute()
+        print(f"deleted https://youtu.be/{record['id']} ({file})")
+    _save_state(state)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument('--day', type=int)
     parser.add_argument('--limit', type=int)
     parser.add_argument('--dry-run', action='store_true')
     parser.add_argument('--retry-thumbnails', action='store_true')
+    parser.add_argument('--replace', nargs='+', metavar='FILE')
     args = parser.parse_args()
 
     catalogue = json.loads(CATALOGUE.read_text(encoding='utf-8'))
@@ -139,8 +164,19 @@ def main() -> None:
         _retry_thumbnails(state, catalogue)
         return
 
+    if args.replace:
+        unknown = set(args.replace) - {video['file'] for video in catalogue['videos']}
+        if unknown:
+            sys.exit(f"not in videos.json: {', '.join(sorted(unknown))}")
+        if not args.dry_run:
+            youtube = build('youtube', 'v3', credentials=load_credentials())
+            for file in args.replace:
+                _forget(youtube, state, file)
+
     pending = [video for video in catalogue['videos']
                if not video.get('hold') and not state['videos'].get(video['file'], {}).get('playlist')]
+    if args.replace:
+        pending = [video for video in catalogue['videos'] if video['file'] in args.replace]
     if args.day:
         pending = [video for video in pending if video['day'] <= args.day]
     if args.limit:
@@ -167,6 +203,7 @@ def main() -> None:
             _step(state, file, 'playlist', lambda: youtube.playlistItems().insert(part='snippet', body={'snippet': {
                 'playlistId': _playlist_id(youtube, state, video['playlist'], catalogue['playlists']),
                 'resourceId': {'kind': 'youtube#video', 'videoId': record['id']},
+                'position':   _position(state, catalogue, video),
             }}).execute())
     except HttpError as error:
         if not _is_quota(error):
