@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { DontTranslate, Phrase, Translate, useCurrentLocale, useSignal, useT } from 'langsys-js-react';
-import { LOCALES, LOCALE_LABELS, demoBanner, locale } from './langsys';
+import { demoBanner, languages, locale } from './langsys';
 import './demo.css';
 
 const KEYS_URL = 'https://docs.langsys.dev/learn/concepts/keys-and-environments';
@@ -58,20 +58,24 @@ function LocaleBadge() {
     );
 }
 
-function LocalePills() {
-    const loaded = useCurrentLocale();
+/* The languages the project serves, read once the SDK has started. */
+function LocaleSelect() {
+    const selected = useSignal(locale);
+    const offered = useSignal(languages);
     return (
-        <nav className="locales" translate="no">
-            {LOCALES.map((code) => (
-                <button
-                    key={code}
-                    className={'pill' + ((loaded || 'en-US') === code ? ' active' : '')}
-                    onClick={() => locale.set(code)}
-                >
-                    {LOCALE_LABELS[code] ?? code}
-                </button>
+        <select
+            className="locale-select"
+            aria-label="Language"
+            translate="no"
+            value={selected}
+            onChange={(e) => locale.set(e.target.value)}
+        >
+            {offered.map((l) => (
+                <option key={l.code} value={l.code}>
+                    {l.label}
+                </option>
             ))}
-        </nav>
+        </select>
     );
 }
 
@@ -116,7 +120,7 @@ export default function App() {
                     <div className="brand">
                         <span className="logo">◆</span> <span translate="no">Langsys</span> × React
                     </div>
-                    <LocalePills />
+                    <LocaleSelect />
                 </header>
 
                 <section className="card">

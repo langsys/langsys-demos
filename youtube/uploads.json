@@ -1,0 +1,168 @@
+{
+  "playlists": {
+    "start": "PLWLg4JgTghMM",
+    "concepts": "PLKPrdrF92pUc",
+    "manager": "PLL71l-NU-gbc",
+    "shorts": "PLdPzUZ8uVpFA",
+    "svelte": "PLYyEiJzE3X6U"
+  },
+  "videos": {
+    "pluralization": {
+      "id": "vwQknki_V6A",
+      "playlist": true,
+      "thumbnail": true
+    },
+    "tutorial/workflow": {
+      "id": "DDBgZpPxn_k",
+      "playlist": true,
+      "thumbnail": true
+    },
+    "tutorial/key-files": {
+      "id": "8ityN0zlu98",
+      "playlist": true,
+      "thumbnail": true,
+      "replaced": "41-ycE9FiwQ"
+    },
+    "tutorial/locale-store": {
+      "id": "E6qqpBC_7IY",
+      "playlist": true,
+      "thumbnail": true
+    },
+    "tutorial/keys-and-environments": {
+      "id": "dfaCUjRA168",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "tutorial/adding-a-locale": {
+      "id": "9muq4sNC_Zg",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "translation-memory": {
+      "id": "QC2IIRaAyCc",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "connect-your-ai-assistant": {
+      "id": "KafvNJnm-pQ",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "adding-a-language": {
+      "id": "65z2J2jiSbY",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/social/phrase-9x16": {
+      "id": "L4uu_oG9uok",
+      "playlist": true
+    },
+    "svelte/social/icu-gender-9x16": {
+      "id": "6bMkgdK1GpU",
+      "playlist": true
+    },
+    "svelte/social/icu-plurals-9x16": {
+      "id": "vkDmCusXKcI",
+      "playlist": true
+    },
+    "svelte/social/content-blocks-9x16": {
+      "id": "zw9iKNfjVng",
+      "playlist": true
+    },
+    "explainer": {
+      "id": "_DFWgHZ_QQc",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "getting-started": {
+      "id": "Fo1HCybAHg0",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "catching-up-a-language": {
+      "id": "SHHt8ebaH-g",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "ai-translator-settings": {
+      "id": "PnRoVVfYmKE",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "api-keys-in-production": {
+      "id": "jZJRja7n_-c",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "one-organization-many-projects": {
+      "id": "y1kGQkoZ3_w",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "usage-and-credits": {
+      "id": "TOqn3rfDyGQ",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "plans-and-payments": {
+      "id": "3Lnmfo0T71Q",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "notifications": {
+      "id": "gpSYSKrmVp0",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/hero": {
+      "id": "y-YbRDjV4Wk",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/t-string": {
+      "id": "mqFBw6x7RZg",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/phrase-tag": {
+      "id": "r85P18fhfCU",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/translate-tag": {
+      "id": "krgkcNYw4IY",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/donttranslate": {
+      "id": "YPyWNGdaAHw",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/content-blocks": {
+      "id": "-ZMV0UyKRVk",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/categories": {
+      "id": "-P963Wj0dno",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/icu-gender": {
+      "id": "AfpNQtvugks",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/attributes": {
+      "id": "w9TNoFQ2fpM",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/formatting": {
+      "id": "Bc2h2bxaB9M",
+      "thumbnail": true,
+      "playlist": true
+    }
+  }
+}

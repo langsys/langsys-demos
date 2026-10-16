@@ -1,0 +1,621 @@
+{
+  "defaults": {
+    "category_id": "28",
+    "language": "en",
+    "privacy": "private",
+    "footer": "{learn_more}: {page}\n{start}\n{docs}: https://docs.langsys.dev\n\n#localization #i18n #webdev",
+    "labels": {
+      "learn_more": "Learn more",
+      "get_started": "Get started",
+      "start_free": "Start free",
+      "docs": "Docs"
+    },
+    "tags": [
+      "Langsys",
+      "localization",
+      "i18n",
+      "internationalization",
+      "translation",
+      "app localization",
+      "software localization",
+      "machine translation"
+    ],
+    "start": {
+      "before_launch": "{get_started}: {learn}/quickstart",
+      "after_launch": "{start_free}: https://langsys.dev"
+    },
+    "launched": false
+  },
+  "playlists": {
+    "start": {
+      "title": "Start here",
+      "description": "What Langsys is, the whole setup in one take, and the one idea every language needs: flat sentences."
+    },
+    "concepts": {
+      "title": "The concepts track",
+      "description": "Five short modules, in order, each assuming the last. No SDK-specific syntax on screen."
+    },
+    "manager": {
+      "title": "The Translation Manager",
+      "description": "app.langsys.dev with no code on screen, for whoever owns the copy, the languages, the keys and the bill."
+    },
+    "svelte": {
+      "title": "Svelte, API by API",
+      "description": "One video per primitive in the Langsys Svelte SDK. The other SDKs share the same surface; only the syntax differs."
+    },
+    "shorts": {
+      "title": "Shorts",
+      "description": "One idea in under fifteen seconds: the phrase as the key, plurals, gender agreement and content blocks."
+    }
+  },
+  "videos": [
+    {
+      "file": "explainer",
+      "playlist": "start",
+      "day": 1,
+      "publish": "2026-10-19",
+      "title": "What is Langsys? Your app in every language, no redeploy",
+      "summary": "Langsys in 77 seconds: an SDK in your app and a hosted Translation Manager. A phrase registers itself the first time your code runs it, is machine-translated on arrival, and can be refined by a translator without a deploy.\n\nThe proof: a blog post published at 09:00, with no build and no write key, reaches a reader in Madrid in Spanish at 09:03.",
+      "page": "/learn",
+      "tags": [
+        "what is langsys",
+        "i18n without keys",
+        "runtime translation",
+        "continuous localization",
+        "localize web app",
+        "translate website"
+      ]
+    },
+    {
+      "file": "getting-started",
+      "playlist": "start",
+      "day": 1,
+      "publish": "2026-10-19",
+      "title": "Getting started with Langsys, end to end",
+      "summary": "One take from nothing to a translated app: create the project and its languages, create an API key, install and initialise the SDK, and watch t(), ‹Translate›, ‹Phrase› and ‹DontTranslate› register their phrases. The Spanish is already in the Translation Manager, and the app switches to Spanish and French with no reload.",
+      "page": "/learn/quickstart",
+      "tags": [
+        "langsys tutorial",
+        "getting started",
+        "i18n tutorial",
+        "translate react app",
+        "react i18n",
+        "i18n setup"
+      ]
+    },
+    {
+      "file": "pluralization",
+      "playlist": "start",
+      "day": 1,
+      "publish": "2026-10-19",
+      "title": "Plurals in every language, without if (count === 1)",
+      "summary": "Why a sentence changes with its number, why the if (count === 1) that fixes it in English is English grammar living in your code, and how writing the sentence flat gets you every plural form in every language. Langsys translates it flat, then rebuilds it in each locale's own ICU plural categories, English included.",
+      "page": "/learn/concepts/locale-store#plurals",
+      "tags": [
+        "ICU plurals",
+        "pluralization",
+        "ICU MessageFormat",
+        "plural rules",
+        "CLDR plurals",
+        "i18n plurals"
+      ]
+    },
+    {
+      "file": "tutorial/workflow",
+      "playlist": "concepts",
+      "day": 1,
+      "publish": "2026-10-21",
+      "title": "The translation pipeline, and how Langsys deletes it",
+      "summary": "Concepts 1 of 5. Translation usually round-trips through a pipeline: extract, export, translate, import, deploy. Langsys removes it.",
+      "page": "/learn/concepts/how-it-works",
+      "tags": [
+        "localization workflow",
+        "translation pipeline",
+        "continuous localization",
+        "i18n workflow",
+        "translation management"
+      ]
+    },
+    {
+      "file": "tutorial/key-files",
+      "playlist": "concepts",
+      "day": 1,
+      "publish": "2026-10-23",
+      "title": "No more key files: the sentence is the key",
+      "summary": "Concepts 2 of 5. Where a project starts, the key other i18n libraries make you invent, and what replaces it in Langsys.",
+      "page": "/learn/concepts/token-discovery",
+      "tags": [
+        "i18n keys",
+        "translation keys",
+        "en.json",
+        "i18n without keys",
+        "i18next alternative",
+        "key files"
+      ]
+    },
+    {
+      "file": "tutorial/locale-store",
+      "playlist": "concepts",
+      "day": 1,
+      "publish": "2026-10-26",
+      "title": "The locale store: holding and switching the active language",
+      "summary": "Concepts 3 of 5. How Langsys holds the active locale and switches it across your app.",
+      "page": "/learn/concepts/locale-store",
+      "tags": [
+        "locale switcher",
+        "language switcher",
+        "change language",
+        "active locale",
+        "i18n locale"
+      ]
+    },
+    {
+      "file": "tutorial/keys-and-environments",
+      "playlist": "concepts",
+      "day": 2,
+      "publish": "2026-10-28",
+      "title": "API keys and environments: which key goes where",
+      "summary": "Concepts 4 of 5. Why a key that can register phrases can never ship, why read-only is a dead end, and what ip_write is: one key whose answer depends on where you ask from. Write keys stay on machines you own, ip_write goes into any public bundle, and read-only is for bundles that must never change anything.",
+      "page": "/learn/concepts/keys-and-environments",
+      "tags": [
+        "api keys",
+        "ip_write",
+        "environments",
+        "api key security",
+        "frontend api key"
+      ]
+    },
+    {
+      "file": "tutorial/adding-a-locale",
+      "playlist": "concepts",
+      "day": 2,
+      "publish": "2026-10-30",
+      "title": "Adding a new language is a project setting",
+      "summary": "Concepts 5 of 5. Reaching a new language is a setting, not a project: new phrases translate on arrival, and one run fills in the rest.",
+      "page": "/learn/concepts/adding-a-locale",
+      "tags": [
+        "add language",
+        "new locale",
+        "add translation language",
+        "localize new market"
+      ]
+    },
+    {
+      "file": "managing-translations",
+      "playlist": "manager",
+      "day": 2,
+      "publish": "2026-12-18",
+      "hold": "Filmed against translation-manager MR !1; until it ships, Send on the invite dialog errors on the live app.",
+      "title": "Managing translations in the Langsys Translation Manager",
+      "summary": "The Translation Manager for whoever owns the copy, with no code on screen: the to-do list, a machine draft corrected by hand, AI Translate with Auto-next, Never Translate, and a translator invited to Spanish only. The correction is live in the app with nothing deployed.",
+      "page": "/learn/dashboard#translations",
+      "tags": [
+        "translation manager",
+        "translation editor",
+        "post-editing",
+        "translation management system"
+      ]
+    },
+    {
+      "file": "translation-memory",
+      "playlist": "manager",
+      "day": 2,
+      "publish": "2026-11-25",
+      "title": "Translation memory: a new project that starts already translated",
+      "summary": "A second project in the same organization opens fully translated before anyone touches it. Translation memory carries every sentence, and who wrote it, across projects, so no model is called for the new project at all.",
+      "page": "/learn/dashboard#memory",
+      "tags": [
+        "translation memory",
+        "TM",
+        "reuse translations",
+        "translation management system"
+      ]
+    },
+    {
+      "file": "connect-your-ai-assistant",
+      "playlist": "manager",
+      "day": 2,
+      "publish": "2026-11-27",
+      "title": "Use Langsys from Claude Code over MCP",
+      "summary": "Langsys inside an AI assistant, over the hosted MCP server: one claude mcp add command, approval in the browser, and Claude Code answering questions about your project's languages from live data. The connection can be revoked from your account's Security tab.",
+      "page": "/learn/dashboard#ai-assistant",
+      "tags": [
+        "MCP",
+        "MCP server",
+        "Claude Code",
+        "AI assistant",
+        "model context protocol",
+        "AI translation"
+      ]
+    },
+    {
+      "file": "adding-a-language",
+      "playlist": "manager",
+      "day": 2,
+      "publish": "2026-11-30",
+      "title": "Add German to a live app: exact quote, no deploy",
+      "summary": "German added to a live store. Langsys quotes the existing catalog exactly before anything runs (29 words, $0.35), translates it, and the store switches to German with nothing built or deployed.",
+      "page": "/learn/concepts/adding-a-locale",
+      "tags": [
+        "add language",
+        "translation cost",
+        "translate to german",
+        "no deploy",
+        "translation quote"
+      ]
+    },
+    {
+      "file": "catching-up-a-language",
+      "playlist": "manager",
+      "day": 3,
+      "publish": "2026-12-02",
+      "title": "Catching up a language that fell behind",
+      "summary": "Bulk actions in the Translation Manager: AI Translate Pending for one language or the whole project, with a confirmation that lists every target locale and its cost, and every language back to complete.",
+      "page": "/learn/concepts/adding-a-locale#catching-up",
+      "tags": [
+        "bulk translate",
+        "AI translation",
+        "missing translations",
+        "translation management"
+      ]
+    },
+    {
+      "file": "translating-a-content-block",
+      "playlist": "manager",
+      "day": 3,
+      "publish": "2026-12-21",
+      "hold": "Filmed against translation-manager MR !2; until it ships, the live app drops a segment edit and needs a reload to show the AI result.",
+      "title": "Translating a whole content block as one",
+      "summary": "A ‹Translate› region translated as one content block: AI Translate fills every segment together, a segment is rewritten by hand in the formal register, and a ‹DontTranslate› sentence stays in English while the Italian is filled in around it.",
+      "page": "/learn/concepts/token-discovery#translate",
+      "tags": [
+        "content blocks",
+        "context-aware translation",
+        "AI translation",
+        "formal register"
+      ]
+    },
+    {
+      "file": "ai-translator-settings",
+      "playlist": "manager",
+      "day": 3,
+      "publish": "2026-12-04",
+      "title": "AI Translator settings, every switch explained",
+      "summary": "The AI Translator tab top to bottom: AI translations on demand, auto-translate for new phrases, and auto-detect holding a phrase that arrives already in Spanish as never-translate.",
+      "page": "/learn/concepts/keys-and-environments#project",
+      "tags": [
+        "AI translator",
+        "auto translate",
+        "AI translation",
+        "machine translation settings"
+      ]
+    },
+    {
+      "file": "api-keys-in-production",
+      "playlist": "manager",
+      "day": 3,
+      "publish": "2026-12-07",
+      "title": "API keys in production: activity, pausing and rotation",
+      "summary": "A key after it ships: a real week of storefront traffic on its Activity page, pausing a key without deleting it, and rotation on camera: the three key types, a new IP write key created with an allowlist, and the old one deleted.",
+      "page": "/learn/concepts/keys-and-environments#flow",
+      "tags": [
+        "api key rotation",
+        "api keys",
+        "api key security",
+        "ip allowlist"
+      ]
+    },
+    {
+      "file": "one-organization-many-projects",
+      "playlist": "manager",
+      "day": 3,
+      "publish": "2026-12-09",
+      "title": "One organization, many projects",
+      "summary": "The organization as the thing every project starts from: default locales, AI Translator and billing settings, project funding from the organization's balance, and a customized project switched back to inheriting.",
+      "page": "/learn/dashboard#organizations",
+      "tags": [
+        "organizations",
+        "multiple projects",
+        "agency",
+        "multi project localization"
+      ]
+    },
+    {
+      "file": "usage-and-credits",
+      "playlist": "manager",
+      "day": 3,
+      "publish": "2026-12-11",
+      "title": "Usage and credits: how a project gets funded",
+      "summary": "The two meters, API usage units and credits, and how a project gets funded: a credit transfer from the account to a project done on camera, one line per machine translation in its history, and the project's monthly limit and auto recharge.",
+      "page": "/learn/dashboard#credits",
+      "tags": [
+        "billing",
+        "credits",
+        "usage",
+        "translation pricing"
+      ]
+    },
+    {
+      "file": "plans-and-payments",
+      "playlist": "manager",
+      "day": 4,
+      "publish": "2026-12-14",
+      "title": "Plans and payments in Langsys",
+      "summary": "A tour of billing with nothing submitted: the plan and billing cycle, the Change Plan dialog, payment methods shared with an organization or project, addresses, and invoices.",
+      "page": "/learn/dashboard#billing",
+      "tags": [
+        "pricing",
+        "plans",
+        "billing",
+        "subscription"
+      ]
+    },
+    {
+      "file": "notifications",
+      "playlist": "manager",
+      "day": 4,
+      "publish": "2026-12-16",
+      "title": "Notifications: what Langsys tells you, and where",
+      "summary": "The notifications inbox and its settings: account defaults for new phrases, invitations and project access, by in-app and email, and a per-project override.",
+      "page": "/learn/dashboard#notifications",
+      "tags": [
+        "notifications",
+        "email notifications",
+        "translation alerts"
+      ]
+    },
+    {
+      "file": "svelte/hero",
+      "playlist": "svelte",
+      "day": 4,
+      "publish": "2026-11-02",
+      "title": "Svelte i18n with Langsys: the full walkthrough",
+      "summary": "What other i18n makes you keep in step, one call to replace it, a locale switch, why flat Spanish is wrong for half your users, and what ICU select does about it.",
+      "page": "/learn/sdk/svelte",
+      "tags": [
+        "svelte i18n",
+        "sveltekit i18n",
+        "svelte",
+        "sveltekit",
+        "svelte translation",
+        "svelte 5",
+        "svelte tutorial",
+        "ICU select"
+      ]
+    },
+    {
+      "file": "svelte/t-string",
+      "playlist": "svelte",
+      "day": 4,
+      "publish": "2026-11-04",
+      "title": "t(phrase, category, params) in Svelte",
+      "summary": "The t() call: the keys-file problem it replaces, its three arguments, ICU placeholders and plurals.",
+      "page": "/learn/sdk/svelte#playground",
+      "tags": [
+        "svelte i18n",
+        "sveltekit i18n",
+        "svelte",
+        "sveltekit",
+        "t function",
+        "ICU placeholders",
+        "svelte plurals"
+      ]
+    },
+    {
+      "file": "svelte/phrase-tag",
+      "playlist": "svelte",
+      "day": 4,
+      "publish": "2026-11-06",
+      "title": "‹Phrase› in Svelte: a sentence with markup inside",
+      "summary": "A sentence with markup inside it, kept as one phrase, and why ‹Phrase› params are written %name%.",
+      "page": "/learn/sdk/svelte#tour",
+      "tags": [
+        "svelte i18n",
+        "sveltekit i18n",
+        "svelte",
+        "sveltekit",
+        "rich text translation",
+        "translate html",
+        "markup in translations"
+      ]
+    },
+    {
+      "file": "svelte/translate-tag",
+      "playlist": "svelte",
+      "day": 5,
+      "publish": "2026-11-09",
+      "title": "‹Translate› in Svelte: one tag for a whole region",
+      "summary": "One ‹Translate› tag registers a whole region, and why a block beats a call per line.",
+      "page": "/learn/sdk/svelte#tour",
+      "tags": [
+        "svelte i18n",
+        "sveltekit i18n",
+        "svelte",
+        "sveltekit",
+        "content blocks",
+        "translate component",
+        "translate html"
+      ]
+    },
+    {
+      "file": "svelte/donttranslate",
+      "playlist": "svelte",
+      "day": 5,
+      "publish": "2026-11-11",
+      "title": "‹DontTranslate› in Svelte: keep brand names verbatim",
+      "summary": "Brand names and identifiers held back verbatim, without hoisting them out of the sentence.",
+      "page": "/learn/sdk/svelte#tour",
+      "tags": [
+        "svelte i18n",
+        "sveltekit i18n",
+        "svelte",
+        "sveltekit",
+        "do not translate",
+        "brand names",
+        "untranslatable terms"
+      ]
+    },
+    {
+      "file": "svelte/content-blocks",
+      "playlist": "svelte",
+      "day": 5,
+      "publish": "2026-11-13",
+      "title": "What is a content block? Translating a whole section in Svelte",
+      "summary": "One section registered as a unit, still made of individually reusable phrases.",
+      "page": "/learn/sdk/svelte#content-blocks",
+      "tags": [
+        "svelte i18n",
+        "sveltekit i18n",
+        "svelte",
+        "sveltekit",
+        "content blocks",
+        "translate section",
+        "context-aware translation"
+      ]
+    },
+    {
+      "file": "svelte/categories",
+      "playlist": "svelte",
+      "day": 5,
+      "publish": "2026-11-16",
+      "title": "Same word, two meanings: categories instead of i18n keys",
+      "summary": "Why i18n invented keys, and what replaces them: the same word with two meanings, and the pairs it splits into.",
+      "page": "/learn/sdk/svelte#categories",
+      "tags": [
+        "svelte i18n",
+        "sveltekit i18n",
+        "svelte",
+        "sveltekit",
+        "translation context",
+        "homonyms",
+        "i18n keys"
+      ]
+    },
+    {
+      "file": "svelte/icu-gender",
+      "playlist": "svelte",
+      "day": 5,
+      "publish": "2026-11-18",
+      "title": "Gender agreement without conditionals in your code (ICU select)",
+      "summary": "The gender conditional other i18n leaves in your component, and the branches Langsys generates for each language instead.",
+      "page": "/learn/sdk/svelte#gender",
+      "tags": [
+        "svelte i18n",
+        "sveltekit i18n",
+        "svelte",
+        "sveltekit",
+        "ICU select",
+        "gender",
+        "gender agreement",
+        "grammatical gender"
+      ]
+    },
+    {
+      "file": "svelte/attributes",
+      "playlist": "svelte",
+      "day": 5,
+      "publish": "2026-11-20",
+      "title": "Translating placeholders, alt text and aria labels in Svelte",
+      "summary": "What a half-translated form looks like to the person using it, and how one ‹Translate› reaches placeholders, alt text and aria labels in the same pass.",
+      "page": "/learn/sdk/svelte#attributes",
+      "tags": [
+        "svelte i18n",
+        "sveltekit i18n",
+        "svelte",
+        "sveltekit",
+        "accessibility",
+        "aria-label",
+        "placeholder translation",
+        "alt text",
+        "a11y"
+      ]
+    },
+    {
+      "file": "svelte/formatting",
+      "playlist": "svelte",
+      "day": 6,
+      "publish": "2026-11-23",
+      "title": "Numbers and dates in every locale with Svelte i18n",
+      "summary": "Numbers and dates per CLDR: the branch you'd write by hand, why digit grouping is a shape and not a separator, and why an order number must be passed as a string.",
+      "page": "/learn/sdk/svelte#formatting",
+      "tags": [
+        "svelte i18n",
+        "sveltekit i18n",
+        "svelte",
+        "sveltekit",
+        "number formatting",
+        "date formatting",
+        "CLDR",
+        "Intl",
+        "locale formatting"
+      ]
+    },
+    {
+      "file": "svelte/social/phrase-9x16",
+      "playlist": "shorts",
+      "day": 2,
+      "publish": "2026-10-23",
+      "thumbnail": false,
+      "title": "Your i18n key is just the English sentence #Shorts",
+      "summary": "With Langsys the sentence in your code is the translation key: no keys file, nothing to extract or keep in sync, and the same line comes back in every language. #Shorts",
+      "page": "/learn/concepts/token-discovery",
+      "tags": [
+        "Shorts",
+        "translation keys",
+        "Svelte",
+        "i18n tips",
+        "webdev"
+      ]
+    },
+    {
+      "file": "svelte/social/icu-gender-9x16",
+      "playlist": "shorts",
+      "day": 2,
+      "publish": "2026-11-18",
+      "thumbnail": false,
+      "title": "Bienvenido or Bienvenida? One line of code #Shorts",
+      "summary": "Spanish agrees with the user. Langsys generates the ICU select branches, so Diego gets Bienvenido, Laura gets Bienvenida, and an unknown gender gets the neutral form, from one line. #Shorts",
+      "page": "/learn/sdk/svelte#gender",
+      "tags": [
+        "Shorts",
+        "ICU select",
+        "gender agreement",
+        "Spanish",
+        "i18n tips"
+      ]
+    },
+    {
+      "file": "svelte/social/icu-plurals-9x16",
+      "playlist": "shorts",
+      "day": 2,
+      "publish": "2026-10-26",
+      "thumbnail": false,
+      "title": "Russian has 4 plural forms. You write one line #Shorts",
+      "summary": "One, few, many and other: Russian picks a plural form by the number, and 21 goes back to the singular. Write the sentence flat and Langsys builds every form each locale needs. #Shorts",
+      "page": "/learn/concepts/locale-store#plurals",
+      "tags": [
+        "Shorts",
+        "ICU plurals",
+        "pluralization",
+        "Russian",
+        "i18n tips"
+      ]
+    },
+    {
+      "file": "svelte/social/content-blocks-9x16",
+      "playlist": "shorts",
+      "day": 2,
+      "publish": "2026-11-13",
+      "thumbnail": false,
+      "title": "Translate a whole section with one tag #Shorts",
+      "summary": "One Translate tag wraps a region of markup: every run of text becomes its own phrase, bold and links land where they belong, and the brand name is never translated. #Shorts",
+      "page": "/learn/sdk/svelte#content-blocks",
+      "tags": [
+        "Shorts",
+        "content blocks",
+        "Svelte",
+        "i18n tips"
+      ]
+    }
+  ]
+}

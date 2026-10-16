@@ -1,0 +1,146 @@
+{
+  "labels": {
+    "learn_more": "詳しく見る",
+    "get_started": "はじめる",
+    "start_free": "無料ではじめる",
+    "docs": "ドキュメント"
+  },
+  "videos": {
+    "explainer": {
+      "title": "Langsysとは？再デプロイなしでアプリを多言語化",
+      "summary": "77秒でわかるLangsys：アプリに組み込むSDKと、ホスト型のTranslation Managerです。フレーズはコードが初めて実行したときに自動で登録され、届いた時点で機械翻訳され、デプロイなしで翻訳者が仕上げられます。\n\nその証拠に、09:00に公開したブログ記事が、ビルドもwrite keyもなしで、09:03にはマドリードの読者へスペイン語で届きます。"
+    },
+    "getting-started": {
+      "title": "Langsys入門：ゼロから多言語化まで通しで解説",
+      "summary": "ゼロから翻訳済みアプリまでをワンテイクで。プロジェクトと言語の作成、API keyの作成、SDKのインストールと初期化を行い、t()、‹Translate›、‹Phrase›、‹DontTranslate›がフレーズを登録する様子をご覧いただけます。スペイン語訳はすでにTranslation Managerにあり、アプリはリロードなしでスペイン語とフランス語に切り替わります。"
+    },
+    "pluralization": {
+      "title": "if (count === 1) なしで全言語の複数形に対応",
+      "summary": "文が数によって変わる理由、英語でそれを直すif (count === 1)が実はコードに入り込んだ英語の文法であること、そして文をフラットに書くだけで全言語のすべての複数形が得られる仕組みを解説します。Langsysはフラットなまま翻訳し、英語も含め各ロケール固有のICU複数カテゴリで組み立て直します。"
+    },
+    "tutorial/workflow": {
+      "title": "翻訳パイプラインと、Langsysがそれをなくす方法",
+      "summary": "コンセプト解説 1/5。翻訳はふつう、抽出、エクスポート、翻訳、インポート、デプロイというパイプラインを往復します。Langsysはそれをなくします。"
+    },
+    "tutorial/key-files": {
+      "title": "キーファイルはもう不要：文そのものがキー",
+      "summary": "コンセプト解説 2/5。プロジェクトの出発点、ほかのi18nライブラリで考え出さなければならないキー、そしてLangsysでそれに代わるものを紹介します。"
+    },
+    "tutorial/locale-store": {
+      "title": "ロケールストア：アクティブな言語の保持と切り替え",
+      "summary": "コンセプト解説 3/5。Langsysがアクティブなロケールをどう保持し、アプリ全体でどう切り替えるかを解説します。"
+    },
+    "tutorial/keys-and-environments": {
+      "title": "API keyと環境：どのキーをどこで使うか",
+      "summary": "コンセプト解説 4/5。フレーズを登録できるキーを決してリリースしてはいけない理由、read-onlyが行き止まりである理由、そしてip_writeとは何か。ip_writeは、どこからリクエストするかで応答が変わる1つのキーです。write keyは自分が管理するマシンにとどめ、ip_writeはどの公開バンドルに含めても構いません。read-onlyは何も変更してはならないバンドル向けです。"
+    },
+    "tutorial/adding-a-locale": {
+      "title": "新しい言語の追加は、プロジェクト設定ひとつで",
+      "summary": "コンセプト解説 5/5。新しい言語への対応はプロジェクトではなく設定です。新しいフレーズは届いた時点で翻訳され、残りは1回の実行で埋まります。"
+    },
+    "managing-translations": {
+      "title": "Langsys Translation Managerで翻訳を管理する",
+      "summary": "コピーを担当する人のためのTranslation Managerを、コードを一切映さずに紹介します。ToDoリスト、手で修正する機械翻訳の下書き、「Auto-next」付きの「AI Translate」、「Never Translate」、そしてスペイン語だけに招待した翻訳者。修正はデプロイなしでアプリに即反映されます。"
+    },
+    "translation-memory": {
+      "title": "翻訳メモリ：最初から翻訳済みの新プロジェクト",
+      "summary": "同じ組織の2つ目のプロジェクトが、誰も手を付ける前から完全に翻訳された状態で開きます。翻訳メモリがすべての文とその作成者をプロジェクト間で引き継ぐため、新しいプロジェクトではモデルが一切呼ばれません。"
+    },
+    "connect-your-ai-assistant": {
+      "title": "Claude CodeからMCP経由でLangsysを使う",
+      "summary": "ホスト型MCPサーバーを通じて、AIアシスタントの中でLangsysを使います。claude mcp addコマンドひとつとブラウザでの承認だけで、Claude Codeがプロジェクトの言語に関する質問にライブデータで答えます。接続はアカウントの「Security tab」からいつでも取り消せます。"
+    },
+    "adding-a-language": {
+      "title": "稼働中のアプリにドイツ語を追加：正確な見積もり、デプロイ不要",
+      "summary": "稼働中のストアにドイツ語を追加します。Langsysは実行前に既存カタログの正確な見積もり（29語、$0.35）を示し、翻訳を行い、ビルドもデプロイもなしでストアがドイツ語に切り替わります。"
+    },
+    "catching-up-a-language": {
+      "title": "遅れている言語を一気に追いつかせる",
+      "summary": "Translation Managerの一括操作です。1言語またはプロジェクト全体に「AI Translate Pending」を実行し、対象ロケールごとの費用を一覧する確認画面を経て、すべての言語が完了状態に戻ります。"
+    },
+    "translating-a-content-block": {
+      "title": "コンテンツブロックを丸ごと一括翻訳",
+      "summary": "‹Translate›領域を1つのコンテンツブロックとして翻訳します。「AI Translate」が全セグメントをまとめて埋め、1つのセグメントを丁寧な文体で手直しし、‹DontTranslate›の文は英語のまま、その周りにイタリア語が入ります。"
+    },
+    "ai-translator-settings": {
+      "title": "AI Translatorの設定を全項目解説",
+      "summary": "AI Translatorタブを上から順に解説します。オンデマンドのAI翻訳、新しいフレーズの自動翻訳、そしてすでにスペイン語で届いたフレーズをnever-translateとして保留する自動検出です。"
+    },
+    "api-keys-in-production": {
+      "title": "本番環境のAPI key：アクティビティ、一時停止、ローテーション",
+      "summary": "リリース後のキーの扱い方です。「Activity」ページに表示される実際の1週間分のストアのトラフィック、削除せずにキーを一時停止する方法、そして画面上でのローテーション。3種類のキー、allowlist付きで新しいIP write keyを作成し、古いキーを削除します。"
+    },
+    "one-organization-many-projects": {
+      "title": "1つの組織で、複数のプロジェクトを",
+      "summary": "すべてのプロジェクトの起点となる組織について解説します。デフォルトのロケール、AI Translatorと請求の設定、組織の残高からのプロジェクトへの資金配分、そしてカスタマイズしたプロジェクトを継承設定に戻す方法です。"
+    },
+    "usage-and-credits": {
+      "title": "使用量とクレジット：プロジェクトの資金の仕組み",
+      "summary": "2つのメーター、API使用量ユニットとクレジット、そしてプロジェクトの資金の仕組みを紹介します。アカウントからプロジェクトへのクレジット移動を画面上で実演し、履歴には機械翻訳1回ごとに1行が記録されます。プロジェクトの月間上限と自動チャージも解説します。"
+    },
+    "plans-and-payments": {
+      "title": "Langsysのプランと支払い",
+      "summary": "何も送信せずに請求まわりを一通りご案内します。プランと請求サイクル、「Change Plan」ダイアログ、組織やプロジェクトと共有する支払い方法、住所、請求書です。"
+    },
+    "notifications": {
+      "title": "通知：Langsysが何を、どこで知らせるか",
+      "summary": "通知の受信箱とその設定です。新しいフレーズ、招待、プロジェクトへのアクセスに関するアカウントのデフォルトを、アプリ内とメールで設定でき、プロジェクトごとの上書きも可能です。"
+    },
+    "svelte/hero": {
+      "title": "LangsysでSvelte i18n：完全ウォークスルー",
+      "summary": "ほかのi18nで同期し続けなければならないもの、それを置き換える1回の呼び出し、ロケールの切り替え、フラットなスペイン語がユーザーの半数にとって誤りになる理由、そしてICU selectによる解決策を紹介します。"
+    },
+    "svelte/t-string": {
+      "title": "Svelteでのt(phrase, category, params)",
+      "summary": "t()呼び出しについて。置き換えるキーファイルの問題、3つの引数、ICUプレースホルダーと複数形を解説します。"
+    },
+    "svelte/phrase-tag": {
+      "title": "Svelteの‹Phrase›：マークアップを含む文",
+      "summary": "マークアップを含む文を1つのフレーズのまま扱う方法と、‹Phrase›のparamsを%name%と書く理由を解説します。"
+    },
+    "svelte/translate-tag": {
+      "title": "Svelteの‹Translate›：1つのタグで領域全体を",
+      "summary": "1つの‹Translate›タグで領域全体を登録できます。1行ごとの呼び出しよりブロックが優れている理由も解説します。"
+    },
+    "svelte/donttranslate": {
+      "title": "Svelteの‹DontTranslate›：ブランド名をそのまま残す",
+      "summary": "ブランド名や識別子を、文から切り出すことなく、そのままの形で残します。"
+    },
+    "svelte/content-blocks": {
+      "title": "コンテンツブロックとは？Svelteでセクションを丸ごと翻訳",
+      "summary": "1つのセクションを1単位として登録しつつ、個別に再利用できるフレーズで構成されたままにします。"
+    },
+    "svelte/categories": {
+      "title": "同じ単語、2つの意味：i18nキーの代わりにカテゴリを",
+      "summary": "i18nがキーを生み出した理由と、それに代わるもの。2つの意味を持つ同じ単語と、それが分かれてできるペアを紹介します。"
+    },
+    "svelte/icu-gender": {
+      "title": "コードに条件分岐を書かずに性の一致を実現（ICU select）",
+      "summary": "ほかのi18nではコンポーネントに残ってしまう性別の条件分岐と、その代わりにLangsysが言語ごとに生成する分岐を紹介します。"
+    },
+    "svelte/attributes": {
+      "title": "Svelteでplaceholder、alt text、aria labelを翻訳",
+      "summary": "半分だけ翻訳されたフォームが利用者にどう見えるか、そして1つの‹Translate›でplaceholder、alt text、aria labelまで一度に翻訳する方法を紹介します。"
+    },
+    "svelte/formatting": {
+      "title": "Svelte i18nで数値と日付を全ロケールに対応",
+      "summary": "CLDRに基づく数値と日付。手書きしがちな分岐、桁区切りが単なる区切り文字ではなく「形」である理由、そして注文番号を文字列として渡すべき理由を解説します。"
+    },
+    "svelte/social/phrase-9x16": {
+      "title": "i18nのキーは英語の文そのもの #Shorts",
+      "summary": "Langsysなら、コード内の文がそのまま翻訳キーになります。キーファイルも、抽出や同期の手間もなく、同じ行があらゆる言語で返ってきます。 #Shorts"
+    },
+    "svelte/social/icu-gender-9x16": {
+      "title": "BienvenidoかBienvenidaか？コード1行で #Shorts",
+      "summary": "スペイン語はユーザーに合わせて形が変わります。LangsysがICU selectの分岐を生成するので、1行だけでDiegoにはBienvenido、LauraにはBienvenida、性別不明なら中立形が表示されます。 #Shorts"
+    },
+    "svelte/social/icu-plurals-9x16": {
+      "title": "ロシア語の複数形は4種類。書くのは1行だけ #Shorts",
+      "summary": "one、few、many、other：ロシア語は数によって複数形を選び、21は単数形に戻ります。文をフラットに書けば、Langsysが各ロケールに必要なすべての形を組み立てます。 #Shorts"
+    },
+    "svelte/social/content-blocks-9x16": {
+      "title": "タグ1つでセクションを丸ごと翻訳 #Shorts",
+      "summary": "1つのTranslateタグでマークアップの領域を囲むだけ。テキストの各まとまりがそれぞれフレーズになり、太字やリンクは正しい位置に収まり、ブランド名は決して翻訳されません。 #Shorts"
+    }
+  }
+}

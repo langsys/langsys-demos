@@ -1,5 +1,5 @@
 import { Phrase, Translate, currentlyLoadedLocale, t, tSignal } from 'langsys-js-typescript';
-import { LOCALES, LOCALE_LABELS, demoBanner, locale } from './langsys';
+import { demoBanner, languages, locale } from './langsys';
 import './demo.css';
 
 /* Demo banner — on the shared read-only project, the default catalog
@@ -85,22 +85,19 @@ document.querySelector('#cart-plus')!.addEventListener('click', () => {
    stays verbatim while the sentence around it translates. */
 new Translate(document.querySelector<HTMLElement>('#signin')!, { category: 'Tour' });
 
-/* Locale switcher pills. */
-const nav = document.getElementById('locales')!;
-for (const code of LOCALES) {
-    const pill = document.createElement('button');
-    pill.className = 'pill';
-    pill.dataset.locale = code;
-    pill.textContent = LOCALE_LABELS[code] ?? code;
-    pill.addEventListener('click', () => locale.set(code));
-    nav.appendChild(pill);
-}
+/* Language picker — the languages the project serves, rebuilt when the SDK has read them. */
+const select = document.querySelector<HTMLSelectElement>('#locale-select')!;
+select.addEventListener('change', () => locale.set(select.value));
+languages.subscribe((list) => {
+    select.replaceChildren(...list.map((l) => new Option(l.label, l.code)));
+    select.value = locale.get();
+});
+locale.subscribe((code) => {
+    if (select.value !== code) select.value = code;
+});
 
 /* Reading signals — currentlyLoadedLocale tracks the catalog actually loaded. */
 const meta = document.getElementById('locale-meta')!;
 currentlyLoadedLocale.subscribe((loaded) => {
     meta.textContent = `loaded ${loaded || 'en-US'}`;
-    for (const pill of nav.querySelectorAll<HTMLButtonElement>('.pill')) {
-        pill.classList.toggle('active', pill.dataset.locale === (loaded || 'en-US'));
-    }
 });

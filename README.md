@@ -85,13 +85,14 @@ npm install
 npm start             # nestjs → :3000, hono → :3001
 ```
 
-Switch locale with the buttons and watch the page re-translate live. Each JS
-app demonstrates the same surface — a shared locale store +
-`LangsysApp.init()`, a locale switcher, and `t()` / `<Translate>` / `<Phrase>`
+Pick a language from the menu and watch the page re-translate live. The menu
+offers the languages the project serves, out of the 18 Langsys supports on its
+own surfaces (Arabic output reads right to left). Each JS app demonstrates the
+same surface — a shared locale store + `LangsysApp.init()`, a locale switcher, and `t()` / `<Translate>` / `<Phrase>`
 / `<DontTranslate>`. The PHP apps demonstrate the backend surface — Laravel's
 `@t` Blade directive and `t()` helper, Symfony's `t()` Twig function and
-autowired translator, and each framework's locale detection; their locale
-buttons are plain `?locale=` links the framework integration persists.
+autowired translator, and each framework's locale detection; their language
+menu is a plain `?locale=` form the framework integration persists.
 
 Each app is the live version of its SDK's Learning Center page
 ([docs.langsys.dev/learn/sdk/…](https://docs.langsys.dev/learn/sdk/typescript)):

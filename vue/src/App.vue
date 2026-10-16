@@ -4,7 +4,7 @@
 import { computed, ref } from 'vue';
 import { DontTranslate, Phrase, Translate, useCurrentLocale, useSignal, useT } from 'langsys-js-vue';
 import Greeting from './Greeting.vue';
-import { LOCALES, LOCALE_LABELS, demoBanner, locale } from './langsys';
+import { demoBanner, languages, locale } from './langsys';
 
 const KEYS_URL = 'https://docs.langsys.dev/learn/concepts/keys-and-environments';
 const DOCS_URL = 'https://docs.langsys.dev/learn/sdk/vue';
@@ -26,6 +26,9 @@ const items = ref(3);
 const selected = useSignal(locale);
 const loaded = useCurrentLocale();
 const loadedOrDefault = computed(() => loaded.value || 'en-US');
+
+/* The languages the project serves, read once the SDK has started. */
+const offered = useSignal(languages);
 </script>
 
 <template>
@@ -44,17 +47,15 @@ const loadedOrDefault = computed(() => loaded.value || 'en-US');
     <div class="app">
         <header class="topbar">
             <div class="brand"><span class="logo">◆</span> <span translate="no">Langsys</span> × Vue</div>
-            <nav class="locales" translate="no">
-                <button
-                    v-for="code in LOCALES"
-                    :key="code"
-                    class="pill"
-                    :class="{ active: loadedOrDefault === code }"
-                    @click="locale.set(code)"
-                >
-                    {{ LOCALE_LABELS[code] ?? code }}
-                </button>
-            </nav>
+            <select
+                class="locale-select"
+                aria-label="Language"
+                translate="no"
+                :value="selected"
+                @change="locale.set($event.target.value)"
+            >
+                <option v-for="l in offered" :key="l.code" :value="l.code">{{ l.label }}</option>
+            </select>
         </header>
 
         <section class="card">

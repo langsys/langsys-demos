@@ -1,0 +1,146 @@
+{
+  "labels": {
+    "learn_more": "Daha fazla bilgi",
+    "get_started": "Hemen başlayın",
+    "start_free": "Ücretsiz başlayın",
+    "docs": "Dokümantasyon"
+  },
+  "videos": {
+    "explainer": {
+      "title": "Langsys nedir? Uygulamanız her dilde, yeniden deploy olmadan",
+      "summary": "77 saniyede Langsys: uygulamanızda bir SDK ve barındırılan bir Translation Manager. Kodunuz bir ifadeyi ilk kez çalıştırdığında ifade kendini kaydeder, geldiği anda makine çevirisinden geçer ve bir çevirmen tarafından deploy gerektirmeden iyileştirilebilir.\n\nKanıtı: 09:00'da yayımlanan bir blog yazısı, build olmadan ve yazma anahtarı olmadan, 09:03'te Madrid'deki bir okura İspanyolca olarak ulaşıyor."
+    },
+    "getting-started": {
+      "title": "Langsys'e baştan sona başlangıç",
+      "summary": "Sıfırdan çevrilmiş bir uygulamaya tek çekimde: projeyi ve dillerini oluşturun, bir API anahtarı oluşturun, SDK'yı kurup başlatın ve t(), ‹Translate›, ‹Phrase› ile ‹DontTranslate›'in ifadelerini nasıl kaydettiğini izleyin. İspanyolca çeviri zaten Translation Manager'da hazır ve uygulama sayfa yenilemeden İspanyolca ile Fransızcaya geçiyor."
+    },
+    "pluralization": {
+      "title": "if (count === 1) olmadan her dilde çoğul biçimler",
+      "summary": "Bir cümle neden sayıyla birlikte değişir, İngilizcede bunu düzelten if (count === 1) neden kodunuzda yaşayan İngilizce dilbilgisidir ve cümleyi düz yazmak size her dilde her çoğul biçimi nasıl kazandırır. Langsys cümleyi düz olarak çevirir, ardından İngilizce dahil her yerel ayarın kendi ICU çoğul kategorilerinde yeniden kurar."
+    },
+    "tutorial/workflow": {
+      "title": "Çeviri hattı ve Langsys onu nasıl ortadan kaldırıyor",
+      "summary": "Kavramlar, bölüm 1/5. Çeviri genellikle bir hattan gidip gelir: çıkar, dışa aktar, çevir, içe aktar, deploy et. Langsys bu hattı ortadan kaldırır."
+    },
+    "tutorial/key-files": {
+      "title": "Anahtar dosyalarına elveda: anahtar, cümlenin kendisi",
+      "summary": "Kavramlar, bölüm 2/5. Bir proje nerede başlar, diğer i18n kütüphanelerinin size uydurttuğu anahtar ve Langsys'te onun yerini ne alır."
+    },
+    "tutorial/locale-store": {
+      "title": "Locale store: aktif dili tutmak ve değiştirmek",
+      "summary": "Kavramlar, bölüm 3/5. Langsys aktif yerel ayarı nasıl tutar ve uygulamanızın tamamında nasıl değiştirir."
+    },
+    "tutorial/keys-and-environments": {
+      "title": "API anahtarları ve ortamlar: hangi anahtar nereye?",
+      "summary": "Kavramlar, bölüm 4/5. İfade kaydedebilen bir anahtar neden asla yayına çıkamaz, salt okunur anahtar neden çıkmaz sokaktır ve ip_write nedir: yanıtı nereden sorduğunuza bağlı olan tek bir anahtar. Yazma anahtarları sahibi olduğunuz makinelerde kalır, ip_write herhangi bir herkese açık bundle'a girebilir, salt okunur ise hiçbir şeyi değiştirmemesi gereken bundle'lar içindir."
+    },
+    "tutorial/adding-a-locale": {
+      "title": "Yeni bir dil eklemek sadece bir proje ayarı",
+      "summary": "Kavramlar, bölüm 5/5. Yeni bir dile ulaşmak bir proje değil, bir ayardır: yeni ifadeler geldikleri anda çevrilir, geri kalanını tek bir çalıştırma tamamlar."
+    },
+    "managing-translations": {
+      "title": "Langsys Translation Manager ile çevirileri yönetmek",
+      "summary": "Metinlerin sahibi için Translation Manager, ekranda tek satır kod olmadan: yapılacaklar listesi, elle düzeltilen bir makine taslağı, \"Auto-next\" ile \"AI Translate\", \"Never Translate\" ve yalnızca İspanyolca için davet edilen bir çevirmen. Düzeltme hiçbir şey deploy edilmeden uygulamada canlı."
+    },
+    "translation-memory": {
+      "title": "Çeviri belleği: daha açılırken çevrilmiş yeni bir proje",
+      "summary": "Aynı organizasyondaki ikinci bir proje, kimse dokunmadan tamamen çevrilmiş olarak açılıyor. Çeviri belleği her cümleyi ve onu kimin yazdığını projeler arasında taşır; bu yüzden yeni proje için hiçbir model çağrılmaz."
+    },
+    "connect-your-ai-assistant": {
+      "title": "Langsys'i Claude Code'dan MCP üzerinden kullanın",
+      "summary": "Barındırılan MCP sunucusu üzerinden bir AI asistanının içinde Langsys: tek bir claude mcp add komutu, tarayıcıda onay ve projenizin dilleriyle ilgili soruları canlı verilerle yanıtlayan Claude Code. Bağlantı, hesabınızdaki \"Security tab\" üzerinden iptal edilebilir."
+    },
+    "adding-a-language": {
+      "title": "Canlı uygulamaya Almanca ekleyin: kesin fiyat, deploy yok",
+      "summary": "Canlı bir mağazaya Almanca ekleniyor. Langsys, hiçbir şey çalışmadan önce mevcut kataloğun kesin fiyatını veriyor (29 kelime, $0.35), çeviriyor ve mağaza hiçbir şey build ya da deploy edilmeden Almancaya geçiyor."
+    },
+    "catching-up-a-language": {
+      "title": "Geride kalan bir dili yakalamak",
+      "summary": "Translation Manager'da toplu işlemler: tek bir dil ya da tüm proje için \"AI Translate Pending\", her hedef yerel ayarı ve maliyetini listeleyen bir onay ekranı ve her dil yeniden eksiksiz."
+    },
+    "translating-a-content-block": {
+      "title": "Bütün bir içerik bloğunu tek seferde çevirmek",
+      "summary": "Tek bir içerik bloğu olarak çevrilen bir ‹Translate› bölgesi: \"AI Translate\" tüm segmentleri birlikte doldurur, bir segment resmi üslupla elle yeniden yazılır ve bir ‹DontTranslate› cümlesi, etrafı İtalyanca ile doldurulurken İngilizce kalır."
+    },
+    "ai-translator-settings": {
+      "title": "AI Translator ayarları: her anahtar tek tek açıklandı",
+      "summary": "AI Translator sekmesi baştan sona: istek üzerine AI çevirileri, yeni ifadeler için otomatik çeviri ve zaten İspanyolca gelen bir ifadeyi never-translate olarak tutan otomatik algılama."
+    },
+    "api-keys-in-production": {
+      "title": "Production'da API anahtarları: aktivite, duraklatma ve rotasyon",
+      "summary": "Yayına çıktıktan sonra bir anahtar: \"Activity\" sayfasında bir mağazanın gerçek bir haftalık trafiği, bir anahtarı silmeden duraklatmak ve kamera önünde rotasyon: üç anahtar türü, izin listesiyle oluşturulan yeni bir IP write anahtarı ve eskisinin silinmesi."
+    },
+    "one-organization-many-projects": {
+      "title": "Tek organizasyon, birçok proje",
+      "summary": "Her projenin çıkış noktası olarak organizasyon: varsayılan yerel ayarlar, AI Translator ve faturalandırma ayarları, organizasyon bakiyesinden proje fonlaması ve özelleştirilmiş bir projenin yeniden devralmaya döndürülmesi."
+    },
+    "usage-and-credits": {
+      "title": "Kullanım ve krediler: bir proje nasıl fonlanır?",
+      "summary": "İki sayaç, API kullanım birimleri ve krediler, ve bir projenin nasıl fonlandığı: kamera önünde hesaptan projeye kredi transferi, geçmişte her makine çevirisi için bir satır ve projenin aylık limiti ile otomatik yüklemesi."
+    },
+    "plans-and-payments": {
+      "title": "Langsys'te planlar ve ödemeler",
+      "summary": "Hiçbir şey gönderilmeden faturalandırma turu: plan ve fatura dönemi, \"Change Plan\" penceresi, bir organizasyon ya da projeyle paylaşılan \"Payment Methods\", adresler ve faturalar."
+    },
+    "notifications": {
+      "title": "Bildirimler: Langsys size neyi, nerede söyler?",
+      "summary": "Bildirim kutusu ve ayarları: yeni ifadeler, davetler ve proje erişimi için hesap varsayılanları, uygulama içi ve e-posta ile, ayrıca proje bazında geçersiz kılma."
+    },
+    "svelte/hero": {
+      "title": "Langsys ile Svelte i18n: eksiksiz rehber",
+      "summary": "Diğer i18n çözümlerinin sizi senkron tutmaya zorladığı şeyler, onların yerini alan tek çağrı, bir dil değişimi, düz İspanyolcanın kullanıcılarınızın yarısı için neden yanlış olduğu ve ICU select'in buna ne çözüm getirdiği."
+    },
+    "svelte/t-string": {
+      "title": "Svelte'te t(phrase, category, params)",
+      "summary": "t() çağrısı: yerini aldığı anahtar dosyası sorunu, üç argümanı, ICU yer tutucuları ve çoğullar."
+    },
+    "svelte/phrase-tag": {
+      "title": "Svelte'te ‹Phrase›: içinde markup olan bir cümle",
+      "summary": "İçinde markup olan bir cümle, tek bir ifade olarak korunuyor; ve ‹Phrase› parametreleri neden %name% biçiminde yazılır."
+    },
+    "svelte/translate-tag": {
+      "title": "Svelte'te ‹Translate›: bütün bir bölge için tek etiket",
+      "summary": "Tek bir ‹Translate› etiketi bütün bir bölgeyi kaydeder; bir bloğun satır başına bir çağrıdan neden daha iyi olduğu."
+    },
+    "svelte/donttranslate": {
+      "title": "Svelte'te ‹DontTranslate›: marka adlarını olduğu gibi koruyun",
+      "summary": "Marka adları ve tanımlayıcılar, cümlenin dışına çıkarılmadan olduğu gibi korunuyor."
+    },
+    "svelte/content-blocks": {
+      "title": "İçerik bloğu nedir? Svelte'te bütün bir bölümü çevirmek",
+      "summary": "Tek bir birim olarak kaydedilen bir bölüm; yine de tek tek yeniden kullanılabilen ifadelerden oluşuyor."
+    },
+    "svelte/categories": {
+      "title": "Aynı kelime, iki anlam: i18n anahtarları yerine kategoriler",
+      "summary": "i18n neden anahtarları icat etti ve onların yerini ne alıyor: iki anlamı olan aynı kelime ve ayrıldığı çiftler."
+    },
+    "svelte/icu-gender": {
+      "title": "Kodunuzda koşul olmadan cinsiyet uyumu (ICU select)",
+      "summary": "Diğer i18n çözümlerinin bileşeninizde bıraktığı cinsiyet koşulu ve bunun yerine Langsys'in her dil için ürettiği dallar."
+    },
+    "svelte/attributes": {
+      "title": "Svelte'te placeholder, alt metin ve aria etiketlerini çevirmek",
+      "summary": "Yarı çevrilmiş bir form, onu kullanan kişiye nasıl görünür ve tek bir ‹Translate› aynı geçişte placeholder'lara, alt metinlere ve aria etiketlerine nasıl ulaşır."
+    },
+    "svelte/formatting": {
+      "title": "Svelte i18n ile her yerel ayarda sayılar ve tarihler",
+      "summary": "CLDR'ye göre sayılar ve tarihler: elle yazacağınız dal, basamak gruplamanın neden bir ayırıcı değil bir şekil olduğu ve bir sipariş numarasının neden string olarak geçirilmesi gerektiği."
+    },
+    "svelte/social/phrase-9x16": {
+      "title": "i18n anahtarınız aslında İngilizce cümlenin kendisi #Shorts",
+      "summary": "Langsys ile kodunuzdaki cümle, çeviri anahtarının ta kendisi: anahtar dosyası yok, çıkarılacak ya da senkron tutulacak bir şey yok ve aynı satır her dilde geri geliyor. #Shorts"
+    },
+    "svelte/social/icu-gender-9x16": {
+      "title": "Bienvenido mu, Bienvenida mı? Tek satır kod #Shorts",
+      "summary": "İspanyolca kullanıcıya göre uyum sağlar. Langsys ICU select dallarını üretir; böylece Diego Bienvenido, Laura Bienvenida görür, cinsiyeti bilinmeyen biri ise nötr biçimi alır; hepsi tek satırdan. #Shorts"
+    },
+    "svelte/social/icu-plurals-9x16": {
+      "title": "Rusçada 4 çoğul biçim var. Siz tek satır yazarsınız #Shorts",
+      "summary": "One, few, many ve other: Rusça çoğul biçimi sayıya göre seçer ve 21 yeniden tekile döner. Cümleyi düz yazın, Langsys her yerel ayarın ihtiyaç duyduğu tüm biçimleri kursun. #Shorts"
+    },
+    "svelte/social/content-blocks-9x16": {
+      "title": "Bütün bir bölümü tek etiketle çevirin #Shorts",
+      "summary": "Tek bir Translate etiketi bir markup bölgesini sarar: her metin parçası kendi ifadesi olur, kalın yazılar ve linkler ait oldukları yere yerleşir ve marka adı asla çevrilmez. #Shorts"
+    }
+  }
+}

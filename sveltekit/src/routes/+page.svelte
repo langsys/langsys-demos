@@ -3,7 +3,6 @@
     // same cards as the Svelte demo, under the catalog the server load seeded.
     import { getContext } from 'svelte';
     import { DontTranslate, Phrase, Translate, currentlyLoadedLocale, t } from 'langsys-js-svelte';
-    import { LOCALES, LOCALE_LABELS } from '$lib/langsys';
 
     const KEYS_URL = 'https://docs.langsys.dev/learn/concepts/keys-and-environments';
     const DOCS_URL = 'https://docs.langsys.dev/learn/guides/sveltekit';
@@ -27,13 +26,12 @@
 <div class="app">
     <header class="topbar">
         <div class="brand"><span class="logo">◆</span> <span translate="no">Langsys</span> × SvelteKit</div>
-        <nav class="locales" translate="no">
-            {#each LOCALES as code}
-                <button class={$locale === code ? 'pill active' : 'pill'} onclick={() => locale.set(code)}>
-                    {LOCALE_LABELS[code] ?? code}
-                </button>
+        <!-- The languages the project serves — the server read them, so the list is right from the first paint. -->
+        <select class="locale-select" aria-label="Language" translate="no" bind:value={$locale}>
+            {#each data.languages as l (l.code)}
+                <option value={l.code}>{l.label}</option>
             {/each}
-        </nav>
+        </select>
     </header>
 
     <!-- t() — inline string: the $t store re-reads on locale/catalog change. -->
