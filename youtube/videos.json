@@ -3,7 +3,13 @@
     "category_id": "28",
     "language": "en",
     "privacy": "private",
-    "footer": "Learn more: {page}\n{start}\nDocs: https://docs.langsys.dev\n\n#localization #i18n #webdev",
+    "footer": "{learn_more}: {page}\n{start}\n{docs}: https://docs.langsys.dev\n\n#localization #i18n #webdev",
+    "labels": {
+      "learn_more": "Learn more",
+      "get_started": "Get started",
+      "start_free": "Start free",
+      "docs": "Docs"
+    },
     "tags": [
       "Langsys",
       "localization",
@@ -15,8 +21,8 @@
       "machine translation"
     ],
     "start": {
-      "before_launch": "Get started: https://docs.langsys.dev/learn/quickstart",
-      "after_launch": "Start free: https://langsys.dev"
+      "before_launch": "{get_started}: {learn}/quickstart",
+      "after_launch": "{start_free}: https://langsys.dev"
     },
     "launched": false
   },

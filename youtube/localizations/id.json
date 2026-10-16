@@ -1,0 +1,146 @@
+{
+  "labels": {
+    "learn_more": "Pelajari lebih lanjut",
+    "get_started": "Mulai sekarang",
+    "start_free": "Mulai gratis",
+    "docs": "Dokumentasi"
+  },
+  "videos": {
+    "explainer": {
+      "title": "Apa itu Langsys? Aplikasi Anda dalam semua bahasa, tanpa redeploy",
+      "summary": "Langsys dalam 77 detik: SDK di aplikasi Anda dan Translation Manager yang di-hosting. Sebuah frasa terdaftar dengan sendirinya saat kode Anda pertama kali menjalankannya, langsung diterjemahkan mesin begitu tiba, dan bisa disempurnakan penerjemah tanpa deploy.\n\nBuktinya: artikel blog yang terbit pukul 09:00, tanpa build dan tanpa write key, sampai ke pembaca di Madrid dalam bahasa Spanyol pukul 09:03."
+    },
+    "getting-started": {
+      "title": "Memulai dengan Langsys, dari awal sampai akhir",
+      "summary": "Satu take dari nol hingga aplikasi yang sudah diterjemahkan: buat proyek beserta bahasanya, buat API key, instal dan inisialisasi SDK, lalu lihat t(), ‹Translate›, ‹Phrase›, dan ‹DontTranslate› mendaftarkan frasanya. Terjemahan Spanyol sudah ada di Translation Manager, dan aplikasi beralih ke bahasa Spanyol dan Prancis tanpa reload."
+    },
+    "pluralization": {
+      "title": "Bentuk jamak di semua bahasa, tanpa if (count === 1)",
+      "summary": "Mengapa kalimat berubah mengikuti angkanya, mengapa if (count === 1) yang memperbaikinya dalam bahasa Inggris sebenarnya adalah tata bahasa Inggris yang tinggal di kode Anda, dan bagaimana menulis kalimat secara datar memberi Anda semua bentuk jamak di semua bahasa. Langsys menerjemahkannya datar, lalu menyusunnya kembali sesuai kategori jamak ICU milik setiap locale, termasuk bahasa Inggris."
+    },
+    "tutorial/workflow": {
+      "title": "Pipeline terjemahan, dan cara Langsys menghapusnya",
+      "summary": "Konsep 1 dari 5. Terjemahan biasanya bolak-balik melewati pipeline: extract, export, terjemahkan, import, deploy. Langsys menghilangkannya."
+    },
+    "tutorial/key-files": {
+      "title": "Selamat tinggal file key: kalimatnya adalah key-nya",
+      "summary": "Konsep 2 dari 5. Titik awal sebuah proyek, key yang dipaksa dibuat oleh library i18n lain, dan apa penggantinya di Langsys."
+    },
+    "tutorial/locale-store": {
+      "title": "Locale store: menyimpan dan mengganti bahasa aktif",
+      "summary": "Konsep 3 dari 5. Bagaimana Langsys menyimpan locale aktif dan menggantinya di seluruh aplikasi Anda."
+    },
+    "tutorial/keys-and-environments": {
+      "title": "API key dan environment: key mana untuk di mana",
+      "summary": "Konsep 4 dari 5. Mengapa key yang bisa mendaftarkan frasa tidak boleh ikut dirilis, mengapa read-only adalah jalan buntu, dan apa itu ip_write: satu key yang jawabannya bergantung dari mana Anda bertanya. Write key tetap di mesin milik Anda, ip_write boleh masuk ke bundle publik mana pun, dan read-only untuk bundle yang tidak boleh mengubah apa pun."
+    },
+    "tutorial/adding-a-locale": {
+      "title": "Menambah bahasa baru cukup lewat pengaturan proyek",
+      "summary": "Konsep 5 dari 5. Menjangkau bahasa baru itu sebuah pengaturan, bukan proyek: frasa baru diterjemahkan begitu tiba, dan satu kali proses mengisi sisanya."
+    },
+    "managing-translations": {
+      "title": "Mengelola terjemahan di Langsys Translation Manager",
+      "summary": "Translation Manager untuk pemilik teks, tanpa kode di layar: daftar tugas, draf mesin yang dikoreksi manual, AI Translate dengan Auto-next, Never Translate, dan penerjemah yang diundang khusus untuk bahasa Spanyol. Koreksinya langsung tampil di aplikasi tanpa deploy apa pun."
+    },
+    "translation-memory": {
+      "title": "Translation memory: proyek baru yang sudah langsung terjemah",
+      "summary": "Proyek kedua di organisasi yang sama terbuka dalam keadaan sudah diterjemahkan penuh sebelum ada yang menyentuhnya. Translation memory membawa setiap kalimat, beserta penulisnya, lintas proyek, sehingga tidak ada model yang dipanggil sama sekali untuk proyek baru."
+    },
+    "connect-your-ai-assistant": {
+      "title": "Gunakan Langsys dari Claude Code lewat MCP",
+      "summary": "Langsys di dalam asisten AI, lewat server MCP yang di-hosting: satu perintah claude mcp add, persetujuan di browser, dan Claude Code menjawab pertanyaan tentang bahasa proyek Anda dari data live. Koneksinya bisa dicabut dari Security tab di akun Anda."
+    },
+    "adding-a-language": {
+      "title": "Tambah bahasa Jerman ke aplikasi live: harga pasti, tanpa deploy",
+      "summary": "Bahasa Jerman ditambahkan ke toko yang sedang live. Langsys memberi harga pasti untuk katalog yang ada sebelum apa pun dijalankan (29 kata, $0.35), menerjemahkannya, dan toko beralih ke bahasa Jerman tanpa build atau deploy."
+    },
+    "catching-up-a-language": {
+      "title": "Mengejar bahasa yang tertinggal",
+      "summary": "Aksi massal di Translation Manager: AI Translate Pending untuk satu bahasa atau seluruh proyek, dengan konfirmasi yang mencantumkan setiap locale tujuan dan biayanya, hingga semua bahasa kembali lengkap."
+    },
+    "translating-a-content-block": {
+      "title": "Menerjemahkan satu content block sekaligus",
+      "summary": "Region ‹Translate› diterjemahkan sebagai satu content block: AI Translate mengisi semua segmen bersamaan, satu segmen ditulis ulang manual dengan gaya formal, dan kalimat ‹DontTranslate› tetap dalam bahasa Inggris sementara bahasa Italia diisi di sekelilingnya."
+    },
+    "ai-translator-settings": {
+      "title": "Pengaturan AI Translator, semua opsi dijelaskan",
+      "summary": "Tab AI Translator dari atas ke bawah: terjemahan AI sesuai permintaan, auto-translate untuk frasa baru, dan auto-detect yang menandai frasa yang datang sudah dalam bahasa Spanyol sebagai never-translate."
+    },
+    "api-keys-in-production": {
+      "title": "API key di produksi: aktivitas, jeda, dan rotasi",
+      "summary": "Key setelah dirilis: trafik toko online selama seminggu nyata di halaman Activity, menjeda key tanpa menghapusnya, dan rotasi langsung di depan kamera: tiga jenis key, IP write key baru dibuat dengan allowlist, dan key lama dihapus."
+    },
+    "one-organization-many-projects": {
+      "title": "Satu organisasi, banyak proyek",
+      "summary": "Organisasi sebagai titik awal setiap proyek: locale default, pengaturan AI Translator dan billing, pendanaan proyek dari saldo organisasi, dan proyek yang dikustomisasi dikembalikan ke mode mewarisi."
+    },
+    "usage-and-credits": {
+      "title": "Penggunaan dan kredit: cara proyek didanai",
+      "summary": "Dua meteran, unit penggunaan API dan kredit, serta cara proyek didanai: transfer kredit dari akun ke proyek dilakukan langsung di depan kamera, satu baris per terjemahan mesin di riwayatnya, serta batas bulanan dan isi ulang otomatis proyek."
+    },
+    "plans-and-payments": {
+      "title": "Paket dan pembayaran di Langsys",
+      "summary": "Tur billing tanpa mengirim apa pun: paket dan siklus penagihan, dialog Change Plan, metode pembayaran yang dibagikan dengan organisasi atau proyek, alamat, dan invoice."
+    },
+    "notifications": {
+      "title": "Notifikasi: apa yang Langsys beri tahu, dan di mana",
+      "summary": "Kotak masuk notifikasi dan pengaturannya: default akun untuk frasa baru, undangan, dan akses proyek, lewat in-app dan email, serta override per proyek."
+    },
+    "svelte/hero": {
+      "title": "Svelte i18n dengan Langsys: panduan lengkap",
+      "summary": "Apa yang dipaksa i18n lain untuk terus Anda sinkronkan, satu panggilan untuk menggantikannya, pergantian locale, mengapa bahasa Spanyol yang datar salah bagi separuh pengguna Anda, dan apa solusi ICU select."
+    },
+    "svelte/t-string": {
+      "title": "t(phrase, category, params) di Svelte",
+      "summary": "Panggilan t(): masalah file key yang digantikannya, tiga argumennya, placeholder ICU, dan bentuk jamak."
+    },
+    "svelte/phrase-tag": {
+      "title": "‹Phrase› di Svelte: kalimat dengan markup di dalamnya",
+      "summary": "Kalimat dengan markup di dalamnya, tetap dijaga sebagai satu frasa, dan mengapa params ‹Phrase› ditulis %name%."
+    },
+    "svelte/translate-tag": {
+      "title": "‹Translate› di Svelte: satu tag untuk satu region utuh",
+      "summary": "Satu tag ‹Translate› mendaftarkan seluruh region, dan mengapa satu blok lebih baik daripada satu panggilan per baris."
+    },
+    "svelte/donttranslate": {
+      "title": "‹DontTranslate› di Svelte: nama merek tetap apa adanya",
+      "summary": "Nama merek dan identifier dibiarkan apa adanya, tanpa harus mengeluarkannya dari kalimat."
+    },
+    "svelte/content-blocks": {
+      "title": "Apa itu content block? Menerjemahkan satu bagian utuh di Svelte",
+      "summary": "Satu bagian didaftarkan sebagai satu unit, tetap tersusun dari frasa-frasa yang bisa dipakai ulang satu per satu."
+    },
+    "svelte/categories": {
+      "title": "Kata sama, dua makna: kategori sebagai pengganti key i18n",
+      "summary": "Mengapa i18n menciptakan key, dan apa penggantinya: kata yang sama dengan dua makna, dan pasangan yang terbentuk darinya."
+    },
+    "svelte/icu-gender": {
+      "title": "Kesesuaian gender tanpa kondisional di kode Anda (ICU select)",
+      "summary": "Kondisional gender yang ditinggalkan i18n lain di komponen Anda, dan cabang-cabang yang justru dibuat Langsys untuk setiap bahasa."
+    },
+    "svelte/attributes": {
+      "title": "Menerjemahkan placeholder, alt text, dan aria label di Svelte",
+      "summary": "Seperti apa formulir yang setengah diterjemahkan di mata penggunanya, dan bagaimana satu ‹Translate› menjangkau placeholder, alt text, dan aria label dalam sekali jalan."
+    },
+    "svelte/formatting": {
+      "title": "Angka dan tanggal di semua locale dengan Svelte i18n",
+      "summary": "Angka dan tanggal sesuai CLDR: cabang yang biasanya Anda tulis manual, mengapa pengelompokan digit adalah sebuah pola dan bukan sekadar pemisah, dan mengapa nomor pesanan harus dikirim sebagai string."
+    },
+    "svelte/social/phrase-9x16": {
+      "title": "Key i18n Anda cukup kalimat bahasa Inggrisnya #Shorts",
+      "summary": "Dengan Langsys, kalimat di kode Anda adalah key terjemahannya: tanpa file key, tanpa perlu extract atau sinkronisasi, dan baris yang sama kembali dalam semua bahasa. #Shorts"
+    },
+    "svelte/social/icu-gender-9x16": {
+      "title": "Bienvenido atau Bienvenida? Satu baris kode #Shorts",
+      "summary": "Bahasa Spanyol menyesuaikan dengan penggunanya. Langsys membuat cabang ICU select, jadi Diego mendapat Bienvenido, Laura mendapat Bienvenida, dan gender yang tidak diketahui mendapat bentuk netral, dari satu baris. #Shorts"
+    },
+    "svelte/social/icu-plurals-9x16": {
+      "title": "Bahasa Rusia punya 4 bentuk jamak. Anda tulis satu baris #Shorts",
+      "summary": "One, few, many, dan other: bahasa Rusia memilih bentuk jamak berdasarkan angka, dan 21 kembali ke bentuk tunggal. Tulis kalimatnya datar, dan Langsys membangun setiap bentuk yang dibutuhkan tiap locale. #Shorts"
+    },
+    "svelte/social/content-blocks-9x16": {
+      "title": "Terjemahkan satu bagian utuh dengan satu tag #Shorts",
+      "summary": "Satu tag Translate membungkus satu region markup: setiap potongan teks menjadi frasanya sendiri, teks tebal dan link tetap di tempatnya, dan nama merek tidak pernah diterjemahkan. #Shorts"
+    }
+  }
+}

@@ -44,4 +44,8 @@ Anything whose date has passed goes out too, so a missed day catches up on the n
 | `python upload.py --sync` | After editing a title, summary or tags in `videos.json`, pushes the change to YouTube. |
 | `python upload.py --launch` | The day langsys.dev opens: swaps "Get started" (the docs quickstart) for "Start free: https://langsys.dev" in every description. |
 
+### Titles and descriptions in other languages
+
+`localizations/<code>.json` holds every video's title and summary, plus the four footer labels, in each Learning Center language: ar, de, es, fr, hi, id, it, ja, ko, nl, pl, pt, ru, tr, uk, vi and zh-CN. YouTube shows a viewer the version in their interface language and English otherwise; captions and audio are not affected. A translated description links the Learning Center page in its own language (`/learn/es/...`). `--sync` and new uploads carry them; after changing a title or summary in `videos.json`, update the same entry in each file. The files' keys match `videos.json`, so a new video needs an entry in all seventeen.
+
 `managing-translations` and `translating-a-content-block` have no date: they are filmed against translation-manager MR !1 and !2. Once those ship, remove their `hold`, run `python upload.py` to upload them, give them a `publish` date and add their ids to the Learning Center's `videos.ts`.

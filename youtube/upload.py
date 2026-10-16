@@ -49,6 +49,7 @@ HERE = Path(__file__).parent
 VIDEOS_DIR = HERE.parent / 'videos'
 CATALOGUE = HERE / 'videos.json'
 STATE = HERE / 'uploads.json'
+LOCALIZATIONS = HERE / 'localizations'
 DOCS = 'https://docs.langsys.dev'
 
 
@@ -66,10 +67,35 @@ def _is_quota(error: HttpError) -> bool:
     return 'quotaExceeded' in str(error) or 'uploadLimitExceeded' in str(error)
 
 
-def _description(video: dict, defaults: dict) -> str:
+def _description(video: dict, defaults: dict, summary: str = None, labels: dict = None, lang: str = None) -> str:
+    """The summary and the footer. A translated description links the
+    Learning Center page in its own language; the English one links /learn,
+    which sends the reader to their browser's language."""
+    learn = f'{DOCS}/learn' + (f'/{lang}' if lang else '')
     start = defaults['start']['after_launch' if defaults['launched'] else 'before_launch']
-    footer = defaults['footer'].replace('{page}', DOCS + video['page']).replace('{start}', start)
-    return f"{video['summary']}\n\n{footer}"
+    footer = defaults['footer'].replace('{start}', start)
+    footer = footer.replace('{page}', learn + video['page'].removeprefix('/learn')).replace('{learn}', learn)
+    for key, label in (labels or defaults['labels']).items():
+        footer = footer.replace(f'{{{key}}}', label)
+    return f"{summary or video['summary']}\n\n{footer}"
+
+
+def _translations() -> dict:
+    return {path.stem: json.loads(path.read_text(encoding='utf-8')) for path in sorted(LOCALIZATIONS.glob('*.json'))}
+
+
+def _localizations(video: dict, defaults: dict, translations: dict) -> dict:
+    """Title and description per language, from localizations/<code>.json;
+    YouTube shows the one matching the viewer's interface language."""
+    localized = {}
+    for code, translation in translations.items():
+        entry = translation['videos'].get(video['file'])
+        if entry:
+            localized[code] = {
+                'title':       entry['title'],
+                'description': _description(video, defaults, entry['summary'], translation['labels'], code.split('-')[0]),
+            }
+    return localized
 
 
 def _snippet(video: dict, defaults: dict) -> dict:
@@ -104,9 +130,10 @@ def _upload_video(youtube, video: dict, defaults: dict) -> str:
             'privacyStatus':           defaults['privacy'],
             'selfDeclaredMadeForKids': False,
         },
+        'localizations': _localizations(video, defaults, _translations()),
     }
     media = MediaFileUpload(str(VIDEOS_DIR / f"{video['file']}.mp4"), mimetype='video/mp4', chunksize=8 * 1024 * 1024, resumable=True)
-    request = youtube.videos().insert(part='snippet,status', body=body, media_body=media)
+    request = youtube.videos().insert(part='snippet,status,localizations', body=body, media_body=media)
     response = None
     while response is None:
         progress, response = request.next_chunk()
@@ -182,7 +209,7 @@ def _uploaded(state: dict, catalogue: dict) -> list:
 def _live(youtube, ids: list) -> dict:
     found = {}
     for start in range(0, len(ids), 50):
-        response = youtube.videos().list(part='snippet,status', id=','.join(ids[start:start + 50])).execute()
+        response = youtube.videos().list(part='snippet,status,localizations', id=','.join(ids[start:start + 50])).execute()
         found.update({item['id']: item for item in response['items']})
     return found
 
@@ -201,19 +228,32 @@ def _same(key: str, live, wanted) -> bool:
     return live == wanted
 
 
+def _same_localizations(live: dict, wanted: dict, default_language: str) -> bool:
+    """YouTube may list the default language among the localizations and
+    trims the text it stores, so neither counts as a difference."""
+    def normalized(localizations: dict) -> dict:
+        return {code: {field: text.replace('\r\n', '\n').strip() for field, text in entry.items()}
+                for code, entry in localizations.items() if code != default_language}
+    return normalized(live) == normalized(wanted)
+
+
 def _sync(youtube, state: dict, catalogue: dict) -> dict:
-    """Push titles, descriptions and tags from videos.json to every uploaded
-    video whose copy on YouTube differs; visibility and thumbnails are left alone."""
+    """Push titles, descriptions, tags and their translations from videos.json
+    and localizations/ to every uploaded video whose copy on YouTube differs;
+    visibility and thumbnails are left alone."""
     videos = _uploaded(state, catalogue)
     live = _live(youtube, [state['videos'][video['file']]['id'] for video in videos])
+    translations = _translations()
     changed = 0
     for video in videos:
         item = live[state['videos'][video['file']]['id']]
         wanted = _snippet(video, catalogue['defaults'])
-        if all(_same(key, item['snippet'].get(key), value) for key, value in wanted.items()):
+        localized = _localizations(video, catalogue['defaults'], translations)
+        if all(_same(key, item['snippet'].get(key), value) for key, value in wanted.items()) and _same_localizations(item.get('localizations', {}), localized, wanted['defaultLanguage']):
             continue
-        youtube.videos().update(part='snippet', body={'id': item['id'], 'snippet': wanted}).execute()
+        youtube.videos().update(part='snippet,localizations', body={'id': item['id'], 'snippet': wanted, 'localizations': localized}).execute()
         item['snippet'].update(wanted)
+        item['localizations'] = localized
         changed += 1
         print(f"  updated {video['file']}")
     print(f'{changed} of {len(videos)} videos updated')

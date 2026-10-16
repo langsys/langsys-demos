@@ -1,0 +1,146 @@
+{
+  "labels": {
+    "learn_more": "Scopri di più",
+    "get_started": "Inizia",
+    "start_free": "Inizia gratis",
+    "docs": "Documentazione"
+  },
+  "videos": {
+    "explainer": {
+      "title": "Cos'è Langsys? La tua app in ogni lingua, senza rifare il deploy",
+      "summary": "Langsys in 77 secondi: un SDK nella tua app e un Translation Manager in hosting. Una frase si registra da sola la prima volta che il tuo codice la esegue, viene tradotta automaticamente appena arriva e un traduttore può rifinirla senza alcun deploy.\n\nLa prova: un post del blog pubblicato alle 09:00, senza build e senza write key, raggiunge una lettrice a Madrid in spagnolo alle 09:03."
+    },
+    "getting-started": {
+      "title": "Primi passi con Langsys, dall'inizio alla fine",
+      "summary": "In un'unica ripresa, da zero a un'app tradotta: crei il progetto e le sue lingue, crei una API key, installi e inizializzi l'SDK e guardi t(), ‹Translate›, ‹Phrase› e ‹DontTranslate› registrare le loro frasi. Lo spagnolo è già nel Translation Manager e l'app passa a spagnolo e francese senza ricaricare."
+    },
+    "pluralization": {
+      "title": "Plurali in ogni lingua, senza if (count === 1)",
+      "summary": "Perché una frase cambia con il suo numero, perché l'if (count === 1) che la sistema in inglese è grammatica inglese infilata nel tuo codice, e come scrivere la frase in forma piatta ti dà ogni forma plurale in ogni lingua. Langsys la traduce piatta, poi la ricostruisce nelle categorie plurali ICU di ciascun locale, inglese compreso."
+    },
+    "tutorial/workflow": {
+      "title": "La pipeline di traduzione, e come Langsys la elimina",
+      "summary": "Concetti 1 di 5. Di solito la traduzione fa il giro di una pipeline: estrai, esporti, traduci, importi, fai il deploy. Langsys la elimina."
+    },
+    "tutorial/key-files": {
+      "title": "Basta file di chiavi: la frase è la chiave",
+      "summary": "Concetti 2 di 5. Da dove parte un progetto, la chiave che le altre librerie i18n ti costringono a inventare e cosa la sostituisce in Langsys."
+    },
+    "tutorial/locale-store": {
+      "title": "Il locale store: gestire e cambiare la lingua attiva",
+      "summary": "Concetti 3 di 5. Come Langsys mantiene il locale attivo e lo cambia in tutta la tua app."
+    },
+    "tutorial/keys-and-environments": {
+      "title": "API key e ambienti: quale chiave va dove",
+      "summary": "Concetti 4 di 5. Perché una chiave che può registrare frasi non deve mai finire in produzione, perché la sola lettura è un vicolo cieco e cos'è ip_write: un'unica chiave la cui risposta dipende da dove fai la richiesta. Le write key restano sulle macchine che possiedi, ip_write va in qualsiasi bundle pubblico, e la sola lettura è per i bundle che non devono mai modificare nulla."
+    },
+    "tutorial/adding-a-locale": {
+      "title": "Aggiungere una lingua è solo un'impostazione del progetto",
+      "summary": "Concetti 5 di 5. Arrivare a una nuova lingua è un'impostazione, non un progetto: le nuove frasi vengono tradotte appena arrivano e una sola esecuzione completa il resto."
+    },
+    "managing-translations": {
+      "title": "Gestire le traduzioni nel Translation Manager di Langsys",
+      "summary": "Il Translation Manager per chi si occupa dei testi, senza codice sullo schermo: la lista delle cose da fare, una bozza automatica corretta a mano, AI Translate con Auto-next, Never Translate e un traduttore invitato solo per lo spagnolo. La correzione è subito live nell'app, senza alcun deploy."
+    },
+    "translation-memory": {
+      "title": "Translation memory: un nuovo progetto che nasce già tradotto",
+      "summary": "Un secondo progetto nella stessa organizzazione si apre completamente tradotto prima che qualcuno lo tocchi. La translation memory porta ogni frase, e chi l'ha scritta, da un progetto all'altro, così per il nuovo progetto non viene chiamato nessun modello."
+    },
+    "connect-your-ai-assistant": {
+      "title": "Usa Langsys da Claude Code tramite MCP",
+      "summary": "Langsys dentro un assistente AI, tramite il server MCP in hosting: un solo comando claude mcp add, l'approvazione nel browser e Claude Code che risponde a domande sulle lingue del tuo progetto con dati in tempo reale. Puoi revocare la connessione dal Security tab del tuo account."
+    },
+    "adding-a-language": {
+      "title": "Aggiungi il tedesco a un'app live: prezzo esatto, zero deploy",
+      "summary": "Il tedesco aggiunto a un negozio online live. Langsys indica il prezzo esatto del catalogo esistente prima di avviare qualsiasi cosa (29 parole, $0.35), lo traduce e il negozio passa al tedesco senza build né deploy."
+    },
+    "catching-up-a-language": {
+      "title": "Rimettere in pari una lingua rimasta indietro",
+      "summary": "Azioni di massa nel Translation Manager: AI Translate Pending per una lingua o per l'intero progetto, con una conferma che elenca ogni locale di destinazione e il suo costo, e ogni lingua di nuovo completa."
+    },
+    "translating-a-content-block": {
+      "title": "Tradurre un intero content block in un colpo solo",
+      "summary": "Una regione ‹Translate› tradotta come un unico content block: AI Translate compila tutti i segmenti insieme, un segmento viene riscritto a mano nel registro formale e una frase ‹DontTranslate› resta in inglese mentre l'italiano viene completato intorno."
+    },
+    "ai-translator-settings": {
+      "title": "Impostazioni dell'AI Translator, ogni opzione spiegata",
+      "summary": "La scheda AI Translator dall'alto in basso: traduzioni AI su richiesta, traduzione automatica delle nuove frasi e rilevamento automatico che imposta come Never Translate una frase che arriva già in spagnolo."
+    },
+    "api-keys-in-production": {
+      "title": "API key in produzione: attività, pausa e rotazione",
+      "summary": "Una chiave dopo il rilascio: una vera settimana di traffico del negozio nella sua pagina Activity, la pausa di una chiave senza eliminarla e la rotazione in diretta: i tre tipi di chiave, una nuova IP write key creata con una allowlist e quella vecchia eliminata."
+    },
+    "one-organization-many-projects": {
+      "title": "Un'organizzazione, tanti progetti",
+      "summary": "L'organizzazione come punto di partenza di ogni progetto: locale predefiniti, impostazioni dell'AI Translator e di fatturazione, finanziamento dei progetti dal saldo dell'organizzazione e un progetto personalizzato riportato all'ereditarietà."
+    },
+    "usage-and-credits": {
+      "title": "Utilizzo e crediti: come si finanzia un progetto",
+      "summary": "I due contatori, unità di utilizzo API e crediti, e come si finanzia un progetto: un trasferimento di crediti dall'account a un progetto in diretta, una riga per ogni traduzione automatica nella cronologia, e il limite mensile e la ricarica automatica del progetto."
+    },
+    "plans-and-payments": {
+      "title": "Piani e pagamenti in Langsys",
+      "summary": "Un giro nella fatturazione senza inviare nulla: il piano e il ciclo di fatturazione, la finestra Change Plan, i Payment Methods condivisi con un'organizzazione o un progetto, gli indirizzi e le fatture."
+    },
+    "notifications": {
+      "title": "Notifiche: cosa ti comunica Langsys, e dove",
+      "summary": "La casella delle notifiche e le sue impostazioni: le impostazioni predefinite dell'account per nuove frasi, inviti e accesso ai progetti, in-app e via email, e un'eccezione per singolo progetto."
+    },
+    "svelte/hero": {
+      "title": "Svelte i18n con Langsys: la guida completa",
+      "summary": "Cosa ti costringono a tenere allineato le altre soluzioni i18n, una sola chiamata per sostituirlo, un cambio di lingua, perché lo spagnolo piatto è sbagliato per metà dei tuoi utenti e cosa ci fa ICU select."
+    },
+    "svelte/t-string": {
+      "title": "t(phrase, category, params) in Svelte",
+      "summary": "La chiamata t(): il problema del file di chiavi che sostituisce, i suoi tre argomenti, i placeholder ICU e i plurali."
+    },
+    "svelte/phrase-tag": {
+      "title": "‹Phrase› in Svelte: una frase con markup al suo interno",
+      "summary": "Una frase con markup al suo interno, mantenuta come un'unica frase, e perché i parametri di ‹Phrase› si scrivono %name%."
+    },
+    "svelte/translate-tag": {
+      "title": "‹Translate› in Svelte: un solo tag per un'intera regione",
+      "summary": "Un solo tag ‹Translate› registra un'intera regione, e perché un blocco batte una chiamata per riga."
+    },
+    "svelte/donttranslate": {
+      "title": "‹DontTranslate› in Svelte: i nomi dei brand restano intatti",
+      "summary": "Nomi di brand e identificatori mantenuti alla lettera, senza estrarli dalla frase."
+    },
+    "svelte/content-blocks": {
+      "title": "Cos'è un content block? Tradurre un'intera sezione in Svelte",
+      "summary": "Una sezione registrata come un'unità, ma sempre composta da frasi riutilizzabili singolarmente."
+    },
+    "svelte/categories": {
+      "title": "Stessa parola, due significati: categorie al posto delle chiavi i18n",
+      "summary": "Perché l'i18n ha inventato le chiavi e cosa le sostituisce: la stessa parola con due significati e le coppie in cui si divide."
+    },
+    "svelte/icu-gender": {
+      "title": "Accordo di genere senza condizioni nel codice (ICU select)",
+      "summary": "La condizione sul genere che le altre soluzioni i18n lasciano nel tuo componente, e i rami che Langsys genera invece per ogni lingua."
+    },
+    "svelte/attributes": {
+      "title": "Tradurre placeholder, testi alt e aria label in Svelte",
+      "summary": "Come appare un modulo tradotto a metà a chi lo usa, e come un solo ‹Translate› raggiunge placeholder, testi alt e aria label nello stesso passaggio."
+    },
+    "svelte/formatting": {
+      "title": "Numeri e date in ogni locale con Svelte i18n",
+      "summary": "Numeri e date secondo CLDR: la condizione che scriveresti a mano, perché il raggruppamento delle cifre è una forma e non un separatore, e perché un numero d'ordine va passato come stringa."
+    },
+    "svelte/social/phrase-9x16": {
+      "title": "La tua chiave i18n è semplicemente la frase in inglese #Shorts",
+      "summary": "Con Langsys la frase nel tuo codice è la chiave di traduzione: nessun file di chiavi, niente da estrarre o tenere sincronizzato, e la stessa riga torna in ogni lingua. #Shorts"
+    },
+    "svelte/social/icu-gender-9x16": {
+      "title": "Bienvenido o Bienvenida? Una riga di codice #Shorts",
+      "summary": "In spagnolo la parola si accorda con l'utente. Langsys genera i rami ICU select, così Diego riceve Bienvenido, Laura riceve Bienvenida e un genere sconosciuto riceve la forma neutra, tutto da una sola riga. #Shorts"
+    },
+    "svelte/social/icu-plurals-9x16": {
+      "title": "Il russo ha 4 forme plurali. Tu scrivi una riga #Shorts",
+      "summary": "One, few, many e other: il russo sceglie la forma plurale in base al numero, e 21 torna al singolare. Scrivi la frase piatta e Langsys costruisce ogni forma di cui ha bisogno ciascun locale. #Shorts"
+    },
+    "svelte/social/content-blocks-9x16": {
+      "title": "Traduci un'intera sezione con un solo tag #Shorts",
+      "summary": "Un solo tag Translate avvolge una regione di markup: ogni blocco di testo diventa una frase a sé, grassetti e link finiscono al posto giusto e il nome del brand non viene mai tradotto. #Shorts"
+    }
+  }
+}

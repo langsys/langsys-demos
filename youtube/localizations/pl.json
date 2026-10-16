@@ -1,0 +1,146 @@
+{
+  "labels": {
+    "learn_more": "Dowiedz się więcej",
+    "get_started": "Zacznij",
+    "start_free": "Zacznij za darmo",
+    "docs": "Dokumentacja"
+  },
+  "videos": {
+    "explainer": {
+      "title": "Czym jest Langsys? Twoja aplikacja w każdym języku, bez ponownego wdrożenia",
+      "summary": "Langsys w 77 sekund: SDK w twojej aplikacji i hostowany Translation Manager. Fraza rejestruje się sama, gdy twój kod wykona ją po raz pierwszy, od razu dostaje tłumaczenie maszynowe, a tłumacz może ją dopracować bez wdrożenia.\n\nDowód: wpis na blogu opublikowany o 09:00, bez builda i bez klucza zapisu, trafia do czytelnika w Madrycie po hiszpańsku o 09:03."
+    },
+    "getting-started": {
+      "title": "Langsys od zera: pełny start krok po kroku",
+      "summary": "Jedno ujęcie od zera do przetłumaczonej aplikacji: tworzysz projekt i jego języki, tworzysz klucz API, instalujesz i inicjalizujesz SDK, a potem patrzysz, jak t(), ‹Translate›, ‹Phrase› i ‹DontTranslate› rejestrują swoje frazy. Hiszpańskie tłumaczenia już czekają w Translation Manager, a aplikacja przełącza się na hiszpański i francuski bez przeładowania."
+    },
+    "pluralization": {
+      "title": "Liczba mnoga w każdym języku, bez if (count === 1)",
+      "summary": "Dlaczego zdanie zmienia się razem z liczbą, dlaczego if (count === 1), które naprawia to po angielsku, to angielska gramatyka zaszyta w twoim kodzie, i jak zapisanie zdania bez rozgałęzień daje ci każdą formę liczby mnogiej w każdym języku. Langsys tłumaczy je w tej prostej postaci, a potem odbudowuje w kategoriach liczby mnogiej ICU każdego locale, łącznie z angielskim."
+    },
+    "tutorial/workflow": {
+      "title": "Pipeline tłumaczeń i jak Langsys go usuwa",
+      "summary": "Koncepcje 1 z 5. Tłumaczenia zwykle krążą przez cały pipeline: ekstrakcja, eksport, tłumaczenie, import, wdrożenie. Langsys go usuwa."
+    },
+    "tutorial/key-files": {
+      "title": "Koniec z plikami kluczy: zdanie jest kluczem",
+      "summary": "Koncepcje 2 z 5. Od czego zaczyna się projekt, klucz, który każą ci wymyślać inne biblioteki i18n, i co zastępuje go w Langsys."
+    },
+    "tutorial/locale-store": {
+      "title": "Locale store: przechowywanie i przełączanie aktywnego języka",
+      "summary": "Koncepcje 3 z 5. Jak Langsys przechowuje aktywny locale i przełącza go w całej aplikacji."
+    },
+    "tutorial/keys-and-environments": {
+      "title": "Klucze API i środowiska: który klucz gdzie",
+      "summary": "Koncepcje 4 z 5. Dlaczego klucz, który może rejestrować frazy, nigdy nie może trafić do wydania, dlaczego read-only to ślepa uliczka i czym jest ip_write: jeden klucz, którego odpowiedź zależy od tego, skąd pytasz. Klucze zapisu zostają na maszynach, które kontrolujesz, ip_write trafia do każdego publicznego bundla, a read-only jest dla bundli, które nigdy niczego nie mogą zmienić."
+    },
+    "tutorial/adding-a-locale": {
+      "title": "Nowy język to jedno ustawienie w projekcie",
+      "summary": "Koncepcje 5 z 5. Dodanie nowego języka to ustawienie, a nie osobny projekt: nowe frazy tłumaczą się od razu, a jedno uruchomienie uzupełnia resztę."
+    },
+    "managing-translations": {
+      "title": "Zarządzanie tłumaczeniami w Langsys Translation Manager",
+      "summary": "Translation Manager dla osoby odpowiedzialnej za teksty, bez kodu na ekranie: lista zadań, szkic maszynowy poprawiony ręcznie, AI Translate z Auto-next, Never Translate i tłumacz zaproszony tylko do hiszpańskiego. Poprawka działa w aplikacji na żywo, bez żadnego wdrożenia."
+    },
+    "translation-memory": {
+      "title": "Pamięć tłumaczeń: nowy projekt, który startuje już przetłumaczony",
+      "summary": "Drugi projekt w tej samej organizacji otwiera się w pełni przetłumaczony, zanim ktokolwiek go dotknie. Pamięć tłumaczeń przenosi między projektami każde zdanie razem z informacją, kto je napisał, więc dla nowego projektu nie trzeba wywoływać żadnego modelu."
+    },
+    "connect-your-ai-assistant": {
+      "title": "Langsys w Claude Code przez MCP",
+      "summary": "Langsys w asystencie AI przez hostowany serwer MCP: jedno polecenie claude mcp add, zatwierdzenie w przeglądarce i Claude Code odpowiadający na pytania o języki twojego projektu na podstawie danych na żywo. Połączenie możesz cofnąć w zakładce „Security” swojego konta."
+    },
+    "adding-a-language": {
+      "title": "Dodaj niemiecki do działającej aplikacji: dokładna wycena, zero wdrożeń",
+      "summary": "Niemiecki dodany do działającego sklepu. Langsys dokładnie wycenia istniejący katalog, zanim cokolwiek ruszy (29 słów, $0.35), tłumaczy go, a sklep przełącza się na niemiecki bez żadnego builda ani wdrożenia."
+    },
+    "catching-up-a-language": {
+      "title": "Jak nadrobić język, który został w tyle",
+      "summary": "Akcje zbiorcze w Translation Manager: AI Translate Pending dla jednego języka lub całego projektu, z potwierdzeniem, które pokazuje każdy docelowy locale i jego koszt, a na koniec wszystkie języki znowu w komplecie."
+    },
+    "translating-a-content-block": {
+      "title": "Tłumaczenie całego bloku treści naraz",
+      "summary": "Region ‹Translate› przetłumaczony jako jeden blok treści: AI Translate wypełnia wszystkie segmenty razem, jeden segment zostaje ręcznie przepisany w formalnym rejestrze, a zdanie w ‹DontTranslate› zostaje po angielsku, podczas gdy wokół niego pojawia się tekst po włosku."
+    },
+    "ai-translator-settings": {
+      "title": "Ustawienia AI Translator: każdy przełącznik wyjaśniony",
+      "summary": "Zakładka AI Translator od góry do dołu: tłumaczenia AI na żądanie, automatyczne tłumaczenie nowych fraz i autodetekcja, która oznacza frazę przychodzącą już po hiszpańsku jako never-translate."
+    },
+    "api-keys-in-production": {
+      "title": "Klucze API na produkcji: aktywność, pauzowanie i rotacja",
+      "summary": "Klucz po wdrożeniu: prawdziwy tydzień ruchu ze sklepu na jego stronie Activity, wstrzymanie klucza bez usuwania i rotacja na żywo: trzy typy kluczy, nowy klucz IP write utworzony z allowlistą i usunięcie starego."
+    },
+    "one-organization-many-projects": {
+      "title": "Jedna organizacja, wiele projektów",
+      "summary": "Organizacja jako punkt wyjścia dla każdego projektu: domyślne locale, ustawienia AI Translator i rozliczeń, finansowanie projektu z salda organizacji oraz dostosowany projekt przywrócony do dziedziczenia ustawień."
+    },
+    "usage-and-credits": {
+      "title": "Użycie i kredyty: jak finansowany jest projekt",
+      "summary": "Dwa liczniki, jednostki użycia API i kredyty, oraz to, jak projekt dostaje środki: transfer kredytów z konta do projektu pokazany na żywo, jedna pozycja w historii na każde tłumaczenie maszynowe oraz miesięczny limit projektu i automatyczne doładowanie."
+    },
+    "plans-and-payments": {
+      "title": "Plany i płatności w Langsys",
+      "summary": "Przegląd rozliczeń bez wysyłania czegokolwiek: plan i cykl rozliczeniowy, okno Change Plan, metody płatności współdzielone z organizacją lub projektem, adresy i faktury."
+    },
+    "notifications": {
+      "title": "Powiadomienia: o czym i gdzie informuje cię Langsys",
+      "summary": "Skrzynka powiadomień i jej ustawienia: domyślne ustawienia konta dla nowych fraz, zaproszeń i dostępu do projektów, w aplikacji i e-mailem, oraz nadpisanie dla konkretnego projektu."
+    },
+    "svelte/hero": {
+      "title": "Svelte i18n z Langsys: pełny przewodnik",
+      "summary": "Co inne biblioteki i18n każą ci trzymać w synchronizacji, jedno wywołanie, które to zastępuje, przełączanie locale, dlaczego hiszpański bez odmiany jest błędny dla połowy twoich użytkowników i co robi z tym ICU select."
+    },
+    "svelte/t-string": {
+      "title": "t(phrase, category, params) w Svelte",
+      "summary": "Wywołanie t(): problem z plikami kluczy, który rozwiązuje, jego trzy argumenty, placeholdery ICU i liczba mnoga."
+    },
+    "svelte/phrase-tag": {
+      "title": "‹Phrase› w Svelte: zdanie ze znacznikami w środku",
+      "summary": "Zdanie ze znacznikami w środku, zachowane jako jedna fraza, i dlaczego parametry ‹Phrase› zapisuje się jako %name%."
+    },
+    "svelte/translate-tag": {
+      "title": "‹Translate› w Svelte: jeden tag na cały region",
+      "summary": "Jeden tag ‹Translate› rejestruje cały region i dlaczego blok wygrywa z osobnym wywołaniem dla każdej linii."
+    },
+    "svelte/donttranslate": {
+      "title": "‹DontTranslate› w Svelte: nazwy marek bez zmian",
+      "summary": "Nazwy marek i identyfikatory zachowane dosłownie, bez wyciągania ich ze zdania."
+    },
+    "svelte/content-blocks": {
+      "title": "Czym jest blok treści? Tłumaczenie całej sekcji w Svelte",
+      "summary": "Jedna sekcja zarejestrowana jako całość, wciąż złożona z fraz, których można używać pojedynczo."
+    },
+    "svelte/categories": {
+      "title": "To samo słowo, dwa znaczenia: kategorie zamiast kluczy i18n",
+      "summary": "Dlaczego i18n wymyśliło klucze i co je zastępuje: to samo słowo o dwóch znaczeniach i pary, na które się dzieli."
+    },
+    "svelte/icu-gender": {
+      "title": "Rodzaj gramatyczny bez warunków w kodzie (ICU select)",
+      "summary": "Warunek dla płci, który inne biblioteki i18n zostawiają w twoim komponencie, i gałęzie, które Langsys zamiast tego generuje dla każdego języka."
+    },
+    "svelte/attributes": {
+      "title": "Tłumaczenie placeholderów, tekstów alt i etykiet aria w Svelte",
+      "summary": "Jak w połowie przetłumaczony formularz wygląda dla osoby, która go używa, i jak jeden ‹Translate› obejmuje placeholdery, teksty alt i etykiety aria za jednym razem."
+    },
+    "svelte/formatting": {
+      "title": "Liczby i daty w każdym locale ze Svelte i18n",
+      "summary": "Liczby i daty według CLDR: gałąź, którą trzeba by pisać ręcznie, dlaczego grupowanie cyfr to kształt, a nie separator, i dlaczego numer zamówienia trzeba przekazać jako string."
+    },
+    "svelte/social/phrase-9x16": {
+      "title": "Twój klucz i18n to po prostu angielskie zdanie #Shorts",
+      "summary": "Z Langsys zdanie w twoim kodzie jest kluczem tłumaczenia: bez pliku kluczy, bez ekstrakcji i synchronizacji, a ta sama linia wraca w każdym języku. #Shorts"
+    },
+    "svelte/social/icu-gender-9x16": {
+      "title": "Bienvenido czy Bienvenida? Jedna linia kodu #Shorts",
+      "summary": "Hiszpański dopasowuje się do użytkownika. Langsys generuje gałęzie ICU select, więc Diego dostaje Bienvenido, Laura dostaje Bienvenida, a przy nieznanej płci pojawia się forma neutralna, wszystko z jednej linii. #Shorts"
+    },
+    "svelte/social/icu-plurals-9x16": {
+      "title": "Rosyjski ma 4 formy liczby mnogiej. Ty piszesz jedną linię #Shorts",
+      "summary": "One, few, many i other: rosyjski wybiera formę liczby mnogiej według liczby, a 21 wraca do formy pojedynczej. Zapisz zdanie bez rozgałęzień, a Langsys zbuduje każdą formę, jakiej potrzebuje dany locale. #Shorts"
+    },
+    "svelte/social/content-blocks-9x16": {
+      "title": "Przetłumacz całą sekcję jednym tagiem #Shorts",
+      "summary": "Jeden tag Translate obejmuje region znaczników: każdy fragment tekstu staje się osobną frazą, pogrubienia i linki lądują tam, gdzie powinny, a nazwa marki nigdy nie jest tłumaczona. #Shorts"
+    }
+  }
+}
