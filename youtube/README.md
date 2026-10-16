@@ -22,9 +22,7 @@ Start free: https://langsys.dev
 Docs: https://docs.langsys.dev
 ```
 
-Still to add:
-
-- `watermark.png`: 150×150, shown in the corner of every video.
+`watermark.png` (150×150) is the channel watermark: the hexagon on a white disc with a grey `#A7A9AC` ring, so it reads over light and dark footage. It is set on the channel for the whole length of every video, bottom right, and clicking it subscribes. Change it in Studio, Customization → Branding.
 
 ## Publishing the videos
 
