@@ -25,10 +25,11 @@ Until its day a video stays unlisted, so the Learning Center can embed it,
 and its playlist stays unlisted until the first video in it goes public.
 
 Every video goes up private (an unaudited API project can't set another
-visibility; switching it to unlisted or public in Studio afterwards works), gets its
-thumbnail, and is added to its playlist. Progress is written to uploads.json
-after each step, so a run stopped by the daily quota resumes where it left off.
-Videos with a "hold" note are skipped until the note is removed, and
+visibility on upload), is switched to unlisted so the Learning Center can embed
+it, gets its thumbnail, and is added to its playlist. Progress is written to
+uploads.json after each step, so a run stopped by the daily quota resumes where
+it left off. A "hold" note keeps a video from going public: it uploads like the
+rest, and --publish skips it, saying why, until the note is removed.
 "thumbnail": false skips the thumbnail (Shorts, which YouTube covers from a
 frame of the video).
 """
@@ -281,15 +282,23 @@ def _sync_playlists(youtube, state: dict, catalogue: dict, live: dict) -> None:
 def _calendar(state: dict, catalogue: dict, today: str) -> None:
     for video in sorted((video for video in catalogue['videos'] if video.get('publish')), key=lambda video: video['publish']):
         record = state['videos'].get(video['file'], {})
-        mark = 'published' if record.get('published') else ('due' if video['publish'] <= today else '')
+        mark = 'published' if record.get('published') else 'on hold' if video.get('hold') else 'due' if video['publish'] <= today else ''
         print(f"  {video['publish']}  {mark:9}  {video['title']}")
-    held = [video['file'] for video in catalogue['videos'] if video.get('hold')]
-    print(f"  on hold, no date: {', '.join(held) or 'none'}")
+    undated = [video['file'] for video in catalogue['videos'] if not video.get('publish')]
+    if undated:
+        print(f"  no date: {', '.join(undated)}")
 
 
 def _publish(youtube, state: dict, catalogue: dict, today: str, dry_run: bool) -> None:
-    due = [video for video in _uploaded(state, catalogue)
-           if video.get('publish') and video['publish'] <= today and not state['videos'][video['file']].get('published')]
+    due = [video for video in catalogue['videos']
+           if video.get('publish') and video['publish'] <= today and not state['videos'].get(video['file'], {}).get('published')]
+    for video in due:
+        if video.get('hold'):
+            print(f"  skipped, on hold: {video['file']} ({video['hold']})")
+        elif not state['videos'].get(video['file'], {}).get('id'):
+            print(f"  skipped, not uploaded yet: {video['file']}")
+    due = sorted((video for video in due if not video.get('hold') and state['videos'].get(video['file'], {}).get('id')),
+                 key=lambda video: video['publish'])
     print(f'{len(due)} due on or before {today}')
     for video in due:
         print(f"  {video['publish']}  {video['file']}  ->  {video['title']}")
@@ -365,8 +374,7 @@ def main() -> None:
             for file in args.replace:
                 _forget(youtube, state, file)
 
-    pending = [video for video in catalogue['videos']
-               if not video.get('hold') and not state['videos'].get(video['file'], {}).get('playlist')]
+    pending = [video for video in catalogue['videos'] if not state['videos'].get(video['file'], {}).get('playlist')]
     if args.replace:
         pending = [video for video in catalogue['videos'] if video['file'] in args.replace]
     if args.day:
@@ -375,7 +383,7 @@ def main() -> None:
         pending = pending[:args.limit]
     held = [video['file'] for video in catalogue['videos'] if video.get('hold')]
 
-    print(f"{len(pending)} to upload; held: {', '.join(held) or 'none'}")
+    print(f"{len(pending)} to upload; on hold (uploaded, not published): {', '.join(held) or 'none'}")
     if args.dry_run:
         for video in pending:
             print(f"  day {video['day']}  {video['file']}  ->  {video['title']}")
@@ -390,6 +398,8 @@ def main() -> None:
             if not record.get('id'):
                 record['id'] = _upload_video(youtube, video, defaults)
                 _save_state(state)
+            _step(state, file, 'unlisted', lambda: _set_privacy(
+                youtube, youtube.videos().list(part='status', id=record['id']).execute()['items'][0], 'unlisted'))
             if video.get('thumbnail') is not False:
                 _step(state, file, 'thumbnail', lambda: _set_thumbnail(youtube, file, record['id']))
             _step(state, file, 'playlist', lambda: youtube.playlistItems().insert(part='snippet', body={'snippet': {
