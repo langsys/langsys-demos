@@ -165,7 +165,7 @@ No build, no deploy, and no developer ran it.
 
 Upload `videos/shared/social/published-at-nine-4x5.mp4` (the silent 4:5 cut).
 
-Reply: `(YouTube link once the Short is uploaded)`
+Reply: `https://youtu.be/2pSiq0Xe4mI`
 
 ## Week 2, Wednesday (launch + 9)
 
@@ -193,7 +193,7 @@ One approval in your browser. It never sees your password.
 
 Upload `videos/shared/social/ask-your-assistant-4x5.mp4` (the silent 4:5 cut).
 
-Reply: `(YouTube link once the Short is uploaded)`
+Reply: `https://youtu.be/6AkTyjzK5_c`
 
 ## Week 2, Friday (launch + 11)
 
@@ -235,7 +235,7 @@ Someone fixed one word in another project. This one already knew.
 
 Upload `videos/shared/social/memory-4x5.mp4` (the silent 4:5 cut).
 
-Reply: `(YouTube link once the Short is uploaded)`
+Reply: `https://youtu.be/daw8QZbaaM4`
 
 ## Week 3, Wednesday (launch + 16)
 
@@ -263,7 +263,7 @@ One sentence for the translator, markup and all.
 
 Upload `videos/svelte/social/bold-moves-4x5.mp4` (the silent 4:5 cut).
 
-Reply: `(YouTube link once the Short is uploaded)`
+Reply: `https://youtu.be/OtSqBQkO6TU`
 
 ## Week 3, Friday (launch + 18)
 
@@ -305,7 +305,7 @@ Added in settings, priced exactly, drafted in seconds. No deploy.
 
 Upload `videos/shared/social/add-german-4x5.mp4` (the silent 4:5 cut).
 
-Reply: `(YouTube link once the Short is uploaded)`
+Reply: `https://youtu.be/7dz7DjTAh2Y`
 
 ## Week 4, Wednesday (launch + 23)
 
@@ -335,7 +335,7 @@ The drafts wait for review.
 
 Upload `videos/shared/social/catch-up-4x5.mp4` (the silent 4:5 cut).
 
-Reply: `(YouTube link once the Short is uploaded)`
+Reply: `https://youtu.be/_3WJQCtVcdE`
 
 ## Week 4, Friday (launch + 25)
 
@@ -405,7 +405,7 @@ That's what happens to a brand name nobody marked. Here's how yours stays yours.
 
 Upload `videos/svelte/social/brand-names-4x5.mp4` (the silent 4:5 cut).
 
-Reply: `(YouTube link once the Short is uploaded)`
+Reply: `https://youtu.be/dqxuUR7f7bs`
 
 ## Week 5, Friday (launch + 32)
 
@@ -473,7 +473,7 @@ Gratis for the price. Libre for the evening.
 
 Upload `videos/svelte/social/two-meanings-4x5.mp4` (the silent 4:5 cut).
 
-Reply: `(YouTube link once the Short is uploaded)`
+Reply: `https://youtu.be/xEubzXvE5js`
 
 ## Week 6, Friday (launch + 39)
 
@@ -513,7 +513,7 @@ Even the words a screen reader announces.
 
 Upload `videos/svelte/social/alt-text-4x5.mp4` (the silent 4:5 cut).
 
-Reply: `(YouTube link once the Short is uploaded)`
+Reply: `https://youtu.be/hsb-VE3Kc3E`
 
 ## Week 7, Wednesday (launch + 44)
 
@@ -541,7 +541,7 @@ Pass it as a string, and it stays 1048576.
 
 Upload `videos/svelte/social/local-formats-4x5.mp4` (the silent 4:5 cut).
 
-Reply: `(YouTube link once the Short is uploaded)`
+Reply: `https://youtu.be/_9CfOA8txIU`
 
 ## Week 7, Friday (launch + 46)
 

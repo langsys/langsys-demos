@@ -175,6 +175,56 @@
       "unlisted": true,
       "thumbnail": true,
       "playlist": true
+    },
+    "shared/social/published-at-nine-9x16": {
+      "id": "2pSiq0Xe4mI",
+      "unlisted": true,
+      "playlist": true
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "id": "6AkTyjzK5_c",
+      "unlisted": true,
+      "playlist": true
+    },
+    "shared/social/memory-9x16": {
+      "id": "daw8QZbaaM4",
+      "unlisted": true,
+      "playlist": true
+    },
+    "svelte/social/bold-moves-9x16": {
+      "id": "OtSqBQkO6TU",
+      "unlisted": true,
+      "playlist": true
+    },
+    "shared/social/add-german-9x16": {
+      "id": "7dz7DjTAh2Y",
+      "unlisted": true,
+      "playlist": true
+    },
+    "shared/social/catch-up-9x16": {
+      "id": "_3WJQCtVcdE",
+      "unlisted": true,
+      "playlist": true
+    },
+    "svelte/social/brand-names-9x16": {
+      "id": "dqxuUR7f7bs",
+      "unlisted": true,
+      "playlist": true
+    },
+    "svelte/social/two-meanings-9x16": {
+      "id": "xEubzXvE5js",
+      "unlisted": true,
+      "playlist": true
+    },
+    "svelte/social/alt-text-9x16": {
+      "id": "hsb-VE3Kc3E",
+      "unlisted": true,
+      "playlist": true
+    },
+    "svelte/social/local-formats-9x16": {
+      "id": "_9CfOA8txIU",
+      "unlisted": true,
+      "playlist": true
     }
   }
 }
