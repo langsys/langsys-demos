@@ -141,6 +141,46 @@
     "svelte/social/content-blocks-9x16": {
       "title": "Przetłumacz całą sekcję jednym tagiem #Shorts",
       "summary": "Jeden tag Translate obejmuje region znaczników: każdy fragment tekstu staje się osobną frazą, pogrubienia i linki lądują tam, gdzie powinny, a nazwa marki nigdy nie jest tłumaczona. #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "Opublikowane o 9:00, przeczytane po hiszpańsku o 9:03 #Shorts",
+      "summary": "Wpis trafia do sieci bez builda i bez wdrożenia. Aplikacja pierwszego czytelnika wysyła do Langsys tylko adres strony, Langsys sam czyta stronę, a kilka minut później czytelnik w Madrycie dostaje ją po hiszpańsku. #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "Zapytaj asystenta AI, jak idą Twoje tłumaczenia #Shorts",
+      "summary": "Langsys udostępnia serwer MCP, więc Claude, Codex, Cursor czy GitHub Copilot mogą czytać Twoje projekty i tłumaczyć to, czego brakuje. Jedna zgoda w przeglądarce, a asystent nigdy nie widzi Twojego hasła. #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "Nowy projekt, który startuje już przetłumaczony #Shorts",
+      "summary": "Popraw tłumaczenie raz, a każdy nowy projekt w Twojej organizacji już je zna. Pamięć tłumaczeniowa wypełniła ten projekt po hiszpańsku, razem z autorem tłumaczenia, bez wywoływania żadnego modelu. #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "Po hiszpańsku pogrubienie przesuwa się tam, gdzie trzeba #Shorts",
+      "summary": "Inne biblioteki i18n tną zdanie z pogrubionym słowem na trzy klucze. Z ‹Phrase› tłumacz dostaje jedno zdanie razem ze znacznikami, a po hiszpańsku pogrubienie trafia za rzeczownik, na „no leídos”. #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "Dodaj niemiecki do działającego sklepu, bez wdrożenia #Shorts",
+      "summary": "Dodaj język w ustawieniach projektu, nie w kodzie. Langsys podaje dokładną cenę za istniejący katalog, zanim cokolwiek wyda, tłumaczy każdą frazę w kilka sekund, a sklep mówi po niemiecku bez builda i bez wdrożenia. #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "Dwa języki w tyle, nadrobione jedną akcją #Shorts",
+      "summary": "Francuskiemu i japońskiemu brakowało po dwie frazy. AI Translate Pending tłumaczy je w kilka sekund, a wersje robocze czekają, aż ktoś je sprawdzi. #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "Nazwa Twojej marki, nigdy nie tłumaczona #Shorts",
+      "summary": "Tłumacz nie odróżni nazwy produktu od zwykłej frazy, więc inne biblioteki i18n publikują Bright Ledger jako Libro Mayor Brillante. W Langsys oznaczasz ją w miejscu, w którym stoi, za pomocą ‹DontTranslate›, a zdanie wokół nadal się tłumaczy. #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "Jedno angielskie słowo, dwa hiszpańskie tłumaczenia #Shorts",
+      "summary": "„Free” to na jednym ekranie cena, a na innym wolny wieczór. Inne biblioteki i18n wymyślają klucz, żeby je rozróżnić. Langsys zachowuje zdanie i przypisuje je do kategorii: Gratis i Libre. #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "Placeholdery i tekst alternatywny też się tłumaczą #Shorts",
+      "summary": "Inne biblioteki i18n wymagają osobnego wywołania dla każdego atrybutu, a ten, o którym zapomnisz, zostaje po angielsku. Jeden tag ‹Translate› obejmuje cały obszar: placeholder, opis obrazka i etykietę, którą odczytuje czytnik ekranu. #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "Każda liczba i data w formacie danego języka #Shorts",
+      "summary": "Przekaż samą liczbę i datę jako datę: po niemiecku wychodzi 1.234,5 i 14. März 2026, a w hindi 1234567 grupuje się jako 12,34,567. Numer zamówienia przekazujesz jako tekst, więc zostaje dokładnie taki, jaki jest. #Shorts"
     }
   }
 }

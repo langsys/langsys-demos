@@ -141,6 +141,46 @@
     "svelte/social/content-blocks-9x16": {
       "title": "一个标签，翻译整个版块 #Shorts",
       "summary": "一个 Translate 标签包裹一段标记区域：每段文本都成为独立的短语，粗体和链接各归其位，品牌名永远不会被翻译。#Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "9:00 发布，9:03 就有人用西班牙语读到 #Shorts",
+      "summary": "一篇博客文章上线，无需构建也无需部署。第一位读者的应用只把页面地址发给 Langsys，Langsys 自己读取页面，几分钟后，马德里的读者就看到了西班牙语版本。 #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "问问你的 AI 助手，翻译进展如何 #Shorts",
+      "summary": "Langsys 托管了一个 MCP 服务器，Claude、Codex、Cursor 或 GitHub Copilot 都能读取你的项目并补齐缺失的翻译。只需在浏览器中授权一次，助手永远看不到你的密码。 #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "一个全新项目，一开始就已翻译好 #Shorts",
+      "summary": "改一次翻译，组织里的每个新项目都会知道。翻译记忆用西班牙语填满了这个项目，还保留了译者的署名，而且没有调用任何模型。 #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "在西班牙语中，粗体会移到它该在的位置 #Shorts",
+      "summary": "其他 i18n 库会把含有粗体词的句子拆成三个键。使用 ‹Phrase›，译者拿到的是连同标记在内的一整句话；在西班牙语中，粗体落在名词之后的“no leídos”上。 #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "为线上商店添加德语，无需部署 #Shorts",
+      "summary": "在项目设置中添加语言，而不是改代码。Langsys 会在花钱之前给出现有目录的准确价格，几秒钟内翻译完每个短语，商店无需构建或部署就能说德语。 #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "两种语言落后了，一步操作就追上 #Shorts",
+      "summary": "法语和日语各缺两个短语。AI Translate Pending 几秒钟就能翻译好，草稿会等待有人审核。 #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "你的品牌名，永远不会被翻译 #Shorts",
+      "summary": "译者分不清产品名和普通短语，所以其他 i18n 库会把 Bright Ledger 发布成 Libro Mayor Brillante。在 Langsys 中，你只需在原处用 ‹DontTranslate› 标记它，周围的句子照常翻译。 #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "一个英文单词，两种西班牙语译法 #Shorts",
+      "summary": "“Free”在一个界面上是价格，在另一个界面上是空闲的晚上。其他 i18n 库会编造一个键来区分它们。Langsys 保留原句，并把它归入一个类别：Gratis 和 Libre。 #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "占位符和替代文本也会被翻译 #Shorts",
+      "summary": "其他 i18n 库需要为每个属性单独调用，漏掉的那个就会一直是英文。一个 ‹Translate› 标签覆盖整个区域：占位符、图片描述，以及屏幕阅读器朗读的标签。 #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "每个数字和日期，都按各语言的格式显示 #Shorts",
+      "summary": "直接传入数字，把日期作为日期传入：德语显示 1.234,5 和 14. März 2026，印地语会把 1234567 分组为 12,34,567。订单号作为字符串传入，所以会保持原样。 #Shorts"
     }
   }
 }

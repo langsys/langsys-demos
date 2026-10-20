@@ -26,7 +26,13 @@ Docs: https://docs.langsys.dev
 
 ## Publishing the videos
 
-Every video is uploaded and set unlisted, so the Learning Center can embed it before it goes public. Titles, descriptions, tags, thumbnails and playlists are done. Each video's `publish` date in `videos.json` is its day; the calendar runs Monday, Wednesday and Friday, from 2026-10-19 to 2026-12-16, with each Short going out the same day as the long video it comes from.
+Every video is uploaded and set unlisted, so the Learning Center can embed it before it goes public. Titles, descriptions, tags, thumbnails and playlists are done. Each video's `publish` date in `videos.json` is its day. Nothing goes public before the official launch, so the dates use 2026-10-19 as a stand-in for the launch Monday; once the real date is set, `--reschedule` moves them all.
+
+- **Launch day:** the starting set at once, so someone arriving can watch the whole path: Start here (3), the concepts track (5) and Connect your AI assistant.
+- **After launch:** one long video every Monday, Wednesday and Friday, alternating Svelte and the Translation Manager so both audiences get something each week.
+- **Shorts:** on the first Tuesday or Thursday after the long video they come from, so they can link back to it.
+
+That runs seven weeks past launch day.
 
 On a publishing day, from this folder:
 
@@ -48,4 +54,4 @@ Anything whose date has passed goes out too, so a missed day catches up on the n
 
 `localizations/<code>.json` holds every video's title and summary, plus the four footer labels, in each Learning Center language: ar, de, es, fr, hi, id, it, ja, ko, nl, pl, pt, ru, tr, uk, vi and zh-CN. YouTube shows a viewer the version in their interface language and English otherwise; captions and audio are not affected. A translated description links the Learning Center page in its own language (`/learn/es/...`). `--sync` and new uploads carry them; after changing a title or summary in `videos.json`, update the same entry in each file. The files' keys match `videos.json`, so a new video needs an entry in all seventeen.
 
-`managing-translations` (2026-12-18) and `translating-a-content-block` (2026-12-21) carry a `hold` note: they are filmed against translation-manager MR !1 and !2, and until those ship the live app does not do what the video shows. `python upload.py` uploads them unlisted like the rest; add their ids to the Learning Center's `videos.ts`. `--publish` skips them, printing the note, until the `hold` is removed from `videos.json`.
+`managing-translations` (launch + 4 days) and `translating-a-content-block` (launch + 23 days) carry a `hold` note: they are filmed against translation-manager MR !1 and !2, and until those ship the live app does not do what the video shows. `python upload.py` uploads them unlisted like the rest; add their ids to the Learning Center's `videos.ts`. `--publish` skips them, printing the note, until the `hold` is removed from `videos.json`.

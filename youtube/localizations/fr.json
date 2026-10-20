@@ -141,6 +141,46 @@
     "svelte/social/content-blocks-9x16": {
       "title": "Traduire une section entière avec une seule balise #Shorts",
       "summary": "Une balise Translate englobe une région de balisage : chaque portion de texte devient sa propre phrase, le gras et les liens restent à leur place, et le nom de la marque n'est jamais traduit. #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "Publié à 9 h, lu en espagnol à 9 h 03 #Shorts",
+      "summary": "Un article est mis en ligne sans build ni déploiement. L'application de son premier lecteur n'envoie à Langsys que l'adresse de la page, Langsys lit la page lui-même et, quelques minutes plus tard, un lecteur à Madrid la reçoit en espagnol. #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "Demandez à votre assistant IA où en sont vos traductions #Shorts",
+      "summary": "Langsys héberge un serveur MCP : Claude, Codex, Cursor ou GitHub Copilot peuvent lire vos projets et traduire ce qui manque. Une seule autorisation dans votre navigateur, et l'assistant ne voit jamais votre mot de passe. #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "Un tout nouveau projet, déjà traduit #Shorts",
+      "summary": "Corrigez une traduction une fois, et chaque nouveau projet de votre organisation la connaît déjà. La mémoire de traduction a rempli ce projet en espagnol, avec le nom de la personne qui a traduit, sans appeler aucun modèle. #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "En espagnol, le gras se déplace là où il doit être #Shorts",
+      "summary": "D'autres bibliothèques i18n découpent une phrase contenant un mot en gras en trois clés. Avec ‹Phrase›, le traducteur reçoit une seule phrase, balisage compris, et en espagnol le gras tombe après le nom, sur « no leídos ». #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "Ajoutez l'allemand à une boutique en ligne, sans déploiement #Shorts",
+      "summary": "Ajoutez la langue dans les paramètres du projet, pas dans votre code. Langsys donne le prix exact du catalogue existant avant de dépenser quoi que ce soit, traduit chaque phrase en quelques secondes, et la boutique parle allemand sans rien compiler ni déployer. #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "Deux langues en retard, rattrapées en une seule action #Shorts",
+      "summary": "Il manquait deux phrases au français et deux au japonais. AI Translate Pending les traduit en quelques secondes, et les brouillons attendent qu'une personne les relise. #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "Le nom de votre marque, jamais traduit #Shorts",
+      "summary": "Un traducteur ne peut pas distinguer un nom de produit d'une phrase : d'autres bibliothèques i18n publient Bright Ledger sous le nom de Libro Mayor Brillante. Avec Langsys, vous le marquez là où il se trouve avec ‹DontTranslate›, et la phrase autour continue d'être traduite. #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "Un mot anglais, deux traductions espagnoles #Shorts",
+      "summary": "« Free » est un prix sur un écran et une soirée libre sur un autre. D'autres bibliothèques i18n inventent une clé pour les distinguer. Langsys garde la phrase et la range dans une catégorie : Gratis et Libre. #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "Les placeholders et le texte alternatif se traduisent aussi #Shorts",
+      "summary": "D'autres bibliothèques i18n exigent un appel pour chaque attribut, et celui que vous oubliez reste en anglais. Une seule balise ‹Translate› couvre la zone : le placeholder, la description de l'image et le libellé qu'annonce un lecteur d'écran. #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "Chaque nombre et chaque date, au format de chaque langue #Shorts",
+      "summary": "Passez le nombre tel quel et la date en tant que date : l'allemand affiche 1.234,5 et 14. März 2026, et l'hindi groupe 1234567 en 12,34,567. Un numéro de commande se passe en texte, il reste donc exactement tel quel. #Shorts"
     }
   }
 }

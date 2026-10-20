@@ -141,6 +141,46 @@
     "svelte/social/content-blocks-9x16": {
       "title": "Traduce una sección entera con una etiqueta #Shorts",
       "summary": "Una etiqueta Translate envuelve una región de markup: cada fragmento de texto se convierte en su propia frase, las negritas y los enlaces quedan donde deben y el nombre de la marca nunca se traduce. #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "Publicado a las 09:00, leído en español a las 09:03 #Shorts",
+      "summary": "Un post se publica sin build y sin deploy. La app de su primer lector solo le envía a Langsys la dirección de la página, Langsys lee la página por su cuenta y, minutos después, un lector en Madrid la recibe en español. #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "Pregúntale a tu asistente de IA cómo van tus traducciones #Shorts",
+      "summary": "Langsys aloja un servidor MCP, así que Claude, Codex, Cursor o GitHub Copilot pueden leer tus proyectos y traducir lo que falta. Una sola aprobación en tu navegador, y el asistente nunca ve tu contraseña. #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "Un proyecto nuevo que empieza ya traducido #Shorts",
+      "summary": "Corrige una traducción una vez y cada proyecto nuevo de tu organización ya la conoce. La memoria de traducción llenó este proyecto en español, con el crédito de quien tradujo, y no se llamó a ningún modelo. #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "En español, la negrita se mueve a donde corresponde #Shorts",
+      "summary": "Otras librerías i18n cortan una frase con una palabra en negrita en tres claves. Con ‹Phrase› el traductor recibe una sola frase, con su marcado, y en español la negrita cae después del sustantivo, en \"no leídos\". #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "Añade alemán a una tienda en producción, sin deploy #Shorts",
+      "summary": "Añade el idioma en los ajustes del proyecto, no en tu código. Langsys te da el precio exacto del catálogo existente antes de gastar nada, traduce cada frase en segundos y la tienda habla alemán sin compilar ni desplegar nada. #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "Dos idiomas atrasados, al día con una sola acción #Shorts",
+      "summary": "Al francés y al japonés les faltaban dos frases a cada uno. AI Translate Pending las traduce en segundos, y los borradores esperan a que alguien los revise. #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "El nombre de tu marca, nunca traducido #Shorts",
+      "summary": "Un traductor no puede distinguir el nombre de un producto de una frase, así que otras librerías i18n publican Bright Ledger como Libro Mayor Brillante. Con Langsys lo marcas donde está con ‹DontTranslate›, y la frase alrededor se sigue traduciendo. #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "Una palabra en inglés, dos traducciones al español #Shorts",
+      "summary": "\"Free\" es un precio en una pantalla y una noche libre en otra. Otras librerías i18n inventan una clave para distinguirlas. Langsys conserva la frase y la archiva en una categoría: Gratis y Libre. #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "Los placeholders y el texto alternativo también se traducen #Shorts",
+      "summary": "Otras librerías i18n necesitan una llamada aparte para cada atributo, y el que olvidas se queda en inglés. Una sola etiqueta ‹Translate› cubre la región: el placeholder, la descripción de la imagen y la etiqueta que anuncia un lector de pantalla. #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "Cada número y cada fecha, en el formato de su idioma #Shorts",
+      "summary": "Pasa el número tal cual y la fecha como fecha: en alemán sale 1.234,5 y 14. März 2026, y en hindi 1234567 se agrupa como 12,34,567. Un número de pedido se pasa como texto, así que queda exactamente como está. #Shorts"
     }
   }
 }

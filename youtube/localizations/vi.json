@@ -141,6 +141,46 @@
     "svelte/social/content-blocks-9x16": {
       "title": "Dịch trọn một phần chỉ với một tag #Shorts",
       "summary": "Một tag Translate bao trọn một vùng markup: mỗi đoạn văn bản trở thành một cụm từ riêng, chữ đậm và liên kết nằm đúng chỗ, và tên thương hiệu không bao giờ bị dịch. #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "Đăng lúc 9:00, được đọc bằng tiếng Tây Ban Nha lúc 9:03 #Shorts",
+      "summary": "Một bài blog được đăng mà không cần build hay deploy. Ứng dụng của người đọc đầu tiên chỉ gửi cho Langsys địa chỉ trang, Langsys tự đọc trang, và vài phút sau một người đọc ở Madrid nhận được bài bằng tiếng Tây Ban Nha. #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "Hỏi trợ lý AI xem bản dịch của bạn đang thế nào #Shorts",
+      "summary": "Langsys vận hành một máy chủ MCP, nên Claude, Codex, Cursor hay GitHub Copilot có thể đọc dự án của bạn và dịch phần còn thiếu. Chỉ một lần chấp thuận trên trình duyệt, và trợ lý không bao giờ thấy mật khẩu của bạn. #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "Một dự án mới tinh đã được dịch sẵn ngay từ đầu #Shorts",
+      "summary": "Sửa một bản dịch một lần, mọi dự án mới trong tổ chức của bạn đều đã biết nó. Bộ nhớ dịch đã điền dự án này bằng tiếng Tây Ban Nha, kèm tên người dịch, mà không gọi bất kỳ mô hình nào. #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "Trong tiếng Tây Ban Nha, chữ in đậm dời đến đúng chỗ #Shorts",
+      "summary": "Các thư viện i18n khác cắt một câu có chữ in đậm thành ba key. Với ‹Phrase›, người dịch nhận một câu duy nhất kèm cả markup, và trong tiếng Tây Ban Nha chữ đậm rơi vào sau danh từ, trên \"no leídos\". #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "Thêm tiếng Đức cho cửa hàng đang chạy, không cần deploy #Shorts",
+      "summary": "Thêm ngôn ngữ trong phần cài đặt dự án, không phải trong code. Langsys báo giá chính xác cho danh mục hiện có trước khi chi bất cứ thứ gì, dịch từng cụm từ trong vài giây, và cửa hàng nói tiếng Đức mà không cần build hay deploy. #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "Hai ngôn ngữ bị chậm, bắt kịp chỉ với một thao tác #Shorts",
+      "summary": "Tiếng Pháp và tiếng Nhật mỗi thứ thiếu hai cụm từ. AI Translate Pending dịch chúng trong vài giây, và các bản nháp chờ ai đó duyệt lại. #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "Tên thương hiệu của bạn, không bao giờ bị dịch #Shorts",
+      "summary": "Người dịch không thể phân biệt tên sản phẩm với một cụm từ thường, nên các thư viện i18n khác phát hành Bright Ledger thành Libro Mayor Brillante. Với Langsys, bạn đánh dấu nó ngay tại chỗ bằng ‹DontTranslate›, và câu xung quanh vẫn được dịch. #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "Một từ tiếng Anh, hai bản dịch tiếng Tây Ban Nha #Shorts",
+      "summary": "\"Free\" là một mức giá ở màn hình này và một buổi tối rảnh ở màn hình khác. Các thư viện i18n khác bịa ra một key để phân biệt chúng. Langsys giữ nguyên câu và xếp nó vào một danh mục: Gratis và Libre. #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "Placeholder và văn bản thay thế cũng được dịch #Shorts",
+      "summary": "Các thư viện i18n khác cần một lệnh gọi riêng cho mỗi thuộc tính, và thuộc tính bạn quên sẽ còn nguyên tiếng Anh. Một thẻ ‹Translate› bao trọn cả vùng: placeholder, mô tả hình ảnh và nhãn mà trình đọc màn hình đọc lên. #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "Mọi con số và ngày tháng theo định dạng của từng ngôn ngữ #Shorts",
+      "summary": "Truyền chính con số và ngày tháng dưới dạng ngày: tiếng Đức hiển thị 1.234,5 và 14. März 2026, còn tiếng Hindi nhóm 1234567 thành 12,34,567. Mã đơn hàng được truyền dưới dạng chuỗi nên giữ nguyên như ban đầu. #Shorts"
     }
   }
 }

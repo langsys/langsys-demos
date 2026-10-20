@@ -141,6 +141,46 @@
     "svelte/social/content-blocks-9x16": {
       "title": "Einen ganzen Abschnitt mit einem Tag übersetzen #Shorts",
       "summary": "Ein Translate-Tag umschließt einen Markup-Bereich: Jeder Textabschnitt wird zu einer eigenen Phrase, Fettdruck und Links landen an der richtigen Stelle, und der Markenname wird nie übersetzt. #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "Um 9:00 veröffentlicht, um 9:03 auf Spanisch gelesen #Shorts",
+      "summary": "Ein Blogbeitrag geht ohne Build und ohne Deploy online. Die App des ersten Lesers schickt Langsys nur die Seitenadresse, Langsys liest die Seite selbst, und Minuten später liest jemand in Madrid sie auf Spanisch. #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "Frag deinen KI-Assistenten, wie es um deine Übersetzungen steht #Shorts",
+      "summary": "Langsys betreibt einen MCP-Server, damit Claude, Codex, Cursor oder GitHub Copilot deine Projekte lesen und Fehlendes übersetzen können. Eine Freigabe im Browser, und der Assistent sieht nie dein Passwort. #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "Ein neues Projekt, das schon übersetzt startet #Shorts",
+      "summary": "Korrigiere eine Übersetzung einmal, und jedes neue Projekt deiner Organisation kennt sie schon. Das Translation Memory hat dieses Projekt auf Spanisch gefüllt, samt Namen der Übersetzerin, ohne dass ein Modell aufgerufen wurde. #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "Im Spanischen wandert der Fettdruck an die richtige Stelle #Shorts",
+      "summary": "Andere i18n-Bibliotheken zerlegen einen Satz mit einem fetten Wort in drei Keys. Mit ‹Phrase› bekommt die Übersetzung einen einzigen Satz samt Markup, und im Spanischen landet der Fettdruck hinter dem Substantiv, auf „no leídos“. #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "Deutsch für einen Live-Shop, ganz ohne Deploy #Shorts",
+      "summary": "Füge die Sprache in den Projekteinstellungen hinzu, nicht im Code. Langsys nennt den genauen Preis für den bestehenden Katalog, bevor etwas ausgegeben wird, übersetzt jede Phrase in Sekunden, und der Shop spricht Deutsch, ohne Build und ohne Deploy. #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "Zwei Sprachen im Rückstand, mit einer Aktion aufgeholt #Shorts",
+      "summary": "Französisch und Japanisch fehlten je zwei Phrasen. AI Translate Pending übersetzt sie in Sekunden, und die Entwürfe warten, bis jemand sie prüft. #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "Dein Markenname, niemals übersetzt #Shorts",
+      "summary": "Wer übersetzt, kann einen Produktnamen nicht von einer Phrase unterscheiden, also liefern andere i18n-Bibliotheken Bright Ledger als Libro Mayor Brillante aus. Mit Langsys markierst du ihn mit ‹DontTranslate› direkt an seiner Stelle, und der Satz drumherum wird weiter übersetzt. #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "Ein englisches Wort, zwei spanische Übersetzungen #Shorts",
+      "summary": "„Free“ ist auf einem Bildschirm ein Preis und auf einem anderen ein freier Abend. Andere i18n-Bibliotheken erfinden einen Key, um beides zu unterscheiden. Langsys behält den Satz und ordnet ihn einer Kategorie zu: Gratis und Libre. #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "Auch Platzhalter und Alt-Texte werden übersetzt #Shorts",
+      "summary": "Andere i18n-Bibliotheken brauchen für jedes Attribut einen eigenen Aufruf, und das vergessene bleibt Englisch. Ein einziges ‹Translate›-Tag deckt den Bereich ab: den Platzhalter, die Bildbeschreibung und das Label, das ein Screenreader vorliest. #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "Jede Zahl und jedes Datum im Format der jeweiligen Sprache #Shorts",
+      "summary": "Übergib die Zahl selbst und das Datum als Datum: Deutsch zeigt 1.234,5 und 14. März 2026, und Hindi gruppiert 1234567 als 12,34,567. Eine Bestellnummer geht als String hinein und bleibt genau so, wie sie ist. #Shorts"
     }
   }
 }

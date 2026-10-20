@@ -141,6 +141,46 @@
     "svelte/social/content-blocks-9x16": {
       "title": "태그 하나로 섹션 전체 번역하기 #Shorts",
       "summary": "Translate 태그 하나가 마크업 영역을 감쌉니다. 모든 텍스트 덩어리가 각각의 문구가 되고, 굵은 글씨와 링크는 제자리에 놓이며, 브랜드명은 절대 번역되지 않습니다. #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "오전 9:00에 게시, 9:03에 스페인어로 읽힘 #Shorts",
+      "summary": "블로그 글이 빌드나 배포 없이 게시됩니다. 첫 독자의 앱은 Langsys에 페이지 주소만 보내고, Langsys가 직접 페이지를 읽은 뒤 몇 분 후 마드리드의 독자가 스페인어로 읽습니다. #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "AI 어시스턴트에게 번역 진행 상황을 물어보세요 #Shorts",
+      "summary": "Langsys는 MCP 서버를 제공하므로 Claude, Codex, Cursor, GitHub Copilot이 프로젝트를 읽고 빠진 번역을 채울 수 있습니다. 브라우저에서 한 번 승인하면 되고, 어시스턴트는 비밀번호를 절대 보지 못합니다. #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "처음부터 번역된 채로 시작하는 새 프로젝트 #Shorts",
+      "summary": "번역을 한 번 고치면 조직의 모든 새 프로젝트가 이미 그것을 알고 있습니다. 번역 메모리가 이 프로젝트를 스페인어로 채웠고, 번역한 사람의 이름도 함께 남았으며, 모델은 한 번도 호출되지 않았습니다. #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "스페인어에서는 굵은 글씨가 제자리로 옮겨갑니다 #Shorts",
+      "summary": "다른 i18n 라이브러리는 굵은 단어가 있는 문장을 세 개의 키로 쪼갭니다. ‹Phrase›를 쓰면 번역자는 마크업까지 포함한 한 문장을 받고, 스페인어에서는 굵은 글씨가 명사 뒤 \"no leídos\"에 놓입니다. #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "운영 중인 스토어에 독일어 추가, 배포 없이 #Shorts",
+      "summary": "언어는 코드가 아니라 프로젝트 설정에서 추가합니다. Langsys는 비용을 쓰기 전에 기존 카탈로그의 정확한 가격을 알려주고, 모든 문구를 몇 초 만에 번역하며, 스토어는 빌드나 배포 없이 독일어를 사용합니다. #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "뒤처진 두 언어, 한 번의 작업으로 따라잡기 #Shorts",
+      "summary": "프랑스어와 일본어에 각각 두 개의 문구가 빠져 있었습니다. AI Translate Pending이 몇 초 만에 번역하고, 초안은 누군가 검토할 때까지 기다립니다. #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "브랜드 이름은 절대 번역되지 않습니다 #Shorts",
+      "summary": "번역자는 제품 이름과 일반 문구를 구분할 수 없어서, 다른 i18n 라이브러리는 Bright Ledger를 Libro Mayor Brillante로 내보냅니다. Langsys에서는 그 자리에서 ‹DontTranslate›로 표시하면 되고, 주변 문장은 계속 번역됩니다. #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "영어 단어 하나, 스페인어 번역 둘 #Shorts",
+      "summary": "\"Free\"는 한 화면에서는 가격이고, 다른 화면에서는 일정 없는 저녁입니다. 다른 i18n 라이브러리는 둘을 구분하려고 키를 만들어냅니다. Langsys는 문장을 그대로 두고 카테고리로 분류합니다: Gratis와 Libre. #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "플레이스홀더와 대체 텍스트도 번역됩니다 #Shorts",
+      "summary": "다른 i18n 라이브러리는 속성마다 별도 호출이 필요하고, 빠뜨린 속성은 영어로 남습니다. ‹Translate› 태그 하나로 영역 전체를 처리합니다: 플레이스홀더, 이미지 설명, 스크린 리더가 읽어주는 레이블까지. #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "모든 숫자와 날짜를 각 언어의 형식으로 #Shorts",
+      "summary": "숫자는 숫자 그대로, 날짜는 날짜로 넘기세요. 독일어는 1.234,5와 14. März 2026으로, 힌디어는 1234567을 12,34,567로 묶어 표시합니다. 주문 번호는 문자열로 넘기므로 입력한 그대로 유지됩니다. #Shorts"
     }
   }
 }

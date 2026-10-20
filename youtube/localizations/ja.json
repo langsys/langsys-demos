@@ -141,6 +141,46 @@
     "svelte/social/content-blocks-9x16": {
       "title": "タグ1つでセクションを丸ごと翻訳 #Shorts",
       "summary": "1つのTranslateタグでマークアップの領域を囲むだけ。テキストの各まとまりがそれぞれフレーズになり、太字やリンクは正しい位置に収まり、ブランド名は決して翻訳されません。 #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "9:00 に公開、9:03 にスペイン語で読まれる #Shorts",
+      "summary": "ブログ記事をビルドもデプロイもなしで公開。最初の読者のアプリが Langsys に送るのはページのアドレスだけで、Langsys がページを自分で読み、数分後にはマドリードの読者がスペイン語で読んでいます。 #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "AI アシスタントに翻訳の進み具合を聞いてみよう #Shorts",
+      "summary": "Langsys は MCP サーバーを提供しているので、Claude、Codex、Cursor、GitHub Copilot がプロジェクトを読み、足りない翻訳を補えます。ブラウザで一度承認するだけで、アシスタントがパスワードを見ることはありません。 #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "最初から翻訳済みで始まる新しいプロジェクト #Shorts",
+      "summary": "翻訳を一度直せば、組織の新しいプロジェクトはすべて最初からそれを知っています。翻訳メモリがこのプロジェクトをスペイン語で埋め、翻訳した人の名前も引き継がれ、モデルは一度も呼ばれていません。 #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "スペイン語では太字が正しい位置に移動する #Shorts",
+      "summary": "他の i18n ライブラリは、太字の単語を含む文を 3 つのキーに分割します。‹Phrase› なら翻訳者はマークアップごと 1 つの文を受け取り、スペイン語では太字が名詞の後ろの「no leídos」に移ります。 #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "稼働中のストアにドイツ語を追加、デプロイ不要 #Shorts",
+      "summary": "言語はコードではなくプロジェクト設定で追加します。Langsys は何かを使う前に既存カタログの正確な料金を示し、各フレーズを数秒で翻訳し、ビルドもデプロイもなしでストアがドイツ語になります。 #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "遅れていた 2 言語を、ワンアクションで追いつかせる #Shorts",
+      "summary": "フランス語と日本語にそれぞれ 2 フレーズずつ未翻訳がありました。AI Translate Pending が数秒で翻訳し、下書きは誰かがレビューするまで待機します。 #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "ブランド名は決して翻訳されない #Shorts",
+      "summary": "翻訳者には製品名と普通のフレーズの区別がつかないため、他の i18n ライブラリでは Bright Ledger が Libro Mayor Brillante として出荷されてしまいます。Langsys ならその場で ‹DontTranslate› を付けるだけで、周りの文はそのまま翻訳されます。 #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "英語の 1 単語に、スペイン語の訳が 2 つ #Shorts",
+      "summary": "「Free」は、ある画面では価格、別の画面では予定のない夜を意味します。他の i18n ライブラリは区別のためにキーを作りますが、Langsys は文をそのまま残してカテゴリに分類します。Gratis と Libre です。 #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "プレースホルダーや代替テキストも翻訳される #Shorts",
+      "summary": "他の i18n ライブラリでは属性ごとに個別の呼び出しが必要で、書き忘れた属性は英語のまま残ります。‹Translate› タグひとつで領域全体をカバー。プレースホルダー、画像の説明、スクリーンリーダーが読み上げるラベルまで翻訳されます。 #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "数値も日付も、それぞれの言語の形式で #Shorts",
+      "summary": "数値はそのまま、日付は日付として渡すだけ。ドイツ語では 1.234,5 と 14. März 2026、ヒンディー語では 1234567 が 12,34,567 とグループ化されます。注文番号は文字列で渡すので、書いたとおりのまま残ります。 #Shorts"
     }
   }
 }

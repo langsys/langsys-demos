@@ -141,6 +141,46 @@
     "svelte/social/content-blocks-9x16": {
       "title": "Terjemahkan satu bagian utuh dengan satu tag #Shorts",
       "summary": "Satu tag Translate membungkus satu region markup: setiap potongan teks menjadi frasanya sendiri, teks tebal dan link tetap di tempatnya, dan nama merek tidak pernah diterjemahkan. #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "Terbit pukul 09.00, dibaca dalam bahasa Spanyol pukul 09.03 #Shorts",
+      "summary": "Sebuah postingan blog tayang tanpa build dan tanpa deploy. Aplikasi pembaca pertama hanya mengirim alamat halaman ke Langsys, Langsys membaca halamannya sendiri, dan beberapa menit kemudian pembaca di Madrid membacanya dalam bahasa Spanyol. #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "Tanyakan ke asisten AI bagaimana kabar terjemahanmu #Shorts",
+      "summary": "Langsys menjalankan server MCP, jadi Claude, Codex, Cursor, atau GitHub Copilot bisa membaca proyekmu dan menerjemahkan yang belum ada. Cukup satu persetujuan di browser, dan asisten tidak pernah melihat kata sandimu. #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "Proyek baru yang mulai dalam keadaan sudah diterjemahkan #Shorts",
+      "summary": "Perbaiki terjemahan sekali, dan setiap proyek baru di organisasimu sudah mengetahuinya. Translation Memory mengisi proyek ini dalam bahasa Spanyol, lengkap dengan nama penerjemahnya, tanpa memanggil model apa pun. #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "Dalam bahasa Spanyol, huruf tebal pindah ke tempat yang tepat #Shorts",
+      "summary": "Library i18n lain memotong kalimat yang berisi kata bercetak tebal menjadi tiga key. Dengan ‹Phrase›, penerjemah menerima satu kalimat utuh beserta markup-nya, dan dalam bahasa Spanyol huruf tebal jatuh setelah kata benda, pada \"no leídos\". #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "Tambahkan bahasa Jerman ke toko yang sudah live, tanpa deploy #Shorts",
+      "summary": "Tambahkan bahasanya di pengaturan proyek, bukan di kode. Langsys menyebutkan harga pasti untuk katalog yang ada sebelum mengeluarkan biaya apa pun, menerjemahkan setiap frasa dalam hitungan detik, dan toko berbahasa Jerman tanpa build atau deploy. #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "Dua bahasa tertinggal, terkejar dengan satu tindakan #Shorts",
+      "summary": "Bahasa Prancis dan Jepang masing-masing kurang dua frasa. AI Translate Pending menerjemahkannya dalam hitungan detik, dan drafnya menunggu untuk ditinjau seseorang. #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "Nama merekmu tidak pernah diterjemahkan #Shorts",
+      "summary": "Penerjemah tidak bisa membedakan nama produk dari frasa biasa, jadi library i18n lain merilis Bright Ledger sebagai Libro Mayor Brillante. Dengan Langsys kamu menandainya di tempatnya dengan ‹DontTranslate›, dan kalimat di sekitarnya tetap diterjemahkan. #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "Satu kata bahasa Inggris, dua terjemahan bahasa Spanyol #Shorts",
+      "summary": "\"Free\" adalah harga di satu layar dan malam yang kosong di layar lain. Library i18n lain mengarang key untuk membedakannya. Langsys mempertahankan kalimatnya dan memasukkannya ke sebuah kategori: Gratis dan Libre. #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "Placeholder dan teks alternatif juga diterjemahkan #Shorts",
+      "summary": "Library i18n lain butuh panggilan terpisah untuk setiap atribut, dan atribut yang terlupa tetap berbahasa Inggris. Satu tag ‹Translate› mencakup seluruh area: placeholder, deskripsi gambar, dan label yang dibacakan pembaca layar. #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "Setiap angka dan tanggal dalam format bahasanya #Shorts",
+      "summary": "Berikan angkanya langsung dan tanggal sebagai tanggal: bahasa Jerman menampilkan 1.234,5 dan 14. März 2026, dan bahasa Hindi mengelompokkan 1234567 menjadi 12,34,567. Nomor pesanan diberikan sebagai string, jadi tetap persis seperti aslinya. #Shorts"
     }
   }
 }

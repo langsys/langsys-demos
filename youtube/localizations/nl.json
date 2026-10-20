@@ -141,6 +141,46 @@
     "svelte/social/content-blocks-9x16": {
       "title": "Vertaal een hele sectie met één tag #Shorts",
       "summary": "Eén Translate-tag omsluit een stuk markup: elk stuk tekst wordt een eigen zin, vet en links komen op de juiste plek terecht, en de merknaam wordt nooit vertaald. #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "Om 9:00 gepubliceerd, om 9:03 in het Spaans gelezen #Shorts",
+      "summary": "Een blogpost gaat live zonder build en zonder deploy. De app van de eerste lezer stuurt Langsys alleen het paginaadres, Langsys leest de pagina zelf en een paar minuten later leest iemand in Madrid hem in het Spaans. #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "Vraag je AI-assistent hoe het met je vertalingen staat #Shorts",
+      "summary": "Langsys host een MCP-server, zodat Claude, Codex, Cursor of GitHub Copilot je projecten kunnen lezen en vertalen wat ontbreekt. Eén goedkeuring in je browser, en de assistent ziet nooit je wachtwoord. #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "Een gloednieuw project dat al vertaald begint #Shorts",
+      "summary": "Verbeter een vertaling één keer en elk nieuw project in je organisatie kent haar al. Het vertaalgeheugen vulde dit project in het Spaans, met de naam van wie vertaalde, zonder dat er een model werd aangeroepen. #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "In het Spaans schuift het vetgedrukte mee naar de juiste plek #Shorts",
+      "summary": "Andere i18n-bibliotheken knippen een zin met een vetgedrukt woord op in drie keys. Met ‹Phrase› krijgt de vertaler één zin, markup en al, en in het Spaans valt het vet na het zelfstandig naamwoord, op \"no leídos\". #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "Voeg Duits toe aan een live winkel, zonder deploy #Shorts",
+      "summary": "Voeg de taal toe in de projectinstellingen, niet in je code. Langsys noemt de exacte prijs voor de bestaande catalogus voordat er iets wordt uitgegeven, vertaalt elke zin in seconden, en de winkel spreekt Duits zonder build of deploy. #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "Twee talen achter, bijgewerkt met één actie #Shorts",
+      "summary": "Frans en Japans misten elk twee zinnen. AI Translate Pending vertaalt ze in seconden, en de concepten wachten tot iemand ze nakijkt. #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "Je merknaam, nooit vertaald #Shorts",
+      "summary": "Een vertaler kan een productnaam niet van een zin onderscheiden, dus andere i18n-bibliotheken leveren Bright Ledger uit als Libro Mayor Brillante. Met Langsys markeer je hem ter plekke met ‹DontTranslate›, en de zin eromheen wordt gewoon vertaald. #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "Eén Engels woord, twee Spaanse vertalingen #Shorts",
+      "summary": "\"Free\" is op het ene scherm een prijs en op het andere een vrije avond. Andere i18n-bibliotheken verzinnen een key om ze uit elkaar te houden. Langsys houdt de zin en zet hem in een categorie: Gratis en Libre. #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "Ook placeholders en alt-tekst worden vertaald #Shorts",
+      "summary": "Andere i18n-bibliotheken vragen een aparte aanroep voor elk attribuut, en het attribuut dat je vergeet blijft Engels. Eén ‹Translate›-tag dekt het hele gebied: de placeholder, de afbeeldingsbeschrijving en het label dat een schermlezer voorleest. #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "Elk getal en elke datum in het formaat van elke taal #Shorts",
+      "summary": "Geef het getal zelf door en de datum als datum: Duits toont 1.234,5 en 14. März 2026, en Hindi groepeert 1234567 als 12,34,567. Een ordernummer gaat erin als string, zodat het precies blijft zoals het is. #Shorts"
     }
   }
 }

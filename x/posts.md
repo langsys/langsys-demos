@@ -1,337 +1,570 @@
-# X posts for the YouTube calendar
+# X posts for the publishing calendar
 
-One post per video, on the day it goes public (`python upload.py --publish`). Dates follow `publish` in `../youtube/videos.json`; if the calendar moves with `--reschedule`, regenerate the dates. Each post is under 280 characters, counting the link as 23 the way X does. The link is the youtu.be address, which works once the video is public.
+One post per publishing day, following the X calendar in the Langsys Launch Media Plan. Nothing here goes out before the official launch.
 
-## Monday 2026-10-19
+- **Video goes up on X itself.** X shows posts with outside links to far fewer people, so the post carries the video and the YouTube link goes in the first reply.
+- **Shorts** go up as their silent 4:5 cut. **Long videos** go up as a 30 to 60 second clip.
+- **Hooks lead with the result**, not with code: what the viewer gets, and what an AI assistant can do where the video shows it.
+- Days are counted from launch Monday ("launch + N"). Every post is under 280 characters; the link lives in the reply, so it does not count.
 
-**What is Langsys? Your app in every language, no redeploy** · 213 characters
+## Week 1, Monday (launch day): the launch thread
+
+Pin this thread to the profile.
+
+**1/9 · What is Langsys?** · 215 characters · upload the full 77-second explainer
 
 ```
 Your app, in every language. No keys file, no extraction step, no redeploy.
 
 A blog post published at 09:00 reaches a reader in Madrid, in Spanish, at 09:03.
 
-Here's Langsys in 77 seconds 👇
-https://youtu.be/_DFWgHZ_QQc
+Langsys is live today. Here's what it is, in 77 seconds.
 ```
 
-**Getting started with Langsys, end to end** · 179 characters
+Reply: `https://youtu.be/_DFWgHZ_QQc`
+
+**2/9 · Getting started with Langsys, end to end** · 134 characters (link counted as 23)
 
 ```
-From an empty project to an app that switches to Spanish and French without a reload, in one take.
-
-No .json files were harmed in the making of this video.
+Start here: from an empty project to an app that switches to Spanish and French without a reload, in one take.
 https://youtu.be/Fo1HCybAHg0
 ```
 
-**Plurals in every language, without if (count === 1)** · 207 characters
+**3/9 · Plurals in every language, without if (count === 1)** · 139 characters (link counted as 23)
 
 ```
-if (count === 1) is English grammar living in your code.
-
-Russian has four plural forms. Arabic has six. Write the sentence flat once and Langsys builds every form for every language.
+Russian has four plural forms. Arabic has six. Write the sentence once, and every form is built for every language.
 https://youtu.be/vwQknki_V6A
 ```
 
-## Wednesday 2026-10-21
-
-**The translation pipeline, and how Langsys deletes it** · 139 characters
+**4/9 · The translation pipeline, and how Langsys deletes it** · 146 characters (link counted as 23)
 
 ```
-Extract → export → translate → import → deploy.
+Every i18n setup has the same pipeline: extract, export, translate, import, deploy.
 
-Every i18n setup has this pipeline. We deleted it.
-
-Concepts 1/5 👇
+Concepts 1/5: how Langsys removes it.
 https://youtu.be/DDBgZpPxn_k
 ```
 
-## Friday 2026-10-23
-
-**No more key files: the sentence is the key** · 182 characters
+**5/9 · No more key files: the sentence is the key** · 114 characters (link counted as 23)
 
 ```
-checkout.button.submit.label
-
-Somebody had to invent that key, and somebody has to keep it in sync forever.
-
-In Langsys the sentence is the key. Concepts 2/5:
+Concepts 2/5: the sentence is the key, so there is no keys file to invent or keep in sync.
 https://youtu.be/8ityN0zlu98
 ```
 
-**Your i18n key is just the English sentence #Shorts** · 91 characters
+**6/9 · The locale store: holding and switching the active language** · 129 characters (link counted as 23)
 
 ```
-Your i18n key is just… the English sentence.
-
-In under 15 seconds 👇
-https://youtu.be/L4uu_oG9uok
-```
-
-## Monday 2026-10-26
-
-**The locale store: holding and switching the active language** · 123 characters
-
-```
-One store holds the active language. Switch it and the whole app follows, no reload.
-
-Concepts 3/5:
+Concepts 3/5: one store holds the active language. Switch it, and the whole app follows without a reload.
 https://youtu.be/E6qqpBC_7IY
 ```
 
-**Russian has 4 plural forms. You write one line #Shorts** · 157 characters
+**7/9 · API keys and environments: which key goes where** · 111 characters (link counted as 23)
+
+```
+Concepts 4/5: which API key goes where, and the one that is safe to ship in a live app.
+https://youtu.be/dfaCUjRA168
+```
+
+**8/9 · Adding a new language is a project setting** · 96 characters (link counted as 23)
+
+```
+Concepts 5/5: reaching a new market is a project setting, not a project.
+https://youtu.be/9muq4sNC_Zg
+```
+
+**9/9 · Use Langsys from Claude Code over MCP** · 170 characters (link counted as 23)
+
+```
+And your AI assistant works in Langsys too: ask Claude, Codex, Cursor or Copilot which languages are behind, and have it translate what's missing.
+https://youtu.be/KafvNJnm-pQ
+```
+
+## Week 1, Tuesday (launch + 1)
+
+**Short: Your i18n key is just the English sentence** · 105 characters
+
+```
+Your translation key is the English sentence.
+
+No keys file. Nothing to extract. Nothing to keep in sync.
+```
+
+Upload `videos/svelte/social/phrase-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/L4uu_oG9uok`
+
+## Week 1, Wednesday (launch + 2)
+
+**Video: Svelte i18n with Langsys: the full walkthrough** · 132 characters
+
+```
+Svelte devs: your app in every language, with nothing to keep in step.
+
+The full walkthrough, from one call to a live locale switch.
+```
+
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+
+Reply: `https://youtu.be/y-YbRDjV4Wk`
+
+## Week 1, Thursday (launch + 3)
+
+**Short: Russian has 4 plural forms. You write one line** · 137 characters
 
 ```
 1 файл. 2 файла. 5 файлов. 21 файл.
 
-Russian picks a plural form by the number, and 21 goes back to the singular. You write one line.
-https://youtu.be/vkDmCusXKcI
+Russian picks a plural form by the number, and 21 goes back to the singular. Your app gets all four.
 ```
 
-## Wednesday 2026-10-28
+Upload `videos/svelte/social/icu-plurals-4x5.mp4` (the silent 4:5 cut).
 
-**API keys and environments: which key goes where** · 174 characters
+Reply: `https://youtu.be/vkDmCusXKcI`
 
-```
-A key that can register phrases can't ship. A read-only key is a dead end.
+## Week 1, Friday (launch + 4)
 
-So we made a key whose answer depends on where you ask from. Concepts 4/5:
-https://youtu.be/dfaCUjRA168
-```
-
-## Friday 2026-10-30
-
-**Adding a new language is a project setting** · 169 characters
+**Video: Managing translations in the Langsys Translation Manager** · 147 characters
 
 ```
-Reaching a new market shouldn't be a project. It should be a setting.
+Every phrase your app has ever run, in one place, where a person can review it and sharpen the wording.
 
-New phrases translate on arrival; one run fills in the rest. Concepts 5/5:
-https://youtu.be/9muq4sNC_Zg
+A tour of the Langsys Translation Manager.
 ```
 
-## Monday 2026-11-02
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
 
-**Svelte i18n with Langsys: the full walkthrough** · 193 characters
+Reply: `https://youtu.be/6ef3Mc0ILfk`
 
-```
-Svelte devs: here's i18n with nothing to keep in step.
+> On hold: Filmed against translation-manager MR !1; until it ships, Send on the invite dialog errors on the live app. Post only once the video is public.
 
-One call, a locale switch, and why flat Spanish is wrong for half your users (and what ICU select does about it).
-https://youtu.be/y-YbRDjV4Wk
-```
+## Week 2, Monday (launch + 7)
 
-## Wednesday 2026-11-04
-
-**t(phrase, category, params) in Svelte** · 118 characters
+**Video: t(phrase, category, params) in Svelte** · 104 characters
 
 ```
-t(phrase, category, params)
+One call, every language: t(phrase, category, params).
 
-Three arguments. No keys file. Placeholders and plurals included.
-https://youtu.be/mqFBw6x7RZg
+Placeholders and plurals included. No keys file.
 ```
 
-## Friday 2026-11-06
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
 
-**‹Phrase› in Svelte: a sentence with markup inside** · 165 characters
+Reply: `https://youtu.be/mqFBw6x7RZg`
 
-```
-"Read the <a>terms</a> before you <b>sign</b>."
+## Week 2, Tuesday (launch + 8)
 
-One sentence, markup inside, still one phrase for the translator. Here's <Phrase> in Svelte:
-https://youtu.be/r85P18fhfCU
-```
-
-## Monday 2026-11-09
-
-**‹Translate› in Svelte: one tag for a whole region** · 140 characters
+**Short: Published at 09:00, read in Spanish at 09:03** · 92 characters
 
 ```
-Wrap a region in one <Translate> tag and every line inside registers itself.
+Published at 09:00. Read in Spanish at 09:03.
 
-Why a block beats a t() call per line:
-https://youtu.be/krgkcNYw4IY
+No build, no deploy, and no developer ran it.
 ```
 
-## Wednesday 2026-11-11
+Upload `videos/shared/social/published-at-nine-4x5.mp4` (the silent 4:5 cut).
 
-**‹DontTranslate› in Svelte: keep brand names verbatim** · 175 characters
+Reply: `(YouTube link once the Short is uploaded)`
+
+## Week 2, Wednesday (launch + 9)
+
+**Video: Translation memory: a new project that starts already translated** · 160 characters
 
 ```
-Nobody wants their brand name translated into Spanish.
+We opened a brand-new project. It was already translated.
 
-<DontTranslate> keeps names and identifiers verbatim, without pulling them out of the sentence.
-https://youtu.be/YPyWNGdaAHw
+Translation memory carries every fix, and who made it, across your organization. No model was called.
 ```
 
-## Friday 2026-11-13
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
 
-**What is a content block? Translating a whole section in Svelte** · 162 characters
+Reply: `https://youtu.be/QC2IIRaAyCc`
+
+## Week 2, Thursday (launch + 10)
+
+**Short: Ask your AI assistant how your translations are doing** · 155 characters
+
+```
+Ask your AI assistant how your translations are doing. Then ask it to translate what's missing.
+
+One approval in your browser. It never sees your password.
+```
+
+Upload `videos/shared/social/ask-your-assistant-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `(YouTube link once the Short is uploaded)`
+
+## Week 2, Friday (launch + 11)
+
+**Video: ‹Phrase› in Svelte: a sentence with markup inside** · 152 characters
+
+```
+A sentence with a bold word in it is still one sentence.
+
+With <Phrase>, your translator reads it whole, and the bold lands where each language puts it.
+```
+
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+
+Reply: `https://youtu.be/r85P18fhfCU`
+
+## Week 3, Monday (launch + 14)
+
+**Video: Add German to a live app: exact quote, no deploy** · 163 characters
+
+```
+Adding German to a live store: an exact price before anything runs, every phrase drafted in seconds, and the store speaks German.
+
+Nothing built. Nothing deployed.
+```
+
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+
+Reply: `https://youtu.be/65z2J2jiSbY`
+
+## Week 3, Tuesday (launch + 15)
+
+**Short: A brand-new project that starts already translated** · 107 characters
+
+```
+A brand-new project, already in Spanish.
+
+Someone fixed one word in another project. This one already knew.
+```
+
+Upload `videos/shared/social/memory-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `(YouTube link once the Short is uploaded)`
+
+## Week 3, Wednesday (launch + 16)
+
+**Video: ‹Translate› in Svelte: one tag for a whole region** · 106 characters
+
+```
+Wrap a whole region in one <Translate> tag, and every line inside registers itself.
+
+No t() call per line.
+```
+
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+
+Reply: `https://youtu.be/krgkcNYw4IY`
+
+## Week 3, Thursday (launch + 17)
+
+**Short: In Spanish, the bold moves to where it belongs** · 102 characters
+
+```
+In Spanish, the bold moves to where Spanish puts it.
+
+One sentence for the translator, markup and all.
+```
+
+Upload `videos/svelte/social/bold-moves-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `(YouTube link once the Short is uploaded)`
+
+## Week 3, Friday (launch + 18)
+
+**Video: Catching up a language that fell behind** · 116 characters
+
+```
+Two languages fell behind.
+
+One action drafts every missing phrase, and the drafts wait for a person to review them.
+```
+
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+
+Reply: `https://youtu.be/SHHt8ebaH-g`
+
+## Week 4, Monday (launch + 21)
+
+**Video: ‹DontTranslate› in Svelte: keep brand names verbatim** · 132 characters
+
+```
+Nobody wants their brand name translated.
+
+<DontTranslate> keeps it exactly as written, and the sentence around it still translates.
+```
+
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+
+Reply: `https://youtu.be/YPyWNGdaAHw`
+
+## Week 4, Tuesday (launch + 22)
+
+**Short: Add German to a live store, with no deploy** · 98 characters
+
+```
+Your live store, now in German.
+
+Added in settings, priced exactly, drafted in seconds. No deploy.
+```
+
+Upload `videos/shared/social/add-german-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `(YouTube link once the Short is uploaded)`
+
+## Week 4, Wednesday (launch + 23)
+
+**Video: Translating a whole content block as one** · 135 characters
+
+```
+A whole region of your app, translated as one block, one segment at a time.
+
+Its markup and held-back sentences stay just as they were.
+```
+
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+
+Reply: `https://youtu.be/YVYgEaPvcjg`
+
+> On hold: Filmed against translation-manager MR !2; until it ships, the live app drops a segment edit and needs a reload to show the AI result. Post only once the video is public.
+
+## Week 4, Thursday (launch + 24)
+
+**Short: Two languages behind, caught up in one action** · 88 characters
+
+```
+French and Japanese fell behind. One action caught them up.
+
+The drafts wait for review.
+```
+
+Upload `videos/shared/social/catch-up-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `(YouTube link once the Short is uploaded)`
+
+## Week 4, Friday (launch + 25)
+
+**Video: What is a content block? Translating a whole section in Svelte** · 139 characters
 
 ```
 What is a content block?
 
-A whole section registered as one unit, so it's translated with its context, and still made of reusable phrases.
-https://youtu.be/-ZMV0UyKRVk
+A whole section registered as one unit, so it is translated with its context, and still made of reusable phrases.
 ```
 
-**Translate a whole section with one tag #Shorts** · 128 characters
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+
+Reply: `https://youtu.be/-ZMV0UyKRVk`
+
+## Week 5, Monday (launch + 28)
+
+**Video: AI Translator settings, every switch explained** · 131 characters
 
 ```
-Translate a whole section with one tag. Bold and links land where they belong; the brand name stays put.
-https://youtu.be/zw9iKNfjVng
+Every switch in the AI Translator, explained.
+
+Including the one that spots a phrase that's already in Spanish and leaves it alone.
 ```
 
-## Monday 2026-11-16
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
 
-**Same word, two meanings: categories instead of i18n keys** · 147 characters
+Reply: `https://youtu.be/PnRoVVfYmKE`
 
-```
-"Book" a flight or read a "book"?
+## Week 5, Tuesday (launch + 29)
 
-Same word, two meanings. This is why i18n invented keys. Categories fix it without them:
-https://youtu.be/-P963Wj0dno
-```
-
-## Wednesday 2026-11-18
-
-**Gender agreement without conditionals in your code (ICU select)** · 182 characters
+**Short: Translate a whole section with one tag** · 109 characters
 
 ```
-{gender === 'f' ? 'Bienvenida' : 'Bienvenido'}
+Translate a whole section with one tag.
 
-That conditional doesn't belong in your component. Langsys generates the gender branches per language instead.
-https://youtu.be/AfpNQtvugks
+Bold and links land where they belong, and the brand name stays put.
 ```
 
-**Bienvenido or Bienvenida? One line of code #Shorts** · 112 characters
+Upload `videos/svelte/social/content-blocks-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/zw9iKNfjVng`
+
+## Week 5, Wednesday (launch + 30)
+
+**Video: Same word, two meanings: categories instead of i18n keys** · 144 characters
+
+```
+"Free" is a price. "Free" is also an empty evening.
+
+Same word, two translations. Langsys tells them apart with a category, not an invented key.
+```
+
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+
+Reply: `https://youtu.be/-P963Wj0dno`
+
+## Week 5, Thursday (launch + 31)
+
+**Short: Your brand name, never translated** · 131 characters
+
+```
+Bright Ledger, in Spanish: Libro Mayor Brillante.
+
+That's what happens to a brand name nobody marked. Here's how yours stays yours.
+```
+
+Upload `videos/svelte/social/brand-names-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `(YouTube link once the Short is uploaded)`
+
+## Week 5, Friday (launch + 32)
+
+**Video: API keys in production: activity, pausing and rotation** · 151 characters
+
+```
+What happens to an API key after it ships: its activity, a pause without deleting it, and a rotation that adds the new key before retiring the old one.
+```
+
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+
+Reply: `https://youtu.be/jZJRja7n_-c`
+
+## Week 6, Monday (launch + 35)
+
+**Video: Gender agreement without conditionals in your code (ICU select)** · 152 characters
+
+```
+¡Bienvenido, Diego! ¡Bienvenida, Laura!
+
+Spanish agrees with the person. Langsys builds the gender forms for each language, so your code never branches.
+```
+
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+
+Reply: `https://youtu.be/AfpNQtvugks`
+
+## Week 6, Tuesday (launch + 36)
+
+**Short: Bienvenido or Bienvenida? One line of code** · 96 characters
 
 ```
 Bienvenido or Bienvenida?
 
-Diego, Laura and an unknown user, all from one line of code 👇
-https://youtu.be/6bMkgdK1GpU
+Diego, Laura and someone with no gender on record, all from one line.
 ```
 
-## Friday 2026-11-20
+Upload `videos/svelte/social/icu-gender-4x5.mp4` (the silent 4:5 cut).
 
-**Translating placeholders, alt text and aria labels in Svelte** · 166 characters
+Reply: `https://youtu.be/6bMkgdK1GpU`
+
+## Week 6, Wednesday (launch + 37)
+
+**Video: One organization, many projects** · 135 characters
+
+```
+Agencies: one organization, many projects.
+
+Set defaults once, override them only where a project needs its own, and share one balance.
+```
+
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+
+Reply: `https://youtu.be/y1kGQkoZ3_w`
+
+## Week 6, Thursday (launch + 38)
+
+**Short: One English word, two Spanish translations** · 89 characters
+
+```
+One English word. Two Spanish translations.
+
+Gratis for the price. Libre for the evening.
+```
+
+Upload `videos/svelte/social/two-meanings-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `(YouTube link once the Short is uploaded)`
+
+## Week 6, Friday (launch + 39)
+
+**Video: Translating placeholders, alt text and aria labels in Svelte** · 143 characters
 
 ```
 A form with a translated label and an English placeholder is a half-translated form.
 
-Placeholders, alt text and aria labels in the same pass:
-https://youtu.be/w9TNoFQ2fpM
+Placeholders, alt text and aria labels, in the same pass.
 ```
 
-## Monday 2026-11-23
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
 
-**Numbers and dates in every locale with Svelte i18n** · 162 characters
+Reply: `https://youtu.be/w9TNoFQ2fpM`
+
+## Week 7, Monday (launch + 42)
+
+**Video: Usage and credits: how a project gets funded** · 135 characters
+
+```
+How a project gets funded: units pay for the API, credits pay for the model, and one transfer moves money to the project that needs it.
+```
+
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+
+Reply: `https://youtu.be/TOqn3rfDyGQ`
+
+## Week 7, Tuesday (launch + 43)
+
+**Short: Placeholders and alt text translate too** · 83 characters
+
+```
+Placeholders and alt text translate too.
+
+Even the words a screen reader announces.
+```
+
+Upload `videos/svelte/social/alt-text-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `(YouTube link once the Short is uploaded)`
+
+## Week 7, Wednesday (launch + 44)
+
+**Video: Numbers and dates in every locale with Svelte i18n** · 111 characters
 
 ```
 1,234.5 in the US. 1.234,5 in Germany. 12,34,567 in India.
 
-Digit grouping is a shape, not a separator. Numbers and dates in every locale:
-https://youtu.be/Bc2h2bxaB9M
+Every number and date, in each locale's own format.
 ```
 
-## Wednesday 2026-11-25
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
 
-**Translation memory: a new project that starts already translated** · 189 characters
+Reply: `https://youtu.be/Bc2h2bxaB9M`
 
-```
-We opened a brand new project. It was already fully translated.
+## Week 7, Thursday (launch + 45)
 
-Translation memory carries every sentence, and who wrote it, across your projects. Zero model calls.
-https://youtu.be/QC2IIRaAyCc
-```
-
-## Friday 2026-11-27
-
-**Use Langsys from Claude Code over MCP** · 147 characters
+**Short: Every number and date in each locale's format** · 105 characters
 
 ```
-Ask Claude Code "which languages are behind in my project?" and get the answer from live data.
+Pass an order number as a number, and Germany sees 1.048.576.
 
-One claude mcp add command:
-https://youtu.be/KafvNJnm-pQ
+Pass it as a string, and it stays 1048576.
 ```
 
-## Monday 2026-11-30
+Upload `videos/svelte/social/local-formats-4x5.mp4` (the silent 4:5 cut).
 
-**Add German to a live app: exact quote, no deploy** · 156 characters
+Reply: `(YouTube link once the Short is uploaded)`
 
-```
-Adding German to a live store: exact quote before anything runs (29 words, $0.35), then it's live.
+## Week 7, Friday (launch + 46)
 
-Nothing built, nothing deployed.
-https://youtu.be/65z2J2jiSbY
-```
-
-## Wednesday 2026-12-02
-
-**Catching up a language that fell behind** · 141 characters
+**Video: Plans and payments in Langsys** · 111 characters
 
 ```
-A language fell behind? One click, a confirmation with the exact cost per locale, and every language is back to 100%.
-https://youtu.be/SHHt8ebaH-g
+Plans, billing cycles, saved cards and every invoice, in one place.
+
+The boring part of Langsys, done properly.
 ```
 
-## Friday 2026-12-04
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
 
-**AI Translator settings, every switch explained** · 154 characters
+Reply: `https://youtu.be/3Lnmfo0T71Q`
 
-```
-Every switch in the AI Translator, explained. Including the one that spots a phrase that's already in Spanish and leaves it alone.
-https://youtu.be/PnRoVVfYmKE
-```
+## Week 8, Monday (launch + 49)
 
-## Monday 2026-12-07
-
-**API keys in production: activity, pausing and rotation** · 161 characters
+**Video: Notifications: what Langsys tells you, and where** · 110 characters
 
 ```
-A week of real storefront traffic on a key's activity page, a pause without deleting, and a live key rotation.
-
-API keys after they ship:
-https://youtu.be/jZJRja7n_-c
+New phrases, invitations, project access: what Langsys tells you, where, and how to change it for one project.
 ```
 
-## Wednesday 2026-12-09
+Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
 
-**One organization, many projects** · 145 characters
-
-```
-Agencies, this one's for you: one organization, many projects, settings inherited by default and overridden where needed.
-https://youtu.be/y1kGQkoZ3_w
-```
-
-## Friday 2026-12-11
-
-**Usage and credits: how a project gets funded** · 138 characters
-
-```
-How a project gets funded: API usage, credits, one line per machine translation in its history, and auto recharge.
-https://youtu.be/TOqn3rfDyGQ
-```
-
-## Monday 2026-12-14
-
-**Plans and payments in Langsys** · 142 characters
-
-```
-Plans, billing cycle, payment methods shared across an organization, invoices.
-
-The boring part, in under two minutes:
-https://youtu.be/3Lnmfo0T71Q
-```
-
-## Wednesday 2026-12-16
-
-**Notifications: what Langsys tells you, and where** · 128 characters
-
-```
-New phrases, invitations, project access: what Langsys tells you, where, and how to tune it per project.
-https://youtu.be/gpSYSKrmVp0
-```
+Reply: `https://youtu.be/gpSYSKrmVp0`
