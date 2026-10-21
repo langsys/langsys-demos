@@ -1,0 +1,105 @@
+# Reddit
+
+One useful post per community, each written for that community, from a founder's personal account. Reddit punishes anything that reads like an ad: lead with the problem and the how, say plainly that you built it, and stay in the comments.
+
+Before posting in each community, read its rules on the day: several allow self-promotion only on certain days or in a weekly thread, and some require a minimum account age or karma.
+
+| Day | Community | Post |
+|---|---|---|
+| Launch + 2 | r/sveltejs | Svelte i18n without a keys file |
+| Launch + 14 | r/SaaS | Adding German to a live store without a deploy |
+| Launch + 35 | r/webdev | Plurals and gender agreement without branching in your code |
+
+## Launch + 2 · r/sveltejs
+
+**Title:**
+
+```
+I built a Svelte i18n library where the English sentence is the key (no keys file)
+```
+
+**Body:**
+
+```
+Every Svelte i18n setup I've used ends up with a JSON file of keys like `cart.empty.title` that drifts from the components. I wanted to write the sentence I mean and have the rest happen, so I built Langsys and its Svelte SDK.
+
+What it looks like:
+
+    <script>
+      import { t } from 'langsys-js-svelte';
+    </script>
+
+    <h1>{$t('Your cart is empty', 'Cart')}</h1>
+
+The first time that line runs, the phrase registers itself with Langsys and is machine-drafted in every language you've turned on; a translator can refine it later in a web app, and the fix reaches the running app without a redeploy.
+
+Three Svelte-specific bits I'm happy with:
+
+- `<Phrase>` keeps a sentence with markup inside as one phrase, so the translator sees the whole sentence and the bold lands where Spanish puts it.
+- `<Translate>` wraps a whole region; every run of text inside registers itself, including placeholders, alt text and aria labels.
+- `<DontTranslate>` keeps a brand name verbatim inside a sentence that still translates.
+
+There's a one-minute walkthrough video here: https://youtu.be/y-YbRDjV4Wk
+And a Svelte guide: https://docs.langsys.dev/learn
+
+The SDK is MIT on npm (`langsys-js-svelte`), works with SvelteKit (the catalog is seeded on the server so the first render is already translated), and the hosted service has a free plan.
+
+I'd really like feedback from anyone running i18n in a large Svelte app: what would stop you from switching?
+```
+
+## Launch + 14 · r/SaaS
+
+**Title:**
+
+```
+We added German to a live store in a few seconds, with no deploy. Here's how the pipeline we removed used to work.
+```
+
+**Body:**
+
+```
+Founder of Langsys here. I want to share the problem we built it around, because I think a lot of SaaS teams pay this tax without noticing.
+
+Adding a language to an app usually means a project: extract every string into key files, send them to translators, wait, import them back, test, ship a release. Then every new sentence the team writes goes through the same loop, so the second language is always a few weeks behind the first.
+
+We designed Langsys so that adding a language is a setting:
+
+1. You turn on German in the project settings.
+2. Langsys quotes the exact price for the existing catalog before anything runs (in our demo store: 29 words, $0.35).
+3. AI drafts every phrase in seconds, and the live app switches to German. Nothing is built or deployed.
+4. A person can then review and sharpen the drafts in the Translation Manager, and each fix is live immediately.
+
+New phrases after that are drafted the moment the code first runs them, so the new language never falls behind.
+
+The whole thing, in under two minutes: https://youtu.be/65z2J2jiSbY
+
+Happy to answer questions about the pricing model (per source word, quoted up front), how we handle review, or what we got wrong on the way.
+```
+
+## Launch + 35 · r/webdev
+
+**Title:**
+
+```
+Russian has 4 plural forms and Spanish greets Diego and Laura differently. How we handle both without an if in your code
+```
+
+**Body:**
+
+```
+Two i18n problems most apps get wrong outside English:
+
+**Plurals.** English has two forms (1 file, 2 files). Russian has four: 1 файл, 2 файла, 5 файлов, and 21 файл goes back to the singular. Arabic has six. The usual answer is `count === 1 ? ... : ...`, which is wrong in most languages, or hand-writing an ICU plural message per language.
+
+**Gender agreement.** In Spanish the greeting agrees with the person: ¡Bienvenido, Diego! / ¡Bienvenida, Laura! The usual answer is a conditional in the component, multiplied by every language that needs it.
+
+In Langsys (I'm one of the people building it) you write the sentence once with a parameter, and the ICU branches each language needs are generated for that language: the four Russian plural forms, the Spanish gender forms, a neutral form when the gender is unknown. Your component never branches.
+
+Short videos of both:
+- Plurals: https://youtu.be/vkDmCusXKcI
+- Gender: https://youtu.be/AfpNQtvugks
+
+There's also a write-up of how ICU select and plural work under the hood in our docs: https://docs.langsys.dev/learn
+
+Curious how others handle this today, especially gender in languages with more than two agreement forms.
+```
