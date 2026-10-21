@@ -105,7 +105,7 @@ Svelte devs: your app in every language, with nothing to keep in step.
 The full walkthrough, from one call to a live locale switch.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/svelte/hero.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/y-YbRDjV4Wk`
 
@@ -133,7 +133,7 @@ Every phrase your app has ever run, in one place, where a person can review it a
 A tour of the Langsys Translation Manager.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/managing-translations.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/6ef3Mc0ILfk`
 
@@ -149,7 +149,7 @@ One call, every language: t(phrase, category, params).
 Placeholders and plurals included. No keys file.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/svelte/t-string.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/mqFBw6x7RZg`
 
@@ -177,7 +177,7 @@ We opened a brand-new project. It was already translated.
 Translation memory carries every fix, and who made it, across your organization. No model was called.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/translation-memory.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/QC2IIRaAyCc`
 
@@ -205,7 +205,7 @@ A sentence with a bold word in it is still one sentence.
 With <Phrase>, your translator reads it whole, and the bold lands where each language puts it.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/svelte/phrase-tag.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/r85P18fhfCU`
 
@@ -219,7 +219,7 @@ Adding German to a live store: an exact price before anything runs, every phrase
 Nothing built. Nothing deployed.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/adding-a-language.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/65z2J2jiSbY`
 
@@ -247,7 +247,7 @@ Wrap a whole region in one <Translate> tag, and every line inside registers itse
 No t() call per line.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/svelte/translate-tag.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/krgkcNYw4IY`
 
@@ -275,7 +275,7 @@ Two languages fell behind.
 One action drafts every missing phrase, and the drafts wait for a person to review them.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/catching-up-a-language.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/SHHt8ebaH-g`
 
@@ -289,7 +289,7 @@ Nobody wants their brand name translated.
 <DontTranslate> keeps it exactly as written, and the sentence around it still translates.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/svelte/donttranslate.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/YPyWNGdaAHw`
 
@@ -317,7 +317,7 @@ A whole region of your app, translated as one block, one segment at a time.
 Its markup and held-back sentences stay just as they were.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/translating-a-content-block.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/YVYgEaPvcjg`
 
@@ -347,7 +347,7 @@ What is a content block?
 A whole section registered as one unit, so it is translated with its context, and still made of reusable phrases.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/svelte/content-blocks.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/-ZMV0UyKRVk`
 
@@ -361,7 +361,7 @@ Every switch in the AI Translator, explained.
 Including the one that spots a phrase that's already in Spanish and leaves it alone.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/ai-translator-settings.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/PnRoVVfYmKE`
 
@@ -389,7 +389,7 @@ Reply: `https://youtu.be/zw9iKNfjVng`
 Same word, two translations. Langsys tells them apart with a category, not an invented key.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/svelte/categories.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/-P963Wj0dno`
 
@@ -415,7 +415,7 @@ Reply: `https://youtu.be/dqxuUR7f7bs`
 What happens to an API key after it ships: its activity, a pause without deleting it, and a rotation that adds the new key before retiring the old one.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/api-keys-in-production.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/jZJRja7n_-c`
 
@@ -429,7 +429,7 @@ Reply: `https://youtu.be/jZJRja7n_-c`
 Spanish agrees with the person. Langsys builds the gender forms for each language, so your code never branches.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/svelte/icu-gender.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/AfpNQtvugks`
 
@@ -457,7 +457,7 @@ Agencies: one organization, many projects.
 Set defaults once, override them only where a project needs its own, and share one balance.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/one-organization-many-projects.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/y1kGQkoZ3_w`
 
@@ -485,7 +485,7 @@ A form with a translated label and an English placeholder is a half-translated f
 Placeholders, alt text and aria labels, in the same pass.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/svelte/attributes.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/w9TNoFQ2fpM`
 
@@ -497,7 +497,7 @@ Reply: `https://youtu.be/w9TNoFQ2fpM`
 How a project gets funded: units pay for the API, credits pay for the model, and one transfer moves money to the project that needs it.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/usage-and-credits.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/TOqn3rfDyGQ`
 
@@ -525,7 +525,7 @@ Reply: `https://youtu.be/hsb-VE3Kc3E`
 Every number and date, in each locale's own format.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/svelte/formatting.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/Bc2h2bxaB9M`
 
@@ -553,7 +553,7 @@ Plans, billing cycles, saved cards and every invoice, in one place.
 The boring part of Langsys, done properly.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/plans-and-payments.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/3Lnmfo0T71Q`
 
@@ -565,6 +565,6 @@ Reply: `https://youtu.be/3Lnmfo0T71Q`
 New phrases, invitations, project access: what Langsys tells you, where, and how to change it for one project.
 ```
 
-Upload a 30 to 60 second clip of the strongest moment, cut from the full video.
+Upload `videos/x/notifications.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/gpSYSKrmVp0`
