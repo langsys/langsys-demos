@@ -13,6 +13,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+import utm
+
 DEMOS = Path(r"C:\laragon\www\langsys-demos")
 LABEL = {'react': 'React', 'vue': 'Vue'}
 HASHTAG = {'react': '#React', 'vue': '#VueJS'}
@@ -55,7 +57,8 @@ def x_post(section, video, port, sdk, video_id):
     assert len(body) <= 280, (port['file'], len(body))
     kind = 'Short' if short else 'Video'
     return (f"**{kind}: {heading(port['title'])}** · {len(body)} characters\n\n```\n{body}\n```\n\n"
-            f"{upload}\n\nReply: `https://youtu.be/{video_id}`\n")
+            f"{upload}\n\nReply:\n\n```\nhttps://youtu.be/{video_id}\n"
+            f"{utm.try_free('x', 'social', utm.content_of(port['file']))}\n```\n")
 
 
 def linkedin_post(section, video, port, sdk, video_id):
@@ -75,7 +78,8 @@ def linkedin_post(section, video, port, sdk, video_id):
               else f"`videos/x/{sdk}/{name}.mp4`")
     kind = 'Short' if short else 'Video'
     return (f"**{kind}: {heading(port['title'])}**\n\n```\n{body}\n```\n\n"
-            f"Upload {upload}.\n\nFirst comment: `https://youtu.be/{video_id}`\n")
+            f"Upload {upload}.\n\nFirst comment:\n\n```\nhttps://youtu.be/{video_id}\n"
+            f"{utm.try_free('linkedin', 'social', utm.content_of(port['file']))}\n```\n")
 
 
 def main():

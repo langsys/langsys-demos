@@ -6,13 +6,13 @@ Before posting in each community, read its rules on the day: several allow self-
 
 | Day | Community | Post |
 |---|---|---|
-| Launch + 2 | r/sveltejs | Svelte i18n without a keys file |
-| Launch + 14 | r/SaaS | Adding German to a live store without a deploy |
-| Launch + 35 | r/webdev | Plurals and gender agreement without branching in your code |
-| Launch + 50 | r/reactjs | React i18n without a keys file (the day the React walkthrough goes public) |
-| Launch + 77 | r/vuejs | Vue i18n without a keys file (the day the Vue walkthrough goes public) |
+| Launch + 2 · Wed 28 Oct 2026 | r/sveltejs | Svelte i18n without a keys file |
+| Launch + 14 · Mon 9 Nov 2026 | r/SaaS | Adding German to a live store without a deploy |
+| Launch + 35 · Mon 30 Nov 2026 | r/webdev | Plurals and gender agreement without branching in your code |
+| Launch + 50 · Tue 15 Dec 2026 | r/reactjs | React i18n without a keys file (the day the React walkthrough goes public) |
+| Launch + 91 · Mon 25 Jan 2027 | r/vuejs | Vue i18n without a keys file (the day the Vue walkthrough goes public) |
 
-## Launch + 2 · r/sveltejs
+## Launch + 2 · Wed 28 Oct 2026 · r/sveltejs
 
 **Title:**
 
@@ -42,14 +42,14 @@ Three Svelte-specific bits I'm happy with:
 - `<DontTranslate>` keeps a brand name verbatim inside a sentence that still translates.
 
 There's a one-minute walkthrough video here: https://youtu.be/y-YbRDjV4Wk
-And a Svelte guide: https://docs.langsys.dev/learn
+And a Svelte guide: https://docs.langsys.dev/learn?utm_source=reddit&utm_medium=community&utm_campaign=launch_2026&utm_content=r-sveltejs
 
 The SDK is MIT on npm (`langsys-js-svelte`), works with SvelteKit (the catalog is seeded on the server so the first render is already translated), and the hosted service has a free plan.
 
 I'd really like feedback from anyone running i18n in a large Svelte app: what would stop you from switching?
 ```
 
-## Launch + 14 · r/SaaS
+## Launch + 14 · Mon 9 Nov 2026 · r/SaaS
 
 **Title:**
 
@@ -78,7 +78,7 @@ The whole thing, in under two minutes: https://youtu.be/65z2J2jiSbY
 Happy to answer questions about the pricing model (per source word, quoted up front), how we handle review, or what we got wrong on the way.
 ```
 
-## Launch + 35 · r/webdev
+## Launch + 35 · Mon 30 Nov 2026 · r/webdev
 
 **Title:**
 
@@ -101,12 +101,12 @@ Short videos of both:
 - Plurals: https://youtu.be/vkDmCusXKcI
 - Gender: https://youtu.be/AfpNQtvugks
 
-There's also a write-up of how ICU select and plural work under the hood in our docs: https://docs.langsys.dev/learn
+There's also a write-up of how ICU select and plural work under the hood in our docs: https://docs.langsys.dev/learn?utm_source=reddit&utm_medium=community&utm_campaign=launch_2026&utm_content=r-webdev
 
 Curious how others handle this today, especially gender in languages with more than two agreement forms.
 ```
 
-## Launch + 50 · r/reactjs
+## Launch + 50 · Tue 15 Dec 2026 · r/reactjs
 
 Posted the day the React walkthrough goes public. The link is the walkthrough's unlisted upload, so it works before that day too.
 
@@ -141,14 +141,14 @@ Three components I'm happy with:
 One React-specific gotcha we had to design around: inside `<Phrase>` and `<Translate>` markup, placeholders are written `%count%`, because JSX evaluates `{count}` before the library ever sees the text. Debug mode warns if you get it wrong.
 
 There's a one-minute walkthrough video here: https://youtu.be/sp4K9n4krZ4
-And a React guide: https://docs.langsys.dev/learn/sdk/react
+And a React guide: https://docs.langsys.dev/learn/sdk/react?utm_source=reddit&utm_medium=community&utm_campaign=launch_2026&utm_content=r-reactjs
 
 The SDK is MIT on npm (`langsys-js-react`), works with Next.js (seed the catalog on the server and the first render is already translated, with no flash on hydration), and the hosted service has a free plan.
 
 I'd really like feedback from anyone running i18n in a large React app: what would stop you from switching?
 ```
 
-## Launch + 77 · r/vuejs
+## Launch + 91 · Mon 25 Jan 2027 · r/vuejs
 
 Posted the day the Vue walkthrough goes public. The link is the walkthrough's unlisted upload, so it works before that day too.
 
@@ -185,7 +185,7 @@ Three components I'm happy with:
 One Vue-specific gotcha we had to design around: inside `<Phrase>` and `<Translate>`, write placeholders as `%name%`, not `{{ name }}`. Slot content is compiled by the parent template, so Vue substitutes `{{ name }}` before the library sees it. Debug mode warns if you get it wrong.
 
 There's a one-minute walkthrough video here: https://youtu.be/1ROhtDzJWNo
-And a Vue guide: https://docs.langsys.dev/learn/sdk/vue
+And a Vue guide: https://docs.langsys.dev/learn/sdk/vue?utm_source=reddit&utm_medium=community&utm_campaign=launch_2026&utm_content=r-vuejs
 
 The SDK is MIT on npm (`langsys-js-vue`), works with Nuxt (seed the catalog on the server so the first render is already translated), and the hosted service has a free plan.
 

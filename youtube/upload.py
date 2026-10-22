@@ -44,6 +44,7 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
 
+import utm
 from youtube_auth import load_credentials
 
 HERE = Path(__file__).parent
@@ -78,6 +79,8 @@ def _description(video: dict, defaults: dict, summary: str = None, labels: dict 
     footer = footer.replace('{page}', learn + video['page'].removeprefix('/learn')).replace('{learn}', learn)
     for key, label in (labels or defaults['labels']).items():
         footer = footer.replace(f'{{{key}}}', label)
+    medium = 'short' if video['playlist'] == 'shorts' else 'video'
+    footer = utm.tag_all(footer, 'youtube', medium, utm.content_of(video['file']), defaults['utm_campaign'])
     return f"{summary or video['summary']}\n\n{footer}"
 
 

@@ -1,6 +1,6 @@
 # MCP directories
 
-Listings for the hosted MCP server, so someone searching for a translation or localization MCP server finds Langsys. Submit them on launch day: a listing is public as soon as it's accepted.
+Listings for the hosted MCP server, so someone searching for a translation or localization MCP server finds Langsys. Submit them on launch day (Mon 26 Oct 2026): a listing is public as soon as it's accepted.
 
 The facts every listing uses:
 

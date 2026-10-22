@@ -90,6 +90,6 @@ If your component contains a branch whose only job is grammar (`count === 1`, `g
 - Plurals, in 14 seconds: https://youtu.be/vkDmCusXKcI
 - Plurals in every language, the full video: https://youtu.be/vwQknki_V6A
 - Gender agreement with ICU select: https://youtu.be/AfpNQtvugks
-- Docs: https://docs.langsys.dev/learn
+- Docs: https://docs.langsys.dev/learn?utm_source=devto&utm_medium=article&utm_campaign=launch_2026&utm_content=plurals-and-gender
 
 The SDKs are MIT on npm and Packagist, and there's a free plan if you want to see your own app's sentences come back in Russian.

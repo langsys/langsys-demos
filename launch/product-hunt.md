@@ -1,6 +1,6 @@
 # Product Hunt
 
-**When:** launch + 8 (Tuesday of week 2). A Product Hunt day runs from 00:01 to 23:59 Pacific, so schedule it for 00:01 Pacific; the first hours decide the ranking.
+**When:** launch + 8 · Tue 3 Nov 2026 (Tuesday of week 2). A Product Hunt day runs from 00:01 to 23:59 Pacific, so schedule it for 00:01 Pacific; the first hours decide the ranking.
 **Who:** a founder's personal Product Hunt account as the maker (and hunter, if no one with a following hunts it). Create the account and fill in the profile at least a week before, because brand-new accounts carry less weight.
 **Rules that matter:** never ask for upvotes, and never send a direct link that asks people to vote. "We're live on Product Hunt today, we'd love your feedback" is fine.
 
@@ -57,7 +57,7 @@ Free (with paid plans). Check the plan list on langsys.dev/pricing on the day.
   4. `gallery-4.png`: day one is three steps
   5. `gallery-5.png`: the Translation Manager, an AI draft being edited
   6. `gallery-6.png`: same idea in every SDK
-- **Video:** the explainer on YouTube, `https://youtu.be/_DFWgHZ_QQc`. It must be public by then; it goes public on launch day.
+- **Video:** the explainer on YouTube, `https://youtu.be/_DFWgHZ_QQc`. It must be public by then; it goes public on launch day (Mon 26 Oct 2026).
 
 ## Maker's first comment
 
@@ -85,7 +85,7 @@ I'd love to hear what you'd need before switching your app over, and where you t
 ## Before the day
 
 - [ ] Maker account created, with photo, headline and links
-- [ ] Launch scheduled for launch + 8 at 00:01 Pacific, with everything above filled in
-- [ ] The explainer is public on YouTube (it goes public on launch day)
+- [ ] Launch scheduled for launch + 8 · Tue 3 Nov 2026 at 00:01 Pacific, with everything above filled in
+- [ ] The explainer is public on YouTube (it goes public on launch day, Mon 26 Oct 2026)
 - [ ] A short "We're on Product Hunt today" post ready for X and LinkedIn, posted mid-morning Pacific, linking the Product Hunt page
 - [ ] Someone free to answer every comment through the day

@@ -1,6 +1,6 @@
 # Show HN
 
-**When:** launch + 1 (Tuesday), between 8 and 10 a.m. US Eastern.
+**When:** launch + 1 · Tue 27 Oct 2026 (Tuesday), between 8 and 10 a.m. US Eastern.
 **Who:** a founder, from a personal Hacker News account (not a brand account). Hacker News readers expect to talk to the person who built it.
 **Rules that matter:** the title starts with "Show HN:", the product must be usable without talking to sales (the Free plan is), and no one may be asked to upvote. A post that is asked for votes gets flagged.
 
