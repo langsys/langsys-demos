@@ -1,6 +1,6 @@
 # Tracking where sign-ups come from
 
-Every langsys.dev link the campaign publishes carries UTM parameters, so when someone signs up we know which platform, and which video or post, brought them. The site keeps them in a cookie on `.langsys.dev` and the app sends them with the sign-up, so a person who arrives from a video and signs up days later is still counted.
+Every langsys.dev link the campaign publishes carries UTM parameters, so when someone signs up we know which platform, and which video or post, brought them. The site keeps them in a cookie on `.langsys.dev` and the app sends them with the sign-up, so a person who arrives from a video and signs up days later is still counted. Each arrival from a tagged link or another website is also recorded on its own (the API's `landings` table), so we see how many people each video or post brings, not only how many sign up.
 
 ## The parameters
 
