@@ -181,6 +181,158 @@
     "svelte/social/local-formats-9x16": {
       "title": "Jede Zahl und jedes Datum im Format der jeweiligen Sprache #Shorts",
       "summary": "Übergib die Zahl selbst und das Datum als Datum: Deutsch zeigt 1.234,5 und 14. März 2026, und Hindi gruppiert 1234567 als 12,34,567. Eine Bestellnummer geht als String hinein und bleibt genau so, wie sie ist. #Shorts"
+    },
+    "react/social/react-phrase-9x16": {
+      "title": "Ihr i18n-Key ist einfach der englische Satz (React) #Shorts",
+      "summary": "Mit Langsys ist der Satz in Ihrem Code der Übersetzungs-Key: keine Key-Datei, nichts zu extrahieren oder zu synchronisieren, und dieselbe Zeile kommt in jeder Sprache zurück. #Shorts"
+    },
+    "react/react-hero": {
+      "title": "React i18n mit Langsys: der komplette Durchgang",
+      "summary": "Was andere i18n-Lösungen Sie synchron halten lassen, ein einziger Aufruf als Ersatz, ein Sprachwechsel, warum flaches Spanisch für die Hälfte Ihrer Nutzer falsch ist und was ICU select dagegen tut."
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "title": "Russisch hat 4 Pluralformen. Sie schreiben eine Zeile (React) #Shorts",
+      "summary": "One, few, many und other: Russisch wählt die Pluralform nach der Zahl, und 21 geht zurück in den Singular. Schreiben Sie den Satz flach, und Langsys baut jede Form, die ein Locale braucht. #Shorts"
+    },
+    "react/react-t-string": {
+      "title": "t(phrase, category, params) in React",
+      "summary": "Der t()-Aufruf: das Key-Datei-Problem, das er ersetzt, seine drei Argumente, ICU-Platzhalter und Pluralformen."
+    },
+    "react/react-phrase-tag": {
+      "title": "‹Phrase› in React: ein Satz mit Markup darin",
+      "summary": "Ein Satz mit Markup darin, als eine Phrase erhalten – und warum ‹Phrase›-Parameter als %name% geschrieben werden."
+    },
+    "react/social/react-bold-moves-9x16": {
+      "title": "Im Spanischen wandert der Fettdruck an die richtige Stelle (React) #Shorts",
+      "summary": "Andere i18n-Bibliotheken zerlegen einen Satz mit einem fetten Wort in drei Keys. Mit ‹Phrase› bekommt die Übersetzung einen einzigen Satz samt Markup, und im Spanischen landet der Fettdruck hinter dem Substantiv, auf „no leídos“. #Shorts"
+    },
+    "react/react-translate-tag": {
+      "title": "‹Translate› in React: ein Tag für einen ganzen Bereich",
+      "summary": "Ein ‹Translate›-Tag registriert einen ganzen Bereich – und warum ein Block besser ist als ein Aufruf pro Zeile."
+    },
+    "react/social/react-content-blocks-9x16": {
+      "title": "Einen ganzen Abschnitt mit einem Tag übersetzen (React) #Shorts",
+      "summary": "Ein Translate-Tag umschließt einen Markup-Bereich: Jeder Textabschnitt wird zu einer eigenen Phrase, Fettdruck und Links landen an der richtigen Stelle, und der Markenname wird nie übersetzt. #Shorts"
+    },
+    "react/react-donttranslate": {
+      "title": "‹DontTranslate› in React: Markennamen unverändert lassen",
+      "summary": "Markennamen und Bezeichner bleiben wortgetreu erhalten, ohne sie aus dem Satz herauszulösen."
+    },
+    "react/react-content-blocks": {
+      "title": "Was ist ein Content-Block? Ganze Abschnitte in React übersetzen",
+      "summary": "Ein Abschnitt, als Einheit registriert – und trotzdem aus einzeln wiederverwendbaren Phrasen aufgebaut."
+    },
+    "react/social/react-brand-names-9x16": {
+      "title": "Dein Markenname, niemals übersetzt (React) #Shorts",
+      "summary": "Wer übersetzt, kann einen Produktnamen nicht von einer Phrase unterscheiden, also liefern andere i18n-Bibliotheken Bright Ledger als Libro Mayor Brillante aus. Mit Langsys markierst du ihn mit ‹DontTranslate› direkt an seiner Stelle, und der Satz drumherum wird weiter übersetzt. #Shorts"
+    },
+    "react/react-categories": {
+      "title": "Gleiches Wort, zwei Bedeutungen: Kategorien statt i18n-Keys (React)",
+      "summary": "Warum i18n Keys erfunden hat und was sie ersetzt: dasselbe Wort mit zwei Bedeutungen und die Paare, in die es sich aufteilt."
+    },
+    "react/social/react-icu-gender-9x16": {
+      "title": "Bienvenido oder Bienvenida? Eine Zeile Code (React) #Shorts",
+      "summary": "Im Spanischen richtet sich die Form nach der Person. Langsys erzeugt die ICU select-Zweige: Diego bekommt Bienvenido, Laura bekommt Bienvenida, und bei unbekanntem Geschlecht gibt es die neutrale Form – aus einer einzigen Zeile. #Shorts"
+    },
+    "react/react-icu-gender": {
+      "title": "Genus-Kongruenz ohne Bedingungen im Code (ICU select) (React)",
+      "summary": "Die Geschlechter-Bedingung, die andere i18n-Lösungen in Ihrer Komponente lassen – und die Zweige, die Langsys stattdessen für jede Sprache erzeugt."
+    },
+    "react/react-attributes": {
+      "title": "Platzhalter, Alt-Texte und ARIA-Labels in React übersetzen",
+      "summary": "Wie ein halb übersetztes Formular auf die Person wirkt, die es benutzt – und wie ein einziges ‹Translate› Platzhalter, Alt-Texte und ARIA-Labels im selben Durchgang erfasst."
+    },
+    "react/social/react-two-meanings-9x16": {
+      "title": "Ein englisches Wort, zwei spanische Übersetzungen (React) #Shorts",
+      "summary": "„Free“ ist auf einem Bildschirm ein Preis und auf einem anderen ein freier Abend. Andere i18n-Bibliotheken erfinden einen Key, um beides zu unterscheiden. Langsys behält den Satz und ordnet ihn einer Kategorie zu: Gratis und Libre. #Shorts"
+    },
+    "react/react-formatting": {
+      "title": "Zahlen und Datumsangaben in jedem Locale mit React i18n",
+      "summary": "Zahlen und Datumsangaben nach CLDR: die Verzweigung, die Sie sonst von Hand schreiben würden, warum Zifferngruppierung eine Form und kein Trennzeichen ist und warum eine Bestellnummer als String übergeben werden muss."
+    },
+    "react/social/react-alt-text-9x16": {
+      "title": "Auch Platzhalter und Alt-Texte werden übersetzt (React) #Shorts",
+      "summary": "Andere i18n-Bibliotheken brauchen für jedes Attribut einen eigenen Aufruf, und das vergessene bleibt Englisch. Ein einziges ‹Translate›-Tag deckt den Bereich ab: den Platzhalter, die Bildbeschreibung und das Label, das ein Screenreader vorliest. #Shorts"
+    },
+    "react/social/react-local-formats-9x16": {
+      "title": "Jede Zahl und jedes Datum im Format der jeweiligen Sprache (React) #Shorts",
+      "summary": "Übergib die Zahl selbst und das Datum als Datum: Deutsch zeigt 1.234,5 und 14. März 2026, und Hindi gruppiert 1234567 als 12,34,567. Eine Bestellnummer geht als String hinein und bleibt genau so, wie sie ist. #Shorts"
+    },
+    "vue/vue-hero": {
+      "title": "Vue i18n mit Langsys: der komplette Durchgang",
+      "summary": "Was andere i18n-Lösungen Sie synchron halten lassen, ein einziger Aufruf als Ersatz, ein Sprachwechsel, warum flaches Spanisch für die Hälfte Ihrer Nutzer falsch ist und was ICU select dagegen tut."
+    },
+    "vue/social/vue-phrase-9x16": {
+      "title": "Ihr i18n-Key ist einfach der englische Satz (Vue) #Shorts",
+      "summary": "Mit Langsys ist der Satz in Ihrem Code der Übersetzungs-Key: keine Key-Datei, nichts zu extrahieren oder zu synchronisieren, und dieselbe Zeile kommt in jeder Sprache zurück. #Shorts"
+    },
+    "vue/vue-t-string": {
+      "title": "t(phrase, category, params) in Vue",
+      "summary": "Der t()-Aufruf: das Key-Datei-Problem, das er ersetzt, seine drei Argumente, ICU-Platzhalter und Pluralformen."
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "title": "Russisch hat 4 Pluralformen. Sie schreiben eine Zeile (Vue) #Shorts",
+      "summary": "One, few, many und other: Russisch wählt die Pluralform nach der Zahl, und 21 geht zurück in den Singular. Schreiben Sie den Satz flach, und Langsys baut jede Form, die ein Locale braucht. #Shorts"
+    },
+    "vue/vue-phrase-tag": {
+      "title": "‹Phrase› in Vue: ein Satz mit Markup darin",
+      "summary": "Ein Satz mit Markup darin, als eine Phrase erhalten – und warum ‹Phrase›-Parameter als %name% geschrieben werden."
+    },
+    "vue/vue-translate-tag": {
+      "title": "‹Translate› in Vue: ein Tag für einen ganzen Bereich",
+      "summary": "Ein ‹Translate›-Tag registriert einen ganzen Bereich – und warum ein Block besser ist als ein Aufruf pro Zeile."
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "title": "Im Spanischen wandert der Fettdruck an die richtige Stelle (Vue) #Shorts",
+      "summary": "Andere i18n-Bibliotheken zerlegen einen Satz mit einem fetten Wort in drei Keys. Mit ‹Phrase› bekommt die Übersetzung einen einzigen Satz samt Markup, und im Spanischen landet der Fettdruck hinter dem Substantiv, auf „no leídos“. #Shorts"
+    },
+    "vue/vue-donttranslate": {
+      "title": "‹DontTranslate› in Vue: Markennamen unverändert lassen",
+      "summary": "Markennamen und Bezeichner bleiben wortgetreu erhalten, ohne sie aus dem Satz herauszulösen."
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "title": "Einen ganzen Abschnitt mit einem Tag übersetzen (Vue) #Shorts",
+      "summary": "Ein Translate-Tag umschließt einen Markup-Bereich: Jeder Textabschnitt wird zu einer eigenen Phrase, Fettdruck und Links landen an der richtigen Stelle, und der Markenname wird nie übersetzt. #Shorts"
+    },
+    "vue/vue-content-blocks": {
+      "title": "Was ist ein Content-Block? Ganze Abschnitte in Vue übersetzen",
+      "summary": "Ein Abschnitt, als Einheit registriert – und trotzdem aus einzeln wiederverwendbaren Phrasen aufgebaut."
+    },
+    "vue/vue-categories": {
+      "title": "Gleiches Wort, zwei Bedeutungen: Kategorien statt i18n-Keys (Vue)",
+      "summary": "Warum i18n Keys erfunden hat und was sie ersetzt: dasselbe Wort mit zwei Bedeutungen und die Paare, in die es sich aufteilt."
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "title": "Dein Markenname, niemals übersetzt (Vue) #Shorts",
+      "summary": "Wer übersetzt, kann einen Produktnamen nicht von einer Phrase unterscheiden, also liefern andere i18n-Bibliotheken Bright Ledger als Libro Mayor Brillante aus. Mit Langsys markierst du ihn mit ‹DontTranslate› direkt an seiner Stelle, und der Satz drumherum wird weiter übersetzt. #Shorts"
+    },
+    "vue/vue-icu-gender": {
+      "title": "Genus-Kongruenz ohne Bedingungen im Code (ICU select) (Vue)",
+      "summary": "Die Geschlechter-Bedingung, die andere i18n-Lösungen in Ihrer Komponente lassen – und die Zweige, die Langsys stattdessen für jede Sprache erzeugt."
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "title": "Bienvenido oder Bienvenida? Eine Zeile Code (Vue) #Shorts",
+      "summary": "Im Spanischen richtet sich die Form nach der Person. Langsys erzeugt die ICU select-Zweige: Diego bekommt Bienvenido, Laura bekommt Bienvenida, und bei unbekanntem Geschlecht gibt es die neutrale Form – aus einer einzigen Zeile. #Shorts"
+    },
+    "vue/vue-attributes": {
+      "title": "Platzhalter, Alt-Texte und ARIA-Labels in Vue übersetzen",
+      "summary": "Wie ein halb übersetztes Formular auf die Person wirkt, die es benutzt – und wie ein einziges ‹Translate› Platzhalter, Alt-Texte und ARIA-Labels im selben Durchgang erfasst."
+    },
+    "vue/vue-formatting": {
+      "title": "Zahlen und Datumsangaben in jedem Locale mit Vue i18n",
+      "summary": "Zahlen und Datumsangaben nach CLDR: die Verzweigung, die Sie sonst von Hand schreiben würden, warum Zifferngruppierung eine Form und kein Trennzeichen ist und warum eine Bestellnummer als String übergeben werden muss."
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "title": "Ein englisches Wort, zwei spanische Übersetzungen (Vue) #Shorts",
+      "summary": "„Free“ ist auf einem Bildschirm ein Preis und auf einem anderen ein freier Abend. Andere i18n-Bibliotheken erfinden einen Key, um beides zu unterscheiden. Langsys behält den Satz und ordnet ihn einer Kategorie zu: Gratis und Libre. #Shorts"
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "title": "Auch Platzhalter und Alt-Texte werden übersetzt (Vue) #Shorts",
+      "summary": "Andere i18n-Bibliotheken brauchen für jedes Attribut einen eigenen Aufruf, und das vergessene bleibt Englisch. Ein einziges ‹Translate›-Tag deckt den Bereich ab: den Platzhalter, die Bildbeschreibung und das Label, das ein Screenreader vorliest. #Shorts"
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "title": "Jede Zahl und jedes Datum im Format der jeweiligen Sprache (Vue) #Shorts",
+      "summary": "Übergib die Zahl selbst und das Datum als Datum: Deutsch zeigt 1.234,5 und 14. März 2026, und Hindi gruppiert 1234567 als 12,34,567. Eine Bestellnummer geht als String hinein und bleibt genau so, wie sie ist. #Shorts"
     }
   }
 }

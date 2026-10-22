@@ -181,6 +181,158 @@
     "svelte/social/local-formats-9x16": {
       "title": "数値も日付も、それぞれの言語の形式で #Shorts",
       "summary": "数値はそのまま、日付は日付として渡すだけ。ドイツ語では 1.234,5 と 14. März 2026、ヒンディー語では 1234567 が 12,34,567 とグループ化されます。注文番号は文字列で渡すので、書いたとおりのまま残ります。 #Shorts"
+    },
+    "react/social/react-phrase-9x16": {
+      "title": "i18nのキーは英語の文そのもの (React) #Shorts",
+      "summary": "Langsysなら、コード内の文がそのまま翻訳キーになります。キーファイルも、抽出や同期の手間もなく、同じ行があらゆる言語で返ってきます。 #Shorts"
+    },
+    "react/react-hero": {
+      "title": "LangsysでReact i18n：完全ウォークスルー",
+      "summary": "ほかのi18nで同期し続けなければならないもの、それを置き換える1回の呼び出し、ロケールの切り替え、フラットなスペイン語がユーザーの半数にとって誤りになる理由、そしてICU selectによる解決策を紹介します。"
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "title": "ロシア語の複数形は4種類。書くのは1行だけ (React) #Shorts",
+      "summary": "one、few、many、other：ロシア語は数によって複数形を選び、21は単数形に戻ります。文をフラットに書けば、Langsysが各ロケールに必要なすべての形を組み立てます。 #Shorts"
+    },
+    "react/react-t-string": {
+      "title": "Reactでのt(phrase, category, params)",
+      "summary": "t()呼び出しについて。置き換えるキーファイルの問題、3つの引数、ICUプレースホルダーと複数形を解説します。"
+    },
+    "react/react-phrase-tag": {
+      "title": "Reactの‹Phrase›：マークアップを含む文",
+      "summary": "マークアップを含む文を1つのフレーズのまま扱う方法と、‹Phrase›のparamsを%name%と書く理由を解説します。"
+    },
+    "react/social/react-bold-moves-9x16": {
+      "title": "スペイン語では太字が正しい位置に移動する (React) #Shorts",
+      "summary": "他の i18n ライブラリは、太字の単語を含む文を 3 つのキーに分割します。‹Phrase› なら翻訳者はマークアップごと 1 つの文を受け取り、スペイン語では太字が名詞の後ろの「no leídos」に移ります。 #Shorts"
+    },
+    "react/react-translate-tag": {
+      "title": "Reactの‹Translate›：1つのタグで領域全体を",
+      "summary": "1つの‹Translate›タグで領域全体を登録できます。1行ごとの呼び出しよりブロックが優れている理由も解説します。"
+    },
+    "react/social/react-content-blocks-9x16": {
+      "title": "タグ1つでセクションを丸ごと翻訳 (React) #Shorts",
+      "summary": "1つのTranslateタグでマークアップの領域を囲むだけ。テキストの各まとまりがそれぞれフレーズになり、太字やリンクは正しい位置に収まり、ブランド名は決して翻訳されません。 #Shorts"
+    },
+    "react/react-donttranslate": {
+      "title": "Reactの‹DontTranslate›：ブランド名をそのまま残す",
+      "summary": "ブランド名や識別子を、文から切り出すことなく、そのままの形で残します。"
+    },
+    "react/react-content-blocks": {
+      "title": "コンテンツブロックとは？Reactでセクションを丸ごと翻訳",
+      "summary": "1つのセクションを1単位として登録しつつ、個別に再利用できるフレーズで構成されたままにします。"
+    },
+    "react/social/react-brand-names-9x16": {
+      "title": "ブランド名は決して翻訳されない (React) #Shorts",
+      "summary": "翻訳者には製品名と普通のフレーズの区別がつかないため、他の i18n ライブラリでは Bright Ledger が Libro Mayor Brillante として出荷されてしまいます。Langsys ならその場で ‹DontTranslate› を付けるだけで、周りの文はそのまま翻訳されます。 #Shorts"
+    },
+    "react/react-categories": {
+      "title": "同じ単語、2つの意味：i18nキーの代わりにカテゴリを (React)",
+      "summary": "i18nがキーを生み出した理由と、それに代わるもの。2つの意味を持つ同じ単語と、それが分かれてできるペアを紹介します。"
+    },
+    "react/social/react-icu-gender-9x16": {
+      "title": "BienvenidoかBienvenidaか？コード1行で (React) #Shorts",
+      "summary": "スペイン語はユーザーに合わせて形が変わります。LangsysがICU selectの分岐を生成するので、1行だけでDiegoにはBienvenido、LauraにはBienvenida、性別不明なら中立形が表示されます。 #Shorts"
+    },
+    "react/react-icu-gender": {
+      "title": "コードに条件分岐を書かずに性の一致を実現（ICU select） (React)",
+      "summary": "ほかのi18nではコンポーネントに残ってしまう性別の条件分岐と、その代わりにLangsysが言語ごとに生成する分岐を紹介します。"
+    },
+    "react/react-attributes": {
+      "title": "Reactでplaceholder、alt text、aria labelを翻訳",
+      "summary": "半分だけ翻訳されたフォームが利用者にどう見えるか、そして1つの‹Translate›でplaceholder、alt text、aria labelまで一度に翻訳する方法を紹介します。"
+    },
+    "react/social/react-two-meanings-9x16": {
+      "title": "英語の 1 単語に、スペイン語の訳が 2 つ (React) #Shorts",
+      "summary": "「Free」は、ある画面では価格、別の画面では予定のない夜を意味します。他の i18n ライブラリは区別のためにキーを作りますが、Langsys は文をそのまま残してカテゴリに分類します。Gratis と Libre です。 #Shorts"
+    },
+    "react/react-formatting": {
+      "title": "React i18nで数値と日付を全ロケールに対応",
+      "summary": "CLDRに基づく数値と日付。手書きしがちな分岐、桁区切りが単なる区切り文字ではなく「形」である理由、そして注文番号を文字列として渡すべき理由を解説します。"
+    },
+    "react/social/react-alt-text-9x16": {
+      "title": "プレースホルダーや代替テキストも翻訳される (React) #Shorts",
+      "summary": "他の i18n ライブラリでは属性ごとに個別の呼び出しが必要で、書き忘れた属性は英語のまま残ります。‹Translate› タグひとつで領域全体をカバー。プレースホルダー、画像の説明、スクリーンリーダーが読み上げるラベルまで翻訳されます。 #Shorts"
+    },
+    "react/social/react-local-formats-9x16": {
+      "title": "数値も日付も、それぞれの言語の形式で (React) #Shorts",
+      "summary": "数値はそのまま、日付は日付として渡すだけ。ドイツ語では 1.234,5 と 14. März 2026、ヒンディー語では 1234567 が 12,34,567 とグループ化されます。注文番号は文字列で渡すので、書いたとおりのまま残ります。 #Shorts"
+    },
+    "vue/vue-hero": {
+      "title": "LangsysでVue i18n：完全ウォークスルー",
+      "summary": "ほかのi18nで同期し続けなければならないもの、それを置き換える1回の呼び出し、ロケールの切り替え、フラットなスペイン語がユーザーの半数にとって誤りになる理由、そしてICU selectによる解決策を紹介します。"
+    },
+    "vue/social/vue-phrase-9x16": {
+      "title": "i18nのキーは英語の文そのもの (Vue) #Shorts",
+      "summary": "Langsysなら、コード内の文がそのまま翻訳キーになります。キーファイルも、抽出や同期の手間もなく、同じ行があらゆる言語で返ってきます。 #Shorts"
+    },
+    "vue/vue-t-string": {
+      "title": "Vueでのt(phrase, category, params)",
+      "summary": "t()呼び出しについて。置き換えるキーファイルの問題、3つの引数、ICUプレースホルダーと複数形を解説します。"
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "title": "ロシア語の複数形は4種類。書くのは1行だけ (Vue) #Shorts",
+      "summary": "one、few、many、other：ロシア語は数によって複数形を選び、21は単数形に戻ります。文をフラットに書けば、Langsysが各ロケールに必要なすべての形を組み立てます。 #Shorts"
+    },
+    "vue/vue-phrase-tag": {
+      "title": "Vueの‹Phrase›：マークアップを含む文",
+      "summary": "マークアップを含む文を1つのフレーズのまま扱う方法と、‹Phrase›のparamsを%name%と書く理由を解説します。"
+    },
+    "vue/vue-translate-tag": {
+      "title": "Vueの‹Translate›：1つのタグで領域全体を",
+      "summary": "1つの‹Translate›タグで領域全体を登録できます。1行ごとの呼び出しよりブロックが優れている理由も解説します。"
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "title": "スペイン語では太字が正しい位置に移動する (Vue) #Shorts",
+      "summary": "他の i18n ライブラリは、太字の単語を含む文を 3 つのキーに分割します。‹Phrase› なら翻訳者はマークアップごと 1 つの文を受け取り、スペイン語では太字が名詞の後ろの「no leídos」に移ります。 #Shorts"
+    },
+    "vue/vue-donttranslate": {
+      "title": "Vueの‹DontTranslate›：ブランド名をそのまま残す",
+      "summary": "ブランド名や識別子を、文から切り出すことなく、そのままの形で残します。"
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "title": "タグ1つでセクションを丸ごと翻訳 (Vue) #Shorts",
+      "summary": "1つのTranslateタグでマークアップの領域を囲むだけ。テキストの各まとまりがそれぞれフレーズになり、太字やリンクは正しい位置に収まり、ブランド名は決して翻訳されません。 #Shorts"
+    },
+    "vue/vue-content-blocks": {
+      "title": "コンテンツブロックとは？Vueでセクションを丸ごと翻訳",
+      "summary": "1つのセクションを1単位として登録しつつ、個別に再利用できるフレーズで構成されたままにします。"
+    },
+    "vue/vue-categories": {
+      "title": "同じ単語、2つの意味：i18nキーの代わりにカテゴリを (Vue)",
+      "summary": "i18nがキーを生み出した理由と、それに代わるもの。2つの意味を持つ同じ単語と、それが分かれてできるペアを紹介します。"
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "title": "ブランド名は決して翻訳されない (Vue) #Shorts",
+      "summary": "翻訳者には製品名と普通のフレーズの区別がつかないため、他の i18n ライブラリでは Bright Ledger が Libro Mayor Brillante として出荷されてしまいます。Langsys ならその場で ‹DontTranslate› を付けるだけで、周りの文はそのまま翻訳されます。 #Shorts"
+    },
+    "vue/vue-icu-gender": {
+      "title": "コードに条件分岐を書かずに性の一致を実現（ICU select） (Vue)",
+      "summary": "ほかのi18nではコンポーネントに残ってしまう性別の条件分岐と、その代わりにLangsysが言語ごとに生成する分岐を紹介します。"
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "title": "BienvenidoかBienvenidaか？コード1行で (Vue) #Shorts",
+      "summary": "スペイン語はユーザーに合わせて形が変わります。LangsysがICU selectの分岐を生成するので、1行だけでDiegoにはBienvenido、LauraにはBienvenida、性別不明なら中立形が表示されます。 #Shorts"
+    },
+    "vue/vue-attributes": {
+      "title": "Vueでplaceholder、alt text、aria labelを翻訳",
+      "summary": "半分だけ翻訳されたフォームが利用者にどう見えるか、そして1つの‹Translate›でplaceholder、alt text、aria labelまで一度に翻訳する方法を紹介します。"
+    },
+    "vue/vue-formatting": {
+      "title": "Vue i18nで数値と日付を全ロケールに対応",
+      "summary": "CLDRに基づく数値と日付。手書きしがちな分岐、桁区切りが単なる区切り文字ではなく「形」である理由、そして注文番号を文字列として渡すべき理由を解説します。"
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "title": "英語の 1 単語に、スペイン語の訳が 2 つ (Vue) #Shorts",
+      "summary": "「Free」は、ある画面では価格、別の画面では予定のない夜を意味します。他の i18n ライブラリは区別のためにキーを作りますが、Langsys は文をそのまま残してカテゴリに分類します。Gratis と Libre です。 #Shorts"
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "title": "プレースホルダーや代替テキストも翻訳される (Vue) #Shorts",
+      "summary": "他の i18n ライブラリでは属性ごとに個別の呼び出しが必要で、書き忘れた属性は英語のまま残ります。‹Translate› タグひとつで領域全体をカバー。プレースホルダー、画像の説明、スクリーンリーダーが読み上げるラベルまで翻訳されます。 #Shorts"
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "title": "数値も日付も、それぞれの言語の形式で (Vue) #Shorts",
+      "summary": "数値はそのまま、日付は日付として渡すだけ。ドイツ語では 1.234,5 と 14. März 2026、ヒンディー語では 1234567 が 12,34,567 とグループ化されます。注文番号は文字列で渡すので、書いたとおりのまま残ります。 #Shorts"
     }
   }
 }

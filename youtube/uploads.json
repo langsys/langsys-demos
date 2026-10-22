@@ -4,7 +4,9 @@
     "concepts": "PLKPrdrF92pUc",
     "manager": "PLL71l-NU-gbc",
     "shorts": "PLdPzUZ8uVpFA",
-    "svelte": "PLYyEiJzE3X6U"
+    "svelte": "PLYyEiJzE3X6U",
+    "react": "PLXRrUiWxJ8VY",
+    "vue": "PLGxQO2OE9NkI"
   },
   "videos": {
     "pluralization": {
@@ -223,6 +225,216 @@
     },
     "svelte/social/local-formats-9x16": {
       "id": "_9CfOA8txIU",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/social/react-phrase-9x16": {
+      "id": "wbOSuylCIWE",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-hero": {
+      "id": "sp4K9n4krZ4",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "id": "LeU5LazVgGc",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-t-string": {
+      "id": "22OJORE4d8g",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/react-phrase-tag": {
+      "id": "U1UoliOjgeE",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-bold-moves-9x16": {
+      "id": "vAp5FyuD34Q",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-translate-tag": {
+      "id": "XtjY6UcOoPk",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-content-blocks-9x16": {
+      "id": "uC4VLJyZwnU",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-donttranslate": {
+      "id": "-njmHFcTn7s",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/react-content-blocks": {
+      "id": "kUws7TofOqE",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-brand-names-9x16": {
+      "id": "GeTslWKJ644",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-categories": {
+      "id": "yr8DShqIiJ4",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-icu-gender-9x16": {
+      "id": "2mg4DxHSHlI",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-icu-gender": {
+      "id": "H9vX59TgiMw",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/react-attributes": {
+      "id": "Qtb1vzKpZw0",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-two-meanings-9x16": {
+      "id": "lGXk5lhuMoI",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-formatting": {
+      "id": "gq6qQE_yPss",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-alt-text-9x16": {
+      "id": "ozgMDdZl2H0",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/social/react-local-formats-9x16": {
+      "id": "QYTA7fVF4ZU",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-hero": {
+      "id": "1ROhtDzJWNo",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-phrase-9x16": {
+      "id": "8dim8q1ftfk",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-t-string": {
+      "id": "sIMXbUnD5ns",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "id": "lgejEkwUbHk",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-phrase-tag": {
+      "id": "xTBW-x0g2fg",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/vue-translate-tag": {
+      "id": "WJbebS8J5qg",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "id": "QuwRpvg3T1w",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-donttranslate": {
+      "id": "uF-LHSzYpUU",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "id": "2UF1UPAnCBk",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-content-blocks": {
+      "id": "vMtUjWo2Ezk",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/vue-categories": {
+      "id": "jsqNGO2ArBc",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "id": "8cYsOOGP8Z8",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-icu-gender": {
+      "id": "p_hCurEby8o",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "id": "ncAcC8fZ8KE",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-attributes": {
+      "id": "O4sXjBN_9xw",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/vue-formatting": {
+      "id": "f-BpHgumD7k",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "id": "76kPZu0AQfQ",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "id": "AixBKJN-7ow",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "id": "7eWDPADZhdo",
       "unlisted": true,
       "playlist": true
     }

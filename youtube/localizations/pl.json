@@ -181,6 +181,158 @@
     "svelte/social/local-formats-9x16": {
       "title": "Każda liczba i data w formacie danego języka #Shorts",
       "summary": "Przekaż samą liczbę i datę jako datę: po niemiecku wychodzi 1.234,5 i 14. März 2026, a w hindi 1234567 grupuje się jako 12,34,567. Numer zamówienia przekazujesz jako tekst, więc zostaje dokładnie taki, jaki jest. #Shorts"
+    },
+    "react/social/react-phrase-9x16": {
+      "title": "Twój klucz i18n to po prostu angielskie zdanie (React) #Shorts",
+      "summary": "Z Langsys zdanie w twoim kodzie jest kluczem tłumaczenia: bez pliku kluczy, bez ekstrakcji i synchronizacji, a ta sama linia wraca w każdym języku. #Shorts"
+    },
+    "react/react-hero": {
+      "title": "React i18n z Langsys: pełny przewodnik",
+      "summary": "Co inne biblioteki i18n każą ci trzymać w synchronizacji, jedno wywołanie, które to zastępuje, przełączanie locale, dlaczego hiszpański bez odmiany jest błędny dla połowy twoich użytkowników i co robi z tym ICU select."
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "title": "Rosyjski ma 4 formy liczby mnogiej. Ty piszesz jedną linię (React) #Shorts",
+      "summary": "One, few, many i other: rosyjski wybiera formę liczby mnogiej według liczby, a 21 wraca do formy pojedynczej. Zapisz zdanie bez rozgałęzień, a Langsys zbuduje każdą formę, jakiej potrzebuje dany locale. #Shorts"
+    },
+    "react/react-t-string": {
+      "title": "t(phrase, category, params) w React",
+      "summary": "Wywołanie t(): problem z plikami kluczy, który rozwiązuje, jego trzy argumenty, placeholdery ICU i liczba mnoga."
+    },
+    "react/react-phrase-tag": {
+      "title": "‹Phrase› w React: zdanie ze znacznikami w środku",
+      "summary": "Zdanie ze znacznikami w środku, zachowane jako jedna fraza, i dlaczego parametry ‹Phrase› zapisuje się jako %name%."
+    },
+    "react/social/react-bold-moves-9x16": {
+      "title": "Po hiszpańsku pogrubienie przesuwa się tam, gdzie trzeba (React) #Shorts",
+      "summary": "Inne biblioteki i18n tną zdanie z pogrubionym słowem na trzy klucze. Z ‹Phrase› tłumacz dostaje jedno zdanie razem ze znacznikami, a po hiszpańsku pogrubienie trafia za rzeczownik, na „no leídos”. #Shorts"
+    },
+    "react/react-translate-tag": {
+      "title": "‹Translate› w React: jeden tag na cały region",
+      "summary": "Jeden tag ‹Translate› rejestruje cały region i dlaczego blok wygrywa z osobnym wywołaniem dla każdej linii."
+    },
+    "react/social/react-content-blocks-9x16": {
+      "title": "Przetłumacz całą sekcję jednym tagiem (React) #Shorts",
+      "summary": "Jeden tag Translate obejmuje region znaczników: każdy fragment tekstu staje się osobną frazą, pogrubienia i linki lądują tam, gdzie powinny, a nazwa marki nigdy nie jest tłumaczona. #Shorts"
+    },
+    "react/react-donttranslate": {
+      "title": "‹DontTranslate› w React: nazwy marek bez zmian",
+      "summary": "Nazwy marek i identyfikatory zachowane dosłownie, bez wyciągania ich ze zdania."
+    },
+    "react/react-content-blocks": {
+      "title": "Czym jest blok treści? Tłumaczenie całej sekcji w React",
+      "summary": "Jedna sekcja zarejestrowana jako całość, wciąż złożona z fraz, których można używać pojedynczo."
+    },
+    "react/social/react-brand-names-9x16": {
+      "title": "Nazwa Twojej marki, nigdy nie tłumaczona (React) #Shorts",
+      "summary": "Tłumacz nie odróżni nazwy produktu od zwykłej frazy, więc inne biblioteki i18n publikują Bright Ledger jako Libro Mayor Brillante. W Langsys oznaczasz ją w miejscu, w którym stoi, za pomocą ‹DontTranslate›, a zdanie wokół nadal się tłumaczy. #Shorts"
+    },
+    "react/react-categories": {
+      "title": "To samo słowo, dwa znaczenia: kategorie zamiast kluczy i18n (React)",
+      "summary": "Dlaczego i18n wymyśliło klucze i co je zastępuje: to samo słowo o dwóch znaczeniach i pary, na które się dzieli."
+    },
+    "react/social/react-icu-gender-9x16": {
+      "title": "Bienvenido czy Bienvenida? Jedna linia kodu (React) #Shorts",
+      "summary": "Hiszpański dopasowuje się do użytkownika. Langsys generuje gałęzie ICU select, więc Diego dostaje Bienvenido, Laura dostaje Bienvenida, a przy nieznanej płci pojawia się forma neutralna, wszystko z jednej linii. #Shorts"
+    },
+    "react/react-icu-gender": {
+      "title": "Rodzaj gramatyczny bez warunków w kodzie (ICU select) (React)",
+      "summary": "Warunek dla płci, który inne biblioteki i18n zostawiają w twoim komponencie, i gałęzie, które Langsys zamiast tego generuje dla każdego języka."
+    },
+    "react/react-attributes": {
+      "title": "Tłumaczenie placeholderów, tekstów alt i etykiet aria w React",
+      "summary": "Jak w połowie przetłumaczony formularz wygląda dla osoby, która go używa, i jak jeden ‹Translate› obejmuje placeholdery, teksty alt i etykiety aria za jednym razem."
+    },
+    "react/social/react-two-meanings-9x16": {
+      "title": "Jedno angielskie słowo, dwa hiszpańskie tłumaczenia (React) #Shorts",
+      "summary": "„Free” to na jednym ekranie cena, a na innym wolny wieczór. Inne biblioteki i18n wymyślają klucz, żeby je rozróżnić. Langsys zachowuje zdanie i przypisuje je do kategorii: Gratis i Libre. #Shorts"
+    },
+    "react/react-formatting": {
+      "title": "Liczby i daty w każdym locale ze React i18n",
+      "summary": "Liczby i daty według CLDR: gałąź, którą trzeba by pisać ręcznie, dlaczego grupowanie cyfr to kształt, a nie separator, i dlaczego numer zamówienia trzeba przekazać jako string."
+    },
+    "react/social/react-alt-text-9x16": {
+      "title": "Placeholdery i tekst alternatywny też się tłumaczą (React) #Shorts",
+      "summary": "Inne biblioteki i18n wymagają osobnego wywołania dla każdego atrybutu, a ten, o którym zapomnisz, zostaje po angielsku. Jeden tag ‹Translate› obejmuje cały obszar: placeholder, opis obrazka i etykietę, którą odczytuje czytnik ekranu. #Shorts"
+    },
+    "react/social/react-local-formats-9x16": {
+      "title": "Każda liczba i data w formacie danego języka (React) #Shorts",
+      "summary": "Przekaż samą liczbę i datę jako datę: po niemiecku wychodzi 1.234,5 i 14. März 2026, a w hindi 1234567 grupuje się jako 12,34,567. Numer zamówienia przekazujesz jako tekst, więc zostaje dokładnie taki, jaki jest. #Shorts"
+    },
+    "vue/vue-hero": {
+      "title": "Vue i18n z Langsys: pełny przewodnik",
+      "summary": "Co inne biblioteki i18n każą ci trzymać w synchronizacji, jedno wywołanie, które to zastępuje, przełączanie locale, dlaczego hiszpański bez odmiany jest błędny dla połowy twoich użytkowników i co robi z tym ICU select."
+    },
+    "vue/social/vue-phrase-9x16": {
+      "title": "Twój klucz i18n to po prostu angielskie zdanie (Vue) #Shorts",
+      "summary": "Z Langsys zdanie w twoim kodzie jest kluczem tłumaczenia: bez pliku kluczy, bez ekstrakcji i synchronizacji, a ta sama linia wraca w każdym języku. #Shorts"
+    },
+    "vue/vue-t-string": {
+      "title": "t(phrase, category, params) w Vue",
+      "summary": "Wywołanie t(): problem z plikami kluczy, który rozwiązuje, jego trzy argumenty, placeholdery ICU i liczba mnoga."
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "title": "Rosyjski ma 4 formy liczby mnogiej. Ty piszesz jedną linię (Vue) #Shorts",
+      "summary": "One, few, many i other: rosyjski wybiera formę liczby mnogiej według liczby, a 21 wraca do formy pojedynczej. Zapisz zdanie bez rozgałęzień, a Langsys zbuduje każdą formę, jakiej potrzebuje dany locale. #Shorts"
+    },
+    "vue/vue-phrase-tag": {
+      "title": "‹Phrase› w Vue: zdanie ze znacznikami w środku",
+      "summary": "Zdanie ze znacznikami w środku, zachowane jako jedna fraza, i dlaczego parametry ‹Phrase› zapisuje się jako %name%."
+    },
+    "vue/vue-translate-tag": {
+      "title": "‹Translate› w Vue: jeden tag na cały region",
+      "summary": "Jeden tag ‹Translate› rejestruje cały region i dlaczego blok wygrywa z osobnym wywołaniem dla każdej linii."
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "title": "Po hiszpańsku pogrubienie przesuwa się tam, gdzie trzeba (Vue) #Shorts",
+      "summary": "Inne biblioteki i18n tną zdanie z pogrubionym słowem na trzy klucze. Z ‹Phrase› tłumacz dostaje jedno zdanie razem ze znacznikami, a po hiszpańsku pogrubienie trafia za rzeczownik, na „no leídos”. #Shorts"
+    },
+    "vue/vue-donttranslate": {
+      "title": "‹DontTranslate› w Vue: nazwy marek bez zmian",
+      "summary": "Nazwy marek i identyfikatory zachowane dosłownie, bez wyciągania ich ze zdania."
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "title": "Przetłumacz całą sekcję jednym tagiem (Vue) #Shorts",
+      "summary": "Jeden tag Translate obejmuje region znaczników: każdy fragment tekstu staje się osobną frazą, pogrubienia i linki lądują tam, gdzie powinny, a nazwa marki nigdy nie jest tłumaczona. #Shorts"
+    },
+    "vue/vue-content-blocks": {
+      "title": "Czym jest blok treści? Tłumaczenie całej sekcji w Vue",
+      "summary": "Jedna sekcja zarejestrowana jako całość, wciąż złożona z fraz, których można używać pojedynczo."
+    },
+    "vue/vue-categories": {
+      "title": "To samo słowo, dwa znaczenia: kategorie zamiast kluczy i18n (Vue)",
+      "summary": "Dlaczego i18n wymyśliło klucze i co je zastępuje: to samo słowo o dwóch znaczeniach i pary, na które się dzieli."
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "title": "Nazwa Twojej marki, nigdy nie tłumaczona (Vue) #Shorts",
+      "summary": "Tłumacz nie odróżni nazwy produktu od zwykłej frazy, więc inne biblioteki i18n publikują Bright Ledger jako Libro Mayor Brillante. W Langsys oznaczasz ją w miejscu, w którym stoi, za pomocą ‹DontTranslate›, a zdanie wokół nadal się tłumaczy. #Shorts"
+    },
+    "vue/vue-icu-gender": {
+      "title": "Rodzaj gramatyczny bez warunków w kodzie (ICU select) (Vue)",
+      "summary": "Warunek dla płci, który inne biblioteki i18n zostawiają w twoim komponencie, i gałęzie, które Langsys zamiast tego generuje dla każdego języka."
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "title": "Bienvenido czy Bienvenida? Jedna linia kodu (Vue) #Shorts",
+      "summary": "Hiszpański dopasowuje się do użytkownika. Langsys generuje gałęzie ICU select, więc Diego dostaje Bienvenido, Laura dostaje Bienvenida, a przy nieznanej płci pojawia się forma neutralna, wszystko z jednej linii. #Shorts"
+    },
+    "vue/vue-attributes": {
+      "title": "Tłumaczenie placeholderów, tekstów alt i etykiet aria w Vue",
+      "summary": "Jak w połowie przetłumaczony formularz wygląda dla osoby, która go używa, i jak jeden ‹Translate› obejmuje placeholdery, teksty alt i etykiety aria za jednym razem."
+    },
+    "vue/vue-formatting": {
+      "title": "Liczby i daty w każdym locale ze Vue i18n",
+      "summary": "Liczby i daty według CLDR: gałąź, którą trzeba by pisać ręcznie, dlaczego grupowanie cyfr to kształt, a nie separator, i dlaczego numer zamówienia trzeba przekazać jako string."
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "title": "Jedno angielskie słowo, dwa hiszpańskie tłumaczenia (Vue) #Shorts",
+      "summary": "„Free” to na jednym ekranie cena, a na innym wolny wieczór. Inne biblioteki i18n wymyślają klucz, żeby je rozróżnić. Langsys zachowuje zdanie i przypisuje je do kategorii: Gratis i Libre. #Shorts"
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "title": "Placeholdery i tekst alternatywny też się tłumaczą (Vue) #Shorts",
+      "summary": "Inne biblioteki i18n wymagają osobnego wywołania dla każdego atrybutu, a ten, o którym zapomnisz, zostaje po angielsku. Jeden tag ‹Translate› obejmuje cały obszar: placeholder, opis obrazka i etykietę, którą odczytuje czytnik ekranu. #Shorts"
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "title": "Każda liczba i data w formacie danego języka (Vue) #Shorts",
+      "summary": "Przekaż samą liczbę i datę jako datę: po niemiecku wychodzi 1.234,5 i 14. März 2026, a w hindi 1234567 grupuje się jako 12,34,567. Numer zamówienia przekazujesz jako tekst, więc zostaje dokładnie taki, jaki jest. #Shorts"
     }
   }
 }

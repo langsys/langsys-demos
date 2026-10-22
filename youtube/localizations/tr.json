@@ -181,6 +181,158 @@
     "svelte/social/local-formats-9x16": {
       "title": "Her sayı ve tarih kendi dilinin biçiminde #Shorts",
       "summary": "Sayının kendisini ve tarihi tarih olarak ver: Almancada 1.234,5 ve 14. März 2026 çıkar, Hintçe ise 1234567'yi 12,34,567 olarak gruplar. Sipariş numarası metin olarak verilir, böylece tam olarak yazıldığı gibi kalır. #Shorts"
+    },
+    "react/social/react-phrase-9x16": {
+      "title": "i18n anahtarınız aslında İngilizce cümlenin kendisi (React) #Shorts",
+      "summary": "Langsys ile kodunuzdaki cümle, çeviri anahtarının ta kendisi: anahtar dosyası yok, çıkarılacak ya da senkron tutulacak bir şey yok ve aynı satır her dilde geri geliyor. #Shorts"
+    },
+    "react/react-hero": {
+      "title": "Langsys ile React i18n: eksiksiz rehber",
+      "summary": "Diğer i18n çözümlerinin sizi senkron tutmaya zorladığı şeyler, onların yerini alan tek çağrı, bir dil değişimi, düz İspanyolcanın kullanıcılarınızın yarısı için neden yanlış olduğu ve ICU select'in buna ne çözüm getirdiği."
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "title": "Rusçada 4 çoğul biçim var. Siz tek satır yazarsınız (React) #Shorts",
+      "summary": "One, few, many ve other: Rusça çoğul biçimi sayıya göre seçer ve 21 yeniden tekile döner. Cümleyi düz yazın, Langsys her yerel ayarın ihtiyaç duyduğu tüm biçimleri kursun. #Shorts"
+    },
+    "react/react-t-string": {
+      "title": "React'te t(phrase, category, params)",
+      "summary": "t() çağrısı: yerini aldığı anahtar dosyası sorunu, üç argümanı, ICU yer tutucuları ve çoğullar."
+    },
+    "react/react-phrase-tag": {
+      "title": "React'te ‹Phrase›: içinde markup olan bir cümle",
+      "summary": "İçinde markup olan bir cümle, tek bir ifade olarak korunuyor; ve ‹Phrase› parametreleri neden %name% biçiminde yazılır."
+    },
+    "react/social/react-bold-moves-9x16": {
+      "title": "İspanyolcada kalın yazı olması gereken yere taşınır (React) #Shorts",
+      "summary": "Diğer i18n kütüphaneleri kalın kelime içeren bir cümleyi üç anahtara böler. ‹Phrase› ile çevirmen işaretlemesiyle birlikte tek bir cümle alır ve İspanyolcada kalın yazı isimden sonra, \"no leídos\" üzerine düşer. #Shorts"
+    },
+    "react/react-translate-tag": {
+      "title": "React'te ‹Translate›: bütün bir bölge için tek etiket",
+      "summary": "Tek bir ‹Translate› etiketi bütün bir bölgeyi kaydeder; bir bloğun satır başına bir çağrıdan neden daha iyi olduğu."
+    },
+    "react/social/react-content-blocks-9x16": {
+      "title": "Bütün bir bölümü tek etiketle çevirin (React) #Shorts",
+      "summary": "Tek bir Translate etiketi bir markup bölgesini sarar: her metin parçası kendi ifadesi olur, kalın yazılar ve linkler ait oldukları yere yerleşir ve marka adı asla çevrilmez. #Shorts"
+    },
+    "react/react-donttranslate": {
+      "title": "React'te ‹DontTranslate›: marka adlarını olduğu gibi koruyun",
+      "summary": "Marka adları ve tanımlayıcılar, cümlenin dışına çıkarılmadan olduğu gibi korunuyor."
+    },
+    "react/react-content-blocks": {
+      "title": "İçerik bloğu nedir? React'te bütün bir bölümü çevirmek",
+      "summary": "Tek bir birim olarak kaydedilen bir bölüm; yine de tek tek yeniden kullanılabilen ifadelerden oluşuyor."
+    },
+    "react/social/react-brand-names-9x16": {
+      "title": "Marka adın asla çevrilmez (React) #Shorts",
+      "summary": "Bir çevirmen ürün adını sıradan bir ifadeden ayıramaz; bu yüzden diğer i18n kütüphaneleri Bright Ledger'ı Libro Mayor Brillante olarak yayımlar. Langsys ile onu bulunduğu yerde ‹DontTranslate› ile işaretlersin, etrafındaki cümle çevrilmeye devam eder. #Shorts"
+    },
+    "react/react-categories": {
+      "title": "Aynı kelime, iki anlam: i18n anahtarları yerine kategoriler (React)",
+      "summary": "i18n neden anahtarları icat etti ve onların yerini ne alıyor: iki anlamı olan aynı kelime ve ayrıldığı çiftler."
+    },
+    "react/social/react-icu-gender-9x16": {
+      "title": "Bienvenido mu, Bienvenida mı? Tek satır kod (React) #Shorts",
+      "summary": "İspanyolca kullanıcıya göre uyum sağlar. Langsys ICU select dallarını üretir; böylece Diego Bienvenido, Laura Bienvenida görür, cinsiyeti bilinmeyen biri ise nötr biçimi alır; hepsi tek satırdan. #Shorts"
+    },
+    "react/react-icu-gender": {
+      "title": "Kodunuzda koşul olmadan cinsiyet uyumu (ICU select) (React)",
+      "summary": "Diğer i18n çözümlerinin bileşeninizde bıraktığı cinsiyet koşulu ve bunun yerine Langsys'in her dil için ürettiği dallar."
+    },
+    "react/react-attributes": {
+      "title": "React'te placeholder, alt metin ve aria etiketlerini çevirmek",
+      "summary": "Yarı çevrilmiş bir form, onu kullanan kişiye nasıl görünür ve tek bir ‹Translate› aynı geçişte placeholder'lara, alt metinlere ve aria etiketlerine nasıl ulaşır."
+    },
+    "react/social/react-two-meanings-9x16": {
+      "title": "Bir İngilizce kelime, iki İspanyolca çeviri (React) #Shorts",
+      "summary": "\"Free\" bir ekranda fiyat, başka bir ekranda boş bir akşamdır. Diğer i18n kütüphaneleri bunları ayırt etmek için bir anahtar uydurur. Langsys cümleyi korur ve bir kategoriye yerleştirir: Gratis ve Libre. #Shorts"
+    },
+    "react/react-formatting": {
+      "title": "React i18n ile her yerel ayarda sayılar ve tarihler",
+      "summary": "CLDR'ye göre sayılar ve tarihler: elle yazacağınız dal, basamak gruplamanın neden bir ayırıcı değil bir şekil olduğu ve bir sipariş numarasının neden string olarak geçirilmesi gerektiği."
+    },
+    "react/social/react-alt-text-9x16": {
+      "title": "Placeholder'lar ve alternatif metin de çevrilir (React) #Shorts",
+      "summary": "Diğer i18n kütüphaneleri her öznitelik için ayrı bir çağrı ister; unuttuğun öznitelik İngilizce kalır. Tek bir ‹Translate› etiketi bölgenin tamamını kapsar: placeholder'ı, görsel açıklamasını ve ekran okuyucunun seslendirdiği etiketi. #Shorts"
+    },
+    "react/social/react-local-formats-9x16": {
+      "title": "Her sayı ve tarih kendi dilinin biçiminde (React) #Shorts",
+      "summary": "Sayının kendisini ve tarihi tarih olarak ver: Almancada 1.234,5 ve 14. März 2026 çıkar, Hintçe ise 1234567'yi 12,34,567 olarak gruplar. Sipariş numarası metin olarak verilir, böylece tam olarak yazıldığı gibi kalır. #Shorts"
+    },
+    "vue/vue-hero": {
+      "title": "Langsys ile Vue i18n: eksiksiz rehber",
+      "summary": "Diğer i18n çözümlerinin sizi senkron tutmaya zorladığı şeyler, onların yerini alan tek çağrı, bir dil değişimi, düz İspanyolcanın kullanıcılarınızın yarısı için neden yanlış olduğu ve ICU select'in buna ne çözüm getirdiği."
+    },
+    "vue/social/vue-phrase-9x16": {
+      "title": "i18n anahtarınız aslında İngilizce cümlenin kendisi (Vue) #Shorts",
+      "summary": "Langsys ile kodunuzdaki cümle, çeviri anahtarının ta kendisi: anahtar dosyası yok, çıkarılacak ya da senkron tutulacak bir şey yok ve aynı satır her dilde geri geliyor. #Shorts"
+    },
+    "vue/vue-t-string": {
+      "title": "Vue'te t(phrase, category, params)",
+      "summary": "t() çağrısı: yerini aldığı anahtar dosyası sorunu, üç argümanı, ICU yer tutucuları ve çoğullar."
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "title": "Rusçada 4 çoğul biçim var. Siz tek satır yazarsınız (Vue) #Shorts",
+      "summary": "One, few, many ve other: Rusça çoğul biçimi sayıya göre seçer ve 21 yeniden tekile döner. Cümleyi düz yazın, Langsys her yerel ayarın ihtiyaç duyduğu tüm biçimleri kursun. #Shorts"
+    },
+    "vue/vue-phrase-tag": {
+      "title": "Vue'te ‹Phrase›: içinde markup olan bir cümle",
+      "summary": "İçinde markup olan bir cümle, tek bir ifade olarak korunuyor; ve ‹Phrase› parametreleri neden %name% biçiminde yazılır."
+    },
+    "vue/vue-translate-tag": {
+      "title": "Vue'te ‹Translate›: bütün bir bölge için tek etiket",
+      "summary": "Tek bir ‹Translate› etiketi bütün bir bölgeyi kaydeder; bir bloğun satır başına bir çağrıdan neden daha iyi olduğu."
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "title": "İspanyolcada kalın yazı olması gereken yere taşınır (Vue) #Shorts",
+      "summary": "Diğer i18n kütüphaneleri kalın kelime içeren bir cümleyi üç anahtara böler. ‹Phrase› ile çevirmen işaretlemesiyle birlikte tek bir cümle alır ve İspanyolcada kalın yazı isimden sonra, \"no leídos\" üzerine düşer. #Shorts"
+    },
+    "vue/vue-donttranslate": {
+      "title": "Vue'te ‹DontTranslate›: marka adlarını olduğu gibi koruyun",
+      "summary": "Marka adları ve tanımlayıcılar, cümlenin dışına çıkarılmadan olduğu gibi korunuyor."
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "title": "Bütün bir bölümü tek etiketle çevirin (Vue) #Shorts",
+      "summary": "Tek bir Translate etiketi bir markup bölgesini sarar: her metin parçası kendi ifadesi olur, kalın yazılar ve linkler ait oldukları yere yerleşir ve marka adı asla çevrilmez. #Shorts"
+    },
+    "vue/vue-content-blocks": {
+      "title": "İçerik bloğu nedir? Vue'te bütün bir bölümü çevirmek",
+      "summary": "Tek bir birim olarak kaydedilen bir bölüm; yine de tek tek yeniden kullanılabilen ifadelerden oluşuyor."
+    },
+    "vue/vue-categories": {
+      "title": "Aynı kelime, iki anlam: i18n anahtarları yerine kategoriler (Vue)",
+      "summary": "i18n neden anahtarları icat etti ve onların yerini ne alıyor: iki anlamı olan aynı kelime ve ayrıldığı çiftler."
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "title": "Marka adın asla çevrilmez (Vue) #Shorts",
+      "summary": "Bir çevirmen ürün adını sıradan bir ifadeden ayıramaz; bu yüzden diğer i18n kütüphaneleri Bright Ledger'ı Libro Mayor Brillante olarak yayımlar. Langsys ile onu bulunduğu yerde ‹DontTranslate› ile işaretlersin, etrafındaki cümle çevrilmeye devam eder. #Shorts"
+    },
+    "vue/vue-icu-gender": {
+      "title": "Kodunuzda koşul olmadan cinsiyet uyumu (ICU select) (Vue)",
+      "summary": "Diğer i18n çözümlerinin bileşeninizde bıraktığı cinsiyet koşulu ve bunun yerine Langsys'in her dil için ürettiği dallar."
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "title": "Bienvenido mu, Bienvenida mı? Tek satır kod (Vue) #Shorts",
+      "summary": "İspanyolca kullanıcıya göre uyum sağlar. Langsys ICU select dallarını üretir; böylece Diego Bienvenido, Laura Bienvenida görür, cinsiyeti bilinmeyen biri ise nötr biçimi alır; hepsi tek satırdan. #Shorts"
+    },
+    "vue/vue-attributes": {
+      "title": "Vue'te placeholder, alt metin ve aria etiketlerini çevirmek",
+      "summary": "Yarı çevrilmiş bir form, onu kullanan kişiye nasıl görünür ve tek bir ‹Translate› aynı geçişte placeholder'lara, alt metinlere ve aria etiketlerine nasıl ulaşır."
+    },
+    "vue/vue-formatting": {
+      "title": "Vue i18n ile her yerel ayarda sayılar ve tarihler",
+      "summary": "CLDR'ye göre sayılar ve tarihler: elle yazacağınız dal, basamak gruplamanın neden bir ayırıcı değil bir şekil olduğu ve bir sipariş numarasının neden string olarak geçirilmesi gerektiği."
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "title": "Bir İngilizce kelime, iki İspanyolca çeviri (Vue) #Shorts",
+      "summary": "\"Free\" bir ekranda fiyat, başka bir ekranda boş bir akşamdır. Diğer i18n kütüphaneleri bunları ayırt etmek için bir anahtar uydurur. Langsys cümleyi korur ve bir kategoriye yerleştirir: Gratis ve Libre. #Shorts"
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "title": "Placeholder'lar ve alternatif metin de çevrilir (Vue) #Shorts",
+      "summary": "Diğer i18n kütüphaneleri her öznitelik için ayrı bir çağrı ister; unuttuğun öznitelik İngilizce kalır. Tek bir ‹Translate› etiketi bölgenin tamamını kapsar: placeholder'ı, görsel açıklamasını ve ekran okuyucunun seslendirdiği etiketi. #Shorts"
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "title": "Her sayı ve tarih kendi dilinin biçiminde (Vue) #Shorts",
+      "summary": "Sayının kendisini ve tarihi tarih olarak ver: Almancada 1.234,5 ve 14. März 2026 çıkar, Hintçe ise 1234567'yi 12,34,567 olarak gruplar. Sipariş numarası metin olarak verilir, böylece tam olarak yazıldığı gibi kalır. #Shorts"
     }
   }
 }

@@ -46,6 +46,14 @@
     "shorts": {
       "title": "Shorts",
       "description": "One idea in under fifteen seconds: the phrase as the key, plurals, gender agreement and content blocks."
+    },
+    "react": {
+      "title": "React, API by API",
+      "description": "One video per primitive in the Langsys React SDK. The other SDKs share the same surface; only the syntax differs."
+    },
+    "vue": {
+      "title": "Vue, API by API",
+      "description": "One video per primitive in the Langsys Vue SDK. The other SDKs share the same surface; only the syntax differs."
     }
   },
   "videos": [
@@ -782,6 +790,682 @@
       "tags": [
         "Shorts",
         "Svelte",
+        "number formatting",
+        "date formatting",
+        "CLDR"
+      ]
+    },
+    {
+      "file": "react/social/react-phrase-9x16",
+      "playlist": "shorts",
+      "day": 8,
+      "publish": "2026-12-09",
+      "thumbnail": false,
+      "title": "Your i18n key is just the English sentence (React) #Shorts",
+      "summary": "With Langsys the sentence in your code is the translation key: no keys file, nothing to extract or keep in sync, and the same line comes back in every language. #Shorts",
+      "page": "/learn/concepts/token-discovery",
+      "tags": [
+        "Shorts",
+        "translation keys",
+        "React",
+        "i18n tips",
+        "webdev"
+      ]
+    },
+    {
+      "file": "react/react-hero",
+      "playlist": "react",
+      "day": 8,
+      "publish": "2026-12-08",
+      "title": "React i18n with Langsys: the full walkthrough",
+      "summary": "What other i18n makes you keep in step, one call to replace it, a locale switch, why flat Spanish is wrong for half your users, and what ICU select does about it.",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "react i18n",
+        "next.js i18n",
+        "react",
+        "nextjs",
+        "react translation",
+        "react 19",
+        "react tutorial",
+        "ICU select"
+      ]
+    },
+    {
+      "file": "react/social/react-icu-plurals-9x16",
+      "playlist": "shorts",
+      "day": 8,
+      "publish": "2026-12-10",
+      "thumbnail": false,
+      "title": "Russian has 4 plural forms. You write one line (React) #Shorts",
+      "summary": "One, few, many and other: Russian picks a plural form by the number, and 21 goes back to the singular. Write the sentence flat and Langsys builds every form each locale needs. #Shorts",
+      "page": "/learn/concepts/locale-store#plurals",
+      "tags": [
+        "Shorts",
+        "ICU plurals",
+        "pluralization",
+        "Russian",
+        "i18n tips"
+      ]
+    },
+    {
+      "file": "react/react-t-string",
+      "playlist": "react",
+      "day": 8,
+      "publish": "2026-12-11",
+      "title": "t(phrase, category, params) in React",
+      "summary": "The t() call: the keys-file problem it replaces, its three arguments, ICU placeholders and plurals.",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "react i18n",
+        "next.js i18n",
+        "react",
+        "nextjs",
+        "t function",
+        "ICU placeholders",
+        "react plurals"
+      ]
+    },
+    {
+      "file": "react/react-phrase-tag",
+      "playlist": "react",
+      "day": 8,
+      "publish": "2026-12-14",
+      "title": "‹Phrase› in React: a sentence with markup inside",
+      "summary": "A sentence with markup inside it, kept as one phrase, and why ‹Phrase› params are written %name%.",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "react i18n",
+        "next.js i18n",
+        "react",
+        "nextjs",
+        "rich text translation",
+        "translate html",
+        "markup in translations"
+      ]
+    },
+    {
+      "file": "react/social/react-bold-moves-9x16",
+      "playlist": "shorts",
+      "day": 8,
+      "publish": "2026-12-15",
+      "thumbnail": false,
+      "title": "In Spanish, the bold moves to where it belongs (React) #Shorts",
+      "summary": "Other i18n cuts a sentence with a bold word into three keys. With ‹Phrase› the translator gets one sentence, markup and all, and in Spanish the bold lands after the noun, on \"no leídos\". #Shorts",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "Shorts",
+        "React",
+        "rich text i18n",
+        "Phrase",
+        "i18n"
+      ]
+    },
+    {
+      "file": "react/react-translate-tag",
+      "playlist": "react",
+      "day": 8,
+      "publish": "2026-12-16",
+      "title": "‹Translate› in React: one tag for a whole region",
+      "summary": "One ‹Translate› tag registers a whole region, and why a block beats a call per line.",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "react i18n",
+        "next.js i18n",
+        "react",
+        "nextjs",
+        "content blocks",
+        "translate component",
+        "translate html"
+      ]
+    },
+    {
+      "file": "react/social/react-content-blocks-9x16",
+      "playlist": "shorts",
+      "day": 8,
+      "publish": "2026-12-17",
+      "thumbnail": false,
+      "title": "Translate a whole section with one tag (React) #Shorts",
+      "summary": "One Translate tag wraps a region of markup: every run of text becomes its own phrase, bold and links land where they belong, and the brand name is never translated. #Shorts",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "Shorts",
+        "content blocks",
+        "React",
+        "i18n tips"
+      ]
+    },
+    {
+      "file": "react/react-donttranslate",
+      "playlist": "react",
+      "day": 8,
+      "publish": "2026-12-18",
+      "title": "‹DontTranslate› in React: keep brand names verbatim",
+      "summary": "Brand names and identifiers held back verbatim, without hoisting them out of the sentence.",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "react i18n",
+        "next.js i18n",
+        "react",
+        "nextjs",
+        "do not translate",
+        "brand names",
+        "untranslatable terms"
+      ]
+    },
+    {
+      "file": "react/react-content-blocks",
+      "playlist": "react",
+      "day": 8,
+      "publish": "2026-12-21",
+      "title": "What is a content block? Translating a whole section in React",
+      "summary": "One section registered as a unit, still made of individually reusable phrases.",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "react i18n",
+        "next.js i18n",
+        "react",
+        "nextjs",
+        "content blocks",
+        "translate section",
+        "context-aware translation"
+      ]
+    },
+    {
+      "file": "react/social/react-brand-names-9x16",
+      "playlist": "shorts",
+      "day": 8,
+      "publish": "2026-12-22",
+      "thumbnail": false,
+      "title": "Your brand name, never translated (React) #Shorts",
+      "summary": "A translator can't tell a product name from a phrase, so other i18n ships Bright Ledger as Libro Mayor Brillante. With Langsys you mark it where it stands with ‹DontTranslate›, and the sentence around it still translates. #Shorts",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "Shorts",
+        "React",
+        "i18n",
+        "brand names",
+        "DontTranslate"
+      ]
+    },
+    {
+      "file": "react/react-categories",
+      "playlist": "react",
+      "day": 8,
+      "publish": "2026-12-23",
+      "title": "Same word, two meanings: categories instead of i18n keys (React)",
+      "summary": "Why i18n invented keys, and what replaces them: the same word with two meanings, and the pairs it splits into.",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "react i18n",
+        "next.js i18n",
+        "react",
+        "nextjs",
+        "translation context",
+        "homonyms",
+        "i18n keys"
+      ]
+    },
+    {
+      "file": "react/social/react-icu-gender-9x16",
+      "playlist": "shorts",
+      "day": 8,
+      "publish": "2026-12-24",
+      "thumbnail": false,
+      "title": "Bienvenido or Bienvenida? One line of code (React) #Shorts",
+      "summary": "Spanish agrees with the user. Langsys generates the ICU select branches, so Diego gets Bienvenido, Laura gets Bienvenida, and an unknown gender gets the neutral form, from one line. #Shorts",
+      "page": "/learn/sdk/react#gender",
+      "tags": [
+        "Shorts",
+        "ICU select",
+        "gender agreement",
+        "Spanish",
+        "i18n tips"
+      ]
+    },
+    {
+      "file": "react/react-icu-gender",
+      "playlist": "react",
+      "day": 8,
+      "publish": "2026-12-25",
+      "title": "Gender agreement without conditionals in your code (ICU select) (React)",
+      "summary": "The gender conditional other i18n leaves in your component, and the branches Langsys generates for each language instead.",
+      "page": "/learn/sdk/react#gender",
+      "tags": [
+        "react i18n",
+        "next.js i18n",
+        "react",
+        "nextjs",
+        "ICU select",
+        "gender",
+        "gender agreement",
+        "grammatical gender"
+      ]
+    },
+    {
+      "file": "react/react-attributes",
+      "playlist": "react",
+      "day": 8,
+      "publish": "2026-12-28",
+      "title": "Translating placeholders, alt text and aria labels in React",
+      "summary": "What a half-translated form looks like to the person using it, and how one ‹Translate› reaches placeholders, alt text and aria labels in the same pass.",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "react i18n",
+        "next.js i18n",
+        "react",
+        "nextjs",
+        "accessibility",
+        "aria-label",
+        "placeholder translation",
+        "alt text",
+        "a11y"
+      ]
+    },
+    {
+      "file": "react/social/react-two-meanings-9x16",
+      "playlist": "shorts",
+      "day": 8,
+      "publish": "2026-12-29",
+      "thumbnail": false,
+      "title": "One English word, two Spanish translations (React) #Shorts",
+      "summary": "\"Free\" is a price on one screen and an empty evening on another. Other i18n invents a key to tell them apart. Langsys keeps the sentence and files it under a category: Gratis and Libre. #Shorts",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "Shorts",
+        "React",
+        "i18n keys",
+        "categories",
+        "translation context"
+      ]
+    },
+    {
+      "file": "react/react-formatting",
+      "playlist": "react",
+      "day": 8,
+      "publish": "2026-12-30",
+      "title": "Numbers and dates in every locale with React i18n",
+      "summary": "Numbers and dates per CLDR: the branch you'd write by hand, why digit grouping is a shape and not a separator, and why an order number must be passed as a string.",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "react i18n",
+        "next.js i18n",
+        "react",
+        "nextjs",
+        "number formatting",
+        "date formatting",
+        "CLDR",
+        "Intl",
+        "locale formatting"
+      ]
+    },
+    {
+      "file": "react/social/react-alt-text-9x16",
+      "playlist": "shorts",
+      "day": 8,
+      "publish": "2026-12-31",
+      "thumbnail": false,
+      "title": "Placeholders and alt text translate too (React) #Shorts",
+      "summary": "Other i18n needs a separate call on every attribute, and the one you forget stays English. One ‹Translate› tag covers the region: the placeholder, the image description and the label a screen reader announces. #Shorts",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "Shorts",
+        "React",
+        "accessibility",
+        "alt text",
+        "i18n"
+      ]
+    },
+    {
+      "file": "react/social/react-local-formats-9x16",
+      "playlist": "shorts",
+      "day": 8,
+      "publish": "2027-01-01",
+      "thumbnail": false,
+      "title": "Every number and date in each locale's format (React) #Shorts",
+      "summary": "Pass the number itself and the date as a date: German gets 1.234,5 and 14. März 2026, and Hindi groups 1234567 as 12,34,567. An order number goes in as a string, so it stays exactly as written. #Shorts",
+      "page": "/learn/sdk/react",
+      "tags": [
+        "Shorts",
+        "React",
+        "number formatting",
+        "date formatting",
+        "CLDR"
+      ]
+    },
+    {
+      "file": "vue/vue-hero",
+      "playlist": "vue",
+      "day": 9,
+      "publish": "2027-01-04",
+      "title": "Vue i18n with Langsys: the full walkthrough",
+      "summary": "What other i18n makes you keep in step, one call to replace it, a locale switch, why flat Spanish is wrong for half your users, and what ICU select does about it.",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "vue i18n",
+        "nuxt i18n",
+        "vue",
+        "nuxt",
+        "vue translation",
+        "vue 3",
+        "vue tutorial",
+        "ICU select"
+      ]
+    },
+    {
+      "file": "vue/social/vue-phrase-9x16",
+      "playlist": "shorts",
+      "day": 9,
+      "publish": "2027-01-05",
+      "thumbnail": false,
+      "title": "Your i18n key is just the English sentence (Vue) #Shorts",
+      "summary": "With Langsys the sentence in your code is the translation key: no keys file, nothing to extract or keep in sync, and the same line comes back in every language. #Shorts",
+      "page": "/learn/concepts/token-discovery",
+      "tags": [
+        "Shorts",
+        "translation keys",
+        "Vue",
+        "i18n tips",
+        "webdev"
+      ]
+    },
+    {
+      "file": "vue/vue-t-string",
+      "playlist": "vue",
+      "day": 9,
+      "publish": "2027-01-06",
+      "title": "t(phrase, category, params) in Vue",
+      "summary": "The t() call: the keys-file problem it replaces, its three arguments, ICU placeholders and plurals.",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "vue i18n",
+        "nuxt i18n",
+        "vue",
+        "nuxt",
+        "t function",
+        "ICU placeholders",
+        "vue plurals"
+      ]
+    },
+    {
+      "file": "vue/social/vue-icu-plurals-9x16",
+      "playlist": "shorts",
+      "day": 9,
+      "publish": "2027-01-07",
+      "thumbnail": false,
+      "title": "Russian has 4 plural forms. You write one line (Vue) #Shorts",
+      "summary": "One, few, many and other: Russian picks a plural form by the number, and 21 goes back to the singular. Write the sentence flat and Langsys builds every form each locale needs. #Shorts",
+      "page": "/learn/concepts/locale-store#plurals",
+      "tags": [
+        "Shorts",
+        "ICU plurals",
+        "pluralization",
+        "Russian",
+        "i18n tips"
+      ]
+    },
+    {
+      "file": "vue/vue-phrase-tag",
+      "playlist": "vue",
+      "day": 9,
+      "publish": "2027-01-08",
+      "title": "‹Phrase› in Vue: a sentence with markup inside",
+      "summary": "A sentence with markup inside it, kept as one phrase, and why ‹Phrase› params are written %name%.",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "vue i18n",
+        "nuxt i18n",
+        "vue",
+        "nuxt",
+        "rich text translation",
+        "translate html",
+        "markup in translations"
+      ]
+    },
+    {
+      "file": "vue/vue-translate-tag",
+      "playlist": "vue",
+      "day": 9,
+      "publish": "2027-01-11",
+      "title": "‹Translate› in Vue: one tag for a whole region",
+      "summary": "One ‹Translate› tag registers a whole region, and why a block beats a call per line.",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "vue i18n",
+        "nuxt i18n",
+        "vue",
+        "nuxt",
+        "content blocks",
+        "translate component",
+        "translate html"
+      ]
+    },
+    {
+      "file": "vue/social/vue-bold-moves-9x16",
+      "playlist": "shorts",
+      "day": 9,
+      "publish": "2027-01-12",
+      "thumbnail": false,
+      "title": "In Spanish, the bold moves to where it belongs (Vue) #Shorts",
+      "summary": "Other i18n cuts a sentence with a bold word into three keys. With ‹Phrase› the translator gets one sentence, markup and all, and in Spanish the bold lands after the noun, on \"no leídos\". #Shorts",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "Shorts",
+        "Vue",
+        "rich text i18n",
+        "Phrase",
+        "i18n"
+      ]
+    },
+    {
+      "file": "vue/vue-donttranslate",
+      "playlist": "vue",
+      "day": 9,
+      "publish": "2027-01-13",
+      "title": "‹DontTranslate› in Vue: keep brand names verbatim",
+      "summary": "Brand names and identifiers held back verbatim, without hoisting them out of the sentence.",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "vue i18n",
+        "nuxt i18n",
+        "vue",
+        "nuxt",
+        "do not translate",
+        "brand names",
+        "untranslatable terms"
+      ]
+    },
+    {
+      "file": "vue/social/vue-content-blocks-9x16",
+      "playlist": "shorts",
+      "day": 9,
+      "publish": "2027-01-14",
+      "thumbnail": false,
+      "title": "Translate a whole section with one tag (Vue) #Shorts",
+      "summary": "One Translate tag wraps a region of markup: every run of text becomes its own phrase, bold and links land where they belong, and the brand name is never translated. #Shorts",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "Shorts",
+        "content blocks",
+        "Vue",
+        "i18n tips"
+      ]
+    },
+    {
+      "file": "vue/vue-content-blocks",
+      "playlist": "vue",
+      "day": 9,
+      "publish": "2027-01-15",
+      "title": "What is a content block? Translating a whole section in Vue",
+      "summary": "One section registered as a unit, still made of individually reusable phrases.",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "vue i18n",
+        "nuxt i18n",
+        "vue",
+        "nuxt",
+        "content blocks",
+        "translate section",
+        "context-aware translation"
+      ]
+    },
+    {
+      "file": "vue/vue-categories",
+      "playlist": "vue",
+      "day": 9,
+      "publish": "2027-01-18",
+      "title": "Same word, two meanings: categories instead of i18n keys (Vue)",
+      "summary": "Why i18n invented keys, and what replaces them: the same word with two meanings, and the pairs it splits into.",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "vue i18n",
+        "nuxt i18n",
+        "vue",
+        "nuxt",
+        "translation context",
+        "homonyms",
+        "i18n keys"
+      ]
+    },
+    {
+      "file": "vue/social/vue-brand-names-9x16",
+      "playlist": "shorts",
+      "day": 9,
+      "publish": "2027-01-19",
+      "thumbnail": false,
+      "title": "Your brand name, never translated (Vue) #Shorts",
+      "summary": "A translator can't tell a product name from a phrase, so other i18n ships Bright Ledger as Libro Mayor Brillante. With Langsys you mark it where it stands with ‹DontTranslate›, and the sentence around it still translates. #Shorts",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "Shorts",
+        "Vue",
+        "i18n",
+        "brand names",
+        "DontTranslate"
+      ]
+    },
+    {
+      "file": "vue/vue-icu-gender",
+      "playlist": "vue",
+      "day": 9,
+      "publish": "2027-01-20",
+      "title": "Gender agreement without conditionals in your code (ICU select) (Vue)",
+      "summary": "The gender conditional other i18n leaves in your component, and the branches Langsys generates for each language instead.",
+      "page": "/learn/sdk/vue#gender",
+      "tags": [
+        "vue i18n",
+        "nuxt i18n",
+        "vue",
+        "nuxt",
+        "ICU select",
+        "gender",
+        "gender agreement",
+        "grammatical gender"
+      ]
+    },
+    {
+      "file": "vue/social/vue-icu-gender-9x16",
+      "playlist": "shorts",
+      "day": 9,
+      "publish": "2027-01-21",
+      "thumbnail": false,
+      "title": "Bienvenido or Bienvenida? One line of code (Vue) #Shorts",
+      "summary": "Spanish agrees with the user. Langsys generates the ICU select branches, so Diego gets Bienvenido, Laura gets Bienvenida, and an unknown gender gets the neutral form, from one line. #Shorts",
+      "page": "/learn/sdk/vue#gender",
+      "tags": [
+        "Shorts",
+        "ICU select",
+        "gender agreement",
+        "Spanish",
+        "i18n tips"
+      ]
+    },
+    {
+      "file": "vue/vue-attributes",
+      "playlist": "vue",
+      "day": 9,
+      "publish": "2027-01-22",
+      "title": "Translating placeholders, alt text and aria labels in Vue",
+      "summary": "What a half-translated form looks like to the person using it, and how one ‹Translate› reaches placeholders, alt text and aria labels in the same pass.",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "vue i18n",
+        "nuxt i18n",
+        "vue",
+        "nuxt",
+        "accessibility",
+        "aria-label",
+        "placeholder translation",
+        "alt text",
+        "a11y"
+      ]
+    },
+    {
+      "file": "vue/vue-formatting",
+      "playlist": "vue",
+      "day": 9,
+      "publish": "2027-01-25",
+      "title": "Numbers and dates in every locale with Vue i18n",
+      "summary": "Numbers and dates per CLDR: the branch you'd write by hand, why digit grouping is a shape and not a separator, and why an order number must be passed as a string.",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "vue i18n",
+        "nuxt i18n",
+        "vue",
+        "nuxt",
+        "number formatting",
+        "date formatting",
+        "CLDR",
+        "Intl",
+        "locale formatting"
+      ]
+    },
+    {
+      "file": "vue/social/vue-two-meanings-9x16",
+      "playlist": "shorts",
+      "day": 9,
+      "publish": "2027-01-26",
+      "thumbnail": false,
+      "title": "One English word, two Spanish translations (Vue) #Shorts",
+      "summary": "\"Free\" is a price on one screen and an empty evening on another. Other i18n invents a key to tell them apart. Langsys keeps the sentence and files it under a category: Gratis and Libre. #Shorts",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "Shorts",
+        "Vue",
+        "i18n keys",
+        "categories",
+        "translation context"
+      ]
+    },
+    {
+      "file": "vue/social/vue-alt-text-9x16",
+      "playlist": "shorts",
+      "day": 9,
+      "publish": "2027-01-27",
+      "thumbnail": false,
+      "title": "Placeholders and alt text translate too (Vue) #Shorts",
+      "summary": "Other i18n needs a separate call on every attribute, and the one you forget stays English. One ‹Translate› tag covers the region: the placeholder, the image description and the label a screen reader announces. #Shorts",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "Shorts",
+        "Vue",
+        "accessibility",
+        "alt text",
+        "i18n"
+      ]
+    },
+    {
+      "file": "vue/social/vue-local-formats-9x16",
+      "playlist": "shorts",
+      "day": 9,
+      "publish": "2027-01-28",
+      "thumbnail": false,
+      "title": "Every number and date in each locale's format (Vue) #Shorts",
+      "summary": "Pass the number itself and the date as a date: German gets 1.234,5 and 14. März 2026, and Hindi groups 1234567 as 12,34,567. An order number goes in as a string, so it stays exactly as written. #Shorts",
+      "page": "/learn/sdk/vue",
+      "tags": [
+        "Shorts",
+        "Vue",
         "number formatting",
         "date formatting",
         "CLDR"

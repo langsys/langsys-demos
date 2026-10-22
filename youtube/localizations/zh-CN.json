@@ -181,6 +181,158 @@
     "svelte/social/local-formats-9x16": {
       "title": "每个数字和日期，都按各语言的格式显示 #Shorts",
       "summary": "直接传入数字，把日期作为日期传入：德语显示 1.234,5 和 14. März 2026，印地语会把 1234567 分组为 12,34,567。订单号作为字符串传入，所以会保持原样。 #Shorts"
+    },
+    "react/social/react-phrase-9x16": {
+      "title": "你的 i18n 键，就是那句英文 (React) #Shorts",
+      "summary": "使用 Langsys，代码中的句子就是翻译键：没有键值文件，无需提取或保持同步，同一行文字会以每种语言呈现。#Shorts"
+    },
+    "react/react-hero": {
+      "title": "用 Langsys 实现 React i18n：完整演练",
+      "summary": "其他 i18n 方案要求你时刻保持同步的东西、取代它的一次调用、语言区域切换、为什么不区分性别的西班牙语对一半用户来说都是错的，以及 ICU select 如何解决这个问题。"
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "title": "俄语有 4 种复数形式，你只需写一行 (React) #Shorts",
+      "summary": "one、few、many 和 other：俄语根据数字选择复数形式，而 21 又回到单数。把句子平铺写好，Langsys 就会为每个语言区域构建所需的全部形式。#Shorts"
+    },
+    "react/react-t-string": {
+      "title": "在 React 中使用 t(phrase, category, params)",
+      "summary": "t() 调用：它所取代的键值文件问题、它的三个参数、ICU 占位符和复数。"
+    },
+    "react/react-phrase-tag": {
+      "title": "React 中的 ‹Phrase›：内含标记的句子",
+      "summary": "内含标记的句子如何保持为一个短语，以及为什么 ‹Phrase› 的参数要写成 %name%。"
+    },
+    "react/social/react-bold-moves-9x16": {
+      "title": "在西班牙语中，粗体会移到它该在的位置 (React) #Shorts",
+      "summary": "其他 i18n 库会把含有粗体词的句子拆成三个键。使用 ‹Phrase›，译者拿到的是连同标记在内的一整句话；在西班牙语中，粗体落在名词之后的“no leídos”上。 #Shorts"
+    },
+    "react/react-translate-tag": {
+      "title": "React 中的 ‹Translate›：一个标签搞定整个区域",
+      "summary": "一个 ‹Translate› 标签即可注册整个区域，以及为什么整块处理胜过逐行调用。"
+    },
+    "react/social/react-content-blocks-9x16": {
+      "title": "一个标签，翻译整个版块 (React) #Shorts",
+      "summary": "一个 Translate 标签包裹一段标记区域：每段文本都成为独立的短语，粗体和链接各归其位，品牌名永远不会被翻译。#Shorts"
+    },
+    "react/react-donttranslate": {
+      "title": "React 中的 ‹DontTranslate›：品牌名原样保留",
+      "summary": "品牌名和标识符原样保留，无需把它们从句子中抽离出来。"
+    },
+    "react/react-content-blocks": {
+      "title": "什么是内容块？在 React 中翻译整个版块",
+      "summary": "将一个版块作为整体注册，但它仍由一个个可单独复用的短语组成。"
+    },
+    "react/social/react-brand-names-9x16": {
+      "title": "你的品牌名，永远不会被翻译 (React) #Shorts",
+      "summary": "译者分不清产品名和普通短语，所以其他 i18n 库会把 Bright Ledger 发布成 Libro Mayor Brillante。在 Langsys 中，你只需在原处用 ‹DontTranslate› 标记它，周围的句子照常翻译。 #Shorts"
+    },
+    "react/react-categories": {
+      "title": "同一个词，两种含义：用类别取代 i18n 键 (React)",
+      "summary": "i18n 为什么发明了键，以及用什么取代它：同一个词的两种含义，以及它拆分出的词对。"
+    },
+    "react/social/react-icu-gender-9x16": {
+      "title": "Bienvenido 还是 Bienvenida？一行代码搞定 (React) #Shorts",
+      "summary": "西班牙语要与用户的性别保持一致。Langsys 自动生成 ICU select 分支，只需一行代码：Diego 看到 Bienvenido，Laura 看到 Bienvenida，性别未知时显示中性形式。#Shorts"
+    },
+    "react/react-icu-gender": {
+      "title": "无需在代码里写条件判断，搞定性别一致（ICU select） (React)",
+      "summary": "其他 i18n 方案留在组件里的性别条件判断，以及 Langsys 为每种语言自动生成的分支。"
+    },
+    "react/react-attributes": {
+      "title": "在 React 中翻译 placeholder、alt 文本和 aria 标签",
+      "summary": "翻译了一半的表单在用户眼中是什么样子，以及一个 ‹Translate› 如何在同一轮中覆盖 placeholder、alt 文本和 aria 标签。"
+    },
+    "react/social/react-two-meanings-9x16": {
+      "title": "一个英文单词，两种西班牙语译法 (React) #Shorts",
+      "summary": "“Free”在一个界面上是价格，在另一个界面上是空闲的晚上。其他 i18n 库会编造一个键来区分它们。Langsys 保留原句，并把它归入一个类别：Gratis 和 Libre。 #Shorts"
+    },
+    "react/react-formatting": {
+      "title": "用 React i18n 处理所有语言区域的数字与日期",
+      "summary": "遵循 CLDR 的数字和日期：你原本要手写的分支，为什么数字分组是一种形态而不是分隔符，以及为什么订单号必须以字符串形式传入。"
+    },
+    "react/social/react-alt-text-9x16": {
+      "title": "占位符和替代文本也会被翻译 (React) #Shorts",
+      "summary": "其他 i18n 库需要为每个属性单独调用，漏掉的那个就会一直是英文。一个 ‹Translate› 标签覆盖整个区域：占位符、图片描述，以及屏幕阅读器朗读的标签。 #Shorts"
+    },
+    "react/social/react-local-formats-9x16": {
+      "title": "每个数字和日期，都按各语言的格式显示 (React) #Shorts",
+      "summary": "直接传入数字，把日期作为日期传入：德语显示 1.234,5 和 14. März 2026，印地语会把 1234567 分组为 12,34,567。订单号作为字符串传入，所以会保持原样。 #Shorts"
+    },
+    "vue/vue-hero": {
+      "title": "用 Langsys 实现 Vue i18n：完整演练",
+      "summary": "其他 i18n 方案要求你时刻保持同步的东西、取代它的一次调用、语言区域切换、为什么不区分性别的西班牙语对一半用户来说都是错的，以及 ICU select 如何解决这个问题。"
+    },
+    "vue/social/vue-phrase-9x16": {
+      "title": "你的 i18n 键，就是那句英文 (Vue) #Shorts",
+      "summary": "使用 Langsys，代码中的句子就是翻译键：没有键值文件，无需提取或保持同步，同一行文字会以每种语言呈现。#Shorts"
+    },
+    "vue/vue-t-string": {
+      "title": "在 Vue 中使用 t(phrase, category, params)",
+      "summary": "t() 调用：它所取代的键值文件问题、它的三个参数、ICU 占位符和复数。"
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "title": "俄语有 4 种复数形式，你只需写一行 (Vue) #Shorts",
+      "summary": "one、few、many 和 other：俄语根据数字选择复数形式，而 21 又回到单数。把句子平铺写好，Langsys 就会为每个语言区域构建所需的全部形式。#Shorts"
+    },
+    "vue/vue-phrase-tag": {
+      "title": "Vue 中的 ‹Phrase›：内含标记的句子",
+      "summary": "内含标记的句子如何保持为一个短语，以及为什么 ‹Phrase› 的参数要写成 %name%。"
+    },
+    "vue/vue-translate-tag": {
+      "title": "Vue 中的 ‹Translate›：一个标签搞定整个区域",
+      "summary": "一个 ‹Translate› 标签即可注册整个区域，以及为什么整块处理胜过逐行调用。"
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "title": "在西班牙语中，粗体会移到它该在的位置 (Vue) #Shorts",
+      "summary": "其他 i18n 库会把含有粗体词的句子拆成三个键。使用 ‹Phrase›，译者拿到的是连同标记在内的一整句话；在西班牙语中，粗体落在名词之后的“no leídos”上。 #Shorts"
+    },
+    "vue/vue-donttranslate": {
+      "title": "Vue 中的 ‹DontTranslate›：品牌名原样保留",
+      "summary": "品牌名和标识符原样保留，无需把它们从句子中抽离出来。"
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "title": "一个标签，翻译整个版块 (Vue) #Shorts",
+      "summary": "一个 Translate 标签包裹一段标记区域：每段文本都成为独立的短语，粗体和链接各归其位，品牌名永远不会被翻译。#Shorts"
+    },
+    "vue/vue-content-blocks": {
+      "title": "什么是内容块？在 Vue 中翻译整个版块",
+      "summary": "将一个版块作为整体注册，但它仍由一个个可单独复用的短语组成。"
+    },
+    "vue/vue-categories": {
+      "title": "同一个词，两种含义：用类别取代 i18n 键 (Vue)",
+      "summary": "i18n 为什么发明了键，以及用什么取代它：同一个词的两种含义，以及它拆分出的词对。"
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "title": "你的品牌名，永远不会被翻译 (Vue) #Shorts",
+      "summary": "译者分不清产品名和普通短语，所以其他 i18n 库会把 Bright Ledger 发布成 Libro Mayor Brillante。在 Langsys 中，你只需在原处用 ‹DontTranslate› 标记它，周围的句子照常翻译。 #Shorts"
+    },
+    "vue/vue-icu-gender": {
+      "title": "无需在代码里写条件判断，搞定性别一致（ICU select） (Vue)",
+      "summary": "其他 i18n 方案留在组件里的性别条件判断，以及 Langsys 为每种语言自动生成的分支。"
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "title": "Bienvenido 还是 Bienvenida？一行代码搞定 (Vue) #Shorts",
+      "summary": "西班牙语要与用户的性别保持一致。Langsys 自动生成 ICU select 分支，只需一行代码：Diego 看到 Bienvenido，Laura 看到 Bienvenida，性别未知时显示中性形式。#Shorts"
+    },
+    "vue/vue-attributes": {
+      "title": "在 Vue 中翻译 placeholder、alt 文本和 aria 标签",
+      "summary": "翻译了一半的表单在用户眼中是什么样子，以及一个 ‹Translate› 如何在同一轮中覆盖 placeholder、alt 文本和 aria 标签。"
+    },
+    "vue/vue-formatting": {
+      "title": "用 Vue i18n 处理所有语言区域的数字与日期",
+      "summary": "遵循 CLDR 的数字和日期：你原本要手写的分支，为什么数字分组是一种形态而不是分隔符，以及为什么订单号必须以字符串形式传入。"
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "title": "一个英文单词，两种西班牙语译法 (Vue) #Shorts",
+      "summary": "“Free”在一个界面上是价格，在另一个界面上是空闲的晚上。其他 i18n 库会编造一个键来区分它们。Langsys 保留原句，并把它归入一个类别：Gratis 和 Libre。 #Shorts"
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "title": "占位符和替代文本也会被翻译 (Vue) #Shorts",
+      "summary": "其他 i18n 库需要为每个属性单独调用，漏掉的那个就会一直是英文。一个 ‹Translate› 标签覆盖整个区域：占位符、图片描述，以及屏幕阅读器朗读的标签。 #Shorts"
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "title": "每个数字和日期，都按各语言的格式显示 (Vue) #Shorts",
+      "summary": "直接传入数字，把日期作为日期传入：德语显示 1.234,5 和 14. März 2026，印地语会把 1234567 分组为 12,34,567。订单号作为字符串传入，所以会保持原样。 #Shorts"
     }
   }
 }

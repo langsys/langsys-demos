@@ -657,3 +657,747 @@ Full video in the first comment.
 Upload `videos/x/notifications.mp4`.
 
 First comment: `https://youtu.be/gpSYSKrmVp0`
+
+## Week 8, Tuesday (launch + 50)
+
+**Video: React i18n with Langsys: the full walkthrough**
+
+```
+For React teams: your app in every language, with nothing to keep in step.
+
+The full walkthrough, from the first translated line to a live language switch, including why one flat Spanish translation is wrong for half your users, and how Langsys fixes it without a branch in your code.
+
+Full video in the first comment.
+
+#React #i18n #WebDev
+```
+
+Upload `videos/x/react/hero.mp4`.
+
+First comment: `https://youtu.be/sp4K9n4krZ4`
+
+## Week 8, Wednesday (launch + 51)
+
+**Short: Your i18n key is just the English sentence (React)**
+
+```
+Your translation key is the English sentence.
+
+No keys file to invent, no strings to extract, nothing to keep in sync between your code and your translations.
+
+Developers write the sentence they mean. Translators see the sentence they need to translate. Nobody maintains a list of names like checkout.cart.empty_state.title in between.
+
+Now in React, with the langsys-js-react SDK.
+
+#React #i18n #Localization
+```
+
+Upload `videos/react/social/react-phrase-1x1.mp4`.
+
+First comment: `https://youtu.be/wbOSuylCIWE`
+
+## Week 8, Thursday (launch + 52)
+
+**Short: Russian has 4 plural forms. You write one line (React)**
+
+```
+1 файл. 2 файла. 5 файлов. 21 файл.
+
+Russian picks a plural form by the number, and 21 goes back to the singular. Arabic has six forms.
+
+Most apps get this wrong in every language but English, because someone has to write each form by hand. With Langsys you write the sentence once, and every form each language needs is built for you.
+
+Now in React, with the langsys-js-react SDK.
+
+#React #i18n #Localization
+```
+
+Upload `videos/react/social/react-icu-plurals-1x1.mp4`.
+
+First comment: `https://youtu.be/LeU5LazVgGc`
+
+## Week 8, Friday (launch + 53)
+
+**Video: t(phrase, category, params) in React**
+
+```
+One call, every language.
+
+t(phrase, category, params) replaces the keys file: placeholders and plurals included, and the sentence in your code is the one your translators see.
+
+Now in React, with the langsys-js-react SDK.
+
+Full video in the first comment.
+
+#React #i18n #WebDev
+```
+
+Upload `videos/x/react/t-string.mp4`.
+
+First comment: `https://youtu.be/22OJORE4d8g`
+
+## Week 9, Monday (launch + 56)
+
+**Video: ‹Phrase› in React: a sentence with markup inside**
+
+```
+A sentence with a bold word in it is still one sentence.
+
+Most i18n tools cut it into three fragments, and the translator never sees the whole thing. With ‹Phrase›, the translator reads it whole, and the bold lands wherever each language puts it.
+
+Now in React, with the langsys-js-react SDK.
+
+Full video in the first comment.
+
+#React #i18n #WebDev
+```
+
+Upload `videos/x/react/phrase-tag.mp4`.
+
+First comment: `https://youtu.be/U1UoliOjgeE`
+
+## Week 9, Tuesday (launch + 57)
+
+**Short: In Spanish, the bold moves to where it belongs (React)**
+
+```
+In Spanish, the bold moves to where Spanish puts it.
+
+"Unread messages" becomes "mensajes no leídos", and the emphasis has to follow the meaning, not the English word order.
+
+Your translator gets one sentence, markup and all, and puts the bold where it belongs.
+
+Now in React, with the langsys-js-react SDK.
+
+#React #Localization #i18n
+```
+
+Upload `videos/react/social/react-bold-moves-1x1.mp4`.
+
+First comment: `https://youtu.be/vAp5FyuD34Q`
+
+## Week 9, Wednesday (launch + 58)
+
+**Video: ‹Translate› in React: one tag for a whole region**
+
+```
+Wrap a whole region in one ‹Translate› tag, and every line inside registers itself.
+
+No call per line, and nothing for a developer to forget when the copy changes.
+
+Now in React, with the langsys-js-react SDK.
+
+Full video in the first comment.
+
+#React #i18n #WebDev
+```
+
+Upload `videos/x/react/translate-tag.mp4`.
+
+First comment: `https://youtu.be/XtjY6UcOoPk`
+
+## Week 9, Thursday (launch + 59)
+
+**Short: Translate a whole section with one tag (React)**
+
+```
+Translate a whole section with one tag.
+
+Bold and links land where they belong in each language, and the brand name stays put.
+
+Now in React, with the langsys-js-react SDK.
+
+#React #i18n #Localization
+```
+
+Upload `videos/react/social/react-content-blocks-1x1.mp4`.
+
+First comment: `https://youtu.be/uC4VLJyZwnU`
+
+## Week 9, Friday (launch + 60)
+
+**Video: ‹DontTranslate› in React: keep brand names verbatim**
+
+```
+Nobody wants their brand name translated.
+
+‹DontTranslate› keeps it exactly as written, right where it stands, and the sentence around it still translates.
+
+Now in React, with the langsys-js-react SDK.
+
+Full video in the first comment.
+
+#React #i18n #Branding
+```
+
+Upload `videos/x/react/donttranslate.mp4`.
+
+First comment: `https://youtu.be/-njmHFcTn7s`
+
+## Week 10, Monday (launch + 63)
+
+**Video: What is a content block? Translating a whole section in React**
+
+```
+What is a content block?
+
+A whole section registered as one unit, so it's translated with its context, and still made of phrases you can reuse anywhere else in the app.
+
+Now in React, with the langsys-js-react SDK.
+
+Full video in the first comment.
+
+#React #i18n #WebDev
+```
+
+Upload `videos/x/react/content-blocks.mp4`.
+
+First comment: `https://youtu.be/kUws7TofOqE`
+
+## Week 10, Tuesday (launch + 64)
+
+**Short: Your brand name, never translated (React)**
+
+```
+Bright Ledger, in Spanish: Libro Mayor Brillante.
+
+That's what happens to a brand name nobody marked. A translator, human or AI, can't always tell a product name from a phrase.
+
+With Langsys you mark it once, where it stands, and the sentence around it still translates.
+
+Now in React, with the langsys-js-react SDK.
+
+#React #Branding #Localization
+```
+
+Upload `videos/react/social/react-brand-names-1x1.mp4`.
+
+First comment: `https://youtu.be/GeTslWKJ644`
+
+## Week 10, Wednesday (launch + 65)
+
+**Video: Same word, two meanings: categories instead of i18n keys (React)**
+
+```
+"Free" is a price. "Free" is also an empty evening.
+
+In Spanish those are two different words: gratis and libre. Most i18n tools make a developer invent a key to tell them apart. Langsys files each under a category, and the translator sees which one they're translating.
+
+Now in React, with the langsys-js-react SDK.
+
+Full video in the first comment.
+
+#React #Localization #i18n
+```
+
+Upload `videos/x/react/categories.mp4`.
+
+First comment: `https://youtu.be/yr8DShqIiJ4`
+
+## Week 10, Thursday (launch + 66)
+
+**Short: Bienvenido or Bienvenida? One line of code (React)**
+
+```
+Bienvenido or Bienvenida?
+
+Diego, Laura, and someone with no gender on record, all greeted correctly from one line of code.
+
+Now in React, with the langsys-js-react SDK.
+
+#React #i18n #Localization
+```
+
+Upload `videos/react/social/react-icu-gender-1x1.mp4`.
+
+First comment: `https://youtu.be/2mg4DxHSHlI`
+
+## Week 10, Friday (launch + 67)
+
+**Video: Gender agreement without conditionals in your code (ICU select) (React)**
+
+```
+¡Bienvenido, Diego! ¡Bienvenida, Laura!
+
+Spanish agrees with the person. Most apps either branch on gender in the code or settle for one form for everyone.
+
+Langsys builds the gender forms each language needs, so your code never branches.
+
+Now in React, with the langsys-js-react SDK.
+
+#React #i18n #Localization
+```
+
+Upload `videos/x/react/icu-gender.mp4`.
+
+First comment: `https://youtu.be/H9vX59TgiMw`
+
+## Week 11, Monday (launch + 70)
+
+**Video: Translating placeholders, alt text and aria labels in React**
+
+```
+A form with a translated label and an English placeholder is a half-translated form.
+
+Placeholders, image descriptions and the labels a screen reader announces are translated in the same pass as the text around them. Accessibility shouldn't stop at English.
+
+Now in React, with the langsys-js-react SDK.
+
+Full video in the first comment.
+
+#React #Accessibility #i18n
+```
+
+Upload `videos/x/react/attributes.mp4`.
+
+First comment: `https://youtu.be/Qtb1vzKpZw0`
+
+## Week 11, Tuesday (launch + 71)
+
+**Short: One English word, two Spanish translations (React)**
+
+```
+One English word. Two Spanish translations.
+
+Gratis for the price. Libre for the evening.
+
+The translator sees which one they're translating, and no developer invents a key to tell them apart.
+
+Now in React, with the langsys-js-react SDK.
+
+#React #Localization #Translation
+```
+
+Upload `videos/react/social/react-two-meanings-1x1.mp4`.
+
+First comment: `https://youtu.be/lGXk5lhuMoI`
+
+## Week 11, Wednesday (launch + 72)
+
+**Video: Numbers and dates in every locale with React i18n**
+
+```
+1,234.5 in the US. 1.234,5 in Germany. 12,34,567 in India.
+
+Every number and date in each locale's own format, without a branch in your code, and an order number that stays exactly as written.
+
+Now in React, with the langsys-js-react SDK.
+
+Full video in the first comment.
+
+#React #i18n #Localization
+```
+
+Upload `videos/x/react/formatting.mp4`.
+
+First comment: `https://youtu.be/gq6qQE_yPss`
+
+## Week 11, Thursday (launch + 73)
+
+**Short: Placeholders and alt text translate too (React)**
+
+```
+Placeholders and alt text translate too.
+
+Even the words a screen reader announces. The attribute nobody remembered is the one that stays in English.
+
+Now in React, with the langsys-js-react SDK.
+
+#React #Accessibility #i18n
+```
+
+Upload `videos/react/social/react-alt-text-1x1.mp4`.
+
+First comment: `https://youtu.be/ozgMDdZl2H0`
+
+## Week 11, Friday (launch + 74)
+
+**Short: Every number and date in each locale's format (React)**
+
+```
+Pass an order number as a number, and Germany sees 1.048.576.
+
+Pass it as a string, and it stays 1048576.
+
+Prices and dates take each locale's format. Identifiers stay exactly as written.
+
+Now in React, with the langsys-js-react SDK.
+
+#React #i18n #Localization
+```
+
+Upload `videos/react/social/react-local-formats-1x1.mp4`.
+
+First comment: `https://youtu.be/QYTA7fVF4ZU`
+
+## Week 12, Monday (launch + 77)
+
+**Video: Vue i18n with Langsys: the full walkthrough**
+
+```
+For Vue teams: your app in every language, with nothing to keep in step.
+
+The full walkthrough, from the first translated line to a live language switch, including why one flat Spanish translation is wrong for half your users, and how Langsys fixes it without a branch in your code.
+
+Full video in the first comment.
+
+#VueJS #i18n #WebDev
+```
+
+Upload `videos/x/vue/hero.mp4`.
+
+First comment: `https://youtu.be/1ROhtDzJWNo`
+
+## Week 12, Tuesday (launch + 78)
+
+**Short: Your i18n key is just the English sentence (Vue)**
+
+```
+Your translation key is the English sentence.
+
+No keys file to invent, no strings to extract, nothing to keep in sync between your code and your translations.
+
+Developers write the sentence they mean. Translators see the sentence they need to translate. Nobody maintains a list of names like checkout.cart.empty_state.title in between.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+#VueJS #i18n #Localization
+```
+
+Upload `videos/vue/social/vue-phrase-1x1.mp4`.
+
+First comment: `https://youtu.be/8dim8q1ftfk`
+
+## Week 12, Wednesday (launch + 79)
+
+**Video: t(phrase, category, params) in Vue**
+
+```
+One call, every language.
+
+t(phrase, category, params) replaces the keys file: placeholders and plurals included, and the sentence in your code is the one your translators see.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+Full video in the first comment.
+
+#VueJS #i18n #WebDev
+```
+
+Upload `videos/x/vue/t-string.mp4`.
+
+First comment: `https://youtu.be/sIMXbUnD5ns`
+
+## Week 12, Thursday (launch + 80)
+
+**Short: Russian has 4 plural forms. You write one line (Vue)**
+
+```
+1 файл. 2 файла. 5 файлов. 21 файл.
+
+Russian picks a plural form by the number, and 21 goes back to the singular. Arabic has six forms.
+
+Most apps get this wrong in every language but English, because someone has to write each form by hand. With Langsys you write the sentence once, and every form each language needs is built for you.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+#VueJS #i18n #Localization
+```
+
+Upload `videos/vue/social/vue-icu-plurals-1x1.mp4`.
+
+First comment: `https://youtu.be/lgejEkwUbHk`
+
+## Week 12, Friday (launch + 81)
+
+**Video: ‹Phrase› in Vue: a sentence with markup inside**
+
+```
+A sentence with a bold word in it is still one sentence.
+
+Most i18n tools cut it into three fragments, and the translator never sees the whole thing. With ‹Phrase›, the translator reads it whole, and the bold lands wherever each language puts it.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+Full video in the first comment.
+
+#VueJS #i18n #WebDev
+```
+
+Upload `videos/x/vue/phrase-tag.mp4`.
+
+First comment: `https://youtu.be/xTBW-x0g2fg`
+
+## Week 13, Monday (launch + 84)
+
+**Video: ‹Translate› in Vue: one tag for a whole region**
+
+```
+Wrap a whole region in one ‹Translate› tag, and every line inside registers itself.
+
+No call per line, and nothing for a developer to forget when the copy changes.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+Full video in the first comment.
+
+#VueJS #i18n #WebDev
+```
+
+Upload `videos/x/vue/translate-tag.mp4`.
+
+First comment: `https://youtu.be/WJbebS8J5qg`
+
+## Week 13, Tuesday (launch + 85)
+
+**Short: In Spanish, the bold moves to where it belongs (Vue)**
+
+```
+In Spanish, the bold moves to where Spanish puts it.
+
+"Unread messages" becomes "mensajes no leídos", and the emphasis has to follow the meaning, not the English word order.
+
+Your translator gets one sentence, markup and all, and puts the bold where it belongs.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+#VueJS #Localization #i18n
+```
+
+Upload `videos/vue/social/vue-bold-moves-1x1.mp4`.
+
+First comment: `https://youtu.be/QuwRpvg3T1w`
+
+## Week 13, Wednesday (launch + 86)
+
+**Video: ‹DontTranslate› in Vue: keep brand names verbatim**
+
+```
+Nobody wants their brand name translated.
+
+‹DontTranslate› keeps it exactly as written, right where it stands, and the sentence around it still translates.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+Full video in the first comment.
+
+#VueJS #i18n #Branding
+```
+
+Upload `videos/x/vue/donttranslate.mp4`.
+
+First comment: `https://youtu.be/uF-LHSzYpUU`
+
+## Week 13, Thursday (launch + 87)
+
+**Short: Translate a whole section with one tag (Vue)**
+
+```
+Translate a whole section with one tag.
+
+Bold and links land where they belong in each language, and the brand name stays put.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+#VueJS #i18n #Localization
+```
+
+Upload `videos/vue/social/vue-content-blocks-1x1.mp4`.
+
+First comment: `https://youtu.be/2UF1UPAnCBk`
+
+## Week 13, Friday (launch + 88)
+
+**Video: What is a content block? Translating a whole section in Vue**
+
+```
+What is a content block?
+
+A whole section registered as one unit, so it's translated with its context, and still made of phrases you can reuse anywhere else in the app.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+Full video in the first comment.
+
+#VueJS #i18n #WebDev
+```
+
+Upload `videos/x/vue/content-blocks.mp4`.
+
+First comment: `https://youtu.be/vMtUjWo2Ezk`
+
+## Week 14, Monday (launch + 91)
+
+**Video: Same word, two meanings: categories instead of i18n keys (Vue)**
+
+```
+"Free" is a price. "Free" is also an empty evening.
+
+In Spanish those are two different words: gratis and libre. Most i18n tools make a developer invent a key to tell them apart. Langsys files each under a category, and the translator sees which one they're translating.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+Full video in the first comment.
+
+#VueJS #Localization #i18n
+```
+
+Upload `videos/x/vue/categories.mp4`.
+
+First comment: `https://youtu.be/jsqNGO2ArBc`
+
+## Week 14, Tuesday (launch + 92)
+
+**Short: Your brand name, never translated (Vue)**
+
+```
+Bright Ledger, in Spanish: Libro Mayor Brillante.
+
+That's what happens to a brand name nobody marked. A translator, human or AI, can't always tell a product name from a phrase.
+
+With Langsys you mark it once, where it stands, and the sentence around it still translates.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+#VueJS #Branding #Localization
+```
+
+Upload `videos/vue/social/vue-brand-names-1x1.mp4`.
+
+First comment: `https://youtu.be/8cYsOOGP8Z8`
+
+## Week 14, Wednesday (launch + 93)
+
+**Video: Gender agreement without conditionals in your code (ICU select) (Vue)**
+
+```
+¡Bienvenido, Diego! ¡Bienvenida, Laura!
+
+Spanish agrees with the person. Most apps either branch on gender in the code or settle for one form for everyone.
+
+Langsys builds the gender forms each language needs, so your code never branches.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+#VueJS #i18n #Localization
+```
+
+Upload `videos/x/vue/icu-gender.mp4`.
+
+First comment: `https://youtu.be/p_hCurEby8o`
+
+## Week 14, Thursday (launch + 94)
+
+**Short: Bienvenido or Bienvenida? One line of code (Vue)**
+
+```
+Bienvenido or Bienvenida?
+
+Diego, Laura, and someone with no gender on record, all greeted correctly from one line of code.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+#VueJS #i18n #Localization
+```
+
+Upload `videos/vue/social/vue-icu-gender-1x1.mp4`.
+
+First comment: `https://youtu.be/ncAcC8fZ8KE`
+
+## Week 14, Friday (launch + 95)
+
+**Video: Translating placeholders, alt text and aria labels in Vue**
+
+```
+A form with a translated label and an English placeholder is a half-translated form.
+
+Placeholders, image descriptions and the labels a screen reader announces are translated in the same pass as the text around them. Accessibility shouldn't stop at English.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+Full video in the first comment.
+
+#VueJS #Accessibility #i18n
+```
+
+Upload `videos/x/vue/attributes.mp4`.
+
+First comment: `https://youtu.be/O4sXjBN_9xw`
+
+## Week 15, Monday (launch + 98)
+
+**Video: Numbers and dates in every locale with Vue i18n**
+
+```
+1,234.5 in the US. 1.234,5 in Germany. 12,34,567 in India.
+
+Every number and date in each locale's own format, without a branch in your code, and an order number that stays exactly as written.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+Full video in the first comment.
+
+#VueJS #i18n #Localization
+```
+
+Upload `videos/x/vue/formatting.mp4`.
+
+First comment: `https://youtu.be/f-BpHgumD7k`
+
+## Week 15, Tuesday (launch + 99)
+
+**Short: One English word, two Spanish translations (Vue)**
+
+```
+One English word. Two Spanish translations.
+
+Gratis for the price. Libre for the evening.
+
+The translator sees which one they're translating, and no developer invents a key to tell them apart.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+#VueJS #Localization #Translation
+```
+
+Upload `videos/vue/social/vue-two-meanings-1x1.mp4`.
+
+First comment: `https://youtu.be/76kPZu0AQfQ`
+
+## Week 15, Wednesday (launch + 100)
+
+**Short: Placeholders and alt text translate too (Vue)**
+
+```
+Placeholders and alt text translate too.
+
+Even the words a screen reader announces. The attribute nobody remembered is the one that stays in English.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+#VueJS #Accessibility #i18n
+```
+
+Upload `videos/vue/social/vue-alt-text-1x1.mp4`.
+
+First comment: `https://youtu.be/AixBKJN-7ow`
+
+## Week 15, Thursday (launch + 101)
+
+**Short: Every number and date in each locale's format (Vue)**
+
+```
+Pass an order number as a number, and Germany sees 1.048.576.
+
+Pass it as a string, and it stays 1048576.
+
+Prices and dates take each locale's format. Identifiers stay exactly as written.
+
+Now in Vue, with the langsys-js-vue SDK.
+
+#VueJS #i18n #Localization
+```
+
+Upload `videos/vue/social/vue-local-formats-1x1.mp4`.
+
+First comment: `https://youtu.be/7eWDPADZhdo`

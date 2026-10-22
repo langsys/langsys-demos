@@ -9,6 +9,8 @@ Before posting in each community, read its rules on the day: several allow self-
 | Launch + 2 | r/sveltejs | Svelte i18n without a keys file |
 | Launch + 14 | r/SaaS | Adding German to a live store without a deploy |
 | Launch + 35 | r/webdev | Plurals and gender agreement without branching in your code |
+| Launch + 50 | r/reactjs | React i18n without a keys file (the day the React walkthrough goes public) |
+| Launch + 77 | r/vuejs | Vue i18n without a keys file (the day the Vue walkthrough goes public) |
 
 ## Launch + 2 · r/sveltejs
 
@@ -102,4 +104,90 @@ Short videos of both:
 There's also a write-up of how ICU select and plural work under the hood in our docs: https://docs.langsys.dev/learn
 
 Curious how others handle this today, especially gender in languages with more than two agreement forms.
+```
+
+## Launch + 50 · r/reactjs
+
+Posted the day the React walkthrough goes public. The link is the walkthrough's unlisted upload, so it works before that day too.
+
+**Title:**
+
+```
+I built a React i18n library where the English sentence is the key (no keys file)
+```
+
+**Body:**
+
+```
+Every React i18n setup I've used ends up with a JSON file of keys like `cart.empty.title` that drifts from the components. I wanted to write the sentence I mean and have the rest happen, so I built Langsys and its React SDK.
+
+What it looks like:
+
+    import { useT } from 'langsys-js-react';
+
+    function Cart() {
+      const t = useT();
+      return <h1>{t('Your cart is empty', 'Cart')}</h1>;
+    }
+
+The first time that line renders, the phrase registers itself with Langsys and is machine-drafted in every language you've turned on; a translator can refine it later in a web app, and the fix reaches the running app without a redeploy. Placeholders are type-checked: `t('Hello, {name}!', 'UI', {})` is a TypeScript error.
+
+Three components I'm happy with:
+
+- `<Phrase>` keeps a sentence with markup inside as one phrase, so the translator sees the whole sentence and the bold lands where Spanish puts it.
+- `<Translate>` wraps a whole region; every run of text inside registers itself, including placeholders, alt text and aria labels.
+- `<DontTranslate>` keeps a brand name verbatim inside a sentence that still translates.
+
+One React-specific gotcha we had to design around: inside `<Phrase>` and `<Translate>` markup, placeholders are written `%count%`, because JSX evaluates `{count}` before the library ever sees the text. Debug mode warns if you get it wrong.
+
+There's a one-minute walkthrough video here: https://youtu.be/sp4K9n4krZ4
+And a React guide: https://docs.langsys.dev/learn/sdk/react
+
+The SDK is MIT on npm (`langsys-js-react`), works with Next.js (seed the catalog on the server and the first render is already translated, with no flash on hydration), and the hosted service has a free plan.
+
+I'd really like feedback from anyone running i18n in a large React app: what would stop you from switching?
+```
+
+## Launch + 77 · r/vuejs
+
+Posted the day the Vue walkthrough goes public. The link is the walkthrough's unlisted upload, so it works before that day too.
+
+**Title:**
+
+```
+I built a Vue i18n library where the English sentence is the key (no keys file)
+```
+
+**Body:**
+
+```
+Every Vue i18n setup I've used ends up with a JSON file of keys like `cart.empty.title` that drifts from the components. I wanted to write the sentence I mean and have the rest happen, so I built Langsys and its Vue SDK.
+
+What it looks like:
+
+    <script setup>
+    import { useT } from 'langsys-js-vue';
+    const t = useT();
+    </script>
+
+    <template>
+      <h1>{{ t('Your cart is empty', 'Cart') }}</h1>
+    </template>
+
+The first time that line renders, the phrase registers itself with Langsys and is machine-drafted in every language you've turned on; a translator can refine it later in a web app, and the fix reaches the running app without a redeploy.
+
+Three components I'm happy with:
+
+- `<Phrase>` keeps a sentence with markup inside as one phrase, so the translator sees the whole sentence and the bold lands where Spanish puts it.
+- `<Translate>` wraps a whole region; every run of text inside registers itself, including placeholders, alt text and aria labels.
+- `<DontTranslate>` keeps a brand name verbatim inside a sentence that still translates.
+
+One Vue-specific gotcha we had to design around: inside `<Phrase>` and `<Translate>`, write placeholders as `%name%`, not `{{ name }}`. Slot content is compiled by the parent template, so Vue substitutes `{{ name }}` before the library sees it. Debug mode warns if you get it wrong.
+
+There's a one-minute walkthrough video here: https://youtu.be/1ROhtDzJWNo
+And a Vue guide: https://docs.langsys.dev/learn/sdk/vue
+
+The SDK is MIT on npm (`langsys-js-vue`), works with Nuxt (seed the catalog on the server so the first render is already translated), and the hosted service has a free plan.
+
+I'd really like feedback from anyone running i18n in a large Vue app: what would stop you from switching?
 ```

@@ -181,6 +181,158 @@
     "svelte/social/local-formats-9x16": {
       "title": "모든 숫자와 날짜를 각 언어의 형식으로 #Shorts",
       "summary": "숫자는 숫자 그대로, 날짜는 날짜로 넘기세요. 독일어는 1.234,5와 14. März 2026으로, 힌디어는 1234567을 12,34,567로 묶어 표시합니다. 주문 번호는 문자열로 넘기므로 입력한 그대로 유지됩니다. #Shorts"
+    },
+    "react/social/react-phrase-9x16": {
+      "title": "i18n 키는 그냥 영어 문장이면 됩니다 (React) #Shorts",
+      "summary": "Langsys에서는 코드 속 문장이 곧 번역 키입니다. 키 파일도, 추출하거나 동기화할 것도 없이 같은 줄이 모든 언어로 돌아옵니다. #Shorts"
+    },
+    "react/react-hero": {
+      "title": "Langsys로 하는 React i18n: 전체 과정 살펴보기",
+      "summary": "다른 i18n이 계속 맞춰 두라고 요구하는 것, 이를 대체하는 호출 하나, 로케일 전환, 성별을 구분하지 않은 스페인어가 사용자 절반에게 틀린 이유, 그리고 ICU select가 이를 해결하는 방법."
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "title": "러시아어 복수형은 4가지. 여러분은 한 줄만 쓰면 됩니다 (React) #Shorts",
+      "summary": "one, few, many, other: 러시아어는 숫자에 따라 복수형을 고르고, 21은 다시 단수형으로 돌아갑니다. 문장을 분기 없이 작성하면 Langsys가 각 로케일에 필요한 모든 형태를 만들어 줍니다. #Shorts"
+    },
+    "react/react-t-string": {
+      "title": "React에서 t(phrase, category, params) 사용하기",
+      "summary": "t() 호출: 이것이 대체하는 키 파일 문제, 세 가지 인자, ICU 플레이스홀더와 복수형."
+    },
+    "react/react-phrase-tag": {
+      "title": "React의 ‹Phrase›: 마크업이 들어간 문장 다루기",
+      "summary": "마크업이 들어간 문장을 하나의 문구로 유지하는 방법, 그리고 ‹Phrase› 매개변수를 %name% 형태로 쓰는 이유."
+    },
+    "react/social/react-bold-moves-9x16": {
+      "title": "스페인어에서는 굵은 글씨가 제자리로 옮겨갑니다 (React) #Shorts",
+      "summary": "다른 i18n 라이브러리는 굵은 단어가 있는 문장을 세 개의 키로 쪼갭니다. ‹Phrase›를 쓰면 번역자는 마크업까지 포함한 한 문장을 받고, 스페인어에서는 굵은 글씨가 명사 뒤 \"no leídos\"에 놓입니다. #Shorts"
+    },
+    "react/react-translate-tag": {
+      "title": "React의 ‹Translate›: 영역 전체를 태그 하나로",
+      "summary": "‹Translate› 태그 하나로 영역 전체를 등록하는 방법, 그리고 줄마다 호출하는 것보다 블록이 나은 이유."
+    },
+    "react/social/react-content-blocks-9x16": {
+      "title": "태그 하나로 섹션 전체 번역하기 (React) #Shorts",
+      "summary": "Translate 태그 하나가 마크업 영역을 감쌉니다. 모든 텍스트 덩어리가 각각의 문구가 되고, 굵은 글씨와 링크는 제자리에 놓이며, 브랜드명은 절대 번역되지 않습니다. #Shorts"
+    },
+    "react/react-donttranslate": {
+      "title": "React의 ‹DontTranslate›: 브랜드명을 그대로 유지하기",
+      "summary": "브랜드명과 식별자를 문장 밖으로 빼내지 않고도 원문 그대로 유지합니다."
+    },
+    "react/react-content-blocks": {
+      "title": "콘텐츠 블록이란? React에서 섹션 전체 번역하기",
+      "summary": "하나의 섹션을 단위로 등록하되, 여전히 개별적으로 재사용할 수 있는 문구들로 구성됩니다."
+    },
+    "react/social/react-brand-names-9x16": {
+      "title": "브랜드 이름은 절대 번역되지 않습니다 (React) #Shorts",
+      "summary": "번역자는 제품 이름과 일반 문구를 구분할 수 없어서, 다른 i18n 라이브러리는 Bright Ledger를 Libro Mayor Brillante로 내보냅니다. Langsys에서는 그 자리에서 ‹DontTranslate›로 표시하면 되고, 주변 문장은 계속 번역됩니다. #Shorts"
+    },
+    "react/react-categories": {
+      "title": "같은 단어, 다른 의미: i18n 키 대신 카테고리 (React)",
+      "summary": "i18n이 키를 만들어 낸 이유와 이를 대체하는 것: 두 가지 의미를 가진 같은 단어, 그리고 그 단어가 나뉘는 쌍."
+    },
+    "react/social/react-icu-gender-9x16": {
+      "title": "Bienvenido일까, Bienvenida일까? 코드 한 줄이면 끝 (React) #Shorts",
+      "summary": "스페인어는 사용자에 따라 형태가 달라집니다. Langsys가 ICU select 분기를 생성하므로 코드 한 줄로 Diego에게는 Bienvenido, Laura에게는 Bienvenida, 성별을 모르면 중립형이 표시됩니다. #Shorts"
+    },
+    "react/react-icu-gender": {
+      "title": "코드에 조건문 없이 성별 일치 처리하기 (ICU select) (React)",
+      "summary": "다른 i18n이 컴포넌트에 남겨 두는 성별 조건문, 그리고 Langsys가 그 대신 언어별로 생성하는 분기."
+    },
+    "react/react-attributes": {
+      "title": "React에서 placeholder, alt 텍스트, aria 레이블 번역하기",
+      "summary": "반쯤 번역된 폼이 사용자에게 어떻게 보이는지, 그리고 ‹Translate› 하나로 placeholder, alt 텍스트, aria 레이블까지 한 번에 처리하는 방법."
+    },
+    "react/social/react-two-meanings-9x16": {
+      "title": "영어 단어 하나, 스페인어 번역 둘 (React) #Shorts",
+      "summary": "\"Free\"는 한 화면에서는 가격이고, 다른 화면에서는 일정 없는 저녁입니다. 다른 i18n 라이브러리는 둘을 구분하려고 키를 만들어냅니다. Langsys는 문장을 그대로 두고 카테고리로 분류합니다: Gratis와 Libre. #Shorts"
+    },
+    "react/react-formatting": {
+      "title": "React i18n으로 모든 로케일의 숫자와 날짜 처리하기",
+      "summary": "CLDR에 따른 숫자와 날짜: 직접 작성해야 했을 분기, 자릿수 그룹이 구분자가 아니라 형태인 이유, 그리고 주문 번호를 문자열로 전달해야 하는 이유."
+    },
+    "react/social/react-alt-text-9x16": {
+      "title": "플레이스홀더와 대체 텍스트도 번역됩니다 (React) #Shorts",
+      "summary": "다른 i18n 라이브러리는 속성마다 별도 호출이 필요하고, 빠뜨린 속성은 영어로 남습니다. ‹Translate› 태그 하나로 영역 전체를 처리합니다: 플레이스홀더, 이미지 설명, 스크린 리더가 읽어주는 레이블까지. #Shorts"
+    },
+    "react/social/react-local-formats-9x16": {
+      "title": "모든 숫자와 날짜를 각 언어의 형식으로 (React) #Shorts",
+      "summary": "숫자는 숫자 그대로, 날짜는 날짜로 넘기세요. 독일어는 1.234,5와 14. März 2026으로, 힌디어는 1234567을 12,34,567로 묶어 표시합니다. 주문 번호는 문자열로 넘기므로 입력한 그대로 유지됩니다. #Shorts"
+    },
+    "vue/vue-hero": {
+      "title": "Langsys로 하는 Vue i18n: 전체 과정 살펴보기",
+      "summary": "다른 i18n이 계속 맞춰 두라고 요구하는 것, 이를 대체하는 호출 하나, 로케일 전환, 성별을 구분하지 않은 스페인어가 사용자 절반에게 틀린 이유, 그리고 ICU select가 이를 해결하는 방법."
+    },
+    "vue/social/vue-phrase-9x16": {
+      "title": "i18n 키는 그냥 영어 문장이면 됩니다 (Vue) #Shorts",
+      "summary": "Langsys에서는 코드 속 문장이 곧 번역 키입니다. 키 파일도, 추출하거나 동기화할 것도 없이 같은 줄이 모든 언어로 돌아옵니다. #Shorts"
+    },
+    "vue/vue-t-string": {
+      "title": "Vue에서 t(phrase, category, params) 사용하기",
+      "summary": "t() 호출: 이것이 대체하는 키 파일 문제, 세 가지 인자, ICU 플레이스홀더와 복수형."
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "title": "러시아어 복수형은 4가지. 여러분은 한 줄만 쓰면 됩니다 (Vue) #Shorts",
+      "summary": "one, few, many, other: 러시아어는 숫자에 따라 복수형을 고르고, 21은 다시 단수형으로 돌아갑니다. 문장을 분기 없이 작성하면 Langsys가 각 로케일에 필요한 모든 형태를 만들어 줍니다. #Shorts"
+    },
+    "vue/vue-phrase-tag": {
+      "title": "Vue의 ‹Phrase›: 마크업이 들어간 문장 다루기",
+      "summary": "마크업이 들어간 문장을 하나의 문구로 유지하는 방법, 그리고 ‹Phrase› 매개변수를 %name% 형태로 쓰는 이유."
+    },
+    "vue/vue-translate-tag": {
+      "title": "Vue의 ‹Translate›: 영역 전체를 태그 하나로",
+      "summary": "‹Translate› 태그 하나로 영역 전체를 등록하는 방법, 그리고 줄마다 호출하는 것보다 블록이 나은 이유."
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "title": "스페인어에서는 굵은 글씨가 제자리로 옮겨갑니다 (Vue) #Shorts",
+      "summary": "다른 i18n 라이브러리는 굵은 단어가 있는 문장을 세 개의 키로 쪼갭니다. ‹Phrase›를 쓰면 번역자는 마크업까지 포함한 한 문장을 받고, 스페인어에서는 굵은 글씨가 명사 뒤 \"no leídos\"에 놓입니다. #Shorts"
+    },
+    "vue/vue-donttranslate": {
+      "title": "Vue의 ‹DontTranslate›: 브랜드명을 그대로 유지하기",
+      "summary": "브랜드명과 식별자를 문장 밖으로 빼내지 않고도 원문 그대로 유지합니다."
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "title": "태그 하나로 섹션 전체 번역하기 (Vue) #Shorts",
+      "summary": "Translate 태그 하나가 마크업 영역을 감쌉니다. 모든 텍스트 덩어리가 각각의 문구가 되고, 굵은 글씨와 링크는 제자리에 놓이며, 브랜드명은 절대 번역되지 않습니다. #Shorts"
+    },
+    "vue/vue-content-blocks": {
+      "title": "콘텐츠 블록이란? Vue에서 섹션 전체 번역하기",
+      "summary": "하나의 섹션을 단위로 등록하되, 여전히 개별적으로 재사용할 수 있는 문구들로 구성됩니다."
+    },
+    "vue/vue-categories": {
+      "title": "같은 단어, 다른 의미: i18n 키 대신 카테고리 (Vue)",
+      "summary": "i18n이 키를 만들어 낸 이유와 이를 대체하는 것: 두 가지 의미를 가진 같은 단어, 그리고 그 단어가 나뉘는 쌍."
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "title": "브랜드 이름은 절대 번역되지 않습니다 (Vue) #Shorts",
+      "summary": "번역자는 제품 이름과 일반 문구를 구분할 수 없어서, 다른 i18n 라이브러리는 Bright Ledger를 Libro Mayor Brillante로 내보냅니다. Langsys에서는 그 자리에서 ‹DontTranslate›로 표시하면 되고, 주변 문장은 계속 번역됩니다. #Shorts"
+    },
+    "vue/vue-icu-gender": {
+      "title": "코드에 조건문 없이 성별 일치 처리하기 (ICU select) (Vue)",
+      "summary": "다른 i18n이 컴포넌트에 남겨 두는 성별 조건문, 그리고 Langsys가 그 대신 언어별로 생성하는 분기."
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "title": "Bienvenido일까, Bienvenida일까? 코드 한 줄이면 끝 (Vue) #Shorts",
+      "summary": "스페인어는 사용자에 따라 형태가 달라집니다. Langsys가 ICU select 분기를 생성하므로 코드 한 줄로 Diego에게는 Bienvenido, Laura에게는 Bienvenida, 성별을 모르면 중립형이 표시됩니다. #Shorts"
+    },
+    "vue/vue-attributes": {
+      "title": "Vue에서 placeholder, alt 텍스트, aria 레이블 번역하기",
+      "summary": "반쯤 번역된 폼이 사용자에게 어떻게 보이는지, 그리고 ‹Translate› 하나로 placeholder, alt 텍스트, aria 레이블까지 한 번에 처리하는 방법."
+    },
+    "vue/vue-formatting": {
+      "title": "Vue i18n으로 모든 로케일의 숫자와 날짜 처리하기",
+      "summary": "CLDR에 따른 숫자와 날짜: 직접 작성해야 했을 분기, 자릿수 그룹이 구분자가 아니라 형태인 이유, 그리고 주문 번호를 문자열로 전달해야 하는 이유."
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "title": "영어 단어 하나, 스페인어 번역 둘 (Vue) #Shorts",
+      "summary": "\"Free\"는 한 화면에서는 가격이고, 다른 화면에서는 일정 없는 저녁입니다. 다른 i18n 라이브러리는 둘을 구분하려고 키를 만들어냅니다. Langsys는 문장을 그대로 두고 카테고리로 분류합니다: Gratis와 Libre. #Shorts"
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "title": "플레이스홀더와 대체 텍스트도 번역됩니다 (Vue) #Shorts",
+      "summary": "다른 i18n 라이브러리는 속성마다 별도 호출이 필요하고, 빠뜨린 속성은 영어로 남습니다. ‹Translate› 태그 하나로 영역 전체를 처리합니다: 플레이스홀더, 이미지 설명, 스크린 리더가 읽어주는 레이블까지. #Shorts"
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "title": "모든 숫자와 날짜를 각 언어의 형식으로 (Vue) #Shorts",
+      "summary": "숫자는 숫자 그대로, 날짜는 날짜로 넘기세요. 독일어는 1.234,5와 14. März 2026으로, 힌디어는 1234567을 12,34,567로 묶어 표시합니다. 주문 번호는 문자열로 넘기므로 입력한 그대로 유지됩니다. #Shorts"
     }
   }
 }

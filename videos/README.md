@@ -85,6 +85,19 @@ Suggested order: `explainer` first, then the tutorial track in the order above,
 then the Svelte cuts as API reference — those can be linked directly from a docs
 section rather than watched through.
 
+## React and Vue
+
+The Svelte set, ported cut for cut: `react/react-<demo>.mp4` and
+`vue/vue-<demo>.mp4` for every Svelte cut above except `presenter`, and
+`<sdk>/social/<sdk>-<demo>-{1x1,4x5,9x16}.mp4` for each Svelte social cut below.
+Same lengths, same narration, same layout. What changes is the code on screen:
+`useT()` from `langsys-js-react` or `langsys-js-vue`, `.tsx` and `.vue` file
+names, `{{ }}` and `:attr=` bindings in Vue templates, and `react-i18next` or
+`vue-i18n` as the "other i18n". Masters live in `langsys-demo-videos` under
+`react/` and `vue/`, generated from the Svelte masters by
+`assets/ports/port.py` (all but `react-hero`, which is hand-ported), so a
+Svelte fix is ported by re-generating rather than edited three times.
+
 ## Social cuts
 
 Square and vertical re-cuts of fourteen demos, sized for feed and story

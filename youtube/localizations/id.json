@@ -181,6 +181,158 @@
     "svelte/social/local-formats-9x16": {
       "title": "Setiap angka dan tanggal dalam format bahasanya #Shorts",
       "summary": "Berikan angkanya langsung dan tanggal sebagai tanggal: bahasa Jerman menampilkan 1.234,5 dan 14. März 2026, dan bahasa Hindi mengelompokkan 1234567 menjadi 12,34,567. Nomor pesanan diberikan sebagai string, jadi tetap persis seperti aslinya. #Shorts"
+    },
+    "react/social/react-phrase-9x16": {
+      "title": "Key i18n Anda cukup kalimat bahasa Inggrisnya (React) #Shorts",
+      "summary": "Dengan Langsys, kalimat di kode Anda adalah key terjemahannya: tanpa file key, tanpa perlu extract atau sinkronisasi, dan baris yang sama kembali dalam semua bahasa. #Shorts"
+    },
+    "react/react-hero": {
+      "title": "React i18n dengan Langsys: panduan lengkap",
+      "summary": "Apa yang dipaksa i18n lain untuk terus Anda sinkronkan, satu panggilan untuk menggantikannya, pergantian locale, mengapa bahasa Spanyol yang datar salah bagi separuh pengguna Anda, dan apa solusi ICU select."
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "title": "Bahasa Rusia punya 4 bentuk jamak. Anda tulis satu baris (React) #Shorts",
+      "summary": "One, few, many, dan other: bahasa Rusia memilih bentuk jamak berdasarkan angka, dan 21 kembali ke bentuk tunggal. Tulis kalimatnya datar, dan Langsys membangun setiap bentuk yang dibutuhkan tiap locale. #Shorts"
+    },
+    "react/react-t-string": {
+      "title": "t(phrase, category, params) di React",
+      "summary": "Panggilan t(): masalah file key yang digantikannya, tiga argumennya, placeholder ICU, dan bentuk jamak."
+    },
+    "react/react-phrase-tag": {
+      "title": "‹Phrase› di React: kalimat dengan markup di dalamnya",
+      "summary": "Kalimat dengan markup di dalamnya, tetap dijaga sebagai satu frasa, dan mengapa params ‹Phrase› ditulis %name%."
+    },
+    "react/social/react-bold-moves-9x16": {
+      "title": "Dalam bahasa Spanyol, huruf tebal pindah ke tempat yang tepat (React) #Shorts",
+      "summary": "Library i18n lain memotong kalimat yang berisi kata bercetak tebal menjadi tiga key. Dengan ‹Phrase›, penerjemah menerima satu kalimat utuh beserta markup-nya, dan dalam bahasa Spanyol huruf tebal jatuh setelah kata benda, pada \"no leídos\". #Shorts"
+    },
+    "react/react-translate-tag": {
+      "title": "‹Translate› di React: satu tag untuk satu region utuh",
+      "summary": "Satu tag ‹Translate› mendaftarkan seluruh region, dan mengapa satu blok lebih baik daripada satu panggilan per baris."
+    },
+    "react/social/react-content-blocks-9x16": {
+      "title": "Terjemahkan satu bagian utuh dengan satu tag (React) #Shorts",
+      "summary": "Satu tag Translate membungkus satu region markup: setiap potongan teks menjadi frasanya sendiri, teks tebal dan link tetap di tempatnya, dan nama merek tidak pernah diterjemahkan. #Shorts"
+    },
+    "react/react-donttranslate": {
+      "title": "‹DontTranslate› di React: nama merek tetap apa adanya",
+      "summary": "Nama merek dan identifier dibiarkan apa adanya, tanpa harus mengeluarkannya dari kalimat."
+    },
+    "react/react-content-blocks": {
+      "title": "Apa itu content block? Menerjemahkan satu bagian utuh di React",
+      "summary": "Satu bagian didaftarkan sebagai satu unit, tetap tersusun dari frasa-frasa yang bisa dipakai ulang satu per satu."
+    },
+    "react/social/react-brand-names-9x16": {
+      "title": "Nama merekmu tidak pernah diterjemahkan (React) #Shorts",
+      "summary": "Penerjemah tidak bisa membedakan nama produk dari frasa biasa, jadi library i18n lain merilis Bright Ledger sebagai Libro Mayor Brillante. Dengan Langsys kamu menandainya di tempatnya dengan ‹DontTranslate›, dan kalimat di sekitarnya tetap diterjemahkan. #Shorts"
+    },
+    "react/react-categories": {
+      "title": "Kata sama, dua makna: kategori sebagai pengganti key i18n (React)",
+      "summary": "Mengapa i18n menciptakan key, dan apa penggantinya: kata yang sama dengan dua makna, dan pasangan yang terbentuk darinya."
+    },
+    "react/social/react-icu-gender-9x16": {
+      "title": "Bienvenido atau Bienvenida? Satu baris kode (React) #Shorts",
+      "summary": "Bahasa Spanyol menyesuaikan dengan penggunanya. Langsys membuat cabang ICU select, jadi Diego mendapat Bienvenido, Laura mendapat Bienvenida, dan gender yang tidak diketahui mendapat bentuk netral, dari satu baris. #Shorts"
+    },
+    "react/react-icu-gender": {
+      "title": "Kesesuaian gender tanpa kondisional di kode Anda (ICU select) (React)",
+      "summary": "Kondisional gender yang ditinggalkan i18n lain di komponen Anda, dan cabang-cabang yang justru dibuat Langsys untuk setiap bahasa."
+    },
+    "react/react-attributes": {
+      "title": "Menerjemahkan placeholder, alt text, dan aria label di React",
+      "summary": "Seperti apa formulir yang setengah diterjemahkan di mata penggunanya, dan bagaimana satu ‹Translate› menjangkau placeholder, alt text, dan aria label dalam sekali jalan."
+    },
+    "react/social/react-two-meanings-9x16": {
+      "title": "Satu kata bahasa Inggris, dua terjemahan bahasa Spanyol (React) #Shorts",
+      "summary": "\"Free\" adalah harga di satu layar dan malam yang kosong di layar lain. Library i18n lain mengarang key untuk membedakannya. Langsys mempertahankan kalimatnya dan memasukkannya ke sebuah kategori: Gratis dan Libre. #Shorts"
+    },
+    "react/react-formatting": {
+      "title": "Angka dan tanggal di semua locale dengan React i18n",
+      "summary": "Angka dan tanggal sesuai CLDR: cabang yang biasanya Anda tulis manual, mengapa pengelompokan digit adalah sebuah pola dan bukan sekadar pemisah, dan mengapa nomor pesanan harus dikirim sebagai string."
+    },
+    "react/social/react-alt-text-9x16": {
+      "title": "Placeholder dan teks alternatif juga diterjemahkan (React) #Shorts",
+      "summary": "Library i18n lain butuh panggilan terpisah untuk setiap atribut, dan atribut yang terlupa tetap berbahasa Inggris. Satu tag ‹Translate› mencakup seluruh area: placeholder, deskripsi gambar, dan label yang dibacakan pembaca layar. #Shorts"
+    },
+    "react/social/react-local-formats-9x16": {
+      "title": "Setiap angka dan tanggal dalam format bahasanya (React) #Shorts",
+      "summary": "Berikan angkanya langsung dan tanggal sebagai tanggal: bahasa Jerman menampilkan 1.234,5 dan 14. März 2026, dan bahasa Hindi mengelompokkan 1234567 menjadi 12,34,567. Nomor pesanan diberikan sebagai string, jadi tetap persis seperti aslinya. #Shorts"
+    },
+    "vue/vue-hero": {
+      "title": "Vue i18n dengan Langsys: panduan lengkap",
+      "summary": "Apa yang dipaksa i18n lain untuk terus Anda sinkronkan, satu panggilan untuk menggantikannya, pergantian locale, mengapa bahasa Spanyol yang datar salah bagi separuh pengguna Anda, dan apa solusi ICU select."
+    },
+    "vue/social/vue-phrase-9x16": {
+      "title": "Key i18n Anda cukup kalimat bahasa Inggrisnya (Vue) #Shorts",
+      "summary": "Dengan Langsys, kalimat di kode Anda adalah key terjemahannya: tanpa file key, tanpa perlu extract atau sinkronisasi, dan baris yang sama kembali dalam semua bahasa. #Shorts"
+    },
+    "vue/vue-t-string": {
+      "title": "t(phrase, category, params) di Vue",
+      "summary": "Panggilan t(): masalah file key yang digantikannya, tiga argumennya, placeholder ICU, dan bentuk jamak."
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "title": "Bahasa Rusia punya 4 bentuk jamak. Anda tulis satu baris (Vue) #Shorts",
+      "summary": "One, few, many, dan other: bahasa Rusia memilih bentuk jamak berdasarkan angka, dan 21 kembali ke bentuk tunggal. Tulis kalimatnya datar, dan Langsys membangun setiap bentuk yang dibutuhkan tiap locale. #Shorts"
+    },
+    "vue/vue-phrase-tag": {
+      "title": "‹Phrase› di Vue: kalimat dengan markup di dalamnya",
+      "summary": "Kalimat dengan markup di dalamnya, tetap dijaga sebagai satu frasa, dan mengapa params ‹Phrase› ditulis %name%."
+    },
+    "vue/vue-translate-tag": {
+      "title": "‹Translate› di Vue: satu tag untuk satu region utuh",
+      "summary": "Satu tag ‹Translate› mendaftarkan seluruh region, dan mengapa satu blok lebih baik daripada satu panggilan per baris."
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "title": "Dalam bahasa Spanyol, huruf tebal pindah ke tempat yang tepat (Vue) #Shorts",
+      "summary": "Library i18n lain memotong kalimat yang berisi kata bercetak tebal menjadi tiga key. Dengan ‹Phrase›, penerjemah menerima satu kalimat utuh beserta markup-nya, dan dalam bahasa Spanyol huruf tebal jatuh setelah kata benda, pada \"no leídos\". #Shorts"
+    },
+    "vue/vue-donttranslate": {
+      "title": "‹DontTranslate› di Vue: nama merek tetap apa adanya",
+      "summary": "Nama merek dan identifier dibiarkan apa adanya, tanpa harus mengeluarkannya dari kalimat."
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "title": "Terjemahkan satu bagian utuh dengan satu tag (Vue) #Shorts",
+      "summary": "Satu tag Translate membungkus satu region markup: setiap potongan teks menjadi frasanya sendiri, teks tebal dan link tetap di tempatnya, dan nama merek tidak pernah diterjemahkan. #Shorts"
+    },
+    "vue/vue-content-blocks": {
+      "title": "Apa itu content block? Menerjemahkan satu bagian utuh di Vue",
+      "summary": "Satu bagian didaftarkan sebagai satu unit, tetap tersusun dari frasa-frasa yang bisa dipakai ulang satu per satu."
+    },
+    "vue/vue-categories": {
+      "title": "Kata sama, dua makna: kategori sebagai pengganti key i18n (Vue)",
+      "summary": "Mengapa i18n menciptakan key, dan apa penggantinya: kata yang sama dengan dua makna, dan pasangan yang terbentuk darinya."
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "title": "Nama merekmu tidak pernah diterjemahkan (Vue) #Shorts",
+      "summary": "Penerjemah tidak bisa membedakan nama produk dari frasa biasa, jadi library i18n lain merilis Bright Ledger sebagai Libro Mayor Brillante. Dengan Langsys kamu menandainya di tempatnya dengan ‹DontTranslate›, dan kalimat di sekitarnya tetap diterjemahkan. #Shorts"
+    },
+    "vue/vue-icu-gender": {
+      "title": "Kesesuaian gender tanpa kondisional di kode Anda (ICU select) (Vue)",
+      "summary": "Kondisional gender yang ditinggalkan i18n lain di komponen Anda, dan cabang-cabang yang justru dibuat Langsys untuk setiap bahasa."
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "title": "Bienvenido atau Bienvenida? Satu baris kode (Vue) #Shorts",
+      "summary": "Bahasa Spanyol menyesuaikan dengan penggunanya. Langsys membuat cabang ICU select, jadi Diego mendapat Bienvenido, Laura mendapat Bienvenida, dan gender yang tidak diketahui mendapat bentuk netral, dari satu baris. #Shorts"
+    },
+    "vue/vue-attributes": {
+      "title": "Menerjemahkan placeholder, alt text, dan aria label di Vue",
+      "summary": "Seperti apa formulir yang setengah diterjemahkan di mata penggunanya, dan bagaimana satu ‹Translate› menjangkau placeholder, alt text, dan aria label dalam sekali jalan."
+    },
+    "vue/vue-formatting": {
+      "title": "Angka dan tanggal di semua locale dengan Vue i18n",
+      "summary": "Angka dan tanggal sesuai CLDR: cabang yang biasanya Anda tulis manual, mengapa pengelompokan digit adalah sebuah pola dan bukan sekadar pemisah, dan mengapa nomor pesanan harus dikirim sebagai string."
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "title": "Satu kata bahasa Inggris, dua terjemahan bahasa Spanyol (Vue) #Shorts",
+      "summary": "\"Free\" adalah harga di satu layar dan malam yang kosong di layar lain. Library i18n lain mengarang key untuk membedakannya. Langsys mempertahankan kalimatnya dan memasukkannya ke sebuah kategori: Gratis dan Libre. #Shorts"
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "title": "Placeholder dan teks alternatif juga diterjemahkan (Vue) #Shorts",
+      "summary": "Library i18n lain butuh panggilan terpisah untuk setiap atribut, dan atribut yang terlupa tetap berbahasa Inggris. Satu tag ‹Translate› mencakup seluruh area: placeholder, deskripsi gambar, dan label yang dibacakan pembaca layar. #Shorts"
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "title": "Setiap angka dan tanggal dalam format bahasanya (Vue) #Shorts",
+      "summary": "Berikan angkanya langsung dan tanggal sebagai tanggal: bahasa Jerman menampilkan 1.234,5 dan 14. März 2026, dan bahasa Hindi mengelompokkan 1234567 menjadi 12,34,567. Nomor pesanan diberikan sebagai string, jadi tetap persis seperti aslinya. #Shorts"
     }
   }
 }

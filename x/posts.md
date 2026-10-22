@@ -568,3 +568,607 @@ New phrases, invitations, project access: what Langsys tells you, where, and how
 Upload `videos/x/notifications.mp4` (a captioned 30 to 60 second clip of the full video).
 
 Reply: `https://youtu.be/gpSYSKrmVp0`
+
+## Week 8, Tuesday (launch + 50)
+
+**Video: React i18n with Langsys: the full walkthrough** · 131 characters
+
+```
+React devs: your app in every language, with nothing to keep in step.
+
+The full walkthrough, from one call to a live locale switch.
+```
+
+Upload `videos/x/react/hero.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/sp4K9n4krZ4`
+
+## Week 8, Wednesday (launch + 51)
+
+**Short: Your i18n key is just the English sentence (React)** · 120 characters
+
+```
+Your translation key is the English sentence.
+
+No keys file. Nothing to extract. Nothing to keep in sync.
+
+Now in React.
+```
+
+Upload `videos/react/social/react-phrase-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/wbOSuylCIWE`
+
+## Week 8, Thursday (launch + 52)
+
+**Short: Russian has 4 plural forms. You write one line (React)** · 152 characters
+
+```
+1 файл. 2 файла. 5 файлов. 21 файл.
+
+Russian picks a plural form by the number, and 21 goes back to the singular. Your app gets all four.
+
+Now in React.
+```
+
+Upload `videos/react/social/react-icu-plurals-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/LeU5LazVgGc`
+
+## Week 8, Friday (launch + 53)
+
+**Video: t(phrase, category, params) in React** · 119 characters
+
+```
+One call, every language: t(phrase, category, params).
+
+Placeholders and plurals included. No keys file.
+
+Now in React.
+```
+
+Upload `videos/x/react/t-string.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/22OJORE4d8g`
+
+## Week 9, Monday (launch + 56)
+
+**Video: ‹Phrase› in React: a sentence with markup inside** · 167 characters
+
+```
+A sentence with a bold word in it is still one sentence.
+
+With <Phrase>, your translator reads it whole, and the bold lands where each language puts it.
+
+Now in React.
+```
+
+Upload `videos/x/react/phrase-tag.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/U1UoliOjgeE`
+
+## Week 9, Tuesday (launch + 57)
+
+**Short: In Spanish, the bold moves to where it belongs (React)** · 117 characters
+
+```
+In Spanish, the bold moves to where Spanish puts it.
+
+One sentence for the translator, markup and all.
+
+Now in React.
+```
+
+Upload `videos/react/social/react-bold-moves-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/vAp5FyuD34Q`
+
+## Week 9, Wednesday (launch + 58)
+
+**Video: ‹Translate› in React: one tag for a whole region** · 121 characters
+
+```
+Wrap a whole region in one <Translate> tag, and every line inside registers itself.
+
+No t() call per line.
+
+Now in React.
+```
+
+Upload `videos/x/react/translate-tag.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/XtjY6UcOoPk`
+
+## Week 9, Thursday (launch + 59)
+
+**Short: Translate a whole section with one tag (React)** · 124 characters
+
+```
+Translate a whole section with one tag.
+
+Bold and links land where they belong, and the brand name stays put.
+
+Now in React.
+```
+
+Upload `videos/react/social/react-content-blocks-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/uC4VLJyZwnU`
+
+## Week 9, Friday (launch + 60)
+
+**Video: ‹DontTranslate› in React: keep brand names verbatim** · 147 characters
+
+```
+Nobody wants their brand name translated.
+
+<DontTranslate> keeps it exactly as written, and the sentence around it still translates.
+
+Now in React.
+```
+
+Upload `videos/x/react/donttranslate.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/-njmHFcTn7s`
+
+## Week 10, Monday (launch + 63)
+
+**Video: What is a content block? Translating a whole section in React** · 154 characters
+
+```
+What is a content block?
+
+A whole section registered as one unit, so it is translated with its context, and still made of reusable phrases.
+
+Now in React.
+```
+
+Upload `videos/x/react/content-blocks.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/kUws7TofOqE`
+
+## Week 10, Tuesday (launch + 64)
+
+**Short: Your brand name, never translated (React)** · 146 characters
+
+```
+Bright Ledger, in Spanish: Libro Mayor Brillante.
+
+That's what happens to a brand name nobody marked. Here's how yours stays yours.
+
+Now in React.
+```
+
+Upload `videos/react/social/react-brand-names-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/GeTslWKJ644`
+
+## Week 10, Wednesday (launch + 65)
+
+**Video: Same word, two meanings: categories instead of i18n keys (React)** · 159 characters
+
+```
+"Free" is a price. "Free" is also an empty evening.
+
+Same word, two translations. Langsys tells them apart with a category, not an invented key.
+
+Now in React.
+```
+
+Upload `videos/x/react/categories.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/yr8DShqIiJ4`
+
+## Week 10, Thursday (launch + 66)
+
+**Short: Bienvenido or Bienvenida? One line of code (React)** · 111 characters
+
+```
+Bienvenido or Bienvenida?
+
+Diego, Laura and someone with no gender on record, all from one line.
+
+Now in React.
+```
+
+Upload `videos/react/social/react-icu-gender-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/2mg4DxHSHlI`
+
+## Week 10, Friday (launch + 67)
+
+**Video: Gender agreement without conditionals in your code (ICU select) (React)** · 167 characters
+
+```
+¡Bienvenido, Diego! ¡Bienvenida, Laura!
+
+Spanish agrees with the person. Langsys builds the gender forms for each language, so your code never branches.
+
+Now in React.
+```
+
+Upload `videos/x/react/icu-gender.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/H9vX59TgiMw`
+
+## Week 11, Monday (launch + 70)
+
+**Video: Translating placeholders, alt text and aria labels in React** · 158 characters
+
+```
+A form with a translated label and an English placeholder is a half-translated form.
+
+Placeholders, alt text and aria labels, in the same pass.
+
+Now in React.
+```
+
+Upload `videos/x/react/attributes.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/Qtb1vzKpZw0`
+
+## Week 11, Tuesday (launch + 71)
+
+**Short: One English word, two Spanish translations (React)** · 104 characters
+
+```
+One English word. Two Spanish translations.
+
+Gratis for the price. Libre for the evening.
+
+Now in React.
+```
+
+Upload `videos/react/social/react-two-meanings-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/lGXk5lhuMoI`
+
+## Week 11, Wednesday (launch + 72)
+
+**Video: Numbers and dates in every locale with React i18n** · 126 characters
+
+```
+1,234.5 in the US. 1.234,5 in Germany. 12,34,567 in India.
+
+Every number and date, in each locale's own format.
+
+Now in React.
+```
+
+Upload `videos/x/react/formatting.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/gq6qQE_yPss`
+
+## Week 11, Thursday (launch + 73)
+
+**Short: Placeholders and alt text translate too (React)** · 98 characters
+
+```
+Placeholders and alt text translate too.
+
+Even the words a screen reader announces.
+
+Now in React.
+```
+
+Upload `videos/react/social/react-alt-text-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/ozgMDdZl2H0`
+
+## Week 11, Friday (launch + 74)
+
+**Short: Every number and date in each locale's format (React)** · 120 characters
+
+```
+Pass an order number as a number, and Germany sees 1.048.576.
+
+Pass it as a string, and it stays 1048576.
+
+Now in React.
+```
+
+Upload `videos/react/social/react-local-formats-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/QYTA7fVF4ZU`
+
+## Week 12, Monday (launch + 77)
+
+**Video: Vue i18n with Langsys: the full walkthrough** · 129 characters
+
+```
+Vue devs: your app in every language, with nothing to keep in step.
+
+The full walkthrough, from one call to a live locale switch.
+```
+
+Upload `videos/x/vue/hero.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/1ROhtDzJWNo`
+
+## Week 12, Tuesday (launch + 78)
+
+**Short: Your i18n key is just the English sentence (Vue)** · 118 characters
+
+```
+Your translation key is the English sentence.
+
+No keys file. Nothing to extract. Nothing to keep in sync.
+
+Now in Vue.
+```
+
+Upload `videos/vue/social/vue-phrase-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/8dim8q1ftfk`
+
+## Week 12, Wednesday (launch + 79)
+
+**Video: t(phrase, category, params) in Vue** · 117 characters
+
+```
+One call, every language: t(phrase, category, params).
+
+Placeholders and plurals included. No keys file.
+
+Now in Vue.
+```
+
+Upload `videos/x/vue/t-string.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/sIMXbUnD5ns`
+
+## Week 12, Thursday (launch + 80)
+
+**Short: Russian has 4 plural forms. You write one line (Vue)** · 150 characters
+
+```
+1 файл. 2 файла. 5 файлов. 21 файл.
+
+Russian picks a plural form by the number, and 21 goes back to the singular. Your app gets all four.
+
+Now in Vue.
+```
+
+Upload `videos/vue/social/vue-icu-plurals-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/lgejEkwUbHk`
+
+## Week 12, Friday (launch + 81)
+
+**Video: ‹Phrase› in Vue: a sentence with markup inside** · 165 characters
+
+```
+A sentence with a bold word in it is still one sentence.
+
+With <Phrase>, your translator reads it whole, and the bold lands where each language puts it.
+
+Now in Vue.
+```
+
+Upload `videos/x/vue/phrase-tag.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/xTBW-x0g2fg`
+
+## Week 13, Monday (launch + 84)
+
+**Video: ‹Translate› in Vue: one tag for a whole region** · 119 characters
+
+```
+Wrap a whole region in one <Translate> tag, and every line inside registers itself.
+
+No t() call per line.
+
+Now in Vue.
+```
+
+Upload `videos/x/vue/translate-tag.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/WJbebS8J5qg`
+
+## Week 13, Tuesday (launch + 85)
+
+**Short: In Spanish, the bold moves to where it belongs (Vue)** · 115 characters
+
+```
+In Spanish, the bold moves to where Spanish puts it.
+
+One sentence for the translator, markup and all.
+
+Now in Vue.
+```
+
+Upload `videos/vue/social/vue-bold-moves-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/QuwRpvg3T1w`
+
+## Week 13, Wednesday (launch + 86)
+
+**Video: ‹DontTranslate› in Vue: keep brand names verbatim** · 145 characters
+
+```
+Nobody wants their brand name translated.
+
+<DontTranslate> keeps it exactly as written, and the sentence around it still translates.
+
+Now in Vue.
+```
+
+Upload `videos/x/vue/donttranslate.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/uF-LHSzYpUU`
+
+## Week 13, Thursday (launch + 87)
+
+**Short: Translate a whole section with one tag (Vue)** · 122 characters
+
+```
+Translate a whole section with one tag.
+
+Bold and links land where they belong, and the brand name stays put.
+
+Now in Vue.
+```
+
+Upload `videos/vue/social/vue-content-blocks-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/2UF1UPAnCBk`
+
+## Week 13, Friday (launch + 88)
+
+**Video: What is a content block? Translating a whole section in Vue** · 152 characters
+
+```
+What is a content block?
+
+A whole section registered as one unit, so it is translated with its context, and still made of reusable phrases.
+
+Now in Vue.
+```
+
+Upload `videos/x/vue/content-blocks.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/vMtUjWo2Ezk`
+
+## Week 14, Monday (launch + 91)
+
+**Video: Same word, two meanings: categories instead of i18n keys (Vue)** · 157 characters
+
+```
+"Free" is a price. "Free" is also an empty evening.
+
+Same word, two translations. Langsys tells them apart with a category, not an invented key.
+
+Now in Vue.
+```
+
+Upload `videos/x/vue/categories.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/jsqNGO2ArBc`
+
+## Week 14, Tuesday (launch + 92)
+
+**Short: Your brand name, never translated (Vue)** · 144 characters
+
+```
+Bright Ledger, in Spanish: Libro Mayor Brillante.
+
+That's what happens to a brand name nobody marked. Here's how yours stays yours.
+
+Now in Vue.
+```
+
+Upload `videos/vue/social/vue-brand-names-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/8cYsOOGP8Z8`
+
+## Week 14, Wednesday (launch + 93)
+
+**Video: Gender agreement without conditionals in your code (ICU select) (Vue)** · 165 characters
+
+```
+¡Bienvenido, Diego! ¡Bienvenida, Laura!
+
+Spanish agrees with the person. Langsys builds the gender forms for each language, so your code never branches.
+
+Now in Vue.
+```
+
+Upload `videos/x/vue/icu-gender.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/p_hCurEby8o`
+
+## Week 14, Thursday (launch + 94)
+
+**Short: Bienvenido or Bienvenida? One line of code (Vue)** · 109 characters
+
+```
+Bienvenido or Bienvenida?
+
+Diego, Laura and someone with no gender on record, all from one line.
+
+Now in Vue.
+```
+
+Upload `videos/vue/social/vue-icu-gender-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/ncAcC8fZ8KE`
+
+## Week 14, Friday (launch + 95)
+
+**Video: Translating placeholders, alt text and aria labels in Vue** · 156 characters
+
+```
+A form with a translated label and an English placeholder is a half-translated form.
+
+Placeholders, alt text and aria labels, in the same pass.
+
+Now in Vue.
+```
+
+Upload `videos/x/vue/attributes.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/O4sXjBN_9xw`
+
+## Week 15, Monday (launch + 98)
+
+**Video: Numbers and dates in every locale with Vue i18n** · 124 characters
+
+```
+1,234.5 in the US. 1.234,5 in Germany. 12,34,567 in India.
+
+Every number and date, in each locale's own format.
+
+Now in Vue.
+```
+
+Upload `videos/x/vue/formatting.mp4` (a captioned 30 to 60 second clip of the full video).
+
+Reply: `https://youtu.be/f-BpHgumD7k`
+
+## Week 15, Tuesday (launch + 99)
+
+**Short: One English word, two Spanish translations (Vue)** · 102 characters
+
+```
+One English word. Two Spanish translations.
+
+Gratis for the price. Libre for the evening.
+
+Now in Vue.
+```
+
+Upload `videos/vue/social/vue-two-meanings-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/76kPZu0AQfQ`
+
+## Week 15, Wednesday (launch + 100)
+
+**Short: Placeholders and alt text translate too (Vue)** · 96 characters
+
+```
+Placeholders and alt text translate too.
+
+Even the words a screen reader announces.
+
+Now in Vue.
+```
+
+Upload `videos/vue/social/vue-alt-text-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/AixBKJN-7ow`
+
+## Week 15, Thursday (launch + 101)
+
+**Short: Every number and date in each locale's format (Vue)** · 118 characters
+
+```
+Pass an order number as a number, and Germany sees 1.048.576.
+
+Pass it as a string, and it stays 1048576.
+
+Now in Vue.
+```
+
+Upload `videos/vue/social/vue-local-formats-4x5.mp4` (the silent 4:5 cut).
+
+Reply: `https://youtu.be/7eWDPADZhdo`
