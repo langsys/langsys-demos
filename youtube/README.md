@@ -50,6 +50,15 @@ Anything whose date has passed goes out too, so a missed day catches up on the n
 | `python upload.py --sync` | After editing a title, summary or tags in `videos.json`, pushes the change to YouTube. |
 | `python upload.py --launch` | The day langsys.dev opens: swaps "Get started" (the docs quickstart) for "Start free: https://langsys.dev" in every description. |
 
+### Adding an SDK's port of the Svelte set
+
+The React and Vue sets are ports of the Svelte videos (rendered in `langsys-demo-videos` by `assets/ports/`). Two scripts put a ported set on the calendar, once its files are in `../videos/<sdk>/`:
+
+| Command | Does |
+| --- | --- |
+| `python add_videos.py` | Adds each SDK in its `SDKS` table to `videos.json` and all seventeen localizations: the Svelte entry with the framework name swapped, SDK tags, the SDK's docs page and playlist, dated after the last video on the calendar. Skips entries already there. |
+| `python social_posts.py <sdk>` | After the set is uploaded: appends an X and a LinkedIn post for each of its days to `../x/posts.md` and `../linkedin/posts.md`, adapted from the Svelte post for the same video, with the port's clip and YouTube link. |
+
 ### Titles and descriptions in other languages
 
 `localizations/<code>.json` holds every video's title and summary, plus the four footer labels, in each Learning Center language: ar, de, es, fr, hi, id, it, ja, ko, nl, pl, pt, ru, tr, uk, vi and zh-CN. YouTube shows a viewer the version in their interface language and English otherwise; captions and audio are not affected. A translated description links the Learning Center page in its own language (`/learn/es/...`). `--sync` and new uploads carry them; after changing a title or summary in `videos.json`, update the same entry in each file. The files' keys match `videos.json`, so a new video needs an entry in all seventeen.
