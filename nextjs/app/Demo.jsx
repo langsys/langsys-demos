@@ -5,7 +5,6 @@
 import { useState } from 'react';
 import { DontTranslate, Phrase, Translate, useCurrentLocale, useT } from 'langsys-js-react';
 import { useLocale } from './LangsysClient';
-import { LOCALES, LOCALE_LABELS } from './langsys';
 
 const KEYS_URL = 'https://docs.langsys.dev/learn/concepts/keys-and-environments';
 const DOCS_URL = 'https://docs.langsys.dev/learn/guides/nextjs';
@@ -40,16 +39,23 @@ function CartNote() {
     );
 }
 
-function LocalePills() {
-    const { selected, setLocale } = useLocale();
+/* The languages the project serves — the server read them, so the list is right from the first paint. */
+function LocaleSelect() {
+    const { selected, setLocale, languages } = useLocale();
     return (
-        <nav className="locales" translate="no">
-            {LOCALES.map((code) => (
-                <button key={code} className={'pill' + (selected === code ? ' active' : '')} onClick={() => setLocale(code)}>
-                    {LOCALE_LABELS[code] ?? code}
-                </button>
+        <select
+            className="locale-select"
+            aria-label="Language"
+            translate="no"
+            value={selected}
+            onChange={(e) => setLocale(e.target.value)}
+        >
+            {languages.map((l) => (
+                <option key={l.code} value={l.code}>
+                    {l.label}
+                </option>
             ))}
-        </nav>
+        </select>
     );
 }
 
@@ -99,7 +105,7 @@ export function Demo() {
                     <div className="brand">
                         <span className="logo">◆</span> <span translate="no">Langsys</span> × Next.js
                     </div>
-                    <LocalePills />
+                    <LocaleSelect />
                 </header>
 
                 <section className="card">

@@ -3,19 +3,21 @@
 <script setup lang="ts">
 import { LangsysApp, LangsysAppAPI, createLocaleStore } from 'langsys-js-vue';
 import type { iCategories } from 'langsys-js-vue';
-import { LOCALES, LOCALE_COOKIE } from './langsys';
+import { LANGUAGES, LOCALE_COOKIE, pickLanguage } from './langsys';
 
-// From the cookie the switcher writes; a first visit gets English.
+// From the cookie the switcher writes; the server route keeps it only if the project serves that
+// language, and answers with the locale it resolved and the languages on offer.
 const cookie = useCookie(LOCALE_COOKIE, { maxAge: 31536000, sameSite: 'lax' });
-const initial = LOCALES.includes(cookie.value ?? '') ? cookie.value! : 'en-US';
 
-const { data } = await useAsyncData('langsys', () => $fetch('/api/langsys', { query: { locale: initial } }));
+const { data } = await useAsyncData('langsys', () => $fetch('/api/langsys', { query: { locale: cookie.value } }));
+const dirOf = (code: string) => pickLanguage(LANGUAGES, code)?.dir ?? 'ltr';
 
-useHead({ htmlAttrs: { lang: initial } });
+useHead({ htmlAttrs: { lang: data.value!.locale, 'data-demo-dir': dirOf(data.value!.locale) } });
 
-// One locale store for the app, provided to every page below.
+// One locale store for the app, and the languages on offer, provided to every page below.
 const store = createLocaleStore(data.value!.locale);
 provide('locale', store);
+provide('languages', data.value!.languages);
 
 onMounted(() => {
     const config = useRuntimeConfig().public;
@@ -35,6 +37,8 @@ onMounted(() => {
     store.subscribe((code) => {
         if (first) return void (first = false);
         cookie.value = code;
+        // A right-to-left language lays the demo's output out right to left (demo.css).
+        document.documentElement.dataset.demoDir = dirOf(code);
     });
 });
 </script>

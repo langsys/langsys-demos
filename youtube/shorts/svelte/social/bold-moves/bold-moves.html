@@ -1,0 +1,100 @@
+<meta charset="utf-8" />
+<title>Langsys — the bold moves with the sentence (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<style>
+    #stage .app { height: 270px; }
+    #stage .code { height: 330px; font-size: 26px; }
+    #stage.r1x1 .app { height: 196px; }
+    #stage.r1x1 .code { height: 262px; font-size: 22px; }
+
+    .greeting { font-size: 46px; font-weight: 500; }
+    #stage.r1x1 .greeting { font-size: 38px; }
+    .greeting b { font-weight: 800; color: var(--accent-2); }
+    .greeting .param { color: var(--warn); }
+
+    .stamp { margin-left: auto; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; padding: 5px 12px; border-radius: 999px; }
+    .stamp.old { color: var(--bad); border: 1px solid var(--bad); }
+    .stamp.new { color: var(--accent-2); border: 1px solid var(--accent-2); }
+</style>
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+            <div class="locales">
+                <div class="pill" data-loc="en-US">EN</div>
+                <div class="pill" data-loc="es">ES</div>
+            </div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> Your app</div>
+            <div class="app"><div class="greeting" id="out"></div></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> Inbox.svelte<span class="stamp" id="stamp"></span></div>
+            <div class="code" id="code"></div>
+        </div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // The social cut of svelte/web/phrase-tag: same sentence, same <Phrase>,
+    // same problem act (an ordinary catalog with a key per fragment). In
+    // Spanish the bold lands after the noun, on "no leídos".
+    const B = (s) => '<span class="k">&lt;</span><span class="t">b</span><span class="k">&gt;</span>' + s
+        + '<span class="k">&lt;/</span><span class="t">b</span><span class="k">&gt;</span>';
+
+    const CODE_PHRASE = [
+        '<span class="k">&lt;</span><span class="t">Phrase</span> params={{ name, count: unread }}<span class="k">&gt;</span>',
+        '  Hi <span class="v">%name%</span>, you have <span class="v">%count%</span>',
+        '  ' + B('unread') + ' messages.',
+        '<span class="k">&lt;/</span><span class="t">Phrase</span><span class="k">&gt;</span>',
+    ].join('\n');
+
+    const CODE_PROBLEM = [
+        '{<span class="v">$_</span>(<span class="s">\'inbox.greeting\'</span>, { name, count })}',
+        B('{<span class="v">$_</span>(<span class="s">\'inbox.unread\'</span>)}'),
+        '{<span class="v">$_</span>(<span class="s">\'inbox.suffix\'</span>)}',
+        '',
+        '<span class="c">// Three keys for one sentence.</span>',
+    ].join('\n');
+
+    const OUT = {
+        'en-US': 'Hi <span class="param">Sarah</span>, you have <span class="param">3</span> <b>unread</b> messages.',
+        'es': 'Hola <span class="param">Sarah</span>, tienes <span class="param">3</span> mensajes <b>no leídos</b>.',
+    };
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 14,
+        scenes: [
+            { until: 3.2, locale: 'es', code: 'phrase', caption: 'In Spanish, <em>the bold moves</em> to where it belongs.' },
+            { until: 6.4, locale: 'en-US', code: 'problem', caption: 'Other i18n cuts the sentence <span class="bad">into three keys.</span>' },
+            { until: 9.6, locale: 'en-US', code: 'phrase', caption: 'Now, with Langsys, <em>one tag, markup and all.</em>' },
+            { until: 12.4, locale: 'es', code: 'phrase', caption: 'The translator gets <em>one sentence.</em> <span class="dim">Your bold comes back.</span>' },
+            { until: 14.0, outro: true },
+        ],
+        outro: 'A sentence with markup inside it,<br />kept as one phrase in every language.',
+        render(scene, { el }) {
+            const problem = scene.code === 'problem';
+            el('out').innerHTML = OUT[scene.locale];
+            el('code').innerHTML = problem ? CODE_PROBLEM : CODE_PHRASE;
+            el('stamp').textContent = problem ? 'OTHER I18N' : 'WITH LANGSYS';
+            el('stamp').className = 'stamp ' + (problem ? 'old' : 'new');
+        },
+    });
+</script>

@@ -1,0 +1,102 @@
+<meta charset="utf-8" />
+<title>Langsys — add German to a live app (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<style>
+    #stage .app { height: 290px; }
+    #stage .locs { height: 330px; }
+    #stage.r1x1 .app { height: 210px; padding: 24px 30px; }
+    #stage.r1x1 .locs { height: 250px; padding: 20px 26px; }
+
+    .headline { font-size: 58px; font-weight: 700; letter-spacing: -0.03em; }
+    #stage.r1x1 .headline { font-size: 46px; }
+    .ship { margin-top: 18px; font-size: 30px; color: #c6c6da; }
+
+    .locs { padding: 28px 28px; display: flex; flex-wrap: wrap; gap: 14px; align-content: start; }
+    .loc { border: 1px solid var(--line); border-radius: 12px; padding: 14px 20px; font-size: 27px; color: var(--muted); }
+    .loc.new { border-color: var(--accent-2); background: rgba(74, 212, 180, 0.14); color: var(--ink); }
+    .loc.adding { border-style: dashed; border-color: var(--accent); color: var(--ink); }
+    .note { width: 100%; margin-top: 14px; font-size: 27px; line-height: 1.4; color: var(--muted); }
+    .note b { color: var(--ink); font-weight: 600; }
+
+    .pill.off { opacity: 0.35; }
+</style>
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+            <div class="locales">
+                <div class="pill" data-loc="en">EN</div>
+                <div class="pill" data-loc="es">ES</div>
+                <div class="pill" data-loc="fr">FR</div>
+                <div class="pill" data-loc="de" id="dePill">DE</div>
+            </div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> Your store · live</div>
+            <div class="app">
+                <div class="headline" id="headline"></div>
+                <div class="ship" id="ship"></div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> Project settings · Locales</div>
+            <div class="locs" id="locs"></div>
+        </div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // From the adding-a-language tour (assets/tour/narrate_tour.py,
+    // "tour-addlang"): German added under Locales, the "ask me first" policy
+    // pricing the existing catalog — the exact charge, not an estimate — the
+    // drafts arriving in seconds, and the German pill working with nothing
+    // built or deployed.
+    const HEADLINE = { en: 'New arrivals', es: 'Novedades', fr: 'Nouveautés', de: 'Neuheiten' };
+    const SHIP = {
+        en: 'Free shipping on every order',
+        es: 'Envío gratis en todos los pedidos',
+        fr: 'Livraison gratuite sur toutes les commandes',
+        de: 'Kostenloser Versand für jede Bestellung',
+    };
+    const NOTES = {
+        added: '',
+        adding: '<div class="note">Added in settings. <b>Not a line of code changed.</b></div>',
+        quote: '<div class="note">Translate the existing catalog? <b>Exact charge, every word priced.</b></div>',
+        drafted: '<div class="note"><b>Every phrase drafted</b> by the model, ready for review.</div>',
+    };
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 14,
+        scenes: [
+            { until: 3.2, locale: 'de', de: 'new', note: 'added', caption: 'Your live store, <em>now in German.</em>' },
+            { until: 6.4, locale: 'en', de: 'adding', note: 'adding', caption: 'You add German in settings, <span class="dim">not in your code.</span>' },
+            { until: 9.6, locale: 'en', de: 'adding', note: 'quote', caption: 'Langsys quotes <em>the exact price</em> before it spends.' },
+            { until: 12.4, locale: 'de', de: 'new', note: 'drafted', caption: 'Drafted in seconds. <em>No build, no deploy.</em>' },
+            { until: 14.0, outro: true },
+        ],
+        outro: 'One setting, one exact price,<br />and a store that speaks German a minute later.',
+        render(scene, { el }) {
+            el('headline').textContent = HEADLINE[scene.locale];
+            el('ship').textContent = SHIP[scene.locale];
+            el('dePill').classList.toggle('off', scene.de !== 'new');
+            el('locs').innerHTML = ['English (source)', 'Spanish', 'French'].map((name) => '<div class="loc">' + name + '</div>').join('')
+                + '<div class="loc ' + scene.de + '">German (Germany)</div>' + NOTES[scene.note];
+        },
+    });
+</script>

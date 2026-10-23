@@ -14,8 +14,8 @@ composer install
 php -S localhost:8000 -t public     # on the shared demo project
 ```
 
-Switch locale with the links, or step the count, and the server renders the
-page again. A first visit follows your browser's language.
+Pick a language from the menu (the ones the project serves), or step the
+count, and the server renders the page again. A first visit follows your browser's language.
 
 To use your own project, set the credentials in the environment. A server can
 hold a WRITE key — it never reaches visitors — and that's what lets new

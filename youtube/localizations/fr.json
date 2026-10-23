@@ -1,0 +1,338 @@
+{
+  "labels": {
+    "learn_more": "En savoir plus",
+    "get_started": "Commencer",
+    "start_free": "Essai gratuit",
+    "docs": "Documentation"
+  },
+  "videos": {
+    "explainer": {
+      "title": "Qu'est-ce que Langsys ? Votre application dans toutes les langues, sans redéploiement",
+      "summary": "Langsys en 77 secondes : un SDK dans votre application et un Translation Manager hébergé. Une phrase s'enregistre d'elle-même la première fois que votre code l'exécute, est traduite automatiquement dès son arrivée et peut être affinée par un traducteur sans déploiement.\n\nLa preuve : un article de blog publié à 09:00, sans build et sans clé d'écriture, atteint un lecteur à Madrid en espagnol à 09:03."
+    },
+    "getting-started": {
+      "title": "Bien démarrer avec Langsys, de A à Z",
+      "summary": "D'une page blanche à une application traduite en une seule prise : créez le projet et ses langues, créez une clé API, installez et initialisez le SDK, puis regardez t(), ‹Translate›, ‹Phrase› et ‹DontTranslate› enregistrer leurs phrases. L'espagnol est déjà dans le Translation Manager, et l'application passe à l'espagnol et au français sans rechargement."
+    },
+    "pluralization": {
+      "title": "Les pluriels dans toutes les langues, sans if (count === 1)",
+      "summary": "Pourquoi une phrase change selon son nombre, pourquoi le if (count === 1) qui règle le problème en anglais n'est que de la grammaire anglaise logée dans votre code, et comment écrire la phrase à plat vous donne toutes les formes plurielles dans toutes les langues. Langsys la traduit à plat, puis la reconstruit selon les catégories de pluriel ICU propres à chaque locale, anglais compris."
+    },
+    "tutorial/workflow": {
+      "title": "Le pipeline de traduction, et comment Langsys le supprime",
+      "summary": "Concepts 1 sur 5. La traduction fait généralement l'aller-retour dans un pipeline : extraire, exporter, traduire, importer, déployer. Langsys le supprime."
+    },
+    "tutorial/key-files": {
+      "title": "Fini les fichiers de clés : la phrase est la clé",
+      "summary": "Concepts 2 sur 5. Le point de départ d'un projet, la clé que les autres bibliothèques i18n vous obligent à inventer, et ce qui la remplace dans Langsys."
+    },
+    "tutorial/locale-store": {
+      "title": "Le locale store : conserver et changer la langue active",
+      "summary": "Concepts 3 sur 5. Comment Langsys conserve la locale active et la change dans toute votre application."
+    },
+    "tutorial/keys-and-environments": {
+      "title": "Clés API et environnements : quelle clé va où",
+      "summary": "Concepts 4 sur 5. Pourquoi une clé capable d'enregistrer des phrases ne doit jamais être livrée, pourquoi la lecture seule est une impasse, et ce qu'est ip_write : une seule clé dont la réponse dépend de l'endroit d'où vous la sollicitez. Les clés d'écriture restent sur vos propres machines, ip_write peut aller dans n'importe quel bundle public, et la lecture seule est réservée aux bundles qui ne doivent jamais rien modifier."
+    },
+    "tutorial/adding-a-locale": {
+      "title": "Ajouter une nouvelle langue, c'est un simple réglage du projet",
+      "summary": "Concepts 5 sur 5. Atteindre une nouvelle langue est un réglage, pas un projet : les nouvelles phrases sont traduites dès leur arrivée, et une seule exécution complète le reste."
+    },
+    "managing-translations": {
+      "title": "Gérer vos traductions dans le Translation Manager de Langsys",
+      "summary": "Le Translation Manager pour la personne responsable des textes, sans code à l'écran : la liste des tâches, un brouillon automatique corrigé à la main, « AI Translate » avec « Auto-next », « Never Translate » et un traducteur invité uniquement pour l'espagnol. La correction est en ligne dans l'application sans aucun déploiement."
+    },
+    "translation-memory": {
+      "title": "Mémoire de traduction : un nouveau projet déjà traduit dès le départ",
+      "summary": "Un deuxième projet dans la même organisation s'ouvre entièrement traduit avant que quiconque y touche. La mémoire de traduction transporte chaque phrase, et son auteur, d'un projet à l'autre : aucun modèle n'est appelé pour le nouveau projet."
+    },
+    "connect-your-ai-assistant": {
+      "title": "Utiliser Langsys depuis Claude Code via MCP",
+      "summary": "Langsys dans un assistant IA, via le serveur MCP hébergé : une seule commande claude mcp add, une approbation dans le navigateur, et Claude Code qui répond aux questions sur les langues de votre projet à partir de données en direct. La connexion peut être révoquée depuis le « Security tab » de votre compte."
+    },
+    "adding-a-language": {
+      "title": "Ajouter l'allemand à une application en production : devis exact, sans déploiement",
+      "summary": "L'allemand ajouté à une boutique en production. Langsys chiffre précisément le catalogue existant avant toute exécution (29 mots, $0.35), le traduit, et la boutique passe à l'allemand sans aucun build ni déploiement."
+    },
+    "catching-up-a-language": {
+      "title": "Rattraper une langue qui a pris du retard",
+      "summary": "Les actions groupées du Translation Manager : « AI Translate Pending » pour une langue ou pour tout le projet, avec une confirmation qui liste chaque locale cible et son coût, et toutes les langues de nouveau complètes."
+    },
+    "translating-a-content-block": {
+      "title": "Traduire un bloc de contenu entier d'un seul coup",
+      "summary": "Une région ‹Translate› traduite comme un seul bloc de contenu : « AI Translate » remplit tous les segments ensemble, un segment est réécrit à la main dans un registre soutenu, et une phrase ‹DontTranslate› reste en anglais tandis que l'italien est complété autour d'elle."
+    },
+    "ai-translator-settings": {
+      "title": "Paramètres de l'AI Translator : chaque option expliquée",
+      "summary": "L'onglet AI Translator de haut en bas : traductions IA à la demande, traduction automatique des nouvelles phrases, et détection automatique qui marque comme never-translate une phrase arrivant déjà en espagnol."
+    },
+    "api-keys-in-production": {
+      "title": "Clés API en production : activité, mise en pause et rotation",
+      "summary": "Une clé une fois livrée : une vraie semaine de trafic d'une boutique sur sa page « Activity », la mise en pause d'une clé sans la supprimer, et une rotation filmée : les trois types de clés, une nouvelle clé IP write créée avec une liste d'IP autorisées, et l'ancienne supprimée."
+    },
+    "one-organization-many-projects": {
+      "title": "Une organisation, plusieurs projets",
+      "summary": "L'organisation comme point de départ de chaque projet : locales par défaut, paramètres de l'AI Translator et de facturation, financement des projets à partir du solde de l'organisation, et un projet personnalisé qui revient à l'héritage."
+    },
+    "usage-and-credits": {
+      "title": "Utilisation et crédits : comment un projet est financé",
+      "summary": "Les deux compteurs, unités d'utilisation de l'API et crédits, et comment un projet est financé : un transfert de crédits du compte vers un projet réalisé à l'écran, une ligne par traduction automatique dans son historique, ainsi que la limite mensuelle et la recharge automatique du projet."
+    },
+    "plans-and-payments": {
+      "title": "Forfaits et paiements dans Langsys",
+      "summary": "Une visite de la facturation sans rien valider : le forfait et le cycle de facturation, la boîte de dialogue « Change Plan », les moyens de paiement partagés avec une organisation ou un projet, les adresses et les factures."
+    },
+    "notifications": {
+      "title": "Notifications : ce que Langsys vous signale, et où",
+      "summary": "La boîte de notifications et ses paramètres : les réglages par défaut du compte pour les nouvelles phrases, les invitations et l'accès aux projets, dans l'application et par e-mail, et une exception par projet."
+    },
+    "svelte/hero": {
+      "title": "L'i18n dans Svelte avec Langsys : le guide complet",
+      "summary": "Ce que les autres solutions i18n vous obligent à garder synchronisé, un seul appel pour le remplacer, un changement de locale, pourquoi un espagnol à plat est faux pour la moitié de vos utilisateurs, et ce que fait ICU select pour y remédier."
+    },
+    "svelte/t-string": {
+      "title": "t(phrase, category, params) dans Svelte",
+      "summary": "L'appel t() : le problème du fichier de clés qu'il remplace, ses trois arguments, les placeholders ICU et les pluriels."
+    },
+    "svelte/phrase-tag": {
+      "title": "‹Phrase› dans Svelte : une phrase avec du balisage à l'intérieur",
+      "summary": "Une phrase contenant du balisage, conservée comme une seule phrase, et pourquoi les params de ‹Phrase› s'écrivent %name%."
+    },
+    "svelte/translate-tag": {
+      "title": "‹Translate› dans Svelte : une seule balise pour toute une région",
+      "summary": "Une seule balise ‹Translate› enregistre toute une région, et pourquoi un bloc vaut mieux qu'un appel par ligne."
+    },
+    "svelte/donttranslate": {
+      "title": "‹DontTranslate› dans Svelte : garder les noms de marque tels quels",
+      "summary": "Noms de marque et identifiants conservés tels quels, sans les sortir de la phrase."
+    },
+    "svelte/content-blocks": {
+      "title": "Qu'est-ce qu'un bloc de contenu ? Traduire une section entière dans Svelte",
+      "summary": "Une section enregistrée comme une unité, mais toujours composée de phrases réutilisables individuellement."
+    },
+    "svelte/categories": {
+      "title": "Même mot, deux sens : des catégories plutôt que des clés i18n",
+      "summary": "Pourquoi l'i18n a inventé les clés, et ce qui les remplace : le même mot avec deux sens, et les paires en lesquelles il se divise."
+    },
+    "svelte/icu-gender": {
+      "title": "L'accord en genre sans conditions dans votre code (ICU select)",
+      "summary": "La condition de genre que les autres solutions i18n laissent dans votre composant, et les branches que Langsys génère à la place pour chaque langue."
+    },
+    "svelte/attributes": {
+      "title": "Traduire placeholders, textes alt et aria labels dans Svelte",
+      "summary": "Ce que voit d'un formulaire à moitié traduit la personne qui l'utilise, et comment un seul ‹Translate› atteint placeholders, textes alt et aria labels en une seule passe."
+    },
+    "svelte/formatting": {
+      "title": "Nombres et dates dans chaque locale avec l'i18n Svelte",
+      "summary": "Nombres et dates selon le CLDR : la condition que vous écririez à la main, pourquoi le groupement des chiffres est une forme et non un séparateur, et pourquoi un numéro de commande doit être passé sous forme de chaîne."
+    },
+    "svelte/social/phrase-9x16": {
+      "title": "Votre clé i18n, c'est simplement la phrase en anglais #Shorts",
+      "summary": "Avec Langsys, la phrase dans votre code est la clé de traduction : pas de fichier de clés, rien à extraire ni à synchroniser, et la même ligne revient dans toutes les langues. #Shorts"
+    },
+    "svelte/social/icu-gender-9x16": {
+      "title": "Bienvenido ou Bienvenida ? Une seule ligne de code #Shorts",
+      "summary": "L'espagnol s'accorde avec l'utilisateur. Langsys génère les branches ICU select : Diego obtient Bienvenido, Laura obtient Bienvenida, et un genre inconnu obtient la forme neutre, le tout à partir d'une seule ligne. #Shorts"
+    },
+    "svelte/social/icu-plurals-9x16": {
+      "title": "Le russe a 4 formes de pluriel. Vous écrivez une ligne #Shorts",
+      "summary": "One, few, many et other : le russe choisit une forme de pluriel selon le nombre, et 21 revient au singulier. Écrivez la phrase à plat et Langsys construit toutes les formes dont chaque locale a besoin. #Shorts"
+    },
+    "svelte/social/content-blocks-9x16": {
+      "title": "Traduire une section entière avec une seule balise #Shorts",
+      "summary": "Une balise Translate englobe une région de balisage : chaque portion de texte devient sa propre phrase, le gras et les liens restent à leur place, et le nom de la marque n'est jamais traduit. #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "Publié à 9 h, lu en espagnol à 9 h 03 #Shorts",
+      "summary": "Un article est mis en ligne sans build ni déploiement. L'application de son premier lecteur n'envoie à Langsys que l'adresse de la page, Langsys lit la page lui-même et, quelques minutes plus tard, un lecteur à Madrid la reçoit en espagnol. #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "Demandez à votre assistant IA où en sont vos traductions #Shorts",
+      "summary": "Langsys héberge un serveur MCP : Claude, Codex, Cursor ou GitHub Copilot peuvent lire vos projets et traduire ce qui manque. Une seule autorisation dans votre navigateur, et l'assistant ne voit jamais votre mot de passe. #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "Un tout nouveau projet, déjà traduit #Shorts",
+      "summary": "Corrigez une traduction une fois, et chaque nouveau projet de votre organisation la connaît déjà. La mémoire de traduction a rempli ce projet en espagnol, avec le nom de la personne qui a traduit, sans appeler aucun modèle. #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "En espagnol, le gras se déplace là où il doit être #Shorts",
+      "summary": "D'autres bibliothèques i18n découpent une phrase contenant un mot en gras en trois clés. Avec ‹Phrase›, le traducteur reçoit une seule phrase, balisage compris, et en espagnol le gras tombe après le nom, sur « no leídos ». #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "Ajoutez l'allemand à une boutique en ligne, sans déploiement #Shorts",
+      "summary": "Ajoutez la langue dans les paramètres du projet, pas dans votre code. Langsys donne le prix exact du catalogue existant avant de dépenser quoi que ce soit, traduit chaque phrase en quelques secondes, et la boutique parle allemand sans rien compiler ni déployer. #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "Deux langues en retard, rattrapées en une seule action #Shorts",
+      "summary": "Il manquait deux phrases au français et deux au japonais. AI Translate Pending les traduit en quelques secondes, et les brouillons attendent qu'une personne les relise. #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "Le nom de votre marque, jamais traduit #Shorts",
+      "summary": "Un traducteur ne peut pas distinguer un nom de produit d'une phrase : d'autres bibliothèques i18n publient Bright Ledger sous le nom de Libro Mayor Brillante. Avec Langsys, vous le marquez là où il se trouve avec ‹DontTranslate›, et la phrase autour continue d'être traduite. #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "Un mot anglais, deux traductions espagnoles #Shorts",
+      "summary": "« Free » est un prix sur un écran et une soirée libre sur un autre. D'autres bibliothèques i18n inventent une clé pour les distinguer. Langsys garde la phrase et la range dans une catégorie : Gratis et Libre. #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "Les placeholders et le texte alternatif se traduisent aussi #Shorts",
+      "summary": "D'autres bibliothèques i18n exigent un appel pour chaque attribut, et celui que vous oubliez reste en anglais. Une seule balise ‹Translate› couvre la zone : le placeholder, la description de l'image et le libellé qu'annonce un lecteur d'écran. #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "Chaque nombre et chaque date, au format de chaque langue #Shorts",
+      "summary": "Passez le nombre tel quel et la date en tant que date : l'allemand affiche 1.234,5 et 14. März 2026, et l'hindi groupe 1234567 en 12,34,567. Un numéro de commande se passe en texte, il reste donc exactement tel quel. #Shorts"
+    },
+    "react/social/react-phrase-9x16": {
+      "title": "Votre clé i18n, c'est simplement la phrase en anglais (React) #Shorts",
+      "summary": "Avec Langsys, la phrase dans votre code est la clé de traduction : pas de fichier de clés, rien à extraire ni à synchroniser, et la même ligne revient dans toutes les langues. #Shorts"
+    },
+    "react/react-hero": {
+      "title": "L'i18n dans React avec Langsys : le guide complet",
+      "summary": "Ce que les autres solutions i18n vous obligent à garder synchronisé, un seul appel pour le remplacer, un changement de locale, pourquoi un espagnol à plat est faux pour la moitié de vos utilisateurs, et ce que fait ICU select pour y remédier."
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "title": "Le russe a 4 formes de pluriel. Vous écrivez une ligne (React) #Shorts",
+      "summary": "One, few, many et other : le russe choisit une forme de pluriel selon le nombre, et 21 revient au singulier. Écrivez la phrase à plat et Langsys construit toutes les formes dont chaque locale a besoin. #Shorts"
+    },
+    "react/react-t-string": {
+      "title": "t(phrase, category, params) dans React",
+      "summary": "L'appel t() : le problème du fichier de clés qu'il remplace, ses trois arguments, les placeholders ICU et les pluriels."
+    },
+    "react/react-phrase-tag": {
+      "title": "‹Phrase› dans React : une phrase avec du balisage à l'intérieur",
+      "summary": "Une phrase contenant du balisage, conservée comme une seule phrase, et pourquoi les params de ‹Phrase› s'écrivent %name%."
+    },
+    "react/social/react-bold-moves-9x16": {
+      "title": "En espagnol, le gras se déplace là où il doit être (React) #Shorts",
+      "summary": "D'autres bibliothèques i18n découpent une phrase contenant un mot en gras en trois clés. Avec ‹Phrase›, le traducteur reçoit une seule phrase, balisage compris, et en espagnol le gras tombe après le nom, sur « no leídos ». #Shorts"
+    },
+    "react/react-translate-tag": {
+      "title": "‹Translate› dans React : une seule balise pour toute une région",
+      "summary": "Une seule balise ‹Translate› enregistre toute une région, et pourquoi un bloc vaut mieux qu'un appel par ligne."
+    },
+    "react/social/react-content-blocks-9x16": {
+      "title": "Traduire une section entière avec une seule balise (React) #Shorts",
+      "summary": "Une balise Translate englobe une région de balisage : chaque portion de texte devient sa propre phrase, le gras et les liens restent à leur place, et le nom de la marque n'est jamais traduit. #Shorts"
+    },
+    "react/react-donttranslate": {
+      "title": "‹DontTranslate› dans React : garder les noms de marque tels quels",
+      "summary": "Noms de marque et identifiants conservés tels quels, sans les sortir de la phrase."
+    },
+    "react/react-content-blocks": {
+      "title": "Qu'est-ce qu'un bloc de contenu ? Traduire une section entière dans React",
+      "summary": "Une section enregistrée comme une unité, mais toujours composée de phrases réutilisables individuellement."
+    },
+    "react/social/react-brand-names-9x16": {
+      "title": "Le nom de votre marque, jamais traduit (React) #Shorts",
+      "summary": "Un traducteur ne peut pas distinguer un nom de produit d'une phrase : d'autres bibliothèques i18n publient Bright Ledger sous le nom de Libro Mayor Brillante. Avec Langsys, vous le marquez là où il se trouve avec ‹DontTranslate›, et la phrase autour continue d'être traduite. #Shorts"
+    },
+    "react/react-categories": {
+      "title": "Même mot, deux sens : des catégories plutôt que des clés i18n (React)",
+      "summary": "Pourquoi l'i18n a inventé les clés, et ce qui les remplace : le même mot avec deux sens, et les paires en lesquelles il se divise."
+    },
+    "react/social/react-icu-gender-9x16": {
+      "title": "Bienvenido ou Bienvenida ? Une seule ligne de code (React) #Shorts",
+      "summary": "L'espagnol s'accorde avec l'utilisateur. Langsys génère les branches ICU select : Diego obtient Bienvenido, Laura obtient Bienvenida, et un genre inconnu obtient la forme neutre, le tout à partir d'une seule ligne. #Shorts"
+    },
+    "react/react-icu-gender": {
+      "title": "L'accord en genre sans conditions dans votre code (ICU select) (React)",
+      "summary": "La condition de genre que les autres solutions i18n laissent dans votre composant, et les branches que Langsys génère à la place pour chaque langue."
+    },
+    "react/react-attributes": {
+      "title": "Traduire placeholders, textes alt et aria labels dans React",
+      "summary": "Ce que voit d'un formulaire à moitié traduit la personne qui l'utilise, et comment un seul ‹Translate› atteint placeholders, textes alt et aria labels en une seule passe."
+    },
+    "react/social/react-two-meanings-9x16": {
+      "title": "Un mot anglais, deux traductions espagnoles (React) #Shorts",
+      "summary": "« Free » est un prix sur un écran et une soirée libre sur un autre. D'autres bibliothèques i18n inventent une clé pour les distinguer. Langsys garde la phrase et la range dans une catégorie : Gratis et Libre. #Shorts"
+    },
+    "react/react-formatting": {
+      "title": "Nombres et dates dans chaque locale avec l'i18n React",
+      "summary": "Nombres et dates selon le CLDR : la condition que vous écririez à la main, pourquoi le groupement des chiffres est une forme et non un séparateur, et pourquoi un numéro de commande doit être passé sous forme de chaîne."
+    },
+    "react/social/react-alt-text-9x16": {
+      "title": "Les placeholders et le texte alternatif se traduisent aussi (React) #Shorts",
+      "summary": "D'autres bibliothèques i18n exigent un appel pour chaque attribut, et celui que vous oubliez reste en anglais. Une seule balise ‹Translate› couvre la zone : le placeholder, la description de l'image et le libellé qu'annonce un lecteur d'écran. #Shorts"
+    },
+    "react/social/react-local-formats-9x16": {
+      "title": "Chaque nombre et chaque date, au format de chaque langue (React) #Shorts",
+      "summary": "Passez le nombre tel quel et la date en tant que date : l'allemand affiche 1.234,5 et 14. März 2026, et l'hindi groupe 1234567 en 12,34,567. Un numéro de commande se passe en texte, il reste donc exactement tel quel. #Shorts"
+    },
+    "vue/vue-hero": {
+      "title": "L'i18n dans Vue avec Langsys : le guide complet",
+      "summary": "Ce que les autres solutions i18n vous obligent à garder synchronisé, un seul appel pour le remplacer, un changement de locale, pourquoi un espagnol à plat est faux pour la moitié de vos utilisateurs, et ce que fait ICU select pour y remédier."
+    },
+    "vue/social/vue-phrase-9x16": {
+      "title": "Votre clé i18n, c'est simplement la phrase en anglais (Vue) #Shorts",
+      "summary": "Avec Langsys, la phrase dans votre code est la clé de traduction : pas de fichier de clés, rien à extraire ni à synchroniser, et la même ligne revient dans toutes les langues. #Shorts"
+    },
+    "vue/vue-t-string": {
+      "title": "t(phrase, category, params) dans Vue",
+      "summary": "L'appel t() : le problème du fichier de clés qu'il remplace, ses trois arguments, les placeholders ICU et les pluriels."
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "title": "Le russe a 4 formes de pluriel. Vous écrivez une ligne (Vue) #Shorts",
+      "summary": "One, few, many et other : le russe choisit une forme de pluriel selon le nombre, et 21 revient au singulier. Écrivez la phrase à plat et Langsys construit toutes les formes dont chaque locale a besoin. #Shorts"
+    },
+    "vue/vue-phrase-tag": {
+      "title": "‹Phrase› dans Vue : une phrase avec du balisage à l'intérieur",
+      "summary": "Une phrase contenant du balisage, conservée comme une seule phrase, et pourquoi les params de ‹Phrase› s'écrivent %name%."
+    },
+    "vue/vue-translate-tag": {
+      "title": "‹Translate› dans Vue : une seule balise pour toute une région",
+      "summary": "Une seule balise ‹Translate› enregistre toute une région, et pourquoi un bloc vaut mieux qu'un appel par ligne."
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "title": "En espagnol, le gras se déplace là où il doit être (Vue) #Shorts",
+      "summary": "D'autres bibliothèques i18n découpent une phrase contenant un mot en gras en trois clés. Avec ‹Phrase›, le traducteur reçoit une seule phrase, balisage compris, et en espagnol le gras tombe après le nom, sur « no leídos ». #Shorts"
+    },
+    "vue/vue-donttranslate": {
+      "title": "‹DontTranslate› dans Vue : garder les noms de marque tels quels",
+      "summary": "Noms de marque et identifiants conservés tels quels, sans les sortir de la phrase."
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "title": "Traduire une section entière avec une seule balise (Vue) #Shorts",
+      "summary": "Une balise Translate englobe une région de balisage : chaque portion de texte devient sa propre phrase, le gras et les liens restent à leur place, et le nom de la marque n'est jamais traduit. #Shorts"
+    },
+    "vue/vue-content-blocks": {
+      "title": "Qu'est-ce qu'un bloc de contenu ? Traduire une section entière dans Vue",
+      "summary": "Une section enregistrée comme une unité, mais toujours composée de phrases réutilisables individuellement."
+    },
+    "vue/vue-categories": {
+      "title": "Même mot, deux sens : des catégories plutôt que des clés i18n (Vue)",
+      "summary": "Pourquoi l'i18n a inventé les clés, et ce qui les remplace : le même mot avec deux sens, et les paires en lesquelles il se divise."
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "title": "Le nom de votre marque, jamais traduit (Vue) #Shorts",
+      "summary": "Un traducteur ne peut pas distinguer un nom de produit d'une phrase : d'autres bibliothèques i18n publient Bright Ledger sous le nom de Libro Mayor Brillante. Avec Langsys, vous le marquez là où il se trouve avec ‹DontTranslate›, et la phrase autour continue d'être traduite. #Shorts"
+    },
+    "vue/vue-icu-gender": {
+      "title": "L'accord en genre sans conditions dans votre code (ICU select) (Vue)",
+      "summary": "La condition de genre que les autres solutions i18n laissent dans votre composant, et les branches que Langsys génère à la place pour chaque langue."
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "title": "Bienvenido ou Bienvenida ? Une seule ligne de code (Vue) #Shorts",
+      "summary": "L'espagnol s'accorde avec l'utilisateur. Langsys génère les branches ICU select : Diego obtient Bienvenido, Laura obtient Bienvenida, et un genre inconnu obtient la forme neutre, le tout à partir d'une seule ligne. #Shorts"
+    },
+    "vue/vue-attributes": {
+      "title": "Traduire placeholders, textes alt et aria labels dans Vue",
+      "summary": "Ce que voit d'un formulaire à moitié traduit la personne qui l'utilise, et comment un seul ‹Translate› atteint placeholders, textes alt et aria labels en une seule passe."
+    },
+    "vue/vue-formatting": {
+      "title": "Nombres et dates dans chaque locale avec l'i18n Vue",
+      "summary": "Nombres et dates selon le CLDR : la condition que vous écririez à la main, pourquoi le groupement des chiffres est une forme et non un séparateur, et pourquoi un numéro de commande doit être passé sous forme de chaîne."
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "title": "Un mot anglais, deux traductions espagnoles (Vue) #Shorts",
+      "summary": "« Free » est un prix sur un écran et une soirée libre sur un autre. D'autres bibliothèques i18n inventent une clé pour les distinguer. Langsys garde la phrase et la range dans une catégorie : Gratis et Libre. #Shorts"
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "title": "Les placeholders et le texte alternatif se traduisent aussi (Vue) #Shorts",
+      "summary": "D'autres bibliothèques i18n exigent un appel pour chaque attribut, et celui que vous oubliez reste en anglais. Une seule balise ‹Translate› couvre la zone : le placeholder, la description de l'image et le libellé qu'annonce un lecteur d'écran. #Shorts"
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "title": "Chaque nombre et chaque date, au format de chaque langue (Vue) #Shorts",
+      "summary": "Passez le nombre tel quel et la date en tant que date : l'allemand affiche 1.234,5 et 14. März 2026, et l'hindi groupe 1234567 en 12,34,567. Un numéro de commande se passe en texte, il reste donc exactement tel quel. #Shorts"
+    }
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "labels": {
+    "learn_more": "और जानें",
+    "get_started": "शुरू करें",
+    "start_free": "मुफ़्त में शुरू करें",
+    "docs": "Docs"
+  },
+  "videos": {
+    "explainer": {
+      "title": "Langsys क्या है? आपका app हर भाषा में, बिना redeploy",
+      "summary": "77 सेकंड में Langsys: आपके app में एक SDK और एक hosted Translation Manager. जब आपका code किसी phrase को पहली बार चलाता है, वह phrase खुद register हो जाता है, आते ही उसका machine translation हो जाता है, और translator उसे बिना deploy के बेहतर कर सकता है।\n\nसबूत: 09:00 बजे publish हुई एक blog post, बिना build और बिना write key के, 09:03 तक Madrid में एक reader तक Spanish में पहुँच जाती है।"
+    },
+    "getting-started": {
+      "title": "Langsys के साथ शुरुआत, शुरू से आख़िर तक",
+      "summary": "एक ही take में शून्य से translated app तक: project और उसकी भाषाएँ बनाइए, एक API key बनाइए, SDK install और initialise कीजिए, और देखिए कैसे t(), ‹Translate›, ‹Phrase› और ‹DontTranslate› अपने phrases register करते हैं। Spanish पहले से Translation Manager में तैयार है, और app बिना reload के Spanish और French में switch हो जाता है।"
+    },
+    "pluralization": {
+      "title": "हर भाषा में plurals, बिना if (count === 1)",
+      "summary": "कोई वाक्य संख्या के साथ क्यों बदलता है, English में इसे ठीक करने वाला if (count === 1) असल में आपके code में बैठी English grammar क्यों है, और वाक्य को flat लिखने से आपको हर भाषा में हर plural form कैसे मिलता है। Langsys इसे flat translate करता है, फिर English समेत हर locale की अपनी ICU plural categories में दोबारा बनाता है।"
+    },
+    "tutorial/workflow": {
+      "title": "Translation pipeline, और Langsys उसे कैसे ख़त्म करता है",
+      "summary": "Concepts, भाग 1/5. Translation आमतौर पर एक pipeline से होकर आती-जाती है: extract, export, translate, import, deploy. Langsys इसे हटा देता है।"
+    },
+    "tutorial/key-files": {
+      "title": "Key files की छुट्टी: वाक्य ही key है",
+      "summary": "Concepts, भाग 2/5. Project कहाँ से शुरू होता है, वह key जो दूसरी i18n libraries आपसे गढ़वाती हैं, और Langsys में उसकी जगह क्या लेता है।"
+    },
+    "tutorial/locale-store": {
+      "title": "Locale store: active भाषा को रखना और बदलना",
+      "summary": "Concepts, भाग 3/5. Langsys active locale को कैसे रखता है और पूरे app में उसे कैसे switch करता है।"
+    },
+    "tutorial/keys-and-environments": {
+      "title": "API keys और environments: कौन सी key कहाँ जाती है",
+      "summary": "Concepts, भाग 4/5. जो key phrases register कर सकती है वह कभी ship क्यों नहीं हो सकती, read-only key dead end क्यों है, और ip_write क्या है: एक ही key जिसका जवाब इस पर निर्भर करता है कि आप कहाँ से पूछ रहे हैं। Write keys आपकी अपनी machines पर रहती हैं, ip_write किसी भी public bundle में जा सकती है, और read-only उन bundles के लिए है जिन्हें कभी कुछ नहीं बदलना चाहिए।"
+    },
+    "tutorial/adding-a-locale": {
+      "title": "नई भाषा जोड़ना बस एक project setting है",
+      "summary": "Concepts, भाग 5/5. नई भाषा तक पहुँचना एक setting है, कोई project नहीं: नए phrases आते ही translate हो जाते हैं, और बाकी सब एक run में भर जाता है।"
+    },
+    "managing-translations": {
+      "title": "Langsys Translation Manager में translations manage करना",
+      "summary": "Copy के मालिक के लिए Translation Manager, screen पर बिना किसी code के: to-do list, हाथ से सुधारा गया machine draft, \"Auto-next\" के साथ \"AI Translate\", \"Never Translate\", और सिर्फ़ Spanish के लिए invite किया गया translator. सुधार बिना कुछ deploy किए app में live है।"
+    },
+    "translation-memory": {
+      "title": "Translation memory: नया project जो पहले से translated शुरू होता है",
+      "summary": "उसी organization का दूसरा project, किसी के छूने से पहले ही पूरी तरह translated खुलता है। Translation memory हर वाक्य को, और उसे किसने लिखा, projects के बीच ले जाती है, इसलिए नए project के लिए कोई model call ही नहीं होता।"
+    },
+    "connect-your-ai-assistant": {
+      "title": "Claude Code से MCP के ज़रिए Langsys इस्तेमाल करें",
+      "summary": "Hosted MCP server के ज़रिए AI assistant के अंदर Langsys: एक claude mcp add command, browser में approval, और Claude Code live data से आपके project की भाषाओं के बारे में सवालों के जवाब देता है। Connection को आपके account के \"Security tab\" से revoke किया जा सकता है।"
+    },
+    "adding-a-language": {
+      "title": "Live app में German जोड़ें: सटीक quote, कोई deploy नहीं",
+      "summary": "एक live store में German जोड़ा गया। कुछ भी चलने से पहले Langsys मौजूदा catalog का सटीक quote देता है (29 words, $0.35), उसे translate करता है, और store बिना कुछ build या deploy किए German में switch हो जाता है।"
+    },
+    "catching-up-a-language": {
+      "title": "पीछे छूट गई भाषा को फिर से पूरा करना",
+      "summary": "Translation Manager में bulk actions: एक भाषा या पूरे project के लिए \"AI Translate Pending\", एक confirmation जो हर target locale और उसकी cost दिखाता है, और हर भाषा फिर से complete."
+    },
+    "translating-a-content-block": {
+      "title": "पूरे content block को एक साथ translate करना",
+      "summary": "एक content block के रूप में translate हुआ ‹Translate› region: \"AI Translate\" सभी segments एक साथ भरता है, एक segment को formal register में हाथ से दोबारा लिखा जाता है, और एक ‹DontTranslate› वाक्य English में ही रहता है जबकि उसके आसपास Italian भरी जाती है।"
+    },
+    "ai-translator-settings": {
+      "title": "AI Translator settings: हर switch की पूरी जानकारी",
+      "summary": "AI Translator tab ऊपर से नीचे तक: on demand AI translations, नए phrases के लिए auto-translate, और auto-detect जो पहले से Spanish में आए phrase को never-translate पर रखता है।"
+    },
+    "api-keys-in-production": {
+      "title": "Production में API keys: activity, pause और rotation",
+      "summary": "Ship होने के बाद एक key: उसके \"Activity\" page पर storefront traffic का एक असली हफ़्ता, key को delete किए बिना pause करना, और camera पर rotation: तीनों key types, allowlist के साथ बनी नई IP write key, और पुरानी key delete."
+    },
+    "one-organization-many-projects": {
+      "title": "एक organization, कई projects",
+      "summary": "Organization, जहाँ से हर project शुरू होता है: default locales, AI Translator और billing settings, organization के balance से project funding, और एक customized project को वापस inherit पर लाना।"
+    },
+    "usage-and-credits": {
+      "title": "Usage और credits: project को funding कैसे मिलती है",
+      "summary": "दो meters, API usage units और credits, और project को funding कैसे मिलती है: camera पर account से project में credit transfer, उसकी history में हर machine translation की एक line, और project की monthly limit और auto recharge."
+    },
+    "plans-and-payments": {
+      "title": "Langsys में plans और payments",
+      "summary": "बिना कुछ submit किए billing का tour: plan और billing cycle, \"Change Plan\" dialog, organization या project के साथ shared \"Payment Methods\", addresses, और invoices."
+    },
+    "notifications": {
+      "title": "Notifications: Langsys आपको क्या बताता है, और कहाँ",
+      "summary": "Notifications inbox और उसकी settings: नए phrases, invitations और project access के लिए account defaults, in-app और email पर, और per-project override."
+    },
+    "svelte/hero": {
+      "title": "Langsys के साथ Svelte i18n: पूरा walkthrough",
+      "summary": "दूसरे i18n solutions आपसे क्या-क्या sync में रखवाते हैं, उसे replace करने वाली एक call, locale switch, flat Spanish आपके आधे users के लिए गलत क्यों है, और ICU select इसके लिए क्या करता है।"
+    },
+    "svelte/t-string": {
+      "title": "Svelte में t(phrase, category, params)",
+      "summary": "t() call: keys-file की वह problem जिसे यह replace करती है, इसके तीन arguments, ICU placeholders और plurals."
+    },
+    "svelte/phrase-tag": {
+      "title": "Svelte में ‹Phrase›: markup वाला वाक्य",
+      "summary": "अंदर markup वाला वाक्य, एक ही phrase के रूप में रखा गया, और ‹Phrase› params को %name% की तरह क्यों लिखा जाता है।"
+    },
+    "svelte/translate-tag": {
+      "title": "Svelte में ‹Translate›: पूरे region के लिए एक tag",
+      "summary": "एक ‹Translate› tag पूरा region register करता है, और हर line के लिए एक call से block बेहतर क्यों है।"
+    },
+    "svelte/donttranslate": {
+      "title": "Svelte में ‹DontTranslate›: brand names जैसे के तैसे रखें",
+      "summary": "Brand names और identifiers जैसे के तैसे रहते हैं, उन्हें वाक्य से बाहर निकाले बिना।"
+    },
+    "svelte/content-blocks": {
+      "title": "Content block क्या है? Svelte में पूरा section translate करना",
+      "summary": "एक section एक unit के रूप में register होता है, फिर भी अलग-अलग reusable phrases से बना रहता है।"
+    },
+    "svelte/categories": {
+      "title": "एक शब्द, दो मतलब: i18n keys की जगह categories",
+      "summary": "i18n ने keys क्यों बनाईं, और उनकी जगह क्या लेता है: दो मतलब वाला एक ही शब्द, और वे pairs जिनमें वह बँट जाता है।"
+    },
+    "svelte/icu-gender": {
+      "title": "Code में बिना conditionals के gender agreement (ICU select)",
+      "summary": "दूसरे i18n solutions आपके component में जो gender conditional छोड़ देते हैं, और उसकी जगह Langsys हर भाषा के लिए जो branches generate करता है।"
+    },
+    "svelte/attributes": {
+      "title": "Svelte में placeholders, alt text और aria labels translate करना",
+      "summary": "आधा translated form इस्तेमाल करने वाले को कैसा दिखता है, और एक ही ‹Translate› एक ही pass में placeholders, alt text और aria labels तक कैसे पहुँचता है।"
+    },
+    "svelte/formatting": {
+      "title": "Svelte i18n के साथ हर locale में numbers और dates",
+      "summary": "CLDR के हिसाब से numbers और dates: वह branch जो आप हाथ से लिखते, digit grouping एक separator नहीं बल्कि एक shape क्यों है, और order number को string के रूप में क्यों pass करना चाहिए।"
+    },
+    "svelte/social/phrase-9x16": {
+      "title": "आपकी i18n key बस English वाक्य है #Shorts",
+      "summary": "Langsys के साथ आपके code का वाक्य ही translation key है: कोई keys file नहीं, कुछ extract या sync करने की ज़रूरत नहीं, और वही line हर भाषा में वापस आती है। #Shorts"
+    },
+    "svelte/social/icu-gender-9x16": {
+      "title": "Bienvenido या Bienvenida? Code की एक line #Shorts",
+      "summary": "Spanish user के हिसाब से बदलती है। Langsys ICU select branches generate करता है, तो Diego को Bienvenido, Laura को Bienvenida, और अज्ञात gender वाले को neutral form मिलता है, एक ही line से। #Shorts"
+    },
+    "svelte/social/icu-plurals-9x16": {
+      "title": "Russian में 4 plural forms हैं। आप लिखते हैं एक line #Shorts",
+      "summary": "One, few, many और other: Russian संख्या के हिसाब से plural form चुनती है, और 21 फिर से singular पर लौट आता है। वाक्य flat लिखिए और Langsys हर locale के लिए ज़रूरी हर form बना देता है। #Shorts"
+    },
+    "svelte/social/content-blocks-9x16": {
+      "title": "एक tag से पूरा section translate करें #Shorts",
+      "summary": "एक Translate tag markup के एक region को wrap करता है: text का हर हिस्सा अपना phrase बन जाता है, bold और links सही जगह पर आते हैं, और brand name कभी translate नहीं होता। #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "सुबह 9:00 बजे प्रकाशित, 9:03 बजे स्पेनिश में पढ़ा गया #Shorts",
+      "summary": "एक ब्लॉग पोस्ट बिना build और बिना deploy के लाइव होती है। पहले पाठक का ऐप Langsys को सिर्फ़ पेज का पता भेजता है, Langsys खुद पेज पढ़ता है, और कुछ मिनट बाद मैड्रिड का एक पाठक उसे स्पेनिश में पढ़ता है। #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "अपने AI असिस्टेंट से पूछिए कि आपके अनुवाद कैसे चल रहे हैं #Shorts",
+      "summary": "Langsys एक MCP सर्वर होस्ट करता है, ताकि Claude, Codex, Cursor या GitHub Copilot आपके प्रोजेक्ट पढ़ सकें और जो बाकी है उसका अनुवाद कर सकें। ब्राउज़र में एक बार मंज़ूरी, और असिस्टेंट आपका पासवर्ड कभी नहीं देखता। #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "एक नया प्रोजेक्ट जो पहले से अनुवादित शुरू होता है #Shorts",
+      "summary": "एक अनुवाद एक बार ठीक कीजिए, और आपके संगठन का हर नया प्रोजेक्ट उसे पहले से जानता है। ट्रांसलेशन मेमोरी ने इस प्रोजेक्ट को स्पेनिश में भर दिया, अनुवाद करने वाले के नाम के साथ, और कोई मॉडल नहीं बुलाया गया। #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "स्पेनिश में बोल्ड सही जगह पर चला जाता है #Shorts",
+      "summary": "दूसरी i18n लाइब्रेरी बोल्ड शब्द वाले वाक्य को तीन keys में काट देती हैं। ‹Phrase› के साथ अनुवादक को मार्कअप सहित एक ही वाक्य मिलता है, और स्पेनिश में बोल्ड संज्ञा के बाद, \"no leídos\" पर आता है। #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "चालू स्टोर में जर्मन जोड़िए, बिना deploy के #Shorts",
+      "summary": "भाषा को अपने कोड में नहीं, प्रोजेक्ट सेटिंग्स में जोड़िए। Langsys कुछ भी खर्च करने से पहले मौजूदा कैटलॉग की सटीक कीमत बताता है, हर वाक्यांश का अनुवाद सेकंडों में करता है, और स्टोर बिना build या deploy के जर्मन बोलने लगता है। #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "दो भाषाएँ पीछे थीं, एक ही कार्रवाई में बराबर #Shorts",
+      "summary": "फ्रेंच और जापानी में दो-दो वाक्यांश बाकी थे। AI Translate Pending उनका अनुवाद सेकंडों में करता है, और ड्राफ़्ट किसी के रिव्यू का इंतज़ार करते हैं। #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "आपके ब्रांड का नाम, कभी अनुवादित नहीं #Shorts",
+      "summary": "अनुवादक किसी प्रोडक्ट के नाम और आम वाक्यांश में फ़र्क नहीं कर पाता, इसलिए दूसरी i18n लाइब्रेरी Bright Ledger को Libro Mayor Brillante बना देती हैं। Langsys में आप उसे उसी जगह ‹DontTranslate› से चिह्नित करते हैं, और आसपास का वाक्य अनुवादित होता रहता है। #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "एक अंग्रेज़ी शब्द, दो स्पेनिश अनुवाद #Shorts",
+      "summary": "\"Free\" एक स्क्रीन पर कीमत है और दूसरी पर खाली शाम। दूसरी i18n लाइब्रेरी इन्हें अलग करने के लिए एक key गढ़ती हैं। Langsys वाक्य को रखता है और उसे एक कैटेगरी में डालता है: Gratis और Libre. #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "प्लेसहोल्डर और alt टेक्स्ट का भी अनुवाद होता है #Shorts",
+      "summary": "दूसरी i18n लाइब्रेरी हर attribute के लिए अलग कॉल माँगती हैं, और जो भूल जाएँ वह अंग्रेज़ी में रह जाता है। एक ‹Translate› टैग पूरे हिस्से को कवर करता है: प्लेसहोल्डर, इमेज का विवरण और वह लेबल जिसे स्क्रीन रीडर पढ़ता है। #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "हर संख्या और तारीख, हर भाषा के अपने फ़ॉर्मैट में #Shorts",
+      "summary": "संख्या को संख्या और तारीख को तारीख के रूप में दीजिए: जर्मन में 1.234,5 और 14. März 2026 दिखता है, और हिंदी में 1234567 को 12,34,567 के रूप में समूहित किया जाता है। ऑर्डर नंबर टेक्स्ट के रूप में जाता है, इसलिए वह जैसा है वैसा ही रहता है। #Shorts"
+    },
+    "react/social/react-phrase-9x16": {
+      "title": "आपकी i18n key बस English वाक्य है (React) #Shorts",
+      "summary": "Langsys के साथ आपके code का वाक्य ही translation key है: कोई keys file नहीं, कुछ extract या sync करने की ज़रूरत नहीं, और वही line हर भाषा में वापस आती है। #Shorts"
+    },
+    "react/react-hero": {
+      "title": "Langsys के साथ React i18n: पूरा walkthrough",
+      "summary": "दूसरे i18n solutions आपसे क्या-क्या sync में रखवाते हैं, उसे replace करने वाली एक call, locale switch, flat Spanish आपके आधे users के लिए गलत क्यों है, और ICU select इसके लिए क्या करता है।"
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "title": "Russian में 4 plural forms हैं। आप लिखते हैं एक line (React) #Shorts",
+      "summary": "One, few, many और other: Russian संख्या के हिसाब से plural form चुनती है, और 21 फिर से singular पर लौट आता है। वाक्य flat लिखिए और Langsys हर locale के लिए ज़रूरी हर form बना देता है। #Shorts"
+    },
+    "react/react-t-string": {
+      "title": "React में t(phrase, category, params)",
+      "summary": "t() call: keys-file की वह problem जिसे यह replace करती है, इसके तीन arguments, ICU placeholders और plurals."
+    },
+    "react/react-phrase-tag": {
+      "title": "React में ‹Phrase›: markup वाला वाक्य",
+      "summary": "अंदर markup वाला वाक्य, एक ही phrase के रूप में रखा गया, और ‹Phrase› params को %name% की तरह क्यों लिखा जाता है।"
+    },
+    "react/social/react-bold-moves-9x16": {
+      "title": "स्पेनिश में बोल्ड सही जगह पर चला जाता है (React) #Shorts",
+      "summary": "दूसरी i18n लाइब्रेरी बोल्ड शब्द वाले वाक्य को तीन keys में काट देती हैं। ‹Phrase› के साथ अनुवादक को मार्कअप सहित एक ही वाक्य मिलता है, और स्पेनिश में बोल्ड संज्ञा के बाद, \"no leídos\" पर आता है। #Shorts"
+    },
+    "react/react-translate-tag": {
+      "title": "React में ‹Translate›: पूरे region के लिए एक tag",
+      "summary": "एक ‹Translate› tag पूरा region register करता है, और हर line के लिए एक call से block बेहतर क्यों है।"
+    },
+    "react/social/react-content-blocks-9x16": {
+      "title": "एक tag से पूरा section translate करें (React) #Shorts",
+      "summary": "एक Translate tag markup के एक region को wrap करता है: text का हर हिस्सा अपना phrase बन जाता है, bold और links सही जगह पर आते हैं, और brand name कभी translate नहीं होता। #Shorts"
+    },
+    "react/react-donttranslate": {
+      "title": "React में ‹DontTranslate›: brand names जैसे के तैसे रखें",
+      "summary": "Brand names और identifiers जैसे के तैसे रहते हैं, उन्हें वाक्य से बाहर निकाले बिना।"
+    },
+    "react/react-content-blocks": {
+      "title": "Content block क्या है? React में पूरा section translate करना",
+      "summary": "एक section एक unit के रूप में register होता है, फिर भी अलग-अलग reusable phrases से बना रहता है।"
+    },
+    "react/social/react-brand-names-9x16": {
+      "title": "आपके ब्रांड का नाम, कभी अनुवादित नहीं (React) #Shorts",
+      "summary": "अनुवादक किसी प्रोडक्ट के नाम और आम वाक्यांश में फ़र्क नहीं कर पाता, इसलिए दूसरी i18n लाइब्रेरी Bright Ledger को Libro Mayor Brillante बना देती हैं। Langsys में आप उसे उसी जगह ‹DontTranslate› से चिह्नित करते हैं, और आसपास का वाक्य अनुवादित होता रहता है। #Shorts"
+    },
+    "react/react-categories": {
+      "title": "एक शब्द, दो मतलब: i18n keys की जगह categories (React)",
+      "summary": "i18n ने keys क्यों बनाईं, और उनकी जगह क्या लेता है: दो मतलब वाला एक ही शब्द, और वे pairs जिनमें वह बँट जाता है।"
+    },
+    "react/social/react-icu-gender-9x16": {
+      "title": "Bienvenido या Bienvenida? Code की एक line (React) #Shorts",
+      "summary": "Spanish user के हिसाब से बदलती है। Langsys ICU select branches generate करता है, तो Diego को Bienvenido, Laura को Bienvenida, और अज्ञात gender वाले को neutral form मिलता है, एक ही line से। #Shorts"
+    },
+    "react/react-icu-gender": {
+      "title": "Code में बिना conditionals के gender agreement (ICU select) (React)",
+      "summary": "दूसरे i18n solutions आपके component में जो gender conditional छोड़ देते हैं, और उसकी जगह Langsys हर भाषा के लिए जो branches generate करता है।"
+    },
+    "react/react-attributes": {
+      "title": "React में placeholders, alt text और aria labels translate करना",
+      "summary": "आधा translated form इस्तेमाल करने वाले को कैसा दिखता है, और एक ही ‹Translate› एक ही pass में placeholders, alt text और aria labels तक कैसे पहुँचता है।"
+    },
+    "react/social/react-two-meanings-9x16": {
+      "title": "एक अंग्रेज़ी शब्द, दो स्पेनिश अनुवाद (React) #Shorts",
+      "summary": "\"Free\" एक स्क्रीन पर कीमत है और दूसरी पर खाली शाम। दूसरी i18n लाइब्रेरी इन्हें अलग करने के लिए एक key गढ़ती हैं। Langsys वाक्य को रखता है और उसे एक कैटेगरी में डालता है: Gratis और Libre. #Shorts"
+    },
+    "react/react-formatting": {
+      "title": "React i18n के साथ हर locale में numbers और dates",
+      "summary": "CLDR के हिसाब से numbers और dates: वह branch जो आप हाथ से लिखते, digit grouping एक separator नहीं बल्कि एक shape क्यों है, और order number को string के रूप में क्यों pass करना चाहिए।"
+    },
+    "react/social/react-alt-text-9x16": {
+      "title": "प्लेसहोल्डर और alt टेक्स्ट का भी अनुवाद होता है (React) #Shorts",
+      "summary": "दूसरी i18n लाइब्रेरी हर attribute के लिए अलग कॉल माँगती हैं, और जो भूल जाएँ वह अंग्रेज़ी में रह जाता है। एक ‹Translate› टैग पूरे हिस्से को कवर करता है: प्लेसहोल्डर, इमेज का विवरण और वह लेबल जिसे स्क्रीन रीडर पढ़ता है। #Shorts"
+    },
+    "react/social/react-local-formats-9x16": {
+      "title": "हर संख्या और तारीख, हर भाषा के अपने फ़ॉर्मैट में (React) #Shorts",
+      "summary": "संख्या को संख्या और तारीख को तारीख के रूप में दीजिए: जर्मन में 1.234,5 और 14. März 2026 दिखता है, और हिंदी में 1234567 को 12,34,567 के रूप में समूहित किया जाता है। ऑर्डर नंबर टेक्स्ट के रूप में जाता है, इसलिए वह जैसा है वैसा ही रहता है। #Shorts"
+    },
+    "vue/vue-hero": {
+      "title": "Langsys के साथ Vue i18n: पूरा walkthrough",
+      "summary": "दूसरे i18n solutions आपसे क्या-क्या sync में रखवाते हैं, उसे replace करने वाली एक call, locale switch, flat Spanish आपके आधे users के लिए गलत क्यों है, और ICU select इसके लिए क्या करता है।"
+    },
+    "vue/social/vue-phrase-9x16": {
+      "title": "आपकी i18n key बस English वाक्य है (Vue) #Shorts",
+      "summary": "Langsys के साथ आपके code का वाक्य ही translation key है: कोई keys file नहीं, कुछ extract या sync करने की ज़रूरत नहीं, और वही line हर भाषा में वापस आती है। #Shorts"
+    },
+    "vue/vue-t-string": {
+      "title": "Vue में t(phrase, category, params)",
+      "summary": "t() call: keys-file की वह problem जिसे यह replace करती है, इसके तीन arguments, ICU placeholders और plurals."
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "title": "Russian में 4 plural forms हैं। आप लिखते हैं एक line (Vue) #Shorts",
+      "summary": "One, few, many और other: Russian संख्या के हिसाब से plural form चुनती है, और 21 फिर से singular पर लौट आता है। वाक्य flat लिखिए और Langsys हर locale के लिए ज़रूरी हर form बना देता है। #Shorts"
+    },
+    "vue/vue-phrase-tag": {
+      "title": "Vue में ‹Phrase›: markup वाला वाक्य",
+      "summary": "अंदर markup वाला वाक्य, एक ही phrase के रूप में रखा गया, और ‹Phrase› params को %name% की तरह क्यों लिखा जाता है।"
+    },
+    "vue/vue-translate-tag": {
+      "title": "Vue में ‹Translate›: पूरे region के लिए एक tag",
+      "summary": "एक ‹Translate› tag पूरा region register करता है, और हर line के लिए एक call से block बेहतर क्यों है।"
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "title": "स्पेनिश में बोल्ड सही जगह पर चला जाता है (Vue) #Shorts",
+      "summary": "दूसरी i18n लाइब्रेरी बोल्ड शब्द वाले वाक्य को तीन keys में काट देती हैं। ‹Phrase› के साथ अनुवादक को मार्कअप सहित एक ही वाक्य मिलता है, और स्पेनिश में बोल्ड संज्ञा के बाद, \"no leídos\" पर आता है। #Shorts"
+    },
+    "vue/vue-donttranslate": {
+      "title": "Vue में ‹DontTranslate›: brand names जैसे के तैसे रखें",
+      "summary": "Brand names और identifiers जैसे के तैसे रहते हैं, उन्हें वाक्य से बाहर निकाले बिना।"
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "title": "एक tag से पूरा section translate करें (Vue) #Shorts",
+      "summary": "एक Translate tag markup के एक region को wrap करता है: text का हर हिस्सा अपना phrase बन जाता है, bold और links सही जगह पर आते हैं, और brand name कभी translate नहीं होता। #Shorts"
+    },
+    "vue/vue-content-blocks": {
+      "title": "Content block क्या है? Vue में पूरा section translate करना",
+      "summary": "एक section एक unit के रूप में register होता है, फिर भी अलग-अलग reusable phrases से बना रहता है।"
+    },
+    "vue/vue-categories": {
+      "title": "एक शब्द, दो मतलब: i18n keys की जगह categories (Vue)",
+      "summary": "i18n ने keys क्यों बनाईं, और उनकी जगह क्या लेता है: दो मतलब वाला एक ही शब्द, और वे pairs जिनमें वह बँट जाता है।"
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "title": "आपके ब्रांड का नाम, कभी अनुवादित नहीं (Vue) #Shorts",
+      "summary": "अनुवादक किसी प्रोडक्ट के नाम और आम वाक्यांश में फ़र्क नहीं कर पाता, इसलिए दूसरी i18n लाइब्रेरी Bright Ledger को Libro Mayor Brillante बना देती हैं। Langsys में आप उसे उसी जगह ‹DontTranslate› से चिह्नित करते हैं, और आसपास का वाक्य अनुवादित होता रहता है। #Shorts"
+    },
+    "vue/vue-icu-gender": {
+      "title": "Code में बिना conditionals के gender agreement (ICU select) (Vue)",
+      "summary": "दूसरे i18n solutions आपके component में जो gender conditional छोड़ देते हैं, और उसकी जगह Langsys हर भाषा के लिए जो branches generate करता है।"
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "title": "Bienvenido या Bienvenida? Code की एक line (Vue) #Shorts",
+      "summary": "Spanish user के हिसाब से बदलती है। Langsys ICU select branches generate करता है, तो Diego को Bienvenido, Laura को Bienvenida, और अज्ञात gender वाले को neutral form मिलता है, एक ही line से। #Shorts"
+    },
+    "vue/vue-attributes": {
+      "title": "Vue में placeholders, alt text और aria labels translate करना",
+      "summary": "आधा translated form इस्तेमाल करने वाले को कैसा दिखता है, और एक ही ‹Translate› एक ही pass में placeholders, alt text और aria labels तक कैसे पहुँचता है।"
+    },
+    "vue/vue-formatting": {
+      "title": "Vue i18n के साथ हर locale में numbers और dates",
+      "summary": "CLDR के हिसाब से numbers और dates: वह branch जो आप हाथ से लिखते, digit grouping एक separator नहीं बल्कि एक shape क्यों है, और order number को string के रूप में क्यों pass करना चाहिए।"
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "title": "एक अंग्रेज़ी शब्द, दो स्पेनिश अनुवाद (Vue) #Shorts",
+      "summary": "\"Free\" एक स्क्रीन पर कीमत है और दूसरी पर खाली शाम। दूसरी i18n लाइब्रेरी इन्हें अलग करने के लिए एक key गढ़ती हैं। Langsys वाक्य को रखता है और उसे एक कैटेगरी में डालता है: Gratis और Libre. #Shorts"
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "title": "प्लेसहोल्डर और alt टेक्स्ट का भी अनुवाद होता है (Vue) #Shorts",
+      "summary": "दूसरी i18n लाइब्रेरी हर attribute के लिए अलग कॉल माँगती हैं, और जो भूल जाएँ वह अंग्रेज़ी में रह जाता है। एक ‹Translate› टैग पूरे हिस्से को कवर करता है: प्लेसहोल्डर, इमेज का विवरण और वह लेबल जिसे स्क्रीन रीडर पढ़ता है। #Shorts"
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "title": "हर संख्या और तारीख, हर भाषा के अपने फ़ॉर्मैट में (Vue) #Shorts",
+      "summary": "संख्या को संख्या और तारीख को तारीख के रूप में दीजिए: जर्मन में 1.234,5 और 14. März 2026 दिखता है, और हिंदी में 1234567 को 12,34,567 के रूप में समूहित किया जाता है। ऑर्डर नंबर टेक्स्ट के रूप में जाता है, इसलिए वह जैसा है वैसा ही रहता है। #Shorts"
+    }
+  }
+}

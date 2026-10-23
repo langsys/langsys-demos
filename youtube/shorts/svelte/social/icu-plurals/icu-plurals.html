@@ -1,0 +1,153 @@
+<meta charset="utf-8" />
+<title>Langsys — ICU plurals (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<style>
+    /* Plurals need room for the count, the sentence and the CLDR category row,
+       and only three lines of code — so borrow height from the code panel. */
+    #stage .app { height: 320px; }
+    #stage .code { height: 196px; }
+    #stage.r1x1 .app { height: 250px; }
+    #stage.r1x1 .code { height: 150px; }
+
+    .countrow { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; }
+    .count {
+        min-width: 84px;
+        padding: 6px 20px;
+        border-radius: 16px;
+        background: rgba(124, 108, 245, 0.18);
+        border: 1px solid var(--accent);
+        font-size: 44px;
+        font-weight: 700;
+        text-align: center;
+        font-variant-numeric: tabular-nums;
+    }
+    .countlabel { font-size: 22px; color: var(--muted); }
+
+    .catrow { display: flex; gap: 10px; margin-top: 22px; }
+    .cat {
+        border: 1px solid var(--line);
+        border-radius: 11px;
+        padding: 9px 18px;
+        font-size: 19px;
+        font-family: 'JetBrains Mono', Consolas, monospace;
+        color: var(--muted);
+    }
+    .cat.on { border-color: var(--accent-2); background: rgba(74, 212, 180, 0.14); color: var(--ink); }
+    .cat.na { opacity: 0.28; }
+</style>
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+            <div class="locales">
+                <div class="pill" data-loc="en">EN</div>
+                <div class="pill" data-loc="ru">RU</div>
+            </div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> Rendered</div>
+            <div class="app">
+                <div class="countrow">
+                    <div class="count" id="count">1</div>
+                    <div class="countlabel">unread messages</div>
+                </div>
+                <div class="greeting" id="rendered"></div>
+                <div class="catrow" id="cats"></div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> App.svelte — never changes</div>
+            <div class="code" id="code"></div>
+        </div>
+
+        <div class="stored" id="stored"></div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // One call site, one number. Every plural form below is selected by CLDR
+    // rules inside the catalog, never by application code.
+    const CODE = [
+        '&lt;p&gt;{<span class="v">$t</span>(<span class="s">\'You have {count} new messages.\'</span>, {',
+        '    <span class="hl">count: unread</span>,',
+        '})}&lt;/p&gt;',
+    ].join('\n');
+
+    // Catalogs. The Russian forms are the real CLDR branches, not guesses.
+    const CATALOG = {
+        en: 'You have {count, plural, one {# new message} other {# new messages}}.',
+        ru: 'У вас {count, plural, one {# новое сообщение} few {# новых сообщения} '
+            + 'many {# новых сообщений} other {# новых сообщения}}.',
+    };
+
+    const RENDERED = {
+        en: { 1: 'You have 1 new message.', 3: 'You have 3 new messages.' },
+        ru: {
+            1: 'У вас 1 новое сообщение.',
+            3: 'У вас 3 новых сообщения.',
+            5: 'У вас 5 новых сообщений.',
+            21: 'У вас 21 новое сообщение.',
+        },
+    };
+
+    // Which CLDR category each count selects. 21 → "one" in Russian, because
+    // 21 % 10 === 1 and 21 % 100 !== 11. That is the beat worth watching.
+    const CATEGORY = {
+        en: { 1: 'one', 3: 'other' },
+        ru: { 1: 'one', 3: 'few', 5: 'many', 21: 'one' },
+    };
+
+    const AVAILABLE = { en: ['one', 'other'], ru: ['one', 'few', 'many', 'other'] };
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 14,
+        scenes: [
+            { until: 3.0, locale: 'ru', count: 1, caption: 'Russian has <em>four</em> plural forms.' },
+            { until: 5.4, locale: 'ru', count: 3, caption: 'Three takes a different one…' },
+            { until: 7.8, locale: 'ru', count: 5, caption: '…five takes another…' },
+            {
+                until: 10.6, locale: 'ru', count: 21,
+                caption: '…and twenty-one goes <em>back to the singular.</em>',
+            },
+            {
+                until: 12.6, locale: 'en', count: 3,
+                caption: 'English has two. <span class="dim">You passed one number.</span>',
+            },
+            { until: 14.0, outro: true },
+        ],
+        outro: 'Plurals live in the phrase, not in your code.<br />'
+            + "Russian's four categories, Arabic's six, English's two — one call site.",
+        render(scene, { el, highlightBranch }) {
+            const category = CATEGORY[scene.locale][scene.count];
+
+            el('code').innerHTML = CODE;
+            el('count').textContent = scene.count;
+            el('rendered').textContent = RENDERED[scene.locale][scene.count];
+
+            el('cats').innerHTML = ['one', 'few', 'many', 'other'].map((c) => {
+                const has = AVAILABLE[scene.locale].includes(c);
+                const cls = 'cat' + (!has ? ' na' : (c === category ? ' on' : ''));
+                return '<div class="' + cls + '">' + c + '</div>';
+            }).join('');
+
+            el('stored').innerHTML = '<span class="tag">CATALOG · ' + scene.locale + '</span><b>'
+                + highlightBranch(CATALOG[scene.locale], category) + '</b>';
+        },
+    });
+</script>

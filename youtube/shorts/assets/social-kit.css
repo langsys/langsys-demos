@@ -1,0 +1,265 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   Langsys social demo kit — shared visual system for every social/ cut.
+
+   Target: LinkedIn and X feed. 1080×1350 (4:5) by default, 1080×1080 (1:1)
+   when the stage carries .r1x1 (set by ?ratio=1x1).
+
+   Feed rules baked in here:
+     · Panels stack vertically. A side-by-side split is unreadable on a phone.
+     · Type is sized for a thumb-height viewport, not a desktop one.
+     · Nothing lands in the bottom ~150px — both platforms overlay UI chrome
+       and post text across that strip.
+
+   YouTube Shorts: 1080×1920 (9:16) when the stage carries .r9x16 (set by
+   ?ratio=9x16). Shorts overlay far more than a feed does — the channel name,
+   title and subscribe button across the bottom ~440px, the like / comment /
+   share column down the right ~140px, the search bar across the top — so the
+   9:16 cut keeps the same stack inside a narrower, taller safe box rather
+   than spreading it across the full frame.
+   ────────────────────────────────────────────────────────────────────────── */
+
+:root {
+    --bg: #0b0b12;
+    --panel: #14141f;
+    --panel-2: #1b1b29;
+    --line: #2a2a3d;
+    --ink: #f4f4f8;
+    --muted: #9a9ab0;
+    --accent: #7c6cf5;
+    --accent-2: #4ad4b4;
+    --code: #c9c9e8;
+    --warn: #f0b26b;
+    --bad: #ef6a86;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: #000;
+    display: grid;
+    place-items: start center;
+    font-family: 'Inter', -apple-system, 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Fixed capture stage. The capture script screenshots exactly this box. */
+#stage {
+    position: relative;
+    width: 1080px;
+    height: 1350px;
+    background: radial-gradient(115% 70% at 20% 0%, #191932 0%, var(--bg) 58%);
+    color: var(--ink);
+    overflow: hidden;
+}
+#stage.r1x1 { height: 1080px; }
+#stage.r9x16 {
+    height: 1920px;
+    background: radial-gradient(130% 55% at 20% 0%, #191932 0%, var(--bg) 58%);
+}
+
+.wrap {
+    position: absolute;
+    inset: 0;
+    padding: 58px 54px 0;
+    display: flex;
+    flex-direction: column;
+}
+/* Scaled up as a whole rather than resized rule by rule, so every demo's own
+   4:5 tuning carries over. Full width: the action column only overlays the
+   lower right, where the panels' text has already ended (left-aligned). */
+#stage.r9x16 .wrap { padding: 190px 56px 0; }
+#stage.r9x16 .wrap > * { zoom: 1.16; }
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+
+header { display: flex; align-items: center; gap: 16px; }
+
+.logo { font-size: 30px; font-weight: 700; letter-spacing: -0.025em; }
+.logo span { color: var(--accent); font-weight: 500; }
+
+.locales {
+    margin-left: auto;
+    display: flex;
+    gap: 7px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px;
+}
+.pill {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--muted);
+    padding: 9px 20px;
+    border-radius: 999px;
+}
+.pill.on { background: var(--accent); color: #fff; }
+
+/* ── Headline / narration line ──────────────────────────────────────────── */
+
+.caption {
+    margin-top: 34px;
+    font-size: 51px;
+    font-weight: 680;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    min-height: 150px;
+}
+#stage.r1x1 .caption { font-size: 45px; min-height: 118px; margin-top: 26px; }
+
+.caption em { color: var(--accent-2); font-style: normal; }
+.caption .dim { color: var(--muted); font-weight: 500; }
+.caption .bad { color: var(--bad); font-style: normal; }
+
+/* ── Panels ─────────────────────────────────────────────────────────────── */
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 22px;
+}
+
+.panel-head {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 17px 24px;
+    border-bottom: 1px solid var(--line);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+}
+.dot { width: 12px; height: 12px; border-radius: 50%; background: #34344a; }
+.dot.live { background: var(--accent-2); }
+
+/* Rendered-app body. */
+.app { padding: 32px 32px; height: 258px; }
+#stage.r1x1 .app { height: 196px; padding: 26px 30px; }
+
+.user { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+.avatar {
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    font-weight: 700; font-size: 24px; color: #fff;
+    flex: none;
+}
+.avatar.f { background: linear-gradient(140deg, #f0679a, #b2569e); }
+.avatar.m { background: linear-gradient(140deg, #4d9cf0, #3f6fd8); }
+.avatar.x { background: linear-gradient(140deg, #6b6b85, #45455c); }
+.uname { font-size: 21px; font-weight: 600; }
+.umeta { font-size: 17px; color: var(--muted); margin-top: 4px; }
+
+.greeting {
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: -0.032em;
+    line-height: 1.18;
+}
+#stage.r1x1 .greeting { font-size: 40px; }
+.sub { margin-top: 16px; font-size: 25px; color: #c6c6da; }
+
+/* Code body. Three or four lines, large. Comments belong in the caption. */
+.code {
+    padding: 26px 28px;
+    font-family: 'JetBrains Mono', 'Cascadia Mono', Consolas, monospace;
+    font-size: 25px;
+    line-height: 1.72;
+    color: var(--code);
+    white-space: pre;
+    height: 292px;
+}
+#stage.r1x1 .code { height: 222px; font-size: 23px; padding: 22px 26px; }
+
+.k { color: #b48cf2; }
+.s { color: #7fd6a8; }
+.c { color: #61617e; }
+.v { color: #f0b26b; }
+.t { color: #6cc6f5; }
+.hl { background: rgba(124, 108, 245, 0.20); border-radius: 5px; }
+.strike { color: #5c5c74; text-decoration: line-through; }
+
+/* ── Proof strip — the stored catalog entry, or a chip row ──────────────── */
+
+.stored {
+    margin-top: 22px;
+    border: 1px dashed var(--line);
+    border-radius: 16px;
+    padding: 18px 22px;
+    font-family: 'JetBrains Mono', Consolas, monospace;
+    font-size: 20px;
+    line-height: 1.55;
+    color: var(--muted);
+    white-space: pre-wrap;
+    word-break: break-word;
+    min-height: 116px;
+}
+#stage.r1x1 .stored { min-height: 92px; font-size: 18px; padding: 15px 20px; margin-top: 18px; }
+/* The strip sits level with the Shorts action column; wrap before it. */
+#stage.r9x16 .stored { padding-right: 96px; }
+
+.stored b { color: #cfcfe4; font-weight: 500; }
+.stored .hl { color: var(--ink); }
+.stored .tag {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--accent-2);
+    margin-right: 11px;
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 22px; min-height: 116px; align-content: flex-start; }
+#stage.r1x1 .chips { min-height: 92px; margin-top: 18px; }
+
+.chip {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-size: 19px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', Consolas, monospace;
+}
+.chip.on { border-color: var(--accent); background: rgba(124, 108, 245, 0.16); color: var(--ink); }
+.chip.locked { border-color: var(--warn); color: var(--warn); }
+.chip.na { opacity: 0.32; }
+
+/* ── Outro ──────────────────────────────────────────────────────────────── */
+
+#outro {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(90% 60% at 50% 38%, #1d1a3a 0%, var(--bg) 62%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    text-align: center;
+    padding: 0 70px 150px;
+}
+#outro.on { display: flex; }
+.outro-logo { font-size: 82px; font-weight: 750; letter-spacing: -0.04em; }
+.outro-line { font-size: 33px; color: #cdcde2; line-height: 1.42; }
+.outro-url { margin-top: 14px; font-size: 28px; font-weight: 600; color: var(--accent-2); }
+
+/* ── Bottom safe zone ───────────────────────────────────────────────────── */
+
+/* Keeps content clear of the platform UI that overlays the lower edge. The
+   progress bar sits on top of the spacer, not on the frame edge. */
+.safe { margin-top: auto; height: 150px; flex: none; position: relative; }
+#stage.r1x1 .safe { height: 104px; }
+#stage.r9x16 .safe { height: 380px; } /* 440px once zoomed */
+
+.progress {
+    position: absolute;
+    left: 0; top: 0;
+    height: 5px;
+    border-radius: 3px;
+    background: var(--accent);
+}
