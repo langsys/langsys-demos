@@ -45,7 +45,7 @@ SDKs are open source (MIT): TypeScript, React, Vue and Svelte on npm, and PHP, L
 
 There's a free plan (one project, AI translation words included on signup). Machine translation beyond that is billed per source word, quoted before anything runs.
 
-A 77-second overview: https://youtu.be/_DFWgHZ_QQc
+A 77-second overview: https://youtu.be/q_a37CzxWrk
 Docs and the Learning Center: https://docs.langsys.dev/learn
 
 I'd love feedback, especially from anyone who has maintained a keys file in a large app, and on where this approach breaks down for you.

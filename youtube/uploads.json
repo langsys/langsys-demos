@@ -71,11 +71,6 @@
       "id": "zw9iKNfjVng",
       "playlist": true
     },
-    "explainer": {
-      "id": "_DFWgHZ_QQc",
-      "thumbnail": true,
-      "playlist": true
-    },
     "getting-started": {
       "id": "Fo1HCybAHg0",
       "thumbnail": true,
@@ -436,6 +431,12 @@
     "vue/social/vue-local-formats-9x16": {
       "id": "7eWDPADZhdo",
       "unlisted": true,
+      "playlist": true
+    },
+    "explainer": {
+      "id": "q_a37CzxWrk",
+      "unlisted": true,
+      "thumbnail": true,
       "playlist": true
     }
   }

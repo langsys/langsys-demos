@@ -57,7 +57,7 @@ Free (with paid plans). Check the plan list on langsys.dev/pricing on the day.
   4. `gallery-4.png`: day one is three steps
   5. `gallery-5.png`: the Translation Manager, an AI draft being edited
   6. `gallery-6.png`: same idea in every SDK
-- **Video:** the explainer on YouTube, `https://youtu.be/_DFWgHZ_QQc`. It must be public by then; it goes public on launch day (Mon 26 Oct 2026).
+- **Video:** the explainer on YouTube, `https://youtu.be/q_a37CzxWrk`. It must be public by then; it goes public on launch day (Mon 26 Oct 2026).
 
 ## Maker's first comment
 

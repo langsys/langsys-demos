@@ -31,7 +31,7 @@ The whole starting path is on YouTube today: getting started, plurals, the five 
 First comment:
 
 ```
-What is Langsys, in 77 seconds: https://youtu.be/_DFWgHZ_QQc
+What is Langsys, in 77 seconds: https://youtu.be/q_a37CzxWrk
 Getting started, end to end: https://youtu.be/Fo1HCybAHg0
 Every video, in order, in the Learning Center: https://docs.langsys.dev/learn?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=launch-post
 Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=launch-post

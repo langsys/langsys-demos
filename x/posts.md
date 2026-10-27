@@ -24,7 +24,7 @@ Langsys is live today. Here's what it is, in 77 seconds.
 Reply:
 
 ```
-https://youtu.be/_DFWgHZ_QQc
+https://youtu.be/q_a37CzxWrk
 Try it free: https://langsys.dev/?utm_source=x&utm_medium=social&utm_campaign=launch_2026&utm_content=launch-thread
 ```
 
