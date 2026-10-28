@@ -563,7 +563,6 @@
       "file": "svelte/social/phrase-9x16",
       "playlist": "shorts",
       "day": 2,
-      "publish": "2026-10-27",
       "thumbnail": false,
       "title": "Your i18n key is just the English sentence #Shorts",
       "summary": "With Langsys the sentence in your code is the translation key: no keys file, nothing to extract or keep in sync, and the same line comes back in every language. #Shorts",
@@ -574,7 +573,8 @@
         "Svelte",
         "i18n tips",
         "webdev"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "svelte/social/icu-gender-9x16",
@@ -597,7 +597,6 @@
       "file": "svelte/social/icu-plurals-9x16",
       "playlist": "shorts",
       "day": 2,
-      "publish": "2026-10-29",
       "thumbnail": false,
       "title": "Russian has 4 plural forms. You write one line #Shorts",
       "summary": "One, few, many and other: Russian picks a plural form by the number, and 21 goes back to the singular. Write the sentence flat and Langsys builds every form each locale needs. #Shorts",
@@ -608,13 +607,13 @@
         "pluralization",
         "Russian",
         "i18n tips"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "svelte/social/content-blocks-9x16",
       "playlist": "shorts",
       "day": 2,
-      "publish": "2026-11-24",
       "thumbnail": false,
       "title": "Translate a whole section with one tag #Shorts",
       "summary": "One Translate tag wraps a region of markup: every run of text becomes its own phrase, bold and links land where they belong, and the brand name is never translated. #Shorts",
@@ -624,13 +623,13 @@
         "content blocks",
         "Svelte",
         "i18n tips"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "shared/social/published-at-nine-9x16",
       "playlist": "shorts",
       "day": 7,
-      "publish": "2026-11-03",
       "thumbnail": false,
       "title": "Published at 09:00, read in Spanish at 09:03 #Shorts",
       "summary": "A blog post goes live with no build and no deploy. Its first reader's app sends Langsys only the page address, Langsys reads the page itself, and minutes later a reader in Madrid gets it in Spanish. #Shorts",
@@ -641,13 +640,13 @@
         "continuous localization",
         "i18n",
         "webdev"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "shared/social/ask-your-assistant-9x16",
       "playlist": "shorts",
       "day": 7,
-      "publish": "2026-11-05",
       "thumbnail": false,
       "title": "Ask your AI assistant how your translations are doing #Shorts",
       "summary": "Langsys hosts an MCP server, so Claude, Codex, Cursor or GitHub Copilot can read your projects and translate what's missing. One approval in your browser, and the assistant never sees your password. #Shorts",
@@ -658,13 +657,13 @@
         "AI assistant",
         "Claude Code",
         "localization"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "shared/social/memory-9x16",
       "playlist": "shorts",
       "day": 7,
-      "publish": "2026-11-10",
       "thumbnail": false,
       "title": "A brand-new project that starts already translated #Shorts",
       "summary": "Fix a translation once and every new project in your organization starts out knowing it. Translation Memory filled this project in Spanish, with the original translator's credit, and no model was called. #Shorts",
@@ -675,13 +674,13 @@
         "localization",
         "machine translation",
         "i18n"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "svelte/social/bold-moves-9x16",
       "playlist": "shorts",
       "day": 7,
-      "publish": "2026-11-12",
       "thumbnail": false,
       "title": "In Spanish, the bold moves to where it belongs #Shorts",
       "summary": "Other i18n cuts a sentence with a bold word into three keys. With ‹Phrase› the translator gets one sentence, markup and all, and in Spanish the bold lands after the noun, on \"no leídos\". #Shorts",
@@ -692,13 +691,13 @@
         "rich text i18n",
         "Phrase",
         "i18n"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "shared/social/add-german-9x16",
       "playlist": "shorts",
       "day": 7,
-      "publish": "2026-11-17",
       "thumbnail": false,
       "title": "Add German to a live store, with no deploy #Shorts",
       "summary": "Add the language in your project settings, not in your code. Langsys quotes the exact price for the existing catalog before it spends anything, drafts every phrase in seconds, and the store speaks German with nothing built or deployed. #Shorts",
@@ -709,13 +708,13 @@
         "localization",
         "machine translation",
         "no deploy"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "shared/social/catch-up-9x16",
       "playlist": "shorts",
       "day": 7,
-      "publish": "2026-11-19",
       "thumbnail": false,
       "title": "Two languages behind, caught up in one action #Shorts",
       "summary": "French and Japanese were each missing two phrases. AI Translate Pending drafts them in seconds, and the drafts wait for someone to review them. #Shorts",
@@ -726,13 +725,13 @@
         "machine translation",
         "localization",
         "i18n"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "svelte/social/brand-names-9x16",
       "playlist": "shorts",
       "day": 7,
-      "publish": "2026-11-26",
       "thumbnail": false,
       "title": "Your brand name, never translated #Shorts",
       "summary": "A translator can't tell a product name from a phrase, so other i18n ships Bright Ledger as Libro Mayor Brillante. With Langsys you mark it where it stands with ‹DontTranslate›, and the sentence around it still translates. #Shorts",
@@ -743,13 +742,13 @@
         "i18n",
         "brand names",
         "DontTranslate"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "svelte/social/two-meanings-9x16",
       "playlist": "shorts",
       "day": 7,
-      "publish": "2026-12-03",
       "thumbnail": false,
       "title": "One English word, two Spanish translations #Shorts",
       "summary": "\"Free\" is a price on one screen and an empty evening on another. Other i18n invents a key to tell them apart. Langsys keeps the sentence and files it under a category: Gratis and Libre. #Shorts",
@@ -760,13 +759,13 @@
         "i18n keys",
         "categories",
         "translation context"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "svelte/social/alt-text-9x16",
       "playlist": "shorts",
       "day": 7,
-      "publish": "2026-12-08",
       "thumbnail": false,
       "title": "Placeholders and alt text translate too #Shorts",
       "summary": "Other i18n needs a separate call on every attribute, and the one you forget stays English. One ‹Translate› tag covers the region: the placeholder, the image description and the label a screen reader announces. #Shorts",
@@ -777,13 +776,13 @@
         "accessibility",
         "alt text",
         "i18n"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "svelte/social/local-formats-9x16",
       "playlist": "shorts",
       "day": 7,
-      "publish": "2026-12-10",
       "thumbnail": false,
       "title": "Every number and date in each locale's format #Shorts",
       "summary": "Pass the number itself and the date as a date: German gets 1.234,5 and 14. März 2026, and Hindi groups 1234567 as 12,34,567. An order number goes in as a string, so it stays exactly as written. #Shorts",
@@ -794,13 +793,13 @@
         "number formatting",
         "date formatting",
         "CLDR"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "react/social/react-phrase-9x16",
       "playlist": "shorts",
       "day": 8,
-      "publish": "2026-12-16",
       "thumbnail": false,
       "title": "Your i18n key is just the English sentence (React) #Shorts",
       "summary": "With Langsys the sentence in your code is the translation key: no keys file, nothing to extract or keep in sync, and the same line comes back in every language. #Shorts",
@@ -811,7 +810,8 @@
         "React",
         "i18n tips",
         "webdev"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "react/react-hero",
@@ -836,7 +836,6 @@
       "file": "react/social/react-icu-plurals-9x16",
       "playlist": "shorts",
       "day": 8,
-      "publish": "2026-12-17",
       "thumbnail": false,
       "title": "Russian has 4 plural forms. You write one line (React) #Shorts",
       "summary": "One, few, many and other: Russian picks a plural form by the number, and 21 goes back to the singular. Write the sentence flat and Langsys builds every form each locale needs. #Shorts",
@@ -847,7 +846,8 @@
         "pluralization",
         "Russian",
         "i18n tips"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "react/react-t-string",
@@ -889,7 +889,6 @@
       "file": "react/social/react-bold-moves-9x16",
       "playlist": "shorts",
       "day": 8,
-      "publish": "2026-12-22",
       "thumbnail": false,
       "title": "In Spanish, the bold moves to where it belongs (React) #Shorts",
       "summary": "Other i18n cuts a sentence with a bold word into three keys. With ‹Phrase› the translator gets one sentence, markup and all, and in Spanish the bold lands after the noun, on \"no leídos\". #Shorts",
@@ -900,7 +899,8 @@
         "rich text i18n",
         "Phrase",
         "i18n"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "react/react-translate-tag",
@@ -924,7 +924,6 @@
       "file": "react/social/react-content-blocks-9x16",
       "playlist": "shorts",
       "day": 8,
-      "publish": "2027-01-07",
       "thumbnail": false,
       "title": "Translate a whole section with one tag (React) #Shorts",
       "summary": "One Translate tag wraps a region of markup: every run of text becomes its own phrase, bold and links land where they belong, and the brand name is never translated. #Shorts",
@@ -934,7 +933,8 @@
         "content blocks",
         "React",
         "i18n tips"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "react/react-donttranslate",
@@ -976,7 +976,6 @@
       "file": "react/social/react-brand-names-9x16",
       "playlist": "shorts",
       "day": 8,
-      "publish": "2027-01-12",
       "thumbnail": false,
       "title": "Your brand name, never translated (React) #Shorts",
       "summary": "A translator can't tell a product name from a phrase, so other i18n ships Bright Ledger as Libro Mayor Brillante. With Langsys you mark it where it stands with ‹DontTranslate›, and the sentence around it still translates. #Shorts",
@@ -987,7 +986,8 @@
         "i18n",
         "brand names",
         "DontTranslate"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "react/react-categories",
@@ -1011,7 +1011,6 @@
       "file": "react/social/react-icu-gender-9x16",
       "playlist": "shorts",
       "day": 8,
-      "publish": "2027-01-14",
       "thumbnail": false,
       "title": "Bienvenido or Bienvenida? One line of code (React) #Shorts",
       "summary": "Spanish agrees with the user. Langsys generates the ICU select branches, so Diego gets Bienvenido, Laura gets Bienvenida, and an unknown gender gets the neutral form, from one line. #Shorts",
@@ -1022,7 +1021,8 @@
         "gender agreement",
         "Spanish",
         "i18n tips"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "react/react-icu-gender",
@@ -1067,7 +1067,6 @@
       "file": "react/social/react-two-meanings-9x16",
       "playlist": "shorts",
       "day": 8,
-      "publish": "2027-01-19",
       "thumbnail": false,
       "title": "One English word, two Spanish translations (React) #Shorts",
       "summary": "\"Free\" is a price on one screen and an empty evening on another. Other i18n invents a key to tell them apart. Langsys keeps the sentence and files it under a category: Gratis and Libre. #Shorts",
@@ -1078,7 +1077,8 @@
         "i18n keys",
         "categories",
         "translation context"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "react/react-formatting",
@@ -1104,7 +1104,6 @@
       "file": "react/social/react-alt-text-9x16",
       "playlist": "shorts",
       "day": 8,
-      "publish": "2027-01-21",
       "thumbnail": false,
       "title": "Placeholders and alt text translate too (React) #Shorts",
       "summary": "Other i18n needs a separate call on every attribute, and the one you forget stays English. One ‹Translate› tag covers the region: the placeholder, the image description and the label a screen reader announces. #Shorts",
@@ -1115,13 +1114,13 @@
         "accessibility",
         "alt text",
         "i18n"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "react/social/react-local-formats-9x16",
       "playlist": "shorts",
       "day": 8,
-      "publish": "2027-01-22",
       "thumbnail": false,
       "title": "Every number and date in each locale's format (React) #Shorts",
       "summary": "Pass the number itself and the date as a date: German gets 1.234,5 and 14. März 2026, and Hindi groups 1234567 as 12,34,567. An order number goes in as a string, so it stays exactly as written. #Shorts",
@@ -1132,7 +1131,8 @@
         "number formatting",
         "date formatting",
         "CLDR"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "vue/vue-hero",
@@ -1157,7 +1157,6 @@
       "file": "vue/social/vue-phrase-9x16",
       "playlist": "shorts",
       "day": 9,
-      "publish": "2027-01-26",
       "thumbnail": false,
       "title": "Your i18n key is just the English sentence (Vue) #Shorts",
       "summary": "With Langsys the sentence in your code is the translation key: no keys file, nothing to extract or keep in sync, and the same line comes back in every language. #Shorts",
@@ -1168,7 +1167,8 @@
         "Vue",
         "i18n tips",
         "webdev"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "vue/vue-t-string",
@@ -1192,7 +1192,6 @@
       "file": "vue/social/vue-icu-plurals-9x16",
       "playlist": "shorts",
       "day": 9,
-      "publish": "2027-01-28",
       "thumbnail": false,
       "title": "Russian has 4 plural forms. You write one line (Vue) #Shorts",
       "summary": "One, few, many and other: Russian picks a plural form by the number, and 21 goes back to the singular. Write the sentence flat and Langsys builds every form each locale needs. #Shorts",
@@ -1203,7 +1202,8 @@
         "pluralization",
         "Russian",
         "i18n tips"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "vue/vue-phrase-tag",
@@ -1245,7 +1245,6 @@
       "file": "vue/social/vue-bold-moves-9x16",
       "playlist": "shorts",
       "day": 9,
-      "publish": "2027-02-02",
       "thumbnail": false,
       "title": "In Spanish, the bold moves to where it belongs (Vue) #Shorts",
       "summary": "Other i18n cuts a sentence with a bold word into three keys. With ‹Phrase› the translator gets one sentence, markup and all, and in Spanish the bold lands after the noun, on \"no leídos\". #Shorts",
@@ -1256,7 +1255,8 @@
         "rich text i18n",
         "Phrase",
         "i18n"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "vue/vue-donttranslate",
@@ -1280,7 +1280,6 @@
       "file": "vue/social/vue-content-blocks-9x16",
       "playlist": "shorts",
       "day": 9,
-      "publish": "2027-02-04",
       "thumbnail": false,
       "title": "Translate a whole section with one tag (Vue) #Shorts",
       "summary": "One Translate tag wraps a region of markup: every run of text becomes its own phrase, bold and links land where they belong, and the brand name is never translated. #Shorts",
@@ -1290,7 +1289,8 @@
         "content blocks",
         "Vue",
         "i18n tips"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "vue/vue-content-blocks",
@@ -1332,7 +1332,6 @@
       "file": "vue/social/vue-brand-names-9x16",
       "playlist": "shorts",
       "day": 9,
-      "publish": "2027-02-09",
       "thumbnail": false,
       "title": "Your brand name, never translated (Vue) #Shorts",
       "summary": "A translator can't tell a product name from a phrase, so other i18n ships Bright Ledger as Libro Mayor Brillante. With Langsys you mark it where it stands with ‹DontTranslate›, and the sentence around it still translates. #Shorts",
@@ -1343,7 +1342,8 @@
         "i18n",
         "brand names",
         "DontTranslate"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "vue/vue-icu-gender",
@@ -1368,7 +1368,6 @@
       "file": "vue/social/vue-icu-gender-9x16",
       "playlist": "shorts",
       "day": 9,
-      "publish": "2027-02-11",
       "thumbnail": false,
       "title": "Bienvenido or Bienvenida? One line of code (Vue) #Shorts",
       "summary": "Spanish agrees with the user. Langsys generates the ICU select branches, so Diego gets Bienvenido, Laura gets Bienvenida, and an unknown gender gets the neutral form, from one line. #Shorts",
@@ -1379,7 +1378,8 @@
         "gender agreement",
         "Spanish",
         "i18n tips"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "vue/vue-attributes",
@@ -1425,7 +1425,6 @@
       "file": "vue/social/vue-two-meanings-9x16",
       "playlist": "shorts",
       "day": 9,
-      "publish": "2027-02-16",
       "thumbnail": false,
       "title": "One English word, two Spanish translations (Vue) #Shorts",
       "summary": "\"Free\" is a price on one screen and an empty evening on another. Other i18n invents a key to tell them apart. Langsys keeps the sentence and files it under a category: Gratis and Libre. #Shorts",
@@ -1436,13 +1435,13 @@
         "i18n keys",
         "categories",
         "translation context"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "vue/social/vue-alt-text-9x16",
       "playlist": "shorts",
       "day": 9,
-      "publish": "2027-02-17",
       "thumbnail": false,
       "title": "Placeholders and alt text translate too (Vue) #Shorts",
       "summary": "Other i18n needs a separate call on every attribute, and the one you forget stays English. One ‹Translate› tag covers the region: the placeholder, the image description and the label a screen reader announces. #Shorts",
@@ -1453,13 +1452,13 @@
         "accessibility",
         "alt text",
         "i18n"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     },
     {
       "file": "vue/social/vue-local-formats-9x16",
       "playlist": "shorts",
       "day": 9,
-      "publish": "2027-02-18",
       "thumbnail": false,
       "title": "Every number and date in each locale's format (Vue) #Shorts",
       "summary": "Pass the number itself and the date as a date: German gets 1.234,5 and 14. März 2026, and Hindi groups 1234567 as 12,34,567. An order number goes in as a string, so it stays exactly as written. #Shorts",
@@ -1470,7 +1469,8 @@
         "number formatting",
         "date formatting",
         "CLDR"
-      ]
+      ],
+      "hold": "Dropped 2026-10-27: needs context a Short does not give. Kept uploaded and unlisted; restore by giving it a publish date and removing this note."
     }
   ]
 }
