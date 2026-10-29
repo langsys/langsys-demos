@@ -7,11 +7,12 @@ Every langsys.dev link the campaign publishes carries UTM parameters, so when so
 | Parameter | Says | Values |
 |---|---|---|
 | `utm_source` | where the link sits | `youtube`, `x`, `linkedin`, `reddit`, `discord`, `devto`, `hashnode`, `alternativeto`, `javascript_weekly`, `frontend_focus`, `svelte_newsletters`, `console_dev` |
-| `utm_medium` | what kind of placement | `video`, `short`, `social`, `community`, `article`, `newsletter`, `listing` |
 | `utm_campaign` | the campaign | `launch_2026` (`utm_campaign` in `youtube/videos.json`) |
 | `utm_content` | which video or post | the video's file with `/` as `-` (`svelte-hero`, `react-react-t-string`), the subreddit (`r-sveltejs`), or `launch-thread` / `launch-post` for launch day |
 
-Values are lowercase, with `_` inside a name and `-` inside a slug. A new platform gets a new `utm_source`; don't reuse one, or its sign-ups are counted as the other's.
+There is no `utm_medium`. The kind of placement always follows from the source (`youtube` is a video, `x` and `linkedin` are social, `reddit` and `discord` are community, and so on), so the API works it out from the source. The list is in langsys-nova's `config/attribution.php`. A visit with no source that came from another website is counted as `referral`. Add `utm_medium` by hand only when a source's usual kind doesn't hold, such as `utm_medium=paid` on an ad. A link that states a medium keeps it.
+
+Values are lowercase, with `_` inside a name and `-` inside a slug. A new platform gets a new `utm_source`; don't reuse one, or its sign-ups are counted as the other's. Add the new source to `config/attribution.php` too, or its visits have no kind of placement.
 
 ## Where the tags are
 
@@ -34,5 +35,5 @@ To post a langsys.dev link anywhere not listed here, tag it first:
 
 ```
 cd youtube
-python -c "import utm; print(utm.tag('https://langsys.dev/', 'SOURCE', 'MEDIUM', 'CONTENT'))"
+python -c "import utm; print(utm.tag('https://langsys.dev/', 'SOURCE', 'CONTENT'))"
 ```

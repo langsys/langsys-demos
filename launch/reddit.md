@@ -42,7 +42,7 @@ Three Svelte-specific bits I'm happy with:
 - `<DontTranslate>` keeps a brand name verbatim inside a sentence that still translates.
 
 There's a one-minute walkthrough video here: https://youtu.be/y-YbRDjV4Wk
-And a Svelte guide: https://docs.langsys.dev/learn?utm_source=reddit&utm_medium=community&utm_campaign=launch_2026&utm_content=r-sveltejs
+And a Svelte guide: https://docs.langsys.dev/learn?utm_source=reddit&utm_campaign=launch_2026&utm_content=r-sveltejs
 
 The SDK is MIT on npm (`langsys-js-svelte`), works with SvelteKit (the catalog is seeded on the server so the first render is already translated), and the hosted service has a free plan.
 
@@ -101,7 +101,7 @@ Short videos of both:
 - Plurals: https://youtu.be/vkDmCusXKcI
 - Gender: https://youtu.be/AfpNQtvugks
 
-There's also a write-up of how ICU select and plural work under the hood in our docs: https://docs.langsys.dev/learn?utm_source=reddit&utm_medium=community&utm_campaign=launch_2026&utm_content=r-webdev
+There's also a write-up of how ICU select and plural work under the hood in our docs: https://docs.langsys.dev/learn?utm_source=reddit&utm_campaign=launch_2026&utm_content=r-webdev
 
 Curious how others handle this today, especially gender in languages with more than two agreement forms.
 ```
@@ -141,7 +141,7 @@ Three components I'm happy with:
 One React-specific gotcha we had to design around: inside `<Phrase>` and `<Translate>` markup, placeholders are written `%count%`, because JSX evaluates `{count}` before the library ever sees the text. Debug mode warns if you get it wrong.
 
 There's a one-minute walkthrough video here: https://youtu.be/sp4K9n4krZ4
-And a React guide: https://docs.langsys.dev/learn/sdk/react?utm_source=reddit&utm_medium=community&utm_campaign=launch_2026&utm_content=r-reactjs
+And a React guide: https://docs.langsys.dev/learn/sdk/react?utm_source=reddit&utm_campaign=launch_2026&utm_content=r-reactjs
 
 The SDK is MIT on npm (`langsys-js-react`), works with Next.js (seed the catalog on the server and the first render is already translated, with no flash on hydration), and the hosted service has a free plan.
 
@@ -185,7 +185,7 @@ Three components I'm happy with:
 One Vue-specific gotcha we had to design around: inside `<Phrase>` and `<Translate>`, write placeholders as `%name%`, not `{{ name }}`. Slot content is compiled by the parent template, so Vue substitutes `{{ name }}` before the library sees it. Debug mode warns if you get it wrong.
 
 There's a one-minute walkthrough video here: https://youtu.be/1ROhtDzJWNo
-And a Vue guide: https://docs.langsys.dev/learn/sdk/vue?utm_source=reddit&utm_medium=community&utm_campaign=launch_2026&utm_content=r-vuejs
+And a Vue guide: https://docs.langsys.dev/learn/sdk/vue?utm_source=reddit&utm_campaign=launch_2026&utm_content=r-vuejs
 
 The SDK is MIT on npm (`langsys-js-vue`), works with Nuxt (seed the catalog on the server so the first render is already translated), and the hosted service has a free plan.
 

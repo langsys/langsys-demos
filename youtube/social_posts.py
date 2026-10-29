@@ -58,7 +58,7 @@ def x_post(section, video, port, sdk, video_id):
     kind = 'Short' if short else 'Video'
     return (f"**{kind}: {heading(port['title'])}** · {len(body)} characters\n\n```\n{body}\n```\n\n"
             f"{upload}\n\nReply:\n\n```\nhttps://youtu.be/{video_id}\n"
-            f"{utm.try_free('x', 'social', utm.content_of(port['file']))}\n```\n")
+            f"{utm.try_free('x', utm.content_of(port['file']))}\n```\n")
 
 
 def linkedin_post(section, video, port, sdk, video_id):
@@ -79,7 +79,7 @@ def linkedin_post(section, video, port, sdk, video_id):
     kind = 'Short' if short else 'Video'
     return (f"**{kind}: {heading(port['title'])}**\n\n```\n{body}\n```\n\n"
             f"Upload {upload}.\n\nFirst comment:\n\n```\nhttps://youtu.be/{video_id}\n"
-            f"{utm.try_free('linkedin', 'social', utm.content_of(port['file']))}\n```\n")
+            f"{utm.try_free('linkedin', utm.content_of(port['file']))}\n```\n")
 
 
 def main():

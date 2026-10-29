@@ -13,7 +13,7 @@ Langsys: Svelte i18n where the English sentence is the key
 
 MIT on npm (langsys-js-svelte), SvelteKit supported with a server-seeded first render.
 1-minute walkthrough: https://youtu.be/y-YbRDjV4Wk
-Docs: https://docs.langsys.dev/learn?utm_source=discord&utm_medium=community&utm_campaign=launch_2026&utm_content=svelte-discord
+Docs: https://docs.langsys.dev/learn?utm_source=discord&utm_campaign=launch_2026&utm_content=svelte-discord
 ```
 
 ## Svelte Society · launch + 2 · Wed 28 Oct 2026
@@ -33,10 +33,10 @@ Submit links; the editors decide what goes in. One line each, no hype.
 
 | Newsletter | Where to submit | What to send | Langsys link to include |
 |---|---|---|---|
-| JavaScript Weekly | javascriptweekly.com (submit link at the bottom) | The Learning Center or the explainer | https://langsys.dev/?utm_source=javascript_weekly&utm_medium=newsletter&utm_campaign=launch_2026&utm_content=launch-blurb |
-| Frontend Focus | frontendfoc.us (submit link) | The ‹Translate› video: placeholders, alt text and aria labels translated in one pass (accessibility angle) | https://langsys.dev/?utm_source=frontend_focus&utm_medium=newsletter&utm_campaign=launch_2026&utm_content=launch-blurb |
-| Svelte newsletters (This Week in Svelte, Svelte Society) | their submission forms or Discord | The Svelte walkthrough | https://langsys.dev/?utm_source=svelte_newsletters&utm_medium=newsletter&utm_campaign=launch_2026&utm_content=launch-blurb |
-| Console.dev | console.dev (submit a tool) | Langsys as a developer tool | https://langsys.dev/?utm_source=console_dev&utm_medium=newsletter&utm_campaign=launch_2026&utm_content=launch-blurb |
+| JavaScript Weekly | javascriptweekly.com (submit link at the bottom) | The Learning Center or the explainer | https://langsys.dev/?utm_source=javascript_weekly&utm_campaign=launch_2026&utm_content=launch-blurb |
+| Frontend Focus | frontendfoc.us (submit link) | The ‹Translate› video: placeholders, alt text and aria labels translated in one pass (accessibility angle) | https://langsys.dev/?utm_source=frontend_focus&utm_campaign=launch_2026&utm_content=launch-blurb |
+| Svelte newsletters (This Week in Svelte, Svelte Society) | their submission forms or Discord | The Svelte walkthrough | https://langsys.dev/?utm_source=svelte_newsletters&utm_campaign=launch_2026&utm_content=launch-blurb |
+| Console.dev | console.dev (submit a tool) | Langsys as a developer tool | https://langsys.dev/?utm_source=console_dev&utm_campaign=launch_2026&utm_content=launch-blurb |
 
 Text to send:
 
@@ -51,7 +51,7 @@ Replace LINK with that newsletter's link from the table, so a sign-up from it is
 alternativeto.net → "Suggest new application".
 
 - **Name:** Langsys
-- **Website:** https://langsys.dev?utm_source=alternativeto&utm_medium=listing&utm_campaign=launch_2026&utm_content=alternativeto
+- **Website:** https://langsys.dev?utm_source=alternativeto&utm_campaign=launch_2026&utm_content=alternativeto
 - **Short description:** `Translation management for web and mobile apps, where the sentence in your code is the key: no keys file, no extraction, no redeploy.`
 - **License / pricing:** Freemium; SDKs open source (MIT)
 - **Platforms:** Online / SaaS

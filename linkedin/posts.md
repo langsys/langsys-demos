@@ -33,8 +33,8 @@ First comment:
 ```
 What is Langsys, in 77 seconds: https://youtu.be/q_a37CzxWrk
 Getting started, end to end: https://youtu.be/Fo1HCybAHg0
-Every video, in order, in the Learning Center: https://docs.langsys.dev/learn?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=launch-post
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=launch-post
+Every video, in order, in the Learning Center: https://docs.langsys.dev/learn?utm_source=linkedin&utm_campaign=launch_2026&utm_content=launch-post
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=launch-post
 ```
 
 ## Week 1, Wednesday (launch + 2 · Wed 28 Oct 2026)
@@ -57,7 +57,7 @@ First comment:
 
 ```
 https://youtu.be/y-YbRDjV4Wk
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=svelte-hero
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=svelte-hero
 ```
 
 ## Week 1, Friday (launch + 4 · Fri 30 Oct 2026)
@@ -80,7 +80,7 @@ First comment:
 
 ```
 https://youtu.be/6ef3Mc0ILfk
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=managing-translations
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=managing-translations
 ```
 
 > On hold: Filmed against translation-manager MR !1; until it ships, Send on the invite dialog errors on the live app. Post only once the video is public.
@@ -105,7 +105,7 @@ First comment:
 
 ```
 https://youtu.be/mqFBw6x7RZg
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=svelte-t-string
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=svelte-t-string
 ```
 
 ## Week 2, Wednesday (launch + 9 · Wed 4 Nov 2026)
@@ -128,7 +128,7 @@ First comment:
 
 ```
 https://youtu.be/QC2IIRaAyCc
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=translation-memory
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=translation-memory
 ```
 
 ## Week 2, Friday (launch + 11 · Fri 6 Nov 2026)
@@ -151,7 +151,7 @@ First comment:
 
 ```
 https://youtu.be/r85P18fhfCU
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=svelte-phrase-tag
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=svelte-phrase-tag
 ```
 
 ## Week 3, Monday (launch + 14 · Mon 9 Nov 2026)
@@ -174,7 +174,7 @@ First comment:
 
 ```
 https://youtu.be/65z2J2jiSbY
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=adding-a-language
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=adding-a-language
 ```
 
 ## Week 3, Wednesday (launch + 16 · Wed 11 Nov 2026)
@@ -197,7 +197,7 @@ First comment:
 
 ```
 https://youtu.be/krgkcNYw4IY
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=svelte-translate-tag
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=svelte-translate-tag
 ```
 
 ## Week 3, Friday (launch + 18 · Fri 13 Nov 2026)
@@ -220,7 +220,7 @@ First comment:
 
 ```
 https://youtu.be/SHHt8ebaH-g
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=catching-up-a-language
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=catching-up-a-language
 ```
 
 ## Week 4, Monday (launch + 21 · Mon 16 Nov 2026)
@@ -243,7 +243,7 @@ First comment:
 
 ```
 https://youtu.be/YPyWNGdaAHw
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=svelte-donttranslate
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=svelte-donttranslate
 ```
 
 ## Week 4, Wednesday (launch + 23 · Wed 18 Nov 2026)
@@ -266,7 +266,7 @@ First comment:
 
 ```
 https://youtu.be/YVYgEaPvcjg
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=translating-a-content-block
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=translating-a-content-block
 ```
 
 > On hold: Filmed against translation-manager MR !2; until it ships, the live app drops a segment edit and needs a reload to show the AI result. Post only once the video is public.
@@ -291,7 +291,7 @@ First comment:
 
 ```
 https://youtu.be/-ZMV0UyKRVk
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=svelte-content-blocks
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=svelte-content-blocks
 ```
 
 ## Week 5, Monday (launch + 28 · Mon 23 Nov 2026)
@@ -314,7 +314,7 @@ First comment:
 
 ```
 https://youtu.be/PnRoVVfYmKE
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=ai-translator-settings
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=ai-translator-settings
 ```
 
 ## Week 5, Wednesday (launch + 30 · Wed 25 Nov 2026)
@@ -337,7 +337,7 @@ First comment:
 
 ```
 https://youtu.be/-P963Wj0dno
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=svelte-categories
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=svelte-categories
 ```
 
 ## Week 5, Friday (launch + 32 · Fri 27 Nov 2026)
@@ -360,7 +360,7 @@ First comment:
 
 ```
 https://youtu.be/jZJRja7n_-c
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=api-keys-in-production
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=api-keys-in-production
 ```
 
 ## Week 6, Monday (launch + 35 · Mon 30 Nov 2026)
@@ -383,7 +383,7 @@ First comment:
 
 ```
 https://youtu.be/AfpNQtvugks
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=svelte-icu-gender
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=svelte-icu-gender
 ```
 
 ## Week 6, Tuesday (launch + 36 · Tue 1 Dec 2026)
@@ -404,7 +404,7 @@ First comment:
 
 ```
 https://youtu.be/6bMkgdK1GpU
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=svelte-social-icu-gender-9x16
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=svelte-social-icu-gender-9x16
 ```
 
 ## Week 6, Wednesday (launch + 37 · Wed 2 Dec 2026)
@@ -427,7 +427,7 @@ First comment:
 
 ```
 https://youtu.be/y1kGQkoZ3_w
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=one-organization-many-projects
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=one-organization-many-projects
 ```
 
 ## Week 6, Friday (launch + 39 · Fri 4 Dec 2026)
@@ -450,7 +450,7 @@ First comment:
 
 ```
 https://youtu.be/w9TNoFQ2fpM
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=svelte-attributes
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=svelte-attributes
 ```
 
 ## Week 7, Monday (launch + 42 · Mon 7 Dec 2026)
@@ -473,7 +473,7 @@ First comment:
 
 ```
 https://youtu.be/TOqn3rfDyGQ
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=usage-and-credits
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=usage-and-credits
 ```
 
 ## Week 7, Wednesday (launch + 44 · Wed 9 Dec 2026)
@@ -496,7 +496,7 @@ First comment:
 
 ```
 https://youtu.be/Bc2h2bxaB9M
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=svelte-formatting
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=svelte-formatting
 ```
 
 ## Week 7, Friday (launch + 46 · Fri 11 Dec 2026)
@@ -519,7 +519,7 @@ First comment:
 
 ```
 https://youtu.be/3Lnmfo0T71Q
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=plans-and-payments
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=plans-and-payments
 ```
 
 ## Week 8, Monday (launch + 49 · Mon 14 Dec 2026)
@@ -542,7 +542,7 @@ First comment:
 
 ```
 https://youtu.be/gpSYSKrmVp0
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=notifications
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=notifications
 ```
 
 ## Week 8, Tuesday (launch + 50 · Tue 15 Dec 2026)
@@ -565,7 +565,7 @@ First comment:
 
 ```
 https://youtu.be/sp4K9n4krZ4
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=react-react-hero
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=react-react-hero
 ```
 
 ## Week 8, Friday (launch + 53 · Fri 18 Dec 2026)
@@ -590,7 +590,7 @@ First comment:
 
 ```
 https://youtu.be/22OJORE4d8g
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=react-react-t-string
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=react-react-t-string
 ```
 
 ## Week 9, Monday (launch + 56 · Mon 21 Dec 2026)
@@ -615,7 +615,7 @@ First comment:
 
 ```
 https://youtu.be/U1UoliOjgeE
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=react-react-phrase-tag
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=react-react-phrase-tag
 ```
 
 ## Week 9, Wednesday (launch + 58 · Wed 23 Dec 2026)
@@ -640,7 +640,7 @@ First comment:
 
 ```
 https://youtu.be/XtjY6UcOoPk
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=react-react-translate-tag
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=react-react-translate-tag
 ```
 
 ## Week 11, Friday (launch + 74 · Fri 8 Jan 2027)
@@ -665,7 +665,7 @@ First comment:
 
 ```
 https://youtu.be/-njmHFcTn7s
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=react-react-donttranslate
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=react-react-donttranslate
 ```
 
 ## Week 12, Monday (launch + 77 · Mon 11 Jan 2027)
@@ -690,7 +690,7 @@ First comment:
 
 ```
 https://youtu.be/kUws7TofOqE
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=react-react-content-blocks
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=react-react-content-blocks
 ```
 
 ## Week 12, Wednesday (launch + 79 · Wed 13 Jan 2027)
@@ -715,7 +715,7 @@ First comment:
 
 ```
 https://youtu.be/yr8DShqIiJ4
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=react-react-categories
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=react-react-categories
 ```
 
 ## Week 12, Friday (launch + 81 · Fri 15 Jan 2027)
@@ -740,7 +740,7 @@ First comment:
 
 ```
 https://youtu.be/H9vX59TgiMw
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=react-react-icu-gender
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=react-react-icu-gender
 ```
 
 ## Week 13, Monday (launch + 84 · Mon 18 Jan 2027)
@@ -765,7 +765,7 @@ First comment:
 
 ```
 https://youtu.be/Qtb1vzKpZw0
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=react-react-attributes
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=react-react-attributes
 ```
 
 ## Week 13, Wednesday (launch + 86 · Wed 20 Jan 2027)
@@ -790,7 +790,7 @@ First comment:
 
 ```
 https://youtu.be/gq6qQE_yPss
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=react-react-formatting
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=react-react-formatting
 ```
 
 ## Week 14, Monday (launch + 91 · Mon 25 Jan 2027)
@@ -813,7 +813,7 @@ First comment:
 
 ```
 https://youtu.be/1ROhtDzJWNo
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=vue-vue-hero
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=vue-vue-hero
 ```
 
 ## Week 14, Wednesday (launch + 93 · Wed 27 Jan 2027)
@@ -838,7 +838,7 @@ First comment:
 
 ```
 https://youtu.be/sIMXbUnD5ns
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=vue-vue-t-string
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=vue-vue-t-string
 ```
 
 ## Week 14, Friday (launch + 95 · Fri 29 Jan 2027)
@@ -863,7 +863,7 @@ First comment:
 
 ```
 https://youtu.be/xTBW-x0g2fg
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=vue-vue-phrase-tag
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=vue-vue-phrase-tag
 ```
 
 ## Week 15, Monday (launch + 98 · Mon 1 Feb 2027)
@@ -888,7 +888,7 @@ First comment:
 
 ```
 https://youtu.be/WJbebS8J5qg
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=vue-vue-translate-tag
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=vue-vue-translate-tag
 ```
 
 ## Week 15, Wednesday (launch + 100 · Wed 3 Feb 2027)
@@ -913,7 +913,7 @@ First comment:
 
 ```
 https://youtu.be/uF-LHSzYpUU
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=vue-vue-donttranslate
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=vue-vue-donttranslate
 ```
 
 ## Week 15, Friday (launch + 102 · Fri 5 Feb 2027)
@@ -938,7 +938,7 @@ First comment:
 
 ```
 https://youtu.be/vMtUjWo2Ezk
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=vue-vue-content-blocks
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=vue-vue-content-blocks
 ```
 
 ## Week 16, Monday (launch + 105 · Mon 8 Feb 2027)
@@ -963,7 +963,7 @@ First comment:
 
 ```
 https://youtu.be/jsqNGO2ArBc
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=vue-vue-categories
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=vue-vue-categories
 ```
 
 ## Week 16, Wednesday (launch + 107 · Wed 10 Feb 2027)
@@ -988,7 +988,7 @@ First comment:
 
 ```
 https://youtu.be/p_hCurEby8o
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=vue-vue-icu-gender
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=vue-vue-icu-gender
 ```
 
 ## Week 16, Friday (launch + 109 · Fri 12 Feb 2027)
@@ -1013,7 +1013,7 @@ First comment:
 
 ```
 https://youtu.be/O4sXjBN_9xw
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=vue-vue-attributes
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=vue-vue-attributes
 ```
 
 ## Week 17, Monday (launch + 112 · Mon 15 Feb 2027)
@@ -1038,6 +1038,6 @@ First comment:
 
 ```
 https://youtu.be/f-BpHgumD7k
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_medium=social&utm_campaign=launch_2026&utm_content=vue-vue-formatting
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=vue-vue-formatting
 ```
 

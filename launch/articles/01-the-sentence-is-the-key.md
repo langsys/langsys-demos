@@ -89,6 +89,6 @@ The SDKs are open source (MIT): `langsys-js-typescript`, `langsys-js-react`, `la
 
 - The key-file problem, in 40 seconds: https://youtu.be/8ityN0zlu98
 - Getting started, end to end: https://youtu.be/Fo1HCybAHg0
-- Docs and the Learning Center: https://docs.langsys.dev/learn?utm_source=devto&utm_medium=article&utm_campaign=launch_2026&utm_content=the-sentence-is-the-key
+- Docs and the Learning Center: https://docs.langsys.dev/learn?utm_source=devto&utm_campaign=launch_2026&utm_content=the-sentence-is-the-key
 
 If you maintain a keys file in a large app, I'd like to hear where you think this approach would break for you.
