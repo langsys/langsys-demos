@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Selvara Journal</title>
+    </head>
+    <body>
+        <header class="masthead">
+            <a class="brand" href="/">Selvara <span>Journal</span></a>
+            <label class="picker">
+                <span class="sr-only">Language</span>
+                <select id="locale-select"></select>
+            </label>
+        </header>
+        <main class="page">
+            <p class="meta" id="meta"></p>
+            <article id="post" class="post"></article>
+        </main>
+        <aside id="wire" class="wire" translate="no">
+            <h2>This browser and Langsys</h2>
+            <dl>
+                <dt>Can it register new text?</dt>
+                <dd data-write data-state="asking">Asking Langsys…</dd>
+            </dl>
+            <h3>Sent to Langsys</h3>
+            <ul data-log></ul>
+            <p class="wire-empty">Nothing yet.</p>
+            <p class="wire-unconfigured">No project or key in <code>.env</code>, so Langsys is not loaded.</p>
+        </aside>
+        <script type="module" src="/src/post.ts"></script>
+    </body>
+</html>

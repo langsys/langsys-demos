@@ -2,7 +2,7 @@
     // The Svelte demo app: every example on docs.langsys.dev/learn/sdk/svelte
     // running live, wired by the exact code the docs page shows.
     import { DontTranslate, Phrase, Translate, currentlyLoadedLocale, t } from 'langsys-js-svelte';
-    import { LOCALES, LOCALE_LABELS, demoBanner, locale } from './langsys';
+    import { demoBanner, languages, locale } from './langsys';
 
     const KEYS_URL = 'https://docs.langsys.dev/learn/concepts/keys-and-environments';
     const DOCS_URL = 'https://docs.langsys.dev/learn/sdk/svelte';
@@ -28,16 +28,12 @@
 <div class="app">
     <header class="topbar">
         <div class="brand"><span class="logo">◆</span> <span translate="no">Langsys</span> × Svelte</div>
-        <nav class="locales" translate="no">
-            {#each LOCALES as code}
-                <button
-                    class={($currentlyLoadedLocale || 'en-US') === code ? 'pill active' : 'pill'}
-                    onclick={() => locale.set(code)}
-                >
-                    {LOCALE_LABELS[code] ?? code}
-                </button>
+        <!-- The languages the project serves, read once the SDK has started. -->
+        <select class="locale-select" aria-label="Language" translate="no" bind:value={$locale}>
+            {#each $languages as l (l.code)}
+                <option value={l.code}>{l.label}</option>
             {/each}
-        </nav>
+        </select>
     </header>
 
     <!-- t() — inline string: the $t store re-reads on locale/catalog change. -->

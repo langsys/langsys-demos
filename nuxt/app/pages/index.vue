@@ -3,13 +3,15 @@
 // as the Vue demo, under the catalog the server seeded.
 import type { Signal } from 'langsys-js-vue';
 import { DontTranslate, Phrase, Translate, useCurrentLocale, useSignal, useT } from 'langsys-js-vue';
-import { LOCALES, LOCALE_LABELS } from '../langsys';
+import type { Language } from '../langsys';
 
 const KEYS_URL = 'https://docs.langsys.dev/learn/concepts/keys-and-environments';
 const DOCS_URL = 'https://docs.langsys.dev/learn/guides/nuxt';
 
 const sharedDemo = useRuntimeConfig().public.langsysSharedDemo;
 const locale = inject<Signal<string>>('locale')!;
+// The languages the project serves — the server read them, so the list is right from the first paint.
+const languages = inject<Language[]>('languages')!;
 const selected = useSignal(locale);
 const loaded = useCurrentLocale();
 
@@ -32,17 +34,15 @@ const items = ref(3);
     <div class="app">
         <header class="topbar">
             <div class="brand"><span class="logo">◆</span> <span translate="no">Langsys</span> × Nuxt</div>
-            <nav class="locales" translate="no">
-                <button
-                    v-for="code in LOCALES"
-                    :key="code"
-                    class="pill"
-                    :class="{ active: selected === code }"
-                    @click="locale.set(code)"
-                >
-                    {{ LOCALE_LABELS[code] ?? code }}
-                </button>
-            </nav>
+            <select
+                class="locale-select"
+                aria-label="Language"
+                translate="no"
+                :value="selected"
+                @change="locale.set(($event.target as HTMLSelectElement).value)"
+            >
+                <option v-for="l in languages" :key="l.code" :value="l.code">{{ l.label }}</option>
+            </select>
         </header>
 
         <section class="card">

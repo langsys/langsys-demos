@@ -1,0 +1,114 @@
+<meta charset="utf-8" />
+<title>Langsys — placeholders and alt text translate too (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<style>
+    #stage .app { height: 316px; padding: 28px 30px; }
+    #stage .code { height: 340px; font-size: 24px; }
+    #stage.r1x1 .app { height: 226px; padding: 22px 28px; }
+    #stage.r1x1 .code { height: 252px; font-size: 19px; }
+
+    .form { display: grid; gap: 18px; }
+    .field { font-size: 25px; color: var(--muted); }
+    .box { border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; font-size: 29px; color: #8a8aa2; }
+    #stage.r1x1 .box { padding: 8px 14px; font-size: 21px; }
+    .meta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .btn { background: var(--accent); color: #fff; border-radius: 12px; padding: 12px 22px; font-size: 27px; font-weight: 600; }
+    .attr { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 21px; border: 1px solid var(--line); border-radius: 10px; padding: 9px 13px; color: var(--muted); }
+    .attr.ok { border-color: var(--accent-2); color: var(--ink); }
+    .attr.stale { border-color: var(--bad); color: var(--bad); }
+    .hot { border-color: var(--bad); color: var(--bad); }
+
+    .stamp { margin-left: auto; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; padding: 5px 12px; border-radius: 999px; }
+    .stamp.old { color: var(--bad); border: 1px solid var(--bad); }
+    .stamp.new { color: var(--accent-2); border: 1px solid var(--accent-2); }
+</style>
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+            <div class="locales">
+                <div class="pill" data-loc="en-US">EN</div>
+                <div class="pill" data-loc="es">ES</div>
+            </div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> Your checkout</div>
+            <div class="app"><div class="form" id="form"></div></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> Checkout.svelte<span class="stamp" id="stamp"></span></div>
+            <div class="code" id="code"></div>
+        </div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // The social cut of svelte/web/attributes: the same checkout, the same
+    // three attributes (placeholder, alt, aria-label), its Spanish strings and
+    // its problem act — a $t() call on every attribute, where the one you
+    // forget stays English.
+    const CODE_TRANSLATE = [
+        '<span class="k">&lt;</span><span class="t">Translate</span> category=<span class="s">"Checkout"</span><span class="k">&gt;</span>',
+        '  &lt;input placeholder=<span class="s">"you@example.com"</span> /&gt;',
+        '  &lt;img alt=<span class="s">"Secure checkout"</span> /&gt;',
+        '  &lt;button aria-label=<span class="s">"Place your order"</span>&gt;',
+        '    Place order&lt;/button&gt;',
+        '<span class="k">&lt;/</span><span class="t">Translate</span><span class="k">&gt;</span>',
+    ].join('\n');
+
+    const CODE_OLD = [
+        '&lt;input placeholder={<span class="v">$t</span>(<span class="s">\'checkout.email_ph\'</span>)} /&gt;',
+        '&lt;img alt={<span class="v">$t</span>(<span class="s">\'checkout.img_alt\'</span>)} /&gt;',
+        '&lt;button aria-label={<span class="v">$t</span>(<span class="s">\'checkout.cta_aria\'</span>)}&gt;',
+        '',
+        '<span class="c">// One call per attribute.</span>',
+        '<span class="c">// Forget one, and it stays English.</span>',
+    ].join('\n');
+
+    const DATA = {
+        EN: { label: 'Email address', ph: 'you@example.com', alt: 'alt: Secure checkout', btn: 'Place order' },
+        ES: { label: 'Correo electrónico', ph: 'tu@ejemplo.com', alt: 'alt: Pago seguro', btn: 'Realizar pedido' },
+        MIX: { label: 'Correo electrónico', ph: 'you@example.com', alt: 'alt: Secure checkout', btn: 'Realizar pedido' },
+    };
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 14,
+        scenes: [
+            { until: 3.2, locale: 'es', data: 'ES', code: 'translate', attrs: 'ok', caption: 'Placeholders and alt text <em>translate too.</em>' },
+            { until: 6.4, locale: 'es', data: 'MIX', code: 'old', attrs: 'stale', caption: 'Other i18n needs a call <span class="bad">on every attribute.</span>' },
+            { until: 9.6, locale: 'en-US', data: 'EN', code: 'translate', attrs: '', caption: 'Now, with Langsys, <em>one tag covers the region.</em>' },
+            { until: 12.4, locale: 'es', data: 'ES', code: 'translate', attrs: 'ok', caption: 'Even what <em>a screen reader</em> announces.' },
+            { until: 14.0, outro: true },
+        ],
+        outro: 'The visible words and the attributes,<br />translated together in one pass.',
+        render(scene, { el }) {
+            const old = scene.code === 'old';
+            const data = DATA[scene.data];
+            const stale = scene.attrs === 'stale';
+            el('form').innerHTML = '<div class="field">' + data.label + '</div>'
+                + '<div class="box' + (stale ? ' hot' : '') + '">' + data.ph + '</div>'
+                + '<div class="meta"><span class="btn">' + data.btn + '</span>'
+                + '<span class="attr ' + scene.attrs + '">' + data.alt + '</span>'
+                + '<span class="attr ' + scene.attrs + '">aria-label</span></div>';
+            el('code').innerHTML = old ? CODE_OLD : CODE_TRANSLATE;
+            el('stamp').textContent = old ? 'OTHER I18N' : 'WITH LANGSYS';
+            el('stamp').className = 'stamp ' + (old ? 'old' : 'new');
+        },
+    });
+</script>

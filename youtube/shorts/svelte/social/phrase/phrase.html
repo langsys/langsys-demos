@@ -1,0 +1,121 @@
+<meta charset="utf-8" />
+<title>Langsys — the phrase is the key (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<style>
+    /* Five lines of code — trim the panel so it does not float in empty space. */
+    #stage .code { height: 244px; }
+    #stage.r1x1 .code { height: 196px; }
+
+    /* The "what you didn't have to write" panel. Shown struck through on the
+       beat where the caption claims there is no keys file. */
+    .nokeys { color: #5c5c74; }
+    .nokeys .gone { text-decoration: line-through; }
+    .nokeys .stamp {
+        display: inline-block;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: var(--bad);
+        margin-right: 11px;
+    }
+</style>
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+            <div class="locales">
+                <div class="pill" data-loc="en-US">EN</div>
+                <div class="pill" data-loc="es">ES</div>
+            </div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> Your app</div>
+            <div class="app">
+                <div class="user">
+                    <div class="avatar f">L</div>
+                    <div>
+                        <div class="uname">Laura</div>
+                        <div class="umeta">Onboarding</div>
+                    </div>
+                </div>
+                <div class="greeting" id="greeting"></div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> App.svelte</div>
+            <div class="code" id="code"></div>
+        </div>
+
+        <div class="stored" id="stored"></div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // The call site never changes across the whole cut — that is the point of
+    // the demo, so the code panel is a constant.
+    const CODE = [
+        '<span class="k">import</span> { t } <span class="k">from</span> <span class="s">\'langsys-js-svelte\'</span>;',
+        '',
+        '&lt;h1&gt;{<span class="v">$t</span>(<span class="s hl">\'Welcome, {name}!\'</span>, {',
+        '    name: user.name,',
+        '})}&lt;/h1&gt;',
+    ].join('\n');
+
+    const GREETING = { 'en-US': 'Welcome, Laura!', 'es': '¡Bienvenida, Laura!' };
+
+    const CATALOG = {
+        'en-US': '<span class="tag">CATALOG · en-US</span><b>Welcome, {name}!</b>',
+        'es': '<span class="tag">CATALOG · es</span><b>{name_gender, select, female {¡Bienvenida, {name}!} '
+            + 'male {¡Bienvenido, {name}!} other {¡Te damos la bienvenida, {name}!}}</b>',
+    };
+
+    // What the traditional setup would have cost you, struck out.
+    const NO_KEYS = '<div class="nokeys"><span class="stamp">NOT NEEDED</span>'
+        + '<span class="gone">locales/en.json → "onboarding.welcome_title"</span><br />'
+        + '<span class="gone">locales/es.json → "onboarding.welcome_title"</span><br />'
+        + '<span class="gone">npm run i18n:extract</span></div>';
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 12,
+        scenes: [
+            {
+                until: 3.2, locale: 'en-US', proof: 'catalog',
+                caption: 'Your translation key <em>is the English sentence.</em>',
+            },
+            {
+                until: 6.6, locale: 'en-US', proof: 'nokeys',
+                caption: 'No keys file. <span class="dim">Nothing to extract, nothing to keep in sync.</span>',
+            },
+            {
+                until: 9.8, locale: 'es', proof: 'catalog',
+                caption: 'Switch locale — <em>same line of code.</em>',
+            },
+            { until: 12.0, outro: true },
+        ],
+        outro: 'The phrase in your code is the key.<br />No keys file, no extraction step, no drift.',
+        render(scene, { el }) {
+            el('code').innerHTML = CODE;
+            el('greeting').textContent = GREETING[scene.locale];
+            el('stored').innerHTML = scene.proof === 'nokeys'
+                ? NO_KEYS
+                : CATALOG[scene.locale];
+        },
+    });
+</script>

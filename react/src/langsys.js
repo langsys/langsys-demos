@@ -1,16 +1,36 @@
-import { LangsysApp, LangsysAppAPI, createLocaleStore } from 'langsys-js-react';
+import { LangsysApp, LangsysAppAPI, canonicalizeLocale, createLocaleStore, createSignal } from 'langsys-js-react';
 
 // One shared locale store: the switcher writes it, LangsysApp reads it.
 export const locale = createLocaleStore('en-US');
-export const LOCALES = ['en-US', 'es-ES', 'fr-FR', 'de-DE'];
 
-// Friendly names for the locale switcher.
-export const LOCALE_LABELS = {
-    'en-US': 'English',
-    'es-ES': 'Español',
-    'fr-FR': 'Français',
-    'de-DE': 'Deutsch',
-};
+// The 18 languages Langsys supports on its own surfaces, each named in itself. The picker
+// offers the ones the project serves, on the locale it serves each from — read from the
+// project once the SDK has started (end of this file). Asking for a locale the project
+// doesn't serve is a 422, which would leave the demo silently in English.
+export const LANGUAGES = [
+    { code: 'en-US', label: 'English' },
+    { code: 'es-419', label: 'Español' },
+    { code: 'pt-BR', label: 'Português' },
+    { code: 'fr-FR', label: 'Français' },
+    { code: 'de-DE', label: 'Deutsch' },
+    { code: 'it-IT', label: 'Italiano' },
+    { code: 'ja-JP', label: '日本語' },
+    { code: 'zh-Hans', label: '中文' },
+    { code: 'ko-KR', label: '한국어' },
+    { code: 'ru-RU', label: 'Русский' },
+    { code: 'uk-UA', label: 'Українська' },
+    { code: 'tr-TR', label: 'Türkçe' },
+    { code: 'pl-PL', label: 'Polski' },
+    { code: 'nl-NL', label: 'Nederlands' },
+    { code: 'id-ID', label: 'Bahasa Indonesia' },
+    { code: 'vi-VN', label: 'Tiếng Việt' },
+    { code: 'hi-IN', label: 'हिन्दी' },
+    { code: 'ar-001', label: 'العربية', dir: 'rtl' },
+];
+
+export const languages = createSignal(LANGUAGES);
+
+const languageOf = (code) => code.split('-')[0].toLowerCase();
 
 // Optional: point the SDK at a non-production instance (local dev). Leave unset
 // in production and it defaults to api.langsys.dev.
@@ -36,4 +56,22 @@ LangsysApp.init({
     projectid: envProjectId || DEMO_PROJECT_ID,
     key: import.meta.env.VITE_LANGSYS_API_KEY || DEMO_KEY,
     UserLocaleStore: locale,
+}).then((response) => {
+    const project = (response)?.data;
+    if (!project?.base_locale) return;
+    const served = { ...project.default_locales, [languageOf(project.base_locale)]: project.base_locale };
+    const offered = LANGUAGES.filter((l) => served[languageOf(l.code)]).map((l) => ({
+        ...l,
+        code: canonicalizeLocale(served[languageOf(l.code)]),
+    }));
+    languages.set(offered);
+    // Keep the selected language, on the locale the project serves it from.
+    const selected = offered.find((l) => languageOf(l.code) === languageOf(locale.get()));
+    locale.set(selected?.code ?? 'en-US');
+});
+
+// A right-to-left language lays the demo's output out right to left (demo.css).
+locale.subscribe((code) => {
+    document.documentElement.dataset.demoDir =
+        LANGUAGES.find((l) => languageOf(l.code) === languageOf(code))?.dir ?? 'ltr';
 });

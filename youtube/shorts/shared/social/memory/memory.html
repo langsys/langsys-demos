@@ -1,0 +1,97 @@
+<meta charset="utf-8" />
+<title>Langsys — a new project that starts already translated (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<style>
+    #stage .list { height: 384px; }
+    #stage .app { height: 250px; }
+    #stage.r1x1 .list { height: 290px; padding: 18px 26px; }
+    #stage.r1x1 .app { height: 180px; padding: 22px 30px; }
+
+    .list { padding: 22px 28px; display: grid; gap: 12px; align-content: start; }
+    .item { display: grid; grid-template-columns: 1fr 1fr auto; gap: 14px; align-items: center; font-size: 30px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    #stage.r1x1 .item { font-size: 24px; padding: 6px 0; }
+    .item:last-child { border-bottom: 0; }
+    .item .en { color: var(--muted); }
+    .item.on .es { color: var(--accent-2); font-weight: 600; }
+    .item .old { color: var(--bad); text-decoration: line-through; margin-right: 10px; }
+    .badge { font-size: 20px; font-weight: 600; border-radius: 999px; padding: 5px 12px; border: 1px solid var(--line); color: var(--muted); }
+    .item.on .badge { border-color: var(--accent-2); color: var(--ink); }
+
+    .nav { display: flex; gap: 40px; font-size: 38px; font-weight: 600; color: var(--muted); }
+    .nav .cart { color: var(--ink); border-bottom: 3px solid var(--accent-2); padding-bottom: 6px; }
+    .shop { font-size: 24px; color: var(--muted); margin-bottom: 20px; }
+</style>
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+            <div class="locales">
+                <div class="pill" data-loc="es">ES</div>
+            </div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> <span id="listHead"></span></div>
+            <div class="list" id="list"></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> <span id="appHead"></span></div>
+            <div class="app">
+                <div class="shop" id="shop"></div>
+                <div class="nav" id="nav"></div>
+            </div>
+        </div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // From the Translation Memory tour (assets/tour/narrate_tour.py,
+    // "tour-memory"): in Selvara Store, carrito was corrected to cesta with
+    // Update Memory on; the new Selvara Outlet project arrives full, nothing in
+    // its to-do list, the cart line already says cesta with Joe's badge, and no
+    // model was called. The memory is shared across the organization.
+    const OUTLET = [
+        ['Cart', 'Cesta', 'Joe · memory'],
+        ['Welcome back', 'Bienvenido de nuevo', 'memory'],
+        ['Checkout', 'Finalizar compra', 'memory'],
+    ];
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 14,
+        scenes: [
+            { until: 3.2, locale: 'es', view: 'outlet', lit: [], caption: 'A brand-new project, <em>already translated.</em>' },
+            { until: 6.4, locale: 'es', view: 'store', lit: [0], caption: 'In another project, someone fixed <span class="bad">carrito</span> to <em>cesta.</em>' },
+            { until: 9.6, locale: 'es', view: 'outlet', lit: [0], caption: 'The new project <em>already says cesta.</em> <span class="dim">Joe still gets the credit.</span>' },
+            { until: 12.4, locale: 'es', view: 'outlet', lit: [0, 1, 2], caption: '<em>No model was called.</em> <span class="dim">One memory per organization.</span>' },
+            { until: 14.0, outro: true },
+        ],
+        outro: 'Every new project starts out knowing<br />what your organization already fixed.',
+        render(scene, { el }) {
+            const store = scene.view === 'store';
+            el('listHead').textContent = store ? 'Selvara Store · Spanish' : 'Selvara Outlet · new project · to do: 0';
+            el('appHead').textContent = store ? 'Selvara Store' : 'Selvara Outlet · nobody translated a word';
+            el('list').innerHTML = store
+                ? '<div class="item on"><span class="en">Cart</span><span class="es"><span class="old">Carrito</span>Cesta</span><span class="badge">Joe</span></div>'
+                : OUTLET.map(([en, es, badge], i) =>
+                    '<div class="item' + (scene.lit.includes(i) ? ' on' : '') + '"><span class="en">' + en + '</span>'
+                    + '<span class="es">' + es + '</span><span class="badge">' + badge + '</span></div>').join('');
+            el('shop').textContent = store ? 'selvara-store' : 'selvara-outlet';
+            el('nav').innerHTML = '<span>Inicio</span><span>Tienda</span><span class="cart">Cesta</span>';
+        },
+    });
+</script>

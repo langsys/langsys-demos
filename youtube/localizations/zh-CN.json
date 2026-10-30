@@ -1,0 +1,338 @@
+{
+  "labels": {
+    "learn_more": "了解更多",
+    "get_started": "立即开始",
+    "start_free": "免费开始",
+    "docs": "文档"
+  },
+  "videos": {
+    "explainer": {
+      "title": "Langsys 是什么？无需重新部署，让应用支持所有语言",
+      "summary": "77 秒了解 Langsys：应用中的 SDK，加上托管的 Translation Manager。短语在代码首次运行时自动注册，一到达就完成机器翻译，译者无需部署即可润色。\n\n实证：一篇 09:00 发布的博客文章，无需构建、无需写入密钥，09:03 就以西班牙语送达 Madrid 的读者。"
+    },
+    "getting-started": {
+      "title": "Langsys 入门：从零到上线全流程",
+      "summary": "一镜到底，从零做出一个已翻译的应用：创建项目及其语言，创建 API 密钥，安装并初始化 SDK，看着 t()、‹Translate›、‹Phrase› 和 ‹DontTranslate› 注册各自的短语。西班牙语译文已经出现在 Translation Manager 中，应用无需刷新即可切换到西班牙语和法语。"
+    },
+    "pluralization": {
+      "title": "告别 if (count === 1)，轻松搞定所有语言的复数",
+      "summary": "为什么句子会随数字变化；为什么在英语里修复它的 if (count === 1) 其实是写死在代码里的英语语法；以及为什么把句子写成不带分支的平铺形式，就能得到每种语言的所有复数形式。Langsys 先翻译平铺的句子，再按每个语言区域自己的 ICU 复数类别重建它，英语也不例外。"
+    },
+    "tutorial/workflow": {
+      "title": "翻译流水线，以及 Langsys 如何把它彻底删掉",
+      "summary": "核心概念 1/5。翻译通常要在一条流水线里来回往返：提取、导出、翻译、导入、部署。Langsys 把这一切都去掉了。"
+    },
+    "tutorial/key-files": {
+      "title": "告别键值文件：句子本身就是键",
+      "summary": "核心概念 2/5。项目从哪里开始，其他 i18n 库逼你凭空发明的键，以及 Langsys 用什么取代它。"
+    },
+    "tutorial/locale-store": {
+      "title": "语言区域存储：保存并切换当前语言",
+      "summary": "核心概念 3/5。Langsys 如何保存当前语言区域，并在整个应用中切换它。"
+    },
+    "tutorial/keys-and-environments": {
+      "title": "API 密钥与环境：哪个密钥该放在哪里",
+      "summary": "核心概念 4/5。为什么能注册短语的密钥绝不能随产品发布，为什么只读是条死路，以及 ip_write 是什么：同一个密钥，响应取决于请求从哪里发出。写入密钥只留在你自己掌控的机器上，ip_write 可以放进任何公开包，只读密钥则用于绝不能改动任何内容的包。"
+    },
+    "tutorial/adding-a-locale": {
+      "title": "添加新语言，只是一项项目设置",
+      "summary": "核心概念 5/5。支持一种新语言只是一项设置，而不是一个新项目：新短语一到达即被翻译，其余内容一次运行即可补齐。"
+    },
+    "managing-translations": {
+      "title": "用 Langsys Translation Manager 管理翻译",
+      "summary": "面向文案负责人的 Translation Manager，全程不出现代码：待办列表、手动修正的机器译稿、配合 Auto-next 使用的 AI Translate、Never Translate，以及一位只受邀负责西班牙语的译者。修改无需任何部署即在应用中生效。"
+    },
+    "translation-memory": {
+      "title": "翻译记忆：新项目一开始就已翻译完成",
+      "summary": "同一组织中的第二个项目，在任何人动手之前就已完全翻译。翻译记忆会跨项目携带每一句话及其作者，因此新项目完全不需要调用模型。"
+    },
+    "connect-your-ai-assistant": {
+      "title": "通过 MCP 在 Claude Code 中使用 Langsys",
+      "summary": "通过托管的 MCP 服务器在 AI 助手中使用 Langsys：一条 claude mcp add 命令，在浏览器中授权，Claude Code 就能基于实时数据回答有关项目语言的问题。连接可以在账户的 Security tab 中撤销。"
+    },
+    "adding-a-language": {
+      "title": "为线上应用添加德语：精确报价，无需部署",
+      "summary": "为一家线上商店添加德语。Langsys 在执行任何操作之前，先对现有目录给出精确报价（29 个词，$0.35），然后完成翻译，商店随即切换为德语，无需任何构建或部署。"
+    },
+    "catching-up-a-language": {
+      "title": "让落后的语言迎头赶上",
+      "summary": "Translation Manager 中的批量操作：对单一语言或整个项目执行 AI Translate Pending，确认框会列出每个目标语言区域及其费用，所有语言重新回到完成状态。"
+    },
+    "translating-a-content-block": {
+      "title": "把整个内容块作为一个整体来翻译",
+      "summary": "将一个 ‹Translate› 区域作为一个内容块翻译：AI Translate 一次性填充所有片段，其中一个片段以正式语体手动重写，‹DontTranslate› 句子保持英文，周围的意大利语照常填充。"
+    },
+    "ai-translator-settings": {
+      "title": "AI Translator 设置：每个开关逐一详解",
+      "summary": "从上到下逐项讲解 AI Translator 标签页：按需 AI 翻译、新短语自动翻译，以及自动检测——将本身已是西班牙语的短语保留为 never-translate。"
+    },
+    "api-keys-in-production": {
+      "title": "生产环境中的 API 密钥：活动记录、暂停与轮换",
+      "summary": "密钥上线之后：在 Activity 页面查看真实一周的店面流量，不删除密钥而是将其暂停，并现场演示轮换：三种密钥类型，新建一个带允许列表的 IP write 密钥，再删除旧密钥。"
+    },
+    "one-organization-many-projects": {
+      "title": "一个组织，多个项目",
+      "summary": "组织是每个项目的起点：默认语言区域、AI Translator 与计费设置、从组织余额为项目注资，以及将一个自定义过的项目切换回继承设置。"
+    },
+    "usage-and-credits": {
+      "title": "用量与积分：项目的资金从哪里来",
+      "summary": "两种计量方式——API 用量单位和积分，以及项目如何获得资金：现场演示从账户向项目转移积分，历史记录中每次机器翻译占一行，还有项目的月度限额与自动充值。"
+    },
+    "plans-and-payments": {
+      "title": "Langsys 的套餐与支付",
+      "summary": "不提交任何内容的计费功能导览：套餐与计费周期、Change Plan 对话框、与组织或项目共享的支付方式、地址以及发票。"
+    },
+    "notifications": {
+      "title": "通知：Langsys 会告诉你什么，在哪里告诉你",
+      "summary": "通知收件箱及其设置：针对新短语、邀请和项目访问权限的账户默认设置，可通过应用内通知和电子邮件接收，并可按项目单独覆盖。"
+    },
+    "svelte/hero": {
+      "title": "用 Langsys 实现 Svelte i18n：完整演练",
+      "summary": "其他 i18n 方案要求你时刻保持同步的东西、取代它的一次调用、语言区域切换、为什么不区分性别的西班牙语对一半用户来说都是错的，以及 ICU select 如何解决这个问题。"
+    },
+    "svelte/t-string": {
+      "title": "在 Svelte 中使用 t(phrase, category, params)",
+      "summary": "t() 调用：它所取代的键值文件问题、它的三个参数、ICU 占位符和复数。"
+    },
+    "svelte/phrase-tag": {
+      "title": "Svelte 中的 ‹Phrase›：内含标记的句子",
+      "summary": "内含标记的句子如何保持为一个短语，以及为什么 ‹Phrase› 的参数要写成 %name%。"
+    },
+    "svelte/translate-tag": {
+      "title": "Svelte 中的 ‹Translate›：一个标签搞定整个区域",
+      "summary": "一个 ‹Translate› 标签即可注册整个区域，以及为什么整块处理胜过逐行调用。"
+    },
+    "svelte/donttranslate": {
+      "title": "Svelte 中的 ‹DontTranslate›：品牌名原样保留",
+      "summary": "品牌名和标识符原样保留，无需把它们从句子中抽离出来。"
+    },
+    "svelte/content-blocks": {
+      "title": "什么是内容块？在 Svelte 中翻译整个版块",
+      "summary": "将一个版块作为整体注册，但它仍由一个个可单独复用的短语组成。"
+    },
+    "svelte/categories": {
+      "title": "同一个词，两种含义：用类别取代 i18n 键",
+      "summary": "i18n 为什么发明了键，以及用什么取代它：同一个词的两种含义，以及它拆分出的词对。"
+    },
+    "svelte/icu-gender": {
+      "title": "无需在代码里写条件判断，搞定性别一致（ICU select）",
+      "summary": "其他 i18n 方案留在组件里的性别条件判断，以及 Langsys 为每种语言自动生成的分支。"
+    },
+    "svelte/attributes": {
+      "title": "在 Svelte 中翻译 placeholder、alt 文本和 aria 标签",
+      "summary": "翻译了一半的表单在用户眼中是什么样子，以及一个 ‹Translate› 如何在同一轮中覆盖 placeholder、alt 文本和 aria 标签。"
+    },
+    "svelte/formatting": {
+      "title": "用 Svelte i18n 处理所有语言区域的数字与日期",
+      "summary": "遵循 CLDR 的数字和日期：你原本要手写的分支，为什么数字分组是一种形态而不是分隔符，以及为什么订单号必须以字符串形式传入。"
+    },
+    "svelte/social/phrase-9x16": {
+      "title": "你的 i18n 键，就是那句英文 #Shorts",
+      "summary": "使用 Langsys，代码中的句子就是翻译键：没有键值文件，无需提取或保持同步，同一行文字会以每种语言呈现。#Shorts"
+    },
+    "svelte/social/icu-gender-9x16": {
+      "title": "Bienvenido 还是 Bienvenida？一行代码搞定 #Shorts",
+      "summary": "西班牙语要与用户的性别保持一致。Langsys 自动生成 ICU select 分支，只需一行代码：Diego 看到 Bienvenido，Laura 看到 Bienvenida，性别未知时显示中性形式。#Shorts"
+    },
+    "svelte/social/icu-plurals-9x16": {
+      "title": "俄语有 4 种复数形式，你只需写一行 #Shorts",
+      "summary": "one、few、many 和 other：俄语根据数字选择复数形式，而 21 又回到单数。把句子平铺写好，Langsys 就会为每个语言区域构建所需的全部形式。#Shorts"
+    },
+    "svelte/social/content-blocks-9x16": {
+      "title": "一个标签，翻译整个版块 #Shorts",
+      "summary": "一个 Translate 标签包裹一段标记区域：每段文本都成为独立的短语，粗体和链接各归其位，品牌名永远不会被翻译。#Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "9:00 发布，9:03 就有人用西班牙语读到 #Shorts",
+      "summary": "一篇博客文章上线，无需构建也无需部署。第一位读者的应用只把页面地址发给 Langsys，Langsys 自己读取页面，几分钟后，马德里的读者就看到了西班牙语版本。 #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "问问你的 AI 助手，翻译进展如何 #Shorts",
+      "summary": "Langsys 托管了一个 MCP 服务器，Claude、Codex、Cursor 或 GitHub Copilot 都能读取你的项目并补齐缺失的翻译。只需在浏览器中授权一次，助手永远看不到你的密码。 #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "一个全新项目，一开始就已翻译好 #Shorts",
+      "summary": "改一次翻译，组织里的每个新项目都会知道。翻译记忆用西班牙语填满了这个项目，还保留了译者的署名，而且没有调用任何模型。 #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "在西班牙语中，粗体会移到它该在的位置 #Shorts",
+      "summary": "其他 i18n 库会把含有粗体词的句子拆成三个键。使用 ‹Phrase›，译者拿到的是连同标记在内的一整句话；在西班牙语中，粗体落在名词之后的“no leídos”上。 #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "为线上商店添加德语，无需部署 #Shorts",
+      "summary": "在项目设置中添加语言，而不是改代码。Langsys 会在花钱之前给出现有目录的准确价格，几秒钟内翻译完每个短语，商店无需构建或部署就能说德语。 #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "两种语言落后了，一步操作就追上 #Shorts",
+      "summary": "法语和日语各缺两个短语。AI Translate Pending 几秒钟就能翻译好，草稿会等待有人审核。 #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "你的品牌名，永远不会被翻译 #Shorts",
+      "summary": "译者分不清产品名和普通短语，所以其他 i18n 库会把 Bright Ledger 发布成 Libro Mayor Brillante。在 Langsys 中，你只需在原处用 ‹DontTranslate› 标记它，周围的句子照常翻译。 #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "一个英文单词，两种西班牙语译法 #Shorts",
+      "summary": "“Free”在一个界面上是价格，在另一个界面上是空闲的晚上。其他 i18n 库会编造一个键来区分它们。Langsys 保留原句，并把它归入一个类别：Gratis 和 Libre。 #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "占位符和替代文本也会被翻译 #Shorts",
+      "summary": "其他 i18n 库需要为每个属性单独调用，漏掉的那个就会一直是英文。一个 ‹Translate› 标签覆盖整个区域：占位符、图片描述，以及屏幕阅读器朗读的标签。 #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "每个数字和日期，都按各语言的格式显示 #Shorts",
+      "summary": "直接传入数字，把日期作为日期传入：德语显示 1.234,5 和 14. März 2026，印地语会把 1234567 分组为 12,34,567。订单号作为字符串传入，所以会保持原样。 #Shorts"
+    },
+    "react/social/react-phrase-9x16": {
+      "title": "你的 i18n 键，就是那句英文 (React) #Shorts",
+      "summary": "使用 Langsys，代码中的句子就是翻译键：没有键值文件，无需提取或保持同步，同一行文字会以每种语言呈现。#Shorts"
+    },
+    "react/react-hero": {
+      "title": "用 Langsys 实现 React i18n：完整演练",
+      "summary": "其他 i18n 方案要求你时刻保持同步的东西、取代它的一次调用、语言区域切换、为什么不区分性别的西班牙语对一半用户来说都是错的，以及 ICU select 如何解决这个问题。"
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "title": "俄语有 4 种复数形式，你只需写一行 (React) #Shorts",
+      "summary": "one、few、many 和 other：俄语根据数字选择复数形式，而 21 又回到单数。把句子平铺写好，Langsys 就会为每个语言区域构建所需的全部形式。#Shorts"
+    },
+    "react/react-t-string": {
+      "title": "在 React 中使用 t(phrase, category, params)",
+      "summary": "t() 调用：它所取代的键值文件问题、它的三个参数、ICU 占位符和复数。"
+    },
+    "react/react-phrase-tag": {
+      "title": "React 中的 ‹Phrase›：内含标记的句子",
+      "summary": "内含标记的句子如何保持为一个短语，以及为什么 ‹Phrase› 的参数要写成 %name%。"
+    },
+    "react/social/react-bold-moves-9x16": {
+      "title": "在西班牙语中，粗体会移到它该在的位置 (React) #Shorts",
+      "summary": "其他 i18n 库会把含有粗体词的句子拆成三个键。使用 ‹Phrase›，译者拿到的是连同标记在内的一整句话；在西班牙语中，粗体落在名词之后的“no leídos”上。 #Shorts"
+    },
+    "react/react-translate-tag": {
+      "title": "React 中的 ‹Translate›：一个标签搞定整个区域",
+      "summary": "一个 ‹Translate› 标签即可注册整个区域，以及为什么整块处理胜过逐行调用。"
+    },
+    "react/social/react-content-blocks-9x16": {
+      "title": "一个标签，翻译整个版块 (React) #Shorts",
+      "summary": "一个 Translate 标签包裹一段标记区域：每段文本都成为独立的短语，粗体和链接各归其位，品牌名永远不会被翻译。#Shorts"
+    },
+    "react/react-donttranslate": {
+      "title": "React 中的 ‹DontTranslate›：品牌名原样保留",
+      "summary": "品牌名和标识符原样保留，无需把它们从句子中抽离出来。"
+    },
+    "react/react-content-blocks": {
+      "title": "什么是内容块？在 React 中翻译整个版块",
+      "summary": "将一个版块作为整体注册，但它仍由一个个可单独复用的短语组成。"
+    },
+    "react/social/react-brand-names-9x16": {
+      "title": "你的品牌名，永远不会被翻译 (React) #Shorts",
+      "summary": "译者分不清产品名和普通短语，所以其他 i18n 库会把 Bright Ledger 发布成 Libro Mayor Brillante。在 Langsys 中，你只需在原处用 ‹DontTranslate› 标记它，周围的句子照常翻译。 #Shorts"
+    },
+    "react/react-categories": {
+      "title": "同一个词，两种含义：用类别取代 i18n 键 (React)",
+      "summary": "i18n 为什么发明了键，以及用什么取代它：同一个词的两种含义，以及它拆分出的词对。"
+    },
+    "react/social/react-icu-gender-9x16": {
+      "title": "Bienvenido 还是 Bienvenida？一行代码搞定 (React) #Shorts",
+      "summary": "西班牙语要与用户的性别保持一致。Langsys 自动生成 ICU select 分支，只需一行代码：Diego 看到 Bienvenido，Laura 看到 Bienvenida，性别未知时显示中性形式。#Shorts"
+    },
+    "react/react-icu-gender": {
+      "title": "无需在代码里写条件判断，搞定性别一致（ICU select） (React)",
+      "summary": "其他 i18n 方案留在组件里的性别条件判断，以及 Langsys 为每种语言自动生成的分支。"
+    },
+    "react/react-attributes": {
+      "title": "在 React 中翻译 placeholder、alt 文本和 aria 标签",
+      "summary": "翻译了一半的表单在用户眼中是什么样子，以及一个 ‹Translate› 如何在同一轮中覆盖 placeholder、alt 文本和 aria 标签。"
+    },
+    "react/social/react-two-meanings-9x16": {
+      "title": "一个英文单词，两种西班牙语译法 (React) #Shorts",
+      "summary": "“Free”在一个界面上是价格，在另一个界面上是空闲的晚上。其他 i18n 库会编造一个键来区分它们。Langsys 保留原句，并把它归入一个类别：Gratis 和 Libre。 #Shorts"
+    },
+    "react/react-formatting": {
+      "title": "用 React i18n 处理所有语言区域的数字与日期",
+      "summary": "遵循 CLDR 的数字和日期：你原本要手写的分支，为什么数字分组是一种形态而不是分隔符，以及为什么订单号必须以字符串形式传入。"
+    },
+    "react/social/react-alt-text-9x16": {
+      "title": "占位符和替代文本也会被翻译 (React) #Shorts",
+      "summary": "其他 i18n 库需要为每个属性单独调用，漏掉的那个就会一直是英文。一个 ‹Translate› 标签覆盖整个区域：占位符、图片描述，以及屏幕阅读器朗读的标签。 #Shorts"
+    },
+    "react/social/react-local-formats-9x16": {
+      "title": "每个数字和日期，都按各语言的格式显示 (React) #Shorts",
+      "summary": "直接传入数字，把日期作为日期传入：德语显示 1.234,5 和 14. März 2026，印地语会把 1234567 分组为 12,34,567。订单号作为字符串传入，所以会保持原样。 #Shorts"
+    },
+    "vue/vue-hero": {
+      "title": "用 Langsys 实现 Vue i18n：完整演练",
+      "summary": "其他 i18n 方案要求你时刻保持同步的东西、取代它的一次调用、语言区域切换、为什么不区分性别的西班牙语对一半用户来说都是错的，以及 ICU select 如何解决这个问题。"
+    },
+    "vue/social/vue-phrase-9x16": {
+      "title": "你的 i18n 键，就是那句英文 (Vue) #Shorts",
+      "summary": "使用 Langsys，代码中的句子就是翻译键：没有键值文件，无需提取或保持同步，同一行文字会以每种语言呈现。#Shorts"
+    },
+    "vue/vue-t-string": {
+      "title": "在 Vue 中使用 t(phrase, category, params)",
+      "summary": "t() 调用：它所取代的键值文件问题、它的三个参数、ICU 占位符和复数。"
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "title": "俄语有 4 种复数形式，你只需写一行 (Vue) #Shorts",
+      "summary": "one、few、many 和 other：俄语根据数字选择复数形式，而 21 又回到单数。把句子平铺写好，Langsys 就会为每个语言区域构建所需的全部形式。#Shorts"
+    },
+    "vue/vue-phrase-tag": {
+      "title": "Vue 中的 ‹Phrase›：内含标记的句子",
+      "summary": "内含标记的句子如何保持为一个短语，以及为什么 ‹Phrase› 的参数要写成 %name%。"
+    },
+    "vue/vue-translate-tag": {
+      "title": "Vue 中的 ‹Translate›：一个标签搞定整个区域",
+      "summary": "一个 ‹Translate› 标签即可注册整个区域，以及为什么整块处理胜过逐行调用。"
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "title": "在西班牙语中，粗体会移到它该在的位置 (Vue) #Shorts",
+      "summary": "其他 i18n 库会把含有粗体词的句子拆成三个键。使用 ‹Phrase›，译者拿到的是连同标记在内的一整句话；在西班牙语中，粗体落在名词之后的“no leídos”上。 #Shorts"
+    },
+    "vue/vue-donttranslate": {
+      "title": "Vue 中的 ‹DontTranslate›：品牌名原样保留",
+      "summary": "品牌名和标识符原样保留，无需把它们从句子中抽离出来。"
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "title": "一个标签，翻译整个版块 (Vue) #Shorts",
+      "summary": "一个 Translate 标签包裹一段标记区域：每段文本都成为独立的短语，粗体和链接各归其位，品牌名永远不会被翻译。#Shorts"
+    },
+    "vue/vue-content-blocks": {
+      "title": "什么是内容块？在 Vue 中翻译整个版块",
+      "summary": "将一个版块作为整体注册，但它仍由一个个可单独复用的短语组成。"
+    },
+    "vue/vue-categories": {
+      "title": "同一个词，两种含义：用类别取代 i18n 键 (Vue)",
+      "summary": "i18n 为什么发明了键，以及用什么取代它：同一个词的两种含义，以及它拆分出的词对。"
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "title": "你的品牌名，永远不会被翻译 (Vue) #Shorts",
+      "summary": "译者分不清产品名和普通短语，所以其他 i18n 库会把 Bright Ledger 发布成 Libro Mayor Brillante。在 Langsys 中，你只需在原处用 ‹DontTranslate› 标记它，周围的句子照常翻译。 #Shorts"
+    },
+    "vue/vue-icu-gender": {
+      "title": "无需在代码里写条件判断，搞定性别一致（ICU select） (Vue)",
+      "summary": "其他 i18n 方案留在组件里的性别条件判断，以及 Langsys 为每种语言自动生成的分支。"
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "title": "Bienvenido 还是 Bienvenida？一行代码搞定 (Vue) #Shorts",
+      "summary": "西班牙语要与用户的性别保持一致。Langsys 自动生成 ICU select 分支，只需一行代码：Diego 看到 Bienvenido，Laura 看到 Bienvenida，性别未知时显示中性形式。#Shorts"
+    },
+    "vue/vue-attributes": {
+      "title": "在 Vue 中翻译 placeholder、alt 文本和 aria 标签",
+      "summary": "翻译了一半的表单在用户眼中是什么样子，以及一个 ‹Translate› 如何在同一轮中覆盖 placeholder、alt 文本和 aria 标签。"
+    },
+    "vue/vue-formatting": {
+      "title": "用 Vue i18n 处理所有语言区域的数字与日期",
+      "summary": "遵循 CLDR 的数字和日期：你原本要手写的分支，为什么数字分组是一种形态而不是分隔符，以及为什么订单号必须以字符串形式传入。"
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "title": "一个英文单词，两种西班牙语译法 (Vue) #Shorts",
+      "summary": "“Free”在一个界面上是价格，在另一个界面上是空闲的晚上。其他 i18n 库会编造一个键来区分它们。Langsys 保留原句，并把它归入一个类别：Gratis 和 Libre。 #Shorts"
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "title": "占位符和替代文本也会被翻译 (Vue) #Shorts",
+      "summary": "其他 i18n 库需要为每个属性单独调用，漏掉的那个就会一直是英文。一个 ‹Translate› 标签覆盖整个区域：占位符、图片描述，以及屏幕阅读器朗读的标签。 #Shorts"
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "title": "每个数字和日期，都按各语言的格式显示 (Vue) #Shorts",
+      "summary": "直接传入数字，把日期作为日期传入：德语显示 1.234,5 和 14. März 2026，印地语会把 1234567 分组为 12,34,567。订单号作为字符串传入，所以会保持原样。 #Shorts"
+    }
+  }
+}

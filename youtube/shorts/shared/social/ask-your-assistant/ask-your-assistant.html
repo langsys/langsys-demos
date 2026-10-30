@@ -1,0 +1,102 @@
+<meta charset="utf-8" />
+<title>Langsys — ask your AI assistant (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<style>
+    #stage .term { height: 380px; }
+    #stage .bars { height: 296px; }
+    #stage.r1x1 .term { height: 280px; }
+    #stage.r1x1 .bars { height: 226px; padding: 20px 28px; }
+
+    .term {
+        padding: 24px 28px;
+        font-family: 'JetBrains Mono', 'Cascadia Mono', Consolas, monospace;
+        font-size: 28px;
+        line-height: 1.6;
+        color: var(--code);
+        white-space: pre-wrap;
+    }
+    #stage.r1x1 .term { font-size: 23px; padding: 18px 26px; }
+    .term .ask { color: var(--ink); }
+    .term .ask::before { content: '> '; color: var(--accent); }
+    .term .say::before { content: '● '; color: var(--accent-2); }
+    .term .hl { color: var(--ink); }
+
+    .bars { padding: 28px 28px; display: grid; gap: 24px; align-content: start; }
+    .bar { display: grid; grid-template-columns: 170px 1fr 140px; gap: 16px; align-items: center; font-size: 28px; }
+    #stage.r1x1 .bar { font-size: 23px; grid-template-columns: 140px 1fr 120px; }
+    .track { height: 14px; border-radius: 7px; background: var(--panel-2); overflow: hidden; }
+    .fill { height: 100%; border-radius: 7px; background: var(--accent-2); }
+    .bar.behind .fill { background: var(--warn); }
+    .bar .state { color: var(--muted); font-size: 23px; text-align: right; }
+    .bar.behind .state { color: var(--warn); }
+</style>
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> Your AI assistant</div>
+            <div class="term" id="term"></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> Store · dashboard</div>
+            <div class="bars" id="bars"></div>
+        </div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // From the MCP tour (assets/tour/narrate_tour.py, "tour-mcp"): the
+    // assistant's answer — Spanish and German done, French and Japanese each
+    // missing two phrases — the dashboard showing the same numbers, that it
+    // can machine-translate what is missing, and the approval screen granting
+    // organizations, projects and translations, never the password.
+    const ASK_STATUS = '<div class="ask">How are the Store\'s translations doing?</div>'
+        + '<div class="say">Spanish and German are done. <span class="hl">French and Japanese are each missing 2 phrases.</span></div>';
+    const ASK_FIX = '<div class="ask">Translate what\'s missing.</div>'
+        + '<div class="say"><span class="hl">French and Japanese are drafted.</span> Every language is complete.</div>';
+    const ASK_GRANT = '<div class="say">Langsys asked you once, in your browser.</div>'
+        + '<div class="say">It can read your organizations, projects and translations.</div>'
+        + '<div class="say"><span class="hl">Never your password.</span></div>';
+
+    const LANGUAGES = ['Spanish', 'German', 'French', 'Japanese'];
+    const BEHIND = ['French', 'Japanese'];
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 14,
+        scenes: [
+            { until: 3.2, term: 'status', done: false, caption: 'Ask your AI assistant <em>how your translations are doing.</em>' },
+            { until: 6.4, term: 'status', done: false, caption: 'It reads <em>the same numbers</em> as your dashboard.' },
+            { until: 9.6, term: 'fix', done: true, caption: 'Then ask it to <em>translate what\'s missing.</em>' },
+            { until: 12.4, term: 'grant', done: true, caption: 'One approval. <span class="dim">Never your password.</span>' },
+            { until: 14.0, outro: true },
+        ],
+        outro: 'Claude, Codex, Cursor or GitHub Copilot,<br />working right in your Langsys projects.',
+        render(scene, { el }) {
+            el('term').innerHTML = scene.term === 'fix' ? ASK_FIX : scene.term === 'grant' ? ASK_GRANT : ASK_STATUS;
+            el('bars').innerHTML = LANGUAGES.map((language) => {
+                const behind = !scene.done && BEHIND.includes(language);
+                return '<div class="bar' + (behind ? ' behind' : '') + '"><span>' + language + '</span>'
+                    + '<div class="track"><div class="fill" style="width:' + (behind ? 84 : 100) + '%"></div></div>'
+                    + '<span class="state">' + (behind ? '2 missing' : 'done') + '</span></div>';
+            }).join('');
+        },
+    });
+</script>

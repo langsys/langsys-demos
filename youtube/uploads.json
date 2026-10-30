@@ -1,0 +1,443 @@
+{
+  "playlists": {
+    "start": "PLWLg4JgTghMM",
+    "concepts": "PLKPrdrF92pUc",
+    "manager": "PLL71l-NU-gbc",
+    "shorts": "PLdPzUZ8uVpFA",
+    "svelte": "PLYyEiJzE3X6U",
+    "react": "PLXRrUiWxJ8VY",
+    "vue": "PLGxQO2OE9NkI"
+  },
+  "videos": {
+    "pluralization": {
+      "id": "vwQknki_V6A",
+      "playlist": true,
+      "thumbnail": true
+    },
+    "tutorial/workflow": {
+      "id": "DDBgZpPxn_k",
+      "playlist": true,
+      "thumbnail": true
+    },
+    "tutorial/key-files": {
+      "id": "8ityN0zlu98",
+      "playlist": true,
+      "thumbnail": true,
+      "replaced": "41-ycE9FiwQ"
+    },
+    "tutorial/locale-store": {
+      "id": "E6qqpBC_7IY",
+      "playlist": true,
+      "thumbnail": true
+    },
+    "tutorial/keys-and-environments": {
+      "id": "dfaCUjRA168",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "tutorial/adding-a-locale": {
+      "id": "9muq4sNC_Zg",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "translation-memory": {
+      "id": "QC2IIRaAyCc",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "connect-your-ai-assistant": {
+      "id": "KafvNJnm-pQ",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "adding-a-language": {
+      "id": "65z2J2jiSbY",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/social/phrase-9x16": {
+      "id": "L4uu_oG9uok",
+      "playlist": true
+    },
+    "svelte/social/icu-gender-9x16": {
+      "id": "6bMkgdK1GpU",
+      "playlist": true
+    },
+    "svelte/social/icu-plurals-9x16": {
+      "id": "vkDmCusXKcI",
+      "playlist": true
+    },
+    "svelte/social/content-blocks-9x16": {
+      "id": "zw9iKNfjVng",
+      "playlist": true
+    },
+    "getting-started": {
+      "id": "Fo1HCybAHg0",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "catching-up-a-language": {
+      "id": "SHHt8ebaH-g",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "ai-translator-settings": {
+      "id": "PnRoVVfYmKE",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "api-keys-in-production": {
+      "id": "jZJRja7n_-c",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "one-organization-many-projects": {
+      "id": "y1kGQkoZ3_w",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "usage-and-credits": {
+      "id": "TOqn3rfDyGQ",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "plans-and-payments": {
+      "id": "3Lnmfo0T71Q",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "notifications": {
+      "id": "gpSYSKrmVp0",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/hero": {
+      "id": "y-YbRDjV4Wk",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/t-string": {
+      "id": "mqFBw6x7RZg",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/phrase-tag": {
+      "id": "r85P18fhfCU",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/translate-tag": {
+      "id": "krgkcNYw4IY",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/donttranslate": {
+      "id": "YPyWNGdaAHw",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/content-blocks": {
+      "id": "-ZMV0UyKRVk",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/categories": {
+      "id": "-P963Wj0dno",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/icu-gender": {
+      "id": "AfpNQtvugks",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/attributes": {
+      "id": "w9TNoFQ2fpM",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "svelte/formatting": {
+      "id": "Bc2h2bxaB9M",
+      "thumbnail": true,
+      "playlist": true
+    },
+    "managing-translations": {
+      "id": "6ef3Mc0ILfk",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "translating-a-content-block": {
+      "id": "YVYgEaPvcjg",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "shared/social/published-at-nine-9x16": {
+      "id": "2pSiq0Xe4mI",
+      "unlisted": true,
+      "playlist": true
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "id": "6AkTyjzK5_c",
+      "unlisted": true,
+      "playlist": true
+    },
+    "shared/social/memory-9x16": {
+      "id": "daw8QZbaaM4",
+      "unlisted": true,
+      "playlist": true
+    },
+    "svelte/social/bold-moves-9x16": {
+      "id": "OtSqBQkO6TU",
+      "unlisted": true,
+      "playlist": true
+    },
+    "shared/social/add-german-9x16": {
+      "id": "7dz7DjTAh2Y",
+      "unlisted": true,
+      "playlist": true
+    },
+    "shared/social/catch-up-9x16": {
+      "id": "_3WJQCtVcdE",
+      "unlisted": true,
+      "playlist": true
+    },
+    "svelte/social/brand-names-9x16": {
+      "id": "dqxuUR7f7bs",
+      "unlisted": true,
+      "playlist": true
+    },
+    "svelte/social/two-meanings-9x16": {
+      "id": "xEubzXvE5js",
+      "unlisted": true,
+      "playlist": true
+    },
+    "svelte/social/alt-text-9x16": {
+      "id": "hsb-VE3Kc3E",
+      "unlisted": true,
+      "playlist": true
+    },
+    "svelte/social/local-formats-9x16": {
+      "id": "_9CfOA8txIU",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/social/react-phrase-9x16": {
+      "id": "wbOSuylCIWE",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-hero": {
+      "id": "sp4K9n4krZ4",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "id": "LeU5LazVgGc",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-t-string": {
+      "id": "22OJORE4d8g",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/react-phrase-tag": {
+      "id": "U1UoliOjgeE",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-bold-moves-9x16": {
+      "id": "vAp5FyuD34Q",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-translate-tag": {
+      "id": "XtjY6UcOoPk",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-content-blocks-9x16": {
+      "id": "uC4VLJyZwnU",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-donttranslate": {
+      "id": "-njmHFcTn7s",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/react-content-blocks": {
+      "id": "kUws7TofOqE",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-brand-names-9x16": {
+      "id": "GeTslWKJ644",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-categories": {
+      "id": "yr8DShqIiJ4",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-icu-gender-9x16": {
+      "id": "2mg4DxHSHlI",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-icu-gender": {
+      "id": "H9vX59TgiMw",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/react-attributes": {
+      "id": "Qtb1vzKpZw0",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-two-meanings-9x16": {
+      "id": "lGXk5lhuMoI",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/react-formatting": {
+      "id": "gq6qQE_yPss",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "react/social/react-alt-text-9x16": {
+      "id": "ozgMDdZl2H0",
+      "unlisted": true,
+      "playlist": true
+    },
+    "react/social/react-local-formats-9x16": {
+      "id": "QYTA7fVF4ZU",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-hero": {
+      "id": "1ROhtDzJWNo",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-phrase-9x16": {
+      "id": "8dim8q1ftfk",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-t-string": {
+      "id": "sIMXbUnD5ns",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "id": "lgejEkwUbHk",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-phrase-tag": {
+      "id": "xTBW-x0g2fg",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/vue-translate-tag": {
+      "id": "WJbebS8J5qg",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "id": "QuwRpvg3T1w",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-donttranslate": {
+      "id": "uF-LHSzYpUU",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "id": "2UF1UPAnCBk",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-content-blocks": {
+      "id": "vMtUjWo2Ezk",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/vue-categories": {
+      "id": "jsqNGO2ArBc",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "id": "8cYsOOGP8Z8",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-icu-gender": {
+      "id": "p_hCurEby8o",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "id": "ncAcC8fZ8KE",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/vue-attributes": {
+      "id": "O4sXjBN_9xw",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/vue-formatting": {
+      "id": "f-BpHgumD7k",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "id": "76kPZu0AQfQ",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "id": "AixBKJN-7ow",
+      "unlisted": true,
+      "playlist": true
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "id": "7eWDPADZhdo",
+      "unlisted": true,
+      "playlist": true
+    },
+    "explainer": {
+      "id": "q_a37CzxWrk",
+      "unlisted": true,
+      "thumbnail": true,
+      "playlist": true
+    }
+  }
+}

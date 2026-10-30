@@ -5,7 +5,7 @@
     import { writable } from 'svelte/store';
     import { LangsysApp, LangsysAppAPI } from 'langsys-js-svelte';
     import { env } from '$env/dynamic/public';
-    import { DEMO_KEY, LOCALE_COOKIE } from '$lib/langsys';
+    import { DEMO_KEY, LANGUAGES, LOCALE_COOKIE, pickLanguage } from '$lib/langsys';
     import '$lib/demo.css';
 
     export let data;
@@ -32,6 +32,8 @@
         return locale.subscribe((code) => {
             if (first) return void (first = false);
             document.cookie = `${LOCALE_COOKIE}=${code}; path=/; max-age=31536000; samesite=lax`;
+            // A right-to-left language lays the demo's output out right to left (demo.css).
+            document.documentElement.dataset.demoDir = pickLanguage(LANGUAGES, code)?.dir ?? 'ltr';
         });
     });
 </script>
