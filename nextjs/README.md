@@ -18,6 +18,33 @@ Pick a language from the menu (the ones the project serves, read on the
 server) and watch the page re-translate live. Reload:
 the server renders in the locale you picked (a cookie carries it).
 
+## Use your own project
+
+The shared demo project is read-only, so its phrases are translated but one you
+write stays in English: a read-only key can't register it. To watch the whole
+loop, run the app on a project of your own:
+
+1. At [app.langsys.dev](https://app.langsys.dev), create a project with English
+   as the source, a few target languages, and **Automatically AI translate all
+   new phrases** turned on.
+2. Create a **Read & Write** key for it.
+3. In a local clone:
+
+   ```bash
+   cp .env.example .env.local
+   ```
+
+   Set `LANGSYS_PROJECT_ID` and `LANGSYS_API_KEY`, and for this experiment set `NEXT_PUBLIC_LANGSYS_API_KEY` to the
+   same write key. The browser is what registers new phrases, so it needs write
+   access here; in production that public key must be a read-only one.
+4. `npm run dev`, then add a sentence of your own to `app/Demo.jsx` with `t('…', 'Greetings')`
+   and reload. It registers, gets translated, and appears in every language you
+   picked.
+
+Translating your phrases uses your project's credits. The
+[quickstart](https://docs.langsys.dev/learn/quickstart) walks through the same
+steps, with a video.
+
 ## What's inside
 
 - `app/layout.jsx` — Server Component: reads the locale cookie and fetches that

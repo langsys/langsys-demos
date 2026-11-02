@@ -20,11 +20,17 @@
 
             <section class="card">
                 <h2><code>t()</code> — inline string, wired to the DOM</h2>
+                <pre class="call"><code>t('Hello, {name}!', 'Greetings', { name })</code></pre>
                 <p class="live" id="greeting">Hello, Sarah!</p>
             </section>
 
             <section class="card">
                 <h2><code>t()</code> — plurals, written flat</h2>
+                <pre class="call"><code>t(
+  'Hello, {name}! You have {count} new messages.',
+  'Greetings',
+  { name, count },
+)</code></pre>
                 <p class="live" id="inbox">Hello, Sarah! You have 3 new messages.</p>
                 <div class="stepper" translate="no">
                     <button id="inbox-minus" aria-label="Fewer messages">−</button>
@@ -36,6 +42,8 @@
 
             <section class="card">
                 <h2><code>Translate</code> — content block</h2>
+                <pre class="call"><code>// &lt;section id="hero"&gt;&lt;h3&gt;Welcome to our store&lt;/h3&gt;…&lt;/section&gt;
+new Translate(hero, { category: 'Home' })</code></pre>
                 <div class="live">
                     <section id="hero">
                         <h3>Welcome to our store</h3>
@@ -46,6 +54,8 @@
 
             <section class="card">
                 <h2><code>Phrase</code> — params &amp; markup</h2>
+                <pre class="call"><code>// &lt;p id="cart-note"&gt;Hi {name}, you have {count} items in your cart.&lt;/p&gt;
+new Phrase(cartNote, { category: 'Cart', params: { name, count } })</code></pre>
                 <p class="live" id="cart-note">Hi {name}, you have {count} items in your cart.</p>
                 <div class="stepper" translate="no">
                     <button id="cart-minus" aria-label="Fewer items">−</button>
@@ -55,7 +65,24 @@
             </section>
 
             <section class="card">
+                <h2><code>t()</code> — dates and numbers, per locale</h2>
+                <pre class="call"><code>t('Your order {id} ships on {date}.', 'Checkout', {
+  id: '48213',
+  date: new Date(2026, 7, 15),
+})</code></pre>
+                <p class="live" id="order">Your order 48213 ships on Aug 15, 2026.</p>
+                <p class="hint">The date is formatted for each locale; the order id is a string, so it stays as written.</p>
+            </section>
+
+            <section class="card">
                 <h2><code>translate="no"</code> — never translated</h2>
+                <pre class="call"><code>&lt;p id="signin"&gt;
+  Welcome!
+  &lt;span translate="no"&gt;
+    This sentence always stays in English.
+  &lt;/span&gt;
+  Thanks for visiting!
+&lt;/p&gt;</code></pre>
                 <p class="live" id="signin">Welcome! <span translate="no">This sentence always stays in English.</span> Thanks for visiting!</p>
             </section>
 

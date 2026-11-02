@@ -8,8 +8,9 @@ import './demo.css';
 if (demoBanner) {
     const message =
         demoBanner === 'shared'
-            ? `<strong>Shared demo project (read-only)</strong> — existing phrases translate; new or edited ones won't. ` +
-              `Drop your own keys in <code>.env</code> to watch discovery register and translate your phrases live. `
+            ? `<strong>Shared demo project (read-only)</strong> — existing phrases translate, but a read-only key can't add new ones. ` +
+              `To watch a phrase you write get translated, <a href="https://github.com/langsys/langsys-demos/tree/main/typescript#use-your-own-project" target="_blank" rel="noopener noreferrer">run this app on your own project</a> ` +
+              `or <a href="https://docs.langsys.dev/learn/quickstart" target="_blank" rel="noopener noreferrer">see it in the quickstart video</a>. `
             : `<strong>No Langsys credentials configured</strong> — showing source text only, nothing translates. ` +
               `Add your project id and key in <code>.env</code> to see it live. `;
     const banner = document.createElement('div');
@@ -17,7 +18,7 @@ if (demoBanner) {
     banner.setAttribute('translate', 'no');
     banner.innerHTML =
         message +
-        `<a href="https://docs.langsys.dev/learn/concepts/keys-and-environments" target="_blank" rel="noopener noreferrer">Get your keys →</a>`;
+        `<a href="https://docs.langsys.dev/learn/concepts/keys-and-environments" target="_blank" rel="noopener noreferrer">Get your keys</a>`;
     document.body.prepend(banner);
 }
 
@@ -57,6 +58,14 @@ document.querySelector('#inbox-minus')!.addEventListener('click', () => {
 document.querySelector('#inbox-plus')!.addEventListener('click', () => {
     messages += 1;
     renderInbox();
+});
+
+/* t() — values in a sentence are formatted per locale: the date here, numbers too.
+   Local midnight, so no timezone moves the day. */
+const order = document.querySelector<HTMLElement>('#order')!;
+const shipDate = new Date(2026, 7, 15);
+tSignal.subscribe(() => {
+    order.textContent = t('Your order {id} ships on {date}.', 'Checkout', { id: '48213', date: shipDate });
 });
 
 /* Translate — a whole content block, localized as a single unit. */

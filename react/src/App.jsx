@@ -6,6 +6,18 @@ import './demo.css';
 const KEYS_URL = 'https://docs.langsys.dev/learn/concepts/keys-and-environments';
 const DOCS_URL = 'https://docs.langsys.dev/learn/sdk/react';
 
+// The call behind each output, shown above it — the same code the app runs.
+const CODE = {
+    greeting: `t('Hello, {name}!', 'Greetings', { name })`,
+    plural: `t(\n  'Hello, {name}! You have {count} new messages.',\n  'Greetings',\n  { name, count },\n)`,
+    block: `<Translate category="Home">\n  <h3>Welcome to our store</h3>\n  <p>Browse the catalog in your language.</p>\n</Translate>`,
+    phrase: `<Phrase category="Cart" params={{ name, count }}>\n  Hi %name%, you have %count% items in your cart.\n</Phrase>`,
+    dont: `<Translate category="Tour">\n  <p>\n    Welcome!\n    <DontTranslate>\n      This sentence always stays in English.\n    </DontTranslate>\n    Thanks for visiting!\n  </p>\n</Translate>`,
+    order: `t('Your order {id} ships on {date}.', 'Checkout', {\n  id: '48213',\n  date: new Date(2026, 7, 15),\n})`,
+};
+// Local midnight, so no timezone moves the day.
+const SHIP_DATE = new Date(2026, 7, 15);
+
 // The React demo app: every example on docs.langsys.dev/learn/sdk/react
 // running live, wired by the exact code the docs page shows.
 
@@ -79,6 +91,12 @@ function LocaleSelect() {
     );
 }
 
+/* t() — values in a sentence are formatted per locale: the date here, numbers too. */
+function Order() {
+    const t = useT();
+    return <p>{t('Your order {id} ships on {date}.', 'Checkout', { id: '48213', date: SHIP_DATE })}</p>;
+}
+
 function Stepper({ count, onChange }) {
     return (
         <div className="stepper" translate="no">
@@ -100,9 +118,7 @@ export default function App() {
                 <div className="demo-banner" translate="no">
                     {demoBanner === 'shared' ? (
                         <>
-                            <strong>Shared demo project (read-only)</strong> — existing phrases translate; new or
-                            edited ones won't. Drop your own keys in <code>.env</code> to watch discovery register and
-                            translate your phrases live.
+                            <strong>Shared demo project (read-only)</strong> — existing phrases translate, but a read-only key can't add new ones. To watch a phrase you write get translated, <a href="https://github.com/langsys/langsys-demos/tree/main/react#use-your-own-project" target="_blank" rel="noopener noreferrer">run this app on your own project</a> or <a href="https://docs.langsys.dev/learn/quickstart" target="_blank" rel="noopener noreferrer">see it in the quickstart video</a>.
                         </>
                     ) : (
                         <>
@@ -111,7 +127,7 @@ export default function App() {
                         </>
                     )}{' '}
                     <a href={KEYS_URL} target="_blank" rel="noopener noreferrer">
-                        Get your keys →
+                        Get your keys
                     </a>
                 </div>
             )}
@@ -127,6 +143,9 @@ export default function App() {
                     <h2>
                         <code>t()</code> — inline string, in a component
                     </h2>
+                    <pre className="call">
+                        <code>{CODE.greeting}</code>
+                    </pre>
                     <div className="live">
                         <Greeting name="Sarah" />
                     </div>
@@ -136,6 +155,9 @@ export default function App() {
                     <h2>
                         <code>t()</code> — plurals, written flat
                     </h2>
+                    <pre className="call">
+                        <code>{CODE.plural}</code>
+                    </pre>
                     <div className="live">
                         <Inbox name="Sarah" />
                     </div>
@@ -148,6 +170,9 @@ export default function App() {
                     <h2>
                         <code>&lt;Translate&gt;</code> — content block
                     </h2>
+                    <pre className="call">
+                        <code>{CODE.block}</code>
+                    </pre>
                     <div className="live">
                         <Translate category="Home">
                             <h3>Welcome to our store</h3>
@@ -160,6 +185,9 @@ export default function App() {
                     <h2>
                         <code>&lt;Phrase&gt;</code> — params &amp; markup
                     </h2>
+                    <pre className="call">
+                        <code>{CODE.phrase}</code>
+                    </pre>
                     <div className="live">
                         <CartNote />
                     </div>
@@ -167,8 +195,24 @@ export default function App() {
 
                 <section className="card">
                     <h2>
+                        <code>t()</code> — dates and numbers, per locale
+                    </h2>
+                    <pre className="call">
+                        <code>{CODE.order}</code>
+                    </pre>
+                    <div className="live">
+                        <Order />
+                    </div>
+                    <p className="hint">The date is formatted for each locale; the order id is a string, so it stays as written.</p>
+                </section>
+
+                <section className="card">
+                    <h2>
                         <code>&lt;DontTranslate&gt;</code> — never translated
                     </h2>
+                    <pre className="call">
+                        <code>{CODE.dont}</code>
+                    </pre>
                     <div className="live">
                         <Translate category="Tour">
                             <p>

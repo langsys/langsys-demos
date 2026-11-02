@@ -1,6 +1,16 @@
 {{-- The Laravel demo app: every example on docs.langsys.dev/learn/sdk/laravel
      running live, wired by the exact code the docs page shows. Translation
      happens on the server — view source: the HTML arrives already localized. --}}
+@php
+    // The call behind each output, shown above it — the same code the page runs.
+    $calls = [
+        'greeting' => "@t('Hello, {name}!', 'Greetings', ['name' => 'Sarah'])",
+        'plural' => "@t('Hello, {name}! You have {count} new messages.', 'Greetings', [\n    'name' => 'Sarah',\n    'count' => \$count,\n])",
+        'order' => "t('Your order {id} ships on {date}.', 'Checkout', [\n    'id' => '48213',\n    'date' => new DateTimeImmutable('2026-08-15'),\n])",
+        'categories' => "@t('Home', 'Main Menu')\n@t('Home', 'Home repairs')",
+        'coverage' => "@t('Welcome!', 'Tour')\nThis sentence always stays in English.\n@t('Thanks for visiting!', 'Tour')",
+    ];
+@endphp
 <!doctype html>
 <html lang="{{ $active }}" data-demo-dir="{{ $dir }}">
 <head>
@@ -13,15 +23,13 @@
     @if ($banner)
         <div class="demo-banner" translate="no">
             @if ($banner === 'shared')
-                <strong>Shared demo project (read-only)</strong> — existing phrases translate; new or edited ones
-                won't. Drop your own keys in <code>.env</code> to watch discovery register and translate your
-                phrases live.
+                <strong>Shared demo project (read-only)</strong> — existing phrases translate, but a read-only key can't add new ones. To watch a phrase you write get translated, <a href="https://github.com/langsys/langsys-demos/tree/main/laravel#use-your-own-project" target="_blank" rel="noopener noreferrer">run this app on your own project</a> or <a href="https://docs.langsys.dev/learn/quickstart" target="_blank" rel="noopener noreferrer">see it in the quickstart video</a>.
             @else
                 <strong>No Langsys credentials configured</strong> — showing source text only, nothing translates.
                 Add your project id and key in <code>.env</code> to see it live.
             @endif
             <a href="https://docs.langsys.dev/learn/concepts/keys-and-environments" target="_blank"
-                rel="noopener noreferrer">Get your keys →</a>
+                rel="noopener noreferrer">Get your keys</a>
         </div>
     @endif
 
@@ -46,6 +54,7 @@
 
         <section class="card">
             <h2><code>@@t</code> — inline string, in Blade</h2>
+            <pre class="call"><code>{{ $calls['greeting'] }}</code></pre>
             <div class="live">
                 <p>@t('Hello, {name}!', 'Greetings', ['name' => 'Sarah'])</p>
             </div>
@@ -53,6 +62,7 @@
 
         <section class="card">
             <h2><code>@@t</code> — plurals, written flat</h2>
+            <pre class="call"><code>{{ $calls['plural'] }}</code></pre>
             <div class="live">
                 <p>@t('Hello, {name}! You have {count} new messages.', 'Greetings', ['name' => 'Sarah', 'count' => $count])</p>
                 <div class="stepper" translate="no">
@@ -69,6 +79,7 @@
 
         <section class="card">
             <h2><code>t()</code> — anywhere in PHP</h2>
+            <pre class="call"><code>{{ $calls['order'] }}</code></pre>
             <div class="live">
                 <p>{{ $orderTitle }}</p>
                 <p>{{ $orderBody }}</p>
@@ -82,6 +93,7 @@
 
         <section class="card">
             <h2>Categories — same phrase, different meaning</h2>
+            <pre class="call"><code>{{ $calls['categories'] }}</code></pre>
             <div class="live">
                 <p>
                     <strong>@t('Home', 'Main Menu')</strong> · <strong>@t('Home', 'Home repairs')</strong>
@@ -95,6 +107,7 @@
 
         <section class="card">
             <h2>Explicit coverage — untagged text never translates</h2>
+            <pre class="call"><code>{{ $calls['coverage'] }}</code></pre>
             <div class="live">
                 <p>@t('Welcome!', 'Tour') This sentence always stays in English. @t('Thanks for visiting!', 'Tour')</p>
             </div>
