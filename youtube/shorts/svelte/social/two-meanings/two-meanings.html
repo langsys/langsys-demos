@@ -1,0 +1,99 @@
+<meta charset="utf-8" />
+<title>Langsys — same word, two meanings (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<style>
+    #stage .app { height: 270px; }
+    #stage .code { height: 340px; font-size: 26px; }
+    #stage.r1x1 .app { height: 200px; padding: 24px 30px; }
+    #stage.r1x1 .code { height: 270px; font-size: 22px; }
+
+    .uses { display: grid; gap: 26px; }
+    .use { display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 31px; color: #c6c6da; }
+    #stage.r1x1 .use { font-size: 25px; }
+    .tag { font-size: 40px; font-weight: 700; color: var(--ink); border: 1px solid var(--line); border-radius: 14px; padding: 6px 20px; }
+    #stage.r1x1 .tag { font-size: 32px; }
+    .tag.on { border-color: var(--accent-2); background: rgba(74, 212, 180, 0.14); }
+
+    .stamp { margin-left: auto; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; padding: 5px 12px; border-radius: 999px; }
+    .stamp.old { color: var(--bad); border: 1px solid var(--bad); }
+    .stamp.new { color: var(--accent-2); border: 1px solid var(--accent-2); }
+</style>
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+            <div class="locales">
+                <div class="pill" data-loc="en-US">EN</div>
+                <div class="pill" data-loc="es">ES</div>
+            </div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> Your app</div>
+            <div class="app"><div class="uses" id="uses"></div></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> App.svelte<span class="stamp" id="stamp"></span></div>
+            <div class="code" id="code"></div>
+        </div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // The social cut of svelte/web/categories, on its Free pair:
+    // t('Free', 'Pricing') -> Gratis, t('Free', 'Availability') -> Libre.
+    const CODE_KEYS = [
+        't(<span class="s hl">\'pricing.free\'</span>);',
+        't(<span class="s hl">\'calendar.free\'</span>);',
+        '',
+        '<span class="c">// An invented name, only to tell</span>',
+        '<span class="c">// two identical words apart.</span>',
+    ].join('\n');
+
+    const CODE_CATS = [
+        '<span class="k">import</span> { t } <span class="k">from</span> <span class="s">\'langsys-js-svelte\'</span>;',
+        '',
+        't(<span class="s">\'Free\'</span>, <span class="s hl">\'Pricing\'</span>);',
+        't(<span class="s">\'Free\'</span>, <span class="s hl">\'Availability\'</span>);',
+    ].join('\n');
+
+    const USES = {
+        'en-US': [['Basic plan', 'Free'], ['Friday evening', 'Free']],
+        'es': [['Plan básico', 'Gratis'], ['Viernes por la noche', 'Libre']],
+    };
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 14,
+        scenes: [
+            { until: 3.2, locale: 'es', code: 'cats', lit: true, caption: 'One English word, <em>two translations.</em>' },
+            { until: 6.4, locale: 'en-US', code: 'keys', lit: false, caption: 'Other i18n invents a key <span class="dim">to tell them apart.</span>' },
+            { until: 9.6, locale: 'en-US', code: 'cats', lit: false, caption: 'Now, with Langsys, <em>a category does it.</em>' },
+            { until: 12.4, locale: 'es', code: 'cats', lit: true, caption: '<em>Gratis</em> is a price. <em>Libre</em> is an empty evening.' },
+            { until: 14.0, outro: true },
+        ],
+        outro: 'Keep the sentence. File it under a category.<br />Two meanings, two translations, no invented keys.',
+        render(scene, { el }) {
+            const keys = scene.code === 'keys';
+            el('uses').innerHTML = USES[scene.locale].map(([label, word]) =>
+                '<div class="use"><span>' + label + '</span><span class="tag' + (scene.lit ? ' on' : '') + '">' + word + '</span></div>').join('');
+            el('code').innerHTML = keys ? CODE_KEYS : CODE_CATS;
+            el('stamp').textContent = keys ? 'OTHER I18N' : 'WITH LANGSYS';
+            el('stamp').className = 'stamp ' + (keys ? 'old' : 'new');
+        },
+    });
+</script>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>New post · Selvara Journal admin</title>
+    </head>
+    <body class="admin">
+        <header class="masthead">
+            <a class="brand" href="/">Selvara <span>Journal</span></a>
+            <span class="admin-tag">Admin</span>
+        </header>
+        <main class="page">
+            <h1 class="admin-title">New post</h1>
+            <form id="editor" class="editor">
+                <label for="title">Title</label>
+                <input id="title" name="title" autocomplete="off" placeholder="A title for the post" />
+                <label for="body">Post</label>
+                <textarea id="body" name="body" rows="9"></textarea>
+                <div class="editor-actions">
+                    <button type="submit">Publish</button>
+                </div>
+            </form>
+            <p id="published" class="published" hidden>Live at <a href="#"></a></p>
+        </main>
+        <script type="module" src="/src/admin.ts"></script>
+    </body>
+</html>

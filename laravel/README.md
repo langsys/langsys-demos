@@ -1,7 +1,7 @@
 # Langsys × Laravel — starter
 
 A minimal [Laravel 12](https://laravel.com) app using
-[`langsys/laravel-sdk`](https://github.com/langsys/langsys-laravel) for
+[`langsys/langsys-php-laravel`](https://github.com/langsys/langsys-php-laravel) for
 realtime, continuous translations — server-rendered, so the page arrives
 already localized (view source!). The phrase in your code is the lookup key
 **and** the base-language default — no keys file, no extraction step.
@@ -26,9 +26,30 @@ php artisan serve       # http://127.0.0.1:8000
 
 No database needed — sessions and cache run on the `file` drivers.
 
-Then switch locale with the buttons (plain `?locale=` links — the
+Then pick a language from the menu (a plain `?locale=` form — the
 `DetectLocale` middleware persists your choice) and watch the page come back
-re-translated.
+re-translated. The menu lists the languages your project serves.
+
+## Use your own project
+
+The shared demo project is read-only, so its phrases are translated but one you
+write stays in English: a read-only key can't register it. To watch the whole
+loop, run the app on a project of your own:
+
+1. At [app.langsys.dev](https://app.langsys.dev), create a project with English
+   as the source, a few target languages, and **Automatically AI translate all
+   new phrases** turned on.
+2. Create a **Read & Write** key for it.
+3. In `.env`, set `LANGSYS_PROJECT_ID` and `LANGSYS_API_KEY` (the write key). A
+   server can hold a write key; it never reaches visitors.
+4. Add a sentence of your own to `resources/views/demo.blade.php` with
+   `@t('…', 'Greetings')` and load the page. It's registered after the
+   response, translated, and shows in every language you picked from the next
+   load on.
+
+Translating your phrases uses your project's credits. The
+[quickstart](https://docs.langsys.dev/learn/quickstart) walks through the same
+steps, with a video.
 
 ## What's inside
 
@@ -53,6 +74,6 @@ phrases register themselves in your dashboard.
 
 - Interactive explorer: the Langsys Learning Center —
   [docs.langsys.dev/learn/sdk/laravel](https://docs.langsys.dev/learn/sdk/laravel)
-- SDK: [`langsys/laravel-sdk`](https://github.com/langsys/langsys-laravel)
-  (wraps [`langsys/php-sdk`](https://github.com/langsys/langsys-php))
+- SDK: [`langsys/langsys-php-laravel`](https://github.com/langsys/langsys-php-laravel)
+  (wraps [`langsys/langsys-php`](https://github.com/langsys/langsys-php))
 - API docs: [docs.langsys.dev](https://docs.langsys.dev)

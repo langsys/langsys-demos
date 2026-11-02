@@ -1,0 +1,204 @@
+/* Selvara Journal: a shop's own blog, not a Langsys demo page. It looks like
+   something a store would publish, so the only Langsys-looking thing on screen
+   is the panel in the corner that reports what the SDK did. */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+    --paper: #fbf8f3;
+    --ink: #2b2420;
+    --muted: #7a6f66;
+    --rule: #e6ddd2;
+    --accent: #b0563c;
+    --field: #ffffff;
+    --panel: #1d1a19;
+    --panel-ink: #f3efe9;
+    --panel-muted: #a59c94;
+    --yes: #67c79a;
+    --no: #f0b26b;
+    --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
+    color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.masthead {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px max(16px, calc((100% - 720px) / 2));
+    border-bottom: 1px solid var(--rule);
+}
+
+.brand {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.brand span { color: var(--accent); font-weight: 500; }
+
+.picker { margin-left: auto; }
+.picker select,
+.admin-link,
+.admin-tag {
+    font: 500 14px var(--sans);
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 6px 14px;
+    text-decoration: none;
+}
+.admin-link,
+.admin-tag { margin-left: auto; }
+.admin-tag { color: var(--muted); }
+
+.page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 44px 16px 220px;
+}
+
+.meta {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: 14px;
+    letter-spacing: 0.02em;
+}
+
+.post h1,
+.admin-title {
+    font-family: var(--serif);
+    font-size: clamp(32px, 6vw, 46px);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin: 0 0 26px;
+}
+.post p {
+    font-size: 19px;
+    margin: 0 0 18px;
+}
+
+.posts { list-style: none; padding: 0; margin: 0; }
+.posts li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule);
+}
+.posts a { font-family: var(--serif); font-size: 21px; color: var(--ink); text-decoration: none; }
+.posts span { color: var(--muted); font-size: 14px; }
+.posts .empty { color: var(--muted); }
+.posts .empty a { font: inherit; color: var(--accent); }
+
+/* ── Admin ─────────────────────────────────────────────────────────────── */
+
+.editor { display: grid; gap: 8px; }
+.editor label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 10px;
+}
+.editor input,
+.editor textarea {
+    font: 18px/1.6 var(--sans);
+    color: var(--ink);
+    background: var(--field);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 12px 14px;
+    width: 100%;
+}
+.editor input { font-family: var(--serif); font-size: 22px; }
+.editor textarea { resize: vertical; }
+.editor input:focus,
+.editor textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.editor-actions { display: flex; justify-content: flex-end; margin-top: 12px; }
+.editor button {
+    font: 600 16px var(--sans);
+    color: #fff;
+    background: var(--accent);
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 28px;
+    cursor: pointer;
+}
+
+.published {
+    margin-top: 22px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: #eaf4ee;
+    color: #24563d;
+}
+.published a { color: inherit; font-weight: 600; word-break: break-all; }
+
+/* ── The panel: what the SDK did, reported from its own calls ──────────── */
+
+.wire {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: min(420px, calc(100% - 32px));
+    background: var(--panel);
+    color: var(--panel-ink);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-size: 14px;
+    line-height: 1.45;
+}
+.wire h2,
+.wire h3 {
+    margin: 0 0 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--panel-muted);
+}
+.wire h3 { margin-top: 14px; }
+.wire dl { margin: 0; }
+.wire dt { color: var(--panel-muted); }
+.wire dd { margin: 2px 0 0; font-weight: 600; }
+.wire dd[data-state='yes'] { color: var(--yes); }
+.wire dd[data-state='no'] { color: var(--no); }
+.wire dd[data-state='asking'] { color: var(--panel-muted); }
+
+.wire ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.wire li { display: grid; gap: 2px; }
+.wire code { font-family: var(--mono); font-size: 13px; color: var(--yes); }
+.wire li span { word-break: break-all; }
+.wire-empty,
+.wire-unconfigured { margin: 0; color: var(--panel-muted); }
+.wire.has-log .wire-empty { display: none; }
+.wire-unconfigured { display: none; }
+.wire[data-unconfigured] .wire-unconfigured { display: block; }
+.wire[data-unconfigured] .wire-empty { display: none; }

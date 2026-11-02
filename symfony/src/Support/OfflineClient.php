@@ -16,9 +16,10 @@ class OfflineClient extends Client
     {
     }
 
-    public function translate($phrase, $locale = null, $category = '__uncategorized__', $contentBlockId = null)
+    public function translate($phrase, $locale = null, $category = '__uncategorized__', $contentBlockId = null, array $params = [])
     {
-        return $phrase;
+        // Source text, with placeholders still filled: "Hello, {name}!" -> "Hello, Sarah!".
+        return $this->interpolate($phrase, $params, null);
     }
 
     public function setLocale($locale)

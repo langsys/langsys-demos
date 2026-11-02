@@ -17,7 +17,9 @@ function Greeting({ name }) {
     return <p>{t('Hello, {name}!', 'Greetings', { name })}</p>;
 }
 
-/* t() — ICU plurals, the interactive playground's phrase. */
+/* t() — plurals. The phrase is written flat; Langsys generates the plural
+   forms per locale (the base locale included) and the SDK picks the branch
+   from `count`. Nobody types ICU. */
 function Inbox({ name }) {
     const t = useT();
     const [count, setCount] = useState(3);
@@ -25,7 +27,7 @@ function Inbox({ name }) {
         <>
             <p>
                 {t(
-                    'Hello, {name}! You have {count, plural, one {# new message} other {# new messages}}.',
+                    'Hello, {name}! You have {count} new messages.',
                     'Greetings',
                     { name, count },
                 )}
@@ -136,7 +138,7 @@ export default function App() {
 
                 <section className="card">
                     <h2>
-                        <code>t()</code> — ICU plurals, from the interactive playground
+                        <code>t()</code> — plurals, written flat
                     </h2>
                     <div className="live">
                         <Inbox name="Sarah" />

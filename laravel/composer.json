@@ -5,13 +5,9 @@
     "description": "Langsys × Laravel demo — realtime, continuous translation with the @t Blade directive.",
     "keywords": ["laravel", "langsys", "i18n", "localization", "demo"],
     "license": "MIT",
-    "repositories": [
-        { "type": "vcs", "url": "https://github.com/langsys/langsys-laravel" },
-        { "type": "vcs", "url": "https://github.com/langsys/langsys-php" }
-    ],
     "require": {
         "php": "^8.2",
-        "langsys/laravel-sdk": "dev-main",
+        "langsys/langsys-php-laravel": "^1.0",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1"
     },

@@ -1,0 +1,338 @@
+{
+  "labels": {
+    "learn_more": "Meer info",
+    "get_started": "Aan de slag",
+    "start_free": "Gratis starten",
+    "docs": "Documentatie"
+  },
+  "videos": {
+    "explainer": {
+      "title": "Wat is Langsys? Je app in elke taal, zonder opnieuw te deployen",
+      "summary": "Langsys in 77 seconden: een SDK in je app en een gehoste Translation Manager. Een zin registreert zichzelf zodra je code hem voor het eerst uitvoert, wordt bij aankomst machinaal vertaald en kan door een vertaler worden verfijnd zonder deploy.\n\nHet bewijs: een blogpost die om 09:00 is gepubliceerd, zonder build en zonder write-key, bereikt om 09:03 een lezer in Madrid in het Spaans."
+    },
+    "getting-started": {
+      "title": "Aan de slag met Langsys, van begin tot eind",
+      "summary": "In één take van niets naar een vertaalde app: maak het project en de talen aan, maak een API-key, installeer en initialiseer de SDK en zie hoe t(), ‹Translate›, ‹Phrase› en ‹DontTranslate› hun zinnen registreren. Het Spaans staat al in de Translation Manager, en de app schakelt zonder herladen over naar Spaans en Frans."
+    },
+    "pluralization": {
+      "title": "Meervouden in elke taal, zonder if (count === 1)",
+      "summary": "Waarom een zin verandert met het getal erin, waarom de if (count === 1) die het in het Engels oplost eigenlijk Engelse grammatica in je code is, en hoe je met een platte zin elke meervoudsvorm in elke taal krijgt. Langsys vertaalt de zin plat en bouwt hem daarna opnieuw op in de eigen ICU-meervoudscategorieën van elke locale, Engels inbegrepen."
+    },
+    "tutorial/workflow": {
+      "title": "De vertaalpipeline, en hoe Langsys hem schrapt",
+      "summary": "Concepten 1 van 5. Vertalingen gaan meestal heen en terug door een pipeline: extraheren, exporteren, vertalen, importeren, deployen. Langsys haalt die weg."
+    },
+    "tutorial/key-files": {
+      "title": "Geen key-bestanden meer: de zin is de key",
+      "summary": "Concepten 2 van 5. Waar een project begint, de key die andere i18n-libraries je laten verzinnen, en wat die in Langsys vervangt."
+    },
+    "tutorial/locale-store": {
+      "title": "De locale store: de actieve taal vasthouden en wisselen",
+      "summary": "Concepten 3 van 5. Hoe Langsys de actieve locale vasthoudt en die in je hele app omschakelt."
+    },
+    "tutorial/keys-and-environments": {
+      "title": "API-keys en omgevingen: welke key hoort waar",
+      "summary": "Concepten 4 van 5. Waarom een key die zinnen kan registreren nooit mee mag in een release, waarom read-only een doodlopende weg is, en wat ip_write is: één key waarvan het antwoord afhangt van waar je vandaan vraagt. Write-keys blijven op machines die van jou zijn, ip_write gaat in elke publieke bundle, en read-only is voor bundles die nooit iets mogen veranderen."
+    },
+    "tutorial/adding-a-locale": {
+      "title": "Een nieuwe taal toevoegen is gewoon een projectinstelling",
+      "summary": "Concepten 5 van 5. Een nieuwe taal is een instelling, geen project: nieuwe zinnen worden bij aankomst vertaald, en één run vult de rest aan."
+    },
+    "managing-translations": {
+      "title": "Vertalingen beheren in de Langsys Translation Manager",
+      "summary": "De Translation Manager voor wie de teksten beheert, zonder code in beeld: de takenlijst, een machinaal concept dat met de hand wordt verbeterd, AI Translate met Auto-next, Never Translate, en een vertaler die alleen voor Spaans wordt uitgenodigd. De correctie staat meteen live in de app, zonder deploy."
+    },
+    "translation-memory": {
+      "title": "Translation memory: een nieuw project dat al vertaald is",
+      "summary": "Een tweede project in dezelfde organisatie is volledig vertaald voordat iemand het aanraakt. Translation memory neemt elke zin, en wie hem schreef, mee over projecten heen, zodat er voor het nieuwe project helemaal geen model wordt aangeroepen."
+    },
+    "connect-your-ai-assistant": {
+      "title": "Langsys gebruiken vanuit Claude Code via MCP",
+      "summary": "Langsys in een AI-assistent, via de gehoste MCP-server: één claude mcp add-commando, goedkeuring in de browser, en Claude Code beantwoordt vragen over de talen van je project met live data. Je kunt de verbinding intrekken via het Security tab van je account."
+    },
+    "adding-a-language": {
+      "title": "Duits toevoegen aan een live app: exacte prijs, geen deploy",
+      "summary": "Duits toegevoegd aan een live webshop. Langsys geeft vooraf een exacte prijs voor de bestaande catalogus (29 woorden, $0.35), vertaalt hem, en de webshop schakelt over naar Duits zonder dat er iets gebouwd of gedeployd wordt."
+    },
+    "catching-up-a-language": {
+      "title": "Een taal bijwerken die achterloopt",
+      "summary": "Bulkacties in de Translation Manager: AI Translate Pending voor één taal of het hele project, met een bevestiging die elke doellocale en de kosten ervan toont, en elke taal weer compleet."
+    },
+    "translating-a-content-block": {
+      "title": "Een heel contentblok in één keer vertalen",
+      "summary": "Een ‹Translate›-regio vertaald als één contentblok: AI Translate vult alle segmenten tegelijk, één segment wordt met de hand herschreven in een formeel register, en een ‹DontTranslate›-zin blijft Engels terwijl het Italiaans eromheen wordt ingevuld."
+    },
+    "ai-translator-settings": {
+      "title": "AI Translator-instellingen: elke schakelaar uitgelegd",
+      "summary": "Het AI Translator-tabblad van boven naar beneden: AI-vertalingen op aanvraag, automatisch vertalen van nieuwe zinnen, en automatische detectie die een zin die al in het Spaans binnenkomt op Never Translate zet."
+    },
+    "api-keys-in-production": {
+      "title": "API-keys in productie: activiteit, pauzeren en roteren",
+      "summary": "Een key na de release: een echte week webshopverkeer op de Activity-pagina, een key pauzeren zonder hem te verwijderen, en rotatie live in beeld: de drie key-types, een nieuwe IP write-key met een allowlist, en de oude verwijderd."
+    },
+    "one-organization-many-projects": {
+      "title": "Eén organisatie, veel projecten",
+      "summary": "De organisatie als vertrekpunt voor elk project: standaardlocales, AI Translator- en facturatie-instellingen, projectfinanciering uit het saldo van de organisatie, en een aangepast project dat weer terug wordt gezet op overerven."
+    },
+    "usage-and-credits": {
+      "title": "Gebruik en credits: zo wordt een project gefinancierd",
+      "summary": "De twee meters, API-gebruikseenheden en credits, en hoe een project wordt gefinancierd: een credittransfer van het account naar een project live in beeld, één regel per machinevertaling in de geschiedenis, en de maandlimiet en automatische opwaardering van het project."
+    },
+    "plans-and-payments": {
+      "title": "Abonnementen en betalingen in Langsys",
+      "summary": "Een rondleiding door facturatie zonder iets te versturen: het abonnement en de factuurperiode, het Change Plan-venster, Payment Methods gedeeld met een organisatie of project, adressen en facturen."
+    },
+    "notifications": {
+      "title": "Meldingen: wat Langsys je laat weten, en waar",
+      "summary": "De meldingeninbox en de instellingen ervan: accountstandaarden voor nieuwe zinnen, uitnodigingen en projecttoegang, via in-app en e-mail, en een instelling per project die dat overschrijft."
+    },
+    "svelte/hero": {
+      "title": "Svelte i18n met Langsys: de volledige walkthrough",
+      "summary": "Wat andere i18n je laat synchroon houden, één aanroep die het vervangt, een taalwissel, waarom plat Spaans voor de helft van je gebruikers fout is, en wat ICU select daaraan doet."
+    },
+    "svelte/t-string": {
+      "title": "t(phrase, category, params) in Svelte",
+      "summary": "De t()-aanroep: het key-bestandprobleem dat hij vervangt, zijn drie argumenten, ICU-placeholders en meervouden."
+    },
+    "svelte/phrase-tag": {
+      "title": "‹Phrase› in Svelte: een zin met markup erin",
+      "summary": "Een zin met markup erin, bewaard als één phrase, en waarom ‹Phrase›-params als %name% worden geschreven."
+    },
+    "svelte/translate-tag": {
+      "title": "‹Translate› in Svelte: één tag voor een hele regio",
+      "summary": "Eén ‹Translate›-tag registreert een hele regio, en waarom een blok beter werkt dan een aanroep per regel."
+    },
+    "svelte/donttranslate": {
+      "title": "‹DontTranslate› in Svelte: merknamen letterlijk houden",
+      "summary": "Merknamen en identifiers letterlijk behouden, zonder ze uit de zin te halen."
+    },
+    "svelte/content-blocks": {
+      "title": "Wat is een contentblok? Een hele sectie vertalen in Svelte",
+      "summary": "Eén sectie geregistreerd als geheel, maar nog steeds opgebouwd uit afzonderlijk herbruikbare zinnen."
+    },
+    "svelte/categories": {
+      "title": "Zelfde woord, twee betekenissen: categorieën in plaats van i18n-keys",
+      "summary": "Waarom i18n keys heeft uitgevonden, en wat ze vervangt: hetzelfde woord met twee betekenissen, en de paren waarin het zich opsplitst."
+    },
+    "svelte/icu-gender": {
+      "title": "Geslachtscongruentie zonder if-statements in je code (ICU select)",
+      "summary": "De geslachtsconditie die andere i18n in je component laat staan, en de takken die Langsys in plaats daarvan voor elke taal genereert."
+    },
+    "svelte/attributes": {
+      "title": "Placeholders, alt-teksten en aria-labels vertalen in Svelte",
+      "summary": "Hoe een half vertaald formulier eruitziet voor wie het gebruikt, en hoe één ‹Translate› placeholders, alt-teksten en aria-labels in dezelfde ronde meeneemt."
+    },
+    "svelte/formatting": {
+      "title": "Getallen en datums in elke locale met Svelte i18n",
+      "summary": "Getallen en datums volgens CLDR: de vertakking die je anders met de hand zou schrijven, waarom cijfergroepering een vorm is en geen scheidingsteken, en waarom een ordernummer als string moet worden doorgegeven."
+    },
+    "svelte/social/phrase-9x16": {
+      "title": "Je i18n-key is gewoon de Engelse zin #Shorts",
+      "summary": "Met Langsys is de zin in je code de vertaalkey: geen key-bestand, niets te extraheren of synchroon te houden, en dezelfde regel komt in elke taal terug. #Shorts"
+    },
+    "svelte/social/icu-gender-9x16": {
+      "title": "Bienvenido of Bienvenida? Eén regel code #Shorts",
+      "summary": "In het Spaans past de vorm zich aan de gebruiker aan. Langsys genereert de ICU select-takken, dus Diego krijgt Bienvenido, Laura krijgt Bienvenida, en een onbekend geslacht krijgt de neutrale vorm, vanuit één regel. #Shorts"
+    },
+    "svelte/social/icu-plurals-9x16": {
+      "title": "Russisch heeft 4 meervoudsvormen. Jij schrijft één regel #Shorts",
+      "summary": "One, few, many en other: het Russisch kiest een meervoudsvorm op basis van het getal, en 21 gaat terug naar het enkelvoud. Schrijf de zin plat en Langsys bouwt elke vorm die een locale nodig heeft. #Shorts"
+    },
+    "svelte/social/content-blocks-9x16": {
+      "title": "Vertaal een hele sectie met één tag #Shorts",
+      "summary": "Eén Translate-tag omsluit een stuk markup: elk stuk tekst wordt een eigen zin, vet en links komen op de juiste plek terecht, en de merknaam wordt nooit vertaald. #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "Om 9:00 gepubliceerd, om 9:03 in het Spaans gelezen #Shorts",
+      "summary": "Een blogpost gaat live zonder build en zonder deploy. De app van de eerste lezer stuurt Langsys alleen het paginaadres, Langsys leest de pagina zelf en een paar minuten later leest iemand in Madrid hem in het Spaans. #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "Vraag je AI-assistent hoe het met je vertalingen staat #Shorts",
+      "summary": "Langsys host een MCP-server, zodat Claude, Codex, Cursor of GitHub Copilot je projecten kunnen lezen en vertalen wat ontbreekt. Eén goedkeuring in je browser, en de assistent ziet nooit je wachtwoord. #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "Een gloednieuw project dat al vertaald begint #Shorts",
+      "summary": "Verbeter een vertaling één keer en elk nieuw project in je organisatie kent haar al. Het vertaalgeheugen vulde dit project in het Spaans, met de naam van wie vertaalde, zonder dat er een model werd aangeroepen. #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "In het Spaans schuift het vetgedrukte mee naar de juiste plek #Shorts",
+      "summary": "Andere i18n-bibliotheken knippen een zin met een vetgedrukt woord op in drie keys. Met ‹Phrase› krijgt de vertaler één zin, markup en al, en in het Spaans valt het vet na het zelfstandig naamwoord, op \"no leídos\". #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "Voeg Duits toe aan een live winkel, zonder deploy #Shorts",
+      "summary": "Voeg de taal toe in de projectinstellingen, niet in je code. Langsys noemt de exacte prijs voor de bestaande catalogus voordat er iets wordt uitgegeven, vertaalt elke zin in seconden, en de winkel spreekt Duits zonder build of deploy. #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "Twee talen achter, bijgewerkt met één actie #Shorts",
+      "summary": "Frans en Japans misten elk twee zinnen. AI Translate Pending vertaalt ze in seconden, en de concepten wachten tot iemand ze nakijkt. #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "Je merknaam, nooit vertaald #Shorts",
+      "summary": "Een vertaler kan een productnaam niet van een zin onderscheiden, dus andere i18n-bibliotheken leveren Bright Ledger uit als Libro Mayor Brillante. Met Langsys markeer je hem ter plekke met ‹DontTranslate›, en de zin eromheen wordt gewoon vertaald. #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "Eén Engels woord, twee Spaanse vertalingen #Shorts",
+      "summary": "\"Free\" is op het ene scherm een prijs en op het andere een vrije avond. Andere i18n-bibliotheken verzinnen een key om ze uit elkaar te houden. Langsys houdt de zin en zet hem in een categorie: Gratis en Libre. #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "Ook placeholders en alt-tekst worden vertaald #Shorts",
+      "summary": "Andere i18n-bibliotheken vragen een aparte aanroep voor elk attribuut, en het attribuut dat je vergeet blijft Engels. Eén ‹Translate›-tag dekt het hele gebied: de placeholder, de afbeeldingsbeschrijving en het label dat een schermlezer voorleest. #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "Elk getal en elke datum in het formaat van elke taal #Shorts",
+      "summary": "Geef het getal zelf door en de datum als datum: Duits toont 1.234,5 en 14. März 2026, en Hindi groepeert 1234567 als 12,34,567. Een ordernummer gaat erin als string, zodat het precies blijft zoals het is. #Shorts"
+    },
+    "react/social/react-phrase-9x16": {
+      "title": "Je i18n-key is gewoon de Engelse zin (React) #Shorts",
+      "summary": "Met Langsys is de zin in je code de vertaalkey: geen key-bestand, niets te extraheren of synchroon te houden, en dezelfde regel komt in elke taal terug. #Shorts"
+    },
+    "react/react-hero": {
+      "title": "React i18n met Langsys: de volledige walkthrough",
+      "summary": "Wat andere i18n je laat synchroon houden, één aanroep die het vervangt, een taalwissel, waarom plat Spaans voor de helft van je gebruikers fout is, en wat ICU select daaraan doet."
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "title": "Russisch heeft 4 meervoudsvormen. Jij schrijft één regel (React) #Shorts",
+      "summary": "One, few, many en other: het Russisch kiest een meervoudsvorm op basis van het getal, en 21 gaat terug naar het enkelvoud. Schrijf de zin plat en Langsys bouwt elke vorm die een locale nodig heeft. #Shorts"
+    },
+    "react/react-t-string": {
+      "title": "t(phrase, category, params) in React",
+      "summary": "De t()-aanroep: het key-bestandprobleem dat hij vervangt, zijn drie argumenten, ICU-placeholders en meervouden."
+    },
+    "react/react-phrase-tag": {
+      "title": "‹Phrase› in React: een zin met markup erin",
+      "summary": "Een zin met markup erin, bewaard als één phrase, en waarom ‹Phrase›-params als %name% worden geschreven."
+    },
+    "react/social/react-bold-moves-9x16": {
+      "title": "In het Spaans schuift het vetgedrukte mee naar de juiste plek (React) #Shorts",
+      "summary": "Andere i18n-bibliotheken knippen een zin met een vetgedrukt woord op in drie keys. Met ‹Phrase› krijgt de vertaler één zin, markup en al, en in het Spaans valt het vet na het zelfstandig naamwoord, op \"no leídos\". #Shorts"
+    },
+    "react/react-translate-tag": {
+      "title": "‹Translate› in React: één tag voor een hele regio",
+      "summary": "Eén ‹Translate›-tag registreert een hele regio, en waarom een blok beter werkt dan een aanroep per regel."
+    },
+    "react/social/react-content-blocks-9x16": {
+      "title": "Vertaal een hele sectie met één tag (React) #Shorts",
+      "summary": "Eén Translate-tag omsluit een stuk markup: elk stuk tekst wordt een eigen zin, vet en links komen op de juiste plek terecht, en de merknaam wordt nooit vertaald. #Shorts"
+    },
+    "react/react-donttranslate": {
+      "title": "‹DontTranslate› in React: merknamen letterlijk houden",
+      "summary": "Merknamen en identifiers letterlijk behouden, zonder ze uit de zin te halen."
+    },
+    "react/react-content-blocks": {
+      "title": "Wat is een contentblok? Een hele sectie vertalen in React",
+      "summary": "Eén sectie geregistreerd als geheel, maar nog steeds opgebouwd uit afzonderlijk herbruikbare zinnen."
+    },
+    "react/social/react-brand-names-9x16": {
+      "title": "Je merknaam, nooit vertaald (React) #Shorts",
+      "summary": "Een vertaler kan een productnaam niet van een zin onderscheiden, dus andere i18n-bibliotheken leveren Bright Ledger uit als Libro Mayor Brillante. Met Langsys markeer je hem ter plekke met ‹DontTranslate›, en de zin eromheen wordt gewoon vertaald. #Shorts"
+    },
+    "react/react-categories": {
+      "title": "Zelfde woord, twee betekenissen: categorieën in plaats van i18n-keys (React)",
+      "summary": "Waarom i18n keys heeft uitgevonden, en wat ze vervangt: hetzelfde woord met twee betekenissen, en de paren waarin het zich opsplitst."
+    },
+    "react/social/react-icu-gender-9x16": {
+      "title": "Bienvenido of Bienvenida? Eén regel code (React) #Shorts",
+      "summary": "In het Spaans past de vorm zich aan de gebruiker aan. Langsys genereert de ICU select-takken, dus Diego krijgt Bienvenido, Laura krijgt Bienvenida, en een onbekend geslacht krijgt de neutrale vorm, vanuit één regel. #Shorts"
+    },
+    "react/react-icu-gender": {
+      "title": "Geslachtscongruentie zonder if-statements in je code (ICU select) (React)",
+      "summary": "De geslachtsconditie die andere i18n in je component laat staan, en de takken die Langsys in plaats daarvan voor elke taal genereert."
+    },
+    "react/react-attributes": {
+      "title": "Placeholders, alt-teksten en aria-labels vertalen in React",
+      "summary": "Hoe een half vertaald formulier eruitziet voor wie het gebruikt, en hoe één ‹Translate› placeholders, alt-teksten en aria-labels in dezelfde ronde meeneemt."
+    },
+    "react/social/react-two-meanings-9x16": {
+      "title": "Eén Engels woord, twee Spaanse vertalingen (React) #Shorts",
+      "summary": "\"Free\" is op het ene scherm een prijs en op het andere een vrije avond. Andere i18n-bibliotheken verzinnen een key om ze uit elkaar te houden. Langsys houdt de zin en zet hem in een categorie: Gratis en Libre. #Shorts"
+    },
+    "react/react-formatting": {
+      "title": "Getallen en datums in elke locale met React i18n",
+      "summary": "Getallen en datums volgens CLDR: de vertakking die je anders met de hand zou schrijven, waarom cijfergroepering een vorm is en geen scheidingsteken, en waarom een ordernummer als string moet worden doorgegeven."
+    },
+    "react/social/react-alt-text-9x16": {
+      "title": "Ook placeholders en alt-tekst worden vertaald (React) #Shorts",
+      "summary": "Andere i18n-bibliotheken vragen een aparte aanroep voor elk attribuut, en het attribuut dat je vergeet blijft Engels. Eén ‹Translate›-tag dekt het hele gebied: de placeholder, de afbeeldingsbeschrijving en het label dat een schermlezer voorleest. #Shorts"
+    },
+    "react/social/react-local-formats-9x16": {
+      "title": "Elk getal en elke datum in het formaat van elke taal (React) #Shorts",
+      "summary": "Geef het getal zelf door en de datum als datum: Duits toont 1.234,5 en 14. März 2026, en Hindi groepeert 1234567 als 12,34,567. Een ordernummer gaat erin als string, zodat het precies blijft zoals het is. #Shorts"
+    },
+    "vue/vue-hero": {
+      "title": "Vue i18n met Langsys: de volledige walkthrough",
+      "summary": "Wat andere i18n je laat synchroon houden, één aanroep die het vervangt, een taalwissel, waarom plat Spaans voor de helft van je gebruikers fout is, en wat ICU select daaraan doet."
+    },
+    "vue/social/vue-phrase-9x16": {
+      "title": "Je i18n-key is gewoon de Engelse zin (Vue) #Shorts",
+      "summary": "Met Langsys is de zin in je code de vertaalkey: geen key-bestand, niets te extraheren of synchroon te houden, en dezelfde regel komt in elke taal terug. #Shorts"
+    },
+    "vue/vue-t-string": {
+      "title": "t(phrase, category, params) in Vue",
+      "summary": "De t()-aanroep: het key-bestandprobleem dat hij vervangt, zijn drie argumenten, ICU-placeholders en meervouden."
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "title": "Russisch heeft 4 meervoudsvormen. Jij schrijft één regel (Vue) #Shorts",
+      "summary": "One, few, many en other: het Russisch kiest een meervoudsvorm op basis van het getal, en 21 gaat terug naar het enkelvoud. Schrijf de zin plat en Langsys bouwt elke vorm die een locale nodig heeft. #Shorts"
+    },
+    "vue/vue-phrase-tag": {
+      "title": "‹Phrase› in Vue: een zin met markup erin",
+      "summary": "Een zin met markup erin, bewaard als één phrase, en waarom ‹Phrase›-params als %name% worden geschreven."
+    },
+    "vue/vue-translate-tag": {
+      "title": "‹Translate› in Vue: één tag voor een hele regio",
+      "summary": "Eén ‹Translate›-tag registreert een hele regio, en waarom een blok beter werkt dan een aanroep per regel."
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "title": "In het Spaans schuift het vetgedrukte mee naar de juiste plek (Vue) #Shorts",
+      "summary": "Andere i18n-bibliotheken knippen een zin met een vetgedrukt woord op in drie keys. Met ‹Phrase› krijgt de vertaler één zin, markup en al, en in het Spaans valt het vet na het zelfstandig naamwoord, op \"no leídos\". #Shorts"
+    },
+    "vue/vue-donttranslate": {
+      "title": "‹DontTranslate› in Vue: merknamen letterlijk houden",
+      "summary": "Merknamen en identifiers letterlijk behouden, zonder ze uit de zin te halen."
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "title": "Vertaal een hele sectie met één tag (Vue) #Shorts",
+      "summary": "Eén Translate-tag omsluit een stuk markup: elk stuk tekst wordt een eigen zin, vet en links komen op de juiste plek terecht, en de merknaam wordt nooit vertaald. #Shorts"
+    },
+    "vue/vue-content-blocks": {
+      "title": "Wat is een contentblok? Een hele sectie vertalen in Vue",
+      "summary": "Eén sectie geregistreerd als geheel, maar nog steeds opgebouwd uit afzonderlijk herbruikbare zinnen."
+    },
+    "vue/vue-categories": {
+      "title": "Zelfde woord, twee betekenissen: categorieën in plaats van i18n-keys (Vue)",
+      "summary": "Waarom i18n keys heeft uitgevonden, en wat ze vervangt: hetzelfde woord met twee betekenissen, en de paren waarin het zich opsplitst."
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "title": "Je merknaam, nooit vertaald (Vue) #Shorts",
+      "summary": "Een vertaler kan een productnaam niet van een zin onderscheiden, dus andere i18n-bibliotheken leveren Bright Ledger uit als Libro Mayor Brillante. Met Langsys markeer je hem ter plekke met ‹DontTranslate›, en de zin eromheen wordt gewoon vertaald. #Shorts"
+    },
+    "vue/vue-icu-gender": {
+      "title": "Geslachtscongruentie zonder if-statements in je code (ICU select) (Vue)",
+      "summary": "De geslachtsconditie die andere i18n in je component laat staan, en de takken die Langsys in plaats daarvan voor elke taal genereert."
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "title": "Bienvenido of Bienvenida? Eén regel code (Vue) #Shorts",
+      "summary": "In het Spaans past de vorm zich aan de gebruiker aan. Langsys genereert de ICU select-takken, dus Diego krijgt Bienvenido, Laura krijgt Bienvenida, en een onbekend geslacht krijgt de neutrale vorm, vanuit één regel. #Shorts"
+    },
+    "vue/vue-attributes": {
+      "title": "Placeholders, alt-teksten en aria-labels vertalen in Vue",
+      "summary": "Hoe een half vertaald formulier eruitziet voor wie het gebruikt, en hoe één ‹Translate› placeholders, alt-teksten en aria-labels in dezelfde ronde meeneemt."
+    },
+    "vue/vue-formatting": {
+      "title": "Getallen en datums in elke locale met Vue i18n",
+      "summary": "Getallen en datums volgens CLDR: de vertakking die je anders met de hand zou schrijven, waarom cijfergroepering een vorm is en geen scheidingsteken, en waarom een ordernummer als string moet worden doorgegeven."
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "title": "Eén Engels woord, twee Spaanse vertalingen (Vue) #Shorts",
+      "summary": "\"Free\" is op het ene scherm een prijs en op het andere een vrije avond. Andere i18n-bibliotheken verzinnen een key om ze uit elkaar te houden. Langsys houdt de zin en zet hem in een categorie: Gratis en Libre. #Shorts"
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "title": "Ook placeholders en alt-tekst worden vertaald (Vue) #Shorts",
+      "summary": "Andere i18n-bibliotheken vragen een aparte aanroep voor elk attribuut, en het attribuut dat je vergeet blijft Engels. Eén ‹Translate›-tag dekt het hele gebied: de placeholder, de afbeeldingsbeschrijving en het label dat een schermlezer voorleest. #Shorts"
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "title": "Elk getal en elke datum in het formaat van elke taal (Vue) #Shorts",
+      "summary": "Geef het getal zelf door en de datum als datum: Duits toont 1.234,5 en 14. März 2026, en Hindi groepeert 1234567 als 12,34,567. Een ordernummer gaat erin als string, zodat het precies blijft zoals het is. #Shorts"
+    }
+  }
+}

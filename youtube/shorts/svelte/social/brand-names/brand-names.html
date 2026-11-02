@@ -1,0 +1,100 @@
+<meta charset="utf-8" />
+<title>Langsys — brand names stay as written (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<style>
+    #stage .app { height: 270px; }
+    #stage .code { height: 340px; font-size: 26px; }
+    #stage.r1x1 .app { height: 196px; }
+    #stage.r1x1 .code { height: 270px; font-size: 22px; }
+
+    .greeting { font-size: 46px; }
+    #stage.r1x1 .greeting { font-size: 38px; }
+    .kept { color: var(--accent-2); }
+    .bad { color: var(--bad); }
+    .lock { color: var(--accent-2); }
+
+    .stamp { margin-left: auto; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; padding: 5px 12px; border-radius: 999px; }
+    .stamp.old { color: var(--bad); border: 1px solid var(--bad); }
+    .stamp.new { color: var(--accent-2); border: 1px solid var(--accent-2); }
+</style>
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+            <div class="locales">
+                <div class="pill" data-loc="en-US">EN</div>
+                <div class="pill" data-loc="es">ES</div>
+            </div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> Your app</div>
+            <div class="app"><div class="greeting" id="out"></div></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> <span id="file"></span><span class="stamp" id="stamp"></span></div>
+            <div class="code" id="code"></div>
+        </div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // The social cut of svelte/web/donttranslate: same example, same code,
+    // same mistranslation. "Libro Mayor Brillante" is what a translator does
+    // with two ordinary English words nobody marked as a product.
+    const CODE_GUARDED = [
+        '<span class="k">&lt;</span><span class="t">Translate</span> category=<span class="s">"Tour"</span><span class="k">&gt;</span>',
+        '  &lt;p&gt;Welcome to',
+        '    <span class="k">&lt;</span><span class="t">DontTranslate</span><span class="k">&gt;</span><span class="lock">Bright Ledger</span><span class="k">&lt;/</span><span class="t">DontTranslate</span><span class="k">&gt;</span>.',
+        '    Thanks for visiting!&lt;/p&gt;',
+        '<span class="k">&lt;/</span><span class="t">Translate</span><span class="k">&gt;</span>',
+    ].join('\n');
+
+    const CODE_OTHER = [
+        '{<span class="v">$t</span>(<span class="s">\'tour.welcome\'</span>)}',
+        '',
+        '<span class="c">// es.json  "tour.welcome":</span>',
+        '<span class="c">//   "Bienvenido a </span><span class="bad">Libro Mayor Brillante</span><span class="c">.</span>',
+        '<span class="c">//    ¡Gracias por visitarnos!"</span>',
+    ].join('\n');
+
+    const OUT = {
+        'es-bad': 'Bienvenido a <span class="bad">Libro Mayor Brillante</span>. ¡Gracias por visitarnos!',
+        'es': 'Bienvenido a <span class="kept">Bright Ledger</span>. ¡Gracias por visitarnos!',
+    };
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 14,
+        scenes: [
+            { until: 3.2, locale: 'es', out: 'es', code: 'guarded', caption: 'Your brand name, <em>never translated.</em>' },
+            { until: 6.4, locale: 'es', out: 'es-bad', code: 'other', caption: 'Other i18n translates it. <span class="bad">Your brand, renamed.</span>' },
+            { until: 9.6, locale: 'es', out: 'es', code: 'guarded', caption: 'Now, with Langsys, <em>mark it where it stands.</em>' },
+            { until: 12.4, locale: 'es', out: 'es', code: 'guarded', caption: 'The sentence around it <em>still translates.</em>' },
+            { until: 14.0, outro: true },
+        ],
+        outro: 'Brand names, identifiers and code stay exactly as written.<br />Everything around them still translates.',
+        render(scene, { el }) {
+            const other = scene.code === 'other';
+            el('out').innerHTML = OUT[scene.out];
+            el('code').innerHTML = other ? CODE_OTHER : CODE_GUARDED;
+            el('file').textContent = 'App.svelte';
+            el('stamp').textContent = other ? 'OTHER I18N' : 'WITH LANGSYS';
+            el('stamp').className = 'stamp ' + (other ? 'old' : 'new');
+        },
+    });
+</script>

@@ -1,0 +1,125 @@
+<meta charset="utf-8" />
+<title>Langsys — ICU gender agreement (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+            <div class="locales">
+                <div class="pill" data-loc="en-US">EN</div>
+                <div class="pill" data-loc="es">ES</div>
+            </div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> Your app</div>
+            <div class="app">
+                <div class="user">
+                    <div class="avatar f" id="avatar">D</div>
+                    <div>
+                        <div class="uname" id="uname">Diego</div>
+                        <div class="umeta" id="umeta">name_gender: "male"</div>
+                    </div>
+                </div>
+                <div class="greeting" id="greeting"></div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> App.svelte — never changes</div>
+            <div class="code" id="code"></div>
+        </div>
+
+        <div class="stored" id="stored"></div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // Constant call site. The gender branch is resolved by the catalog, never
+    // by an `if` in application code — so this panel is deliberately static.
+    const CODE = [
+        '&lt;h1&gt;{<span class="v">$t</span>(<span class="s">\'Welcome, {name}!\'</span>, {',
+        '    name: user.name,',
+        '    <span class="hl">name_gender: user.gender</span>,',
+        '})}&lt;/h1&gt;',
+    ].join('\n');
+
+    const USERS = {
+        male: { name: 'Diego', initial: 'D', cls: 'm', meta: 'name_gender: "male"' },
+        female: { name: 'Laura', initial: 'L', cls: 'f', meta: 'name_gender: "female"' },
+        other: { name: 'Alex', initial: 'A', cls: 'x', meta: 'no gender data' },
+    };
+
+    // Rendered output, exactly what the ICU formatter produces from the catalog.
+    const GREETING = {
+        'es': {
+            male: '¡Bienvenido, Diego!',
+            female: '¡Bienvenida, Laura!',
+            other: '¡Te damos la bienvenida, Alex!',
+        },
+        'en-US': { male: 'Welcome, Diego!', female: 'Welcome, Laura!', other: 'Welcome, Alex!' },
+    };
+
+    const CATALOG = {
+        'es': '{name_gender, select, male {¡Bienvenido, {name}!} female {¡Bienvenida, {name}!} '
+            + 'other {¡Te damos la bienvenida, {name}!}}',
+        'en-US': 'Welcome, {name}!',
+    };
+
+    const TAG = { 'es': 'CATALOG · es', 'en-US': 'CATALOG · en-US' };
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 13,
+        scenes: [
+            {
+                until: 3.4, locale: 'es', gender: 'male',
+                caption: 'Spanish agrees with the user. <em>Bienvenido</em> for Diego.',
+            },
+            {
+                until: 6.6, locale: 'es', gender: 'female',
+                caption: '<em>Bienvenida</em> for Laura. <span class="dim">Same line of code.</span>',
+            },
+            {
+                until: 9.4, locale: 'es', gender: 'other',
+                caption: 'No gender on the record? <em>The neutral branch.</em>',
+            },
+            {
+                until: 11.4, locale: 'en-US', gender: 'other',
+                caption: 'English needs no branch at all. <span class="dim">You still wrote one line.</span>',
+            },
+            { until: 13.0, outro: true },
+        ],
+        outro: 'You never wrote the branch — Langsys generated it.<br />'
+            + 'Gender agreement resolved per user, at render time.',
+        render(scene, { el, highlightBranch }) {
+            const user = USERS[scene.gender];
+
+            el('code').innerHTML = CODE;
+            el('avatar').className = 'avatar ' + user.cls;
+            el('avatar').textContent = user.initial;
+            el('uname').textContent = user.name;
+            el('umeta').textContent = user.meta;
+            el('greeting').textContent = GREETING[scene.locale][scene.gender];
+
+            // Only the Spanish catalog has select branches to light up.
+            const body = scene.locale === 'es'
+                ? highlightBranch(CATALOG.es, scene.gender)
+                : CATALOG['en-US'];
+
+            el('stored').innerHTML = '<span class="tag">' + TAG[scene.locale] + '</span><b>' + body + '</b>';
+        },
+    });
+</script>

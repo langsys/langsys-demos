@@ -1,0 +1,99 @@
+<meta charset="utf-8" />
+<title>Langsys — published at 09:00, read in Spanish at 09:03 (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<style>
+    #stage .app { height: 300px; }
+    #stage .tl { height: 370px; }
+    #stage.r1x1 .app { height: 214px; padding: 24px 30px; }
+    #stage.r1x1 .tl { height: 292px; padding: 18px 26px; }
+
+    .when { font-size: 22px; color: var(--muted); margin-bottom: 14px; }
+    .post { font-size: 50px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.18; }
+    #stage.r1x1 .post { font-size: 40px; }
+    .reader { margin-top: 16px; font-size: 27px; color: #c6c6da; }
+
+    .tl { padding: 26px 28px; display: grid; gap: 24px; align-content: start; }
+    .row { display: flex; gap: 18px; align-items: baseline; font-size: 31px; color: var(--muted); opacity: 0.45; }
+    #stage.r1x1 .row { font-size: 25px; gap: 14px; }
+    .row b { font-family: 'JetBrains Mono', Consolas, monospace; font-weight: 500; color: var(--muted); min-width: 92px; }
+    .row.on { opacity: 1; color: var(--ink); }
+    .row.on b { color: var(--accent-2); }
+</style>
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+            <div class="locales">
+                <div class="pill" data-loc="en-US">EN</div>
+                <div class="pill" data-loc="es">ES</div>
+            </div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> Your blog</div>
+            <div class="app">
+                <div class="when">Today · 09:00</div>
+                <div class="post" id="post"></div>
+                <div class="reader" id="reader"></div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> What happened</div>
+            <div class="tl" id="tl"></div>
+        </div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // The explainer's clocked discovery story, cut to its payoff. Sourced the
+    // same way (README, "shared/web/explainer"): published with no build and no
+    // write key, the first reader's app sends only the address, Langsys reads
+    // the page itself, and a reader in Madrid gets Spanish minutes later.
+    const POST = {
+        'en-US': 'Our spring collection is here',
+        'es': 'Ya llegó nuestra colección de primavera',
+    };
+    const READER = {
+        'en-US': 'First reader · English',
+        'es': 'Reader in Madrid · Español',
+    };
+    const ROWS = [
+        ['09:00', 'Published. No build, no deploy.'],
+        ['09:01', 'First reader. The app sends only the address.'],
+        ['09:02', 'Langsys reads the page itself.'],
+        ['09:03', 'A reader in Madrid gets Spanish.'],
+    ];
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 14,
+        scenes: [
+            { until: 3.2, locale: 'es', lit: [3], caption: 'Published at 09:00. <em>Read in Spanish at 09:03.</em>' },
+            { until: 6.4, locale: 'en-US', lit: [0], caption: 'No build. No deploy. <span class="dim">No developer ran it.</span>' },
+            { until: 9.6, locale: 'en-US', lit: [1, 2], caption: 'Its first reader sends Langsys <em>only the address.</em>' },
+            { until: 12.4, locale: 'es', lit: [3], caption: 'Minutes later, <em>Madrid reads it in Spanish.</em>' },
+            { until: 14.0, outro: true },
+        ],
+        outro: 'Content no developer ever runs<br />still reaches every reader in their language.',
+        render(scene, { el }) {
+            el('post').textContent = POST[scene.locale];
+            el('reader').textContent = READER[scene.locale];
+            el('tl').innerHTML = ROWS.map(([time, text], i) =>
+                '<div class="row' + (scene.lit.includes(i) ? ' on' : '') + '"><b>' + time + '</b>' + text + '</div>').join('');
+        },
+    });
+</script>
