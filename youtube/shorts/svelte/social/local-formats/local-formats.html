@@ -1,0 +1,101 @@
+<meta charset="utf-8" />
+<title>Langsys — numbers and dates in every locale (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<style>
+    #stage .app { height: 300px; }
+    #stage .code { height: 330px; font-size: 26px; }
+    #stage.r1x1 .app { height: 214px; padding: 24px 30px; }
+    #stage.r1x1 .code { height: 262px; font-size: 22px; }
+
+    .rows { display: grid; gap: 20px; }
+    .line { display: flex; gap: 20px; align-items: baseline; font-size: 40px; font-weight: 600; }
+    #stage.r1x1 .line { font-size: 31px; }
+    .line .loc { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 22px; font-weight: 500; color: var(--muted); min-width: 92px; }
+    .line em { font-style: normal; color: var(--accent-2); }
+</style>
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+            <div class="locales">
+                <div class="pill" data-loc="en-US">EN</div>
+                <div class="pill" data-loc="de-DE">DE</div>
+                <div class="pill" data-loc="hi-IN">HI</div>
+            </div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> Your app</div>
+            <div class="app"><div class="rows" id="rows"></div></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> Billing.svelte</div>
+            <div class="code" id="code"></div>
+        </div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // The social cut of svelte/web/formatting: values from its ROWS (CLDR,
+    // de-DE medium date style), the Indian grouping of 1234567, and the order
+    // number passed as a string so it is never grouped.
+    const CODE_MAIN = [
+        't(<span class="s">\'Balance: {amount}\'</span>, <span class="s">\'Billing\'</span>,',
+        '  { amount: <span class="v">1234.5</span> });',
+        '',
+        't(<span class="s">\'Renews {when}\'</span>, <span class="s">\'Billing\'</span>,',
+        '  { when: <span class="k">new</span> <span class="t">Date</span>(...) });',
+    ].join('\n');
+
+    const CODE_GROUP = [
+        't(<span class="s">\'Views {n}\'</span>, <span class="s">\'Analytics\'</span>,',
+        '  { n: <span class="v">1234567</span> });',
+        '',
+        '<span class="c">// One value. Three locales.</span>',
+    ].join('\n');
+
+    const CODE_ID = [
+        't(<span class="s">\'Order {ref}\'</span>, <span class="s">\'Billing\'</span>,',
+        '  { ref: <span class="s hl">\'1048576\'</span> });',
+        '',
+        '<span class="c">// An order number is not a quantity.</span>',
+    ].join('\n');
+
+    const ROWS = {
+        main: [['de-DE', 'Balance: <em>1.234,5</em>'], ['de-DE', 'Renews <em>14. März 2026</em>']],
+        grouping: [['en-US', '<em>1,234,567</em>'], ['de-DE', '<em>1.234.567</em>'], ['hi-IN', '<em>12,34,567</em>']],
+        id: [['de-DE', 'Order <em>1048576</em>']],
+    };
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 14,
+        scenes: [
+            { until: 3.2, locale: 'de-DE', rows: 'main', code: 'main', caption: 'Every number and date, <em>in each locale\'s format.</em>' },
+            { until: 6.4, locale: 'hi-IN', rows: 'grouping', code: 'group', caption: 'Hindi doesn\'t even group <em>in threes.</em>' },
+            { until: 9.6, locale: 'de-DE', rows: 'main', code: 'main', caption: 'Pass the <em>number</em>, and the <em>date</em> as a date.' },
+            { until: 12.4, locale: 'de-DE', rows: 'id', code: 'id', caption: 'An order number? <em>Pass a string.</em> <span class="dim">It stays as written.</span>' },
+            { until: 14.0, outro: true },
+        ],
+        outro: 'Numbers and dates formatted per CLDR,<br />in every locale, from the value you pass.',
+        render(scene, { el }) {
+            el('rows').innerHTML = ROWS[scene.rows].map(([locale, text]) =>
+                '<div class="line"><span class="loc">' + locale + '</span><span>' + text + '</span></div>').join('');
+            el('code').innerHTML = scene.code === 'group' ? CODE_GROUP : scene.code === 'id' ? CODE_ID : CODE_MAIN;
+        },
+    });
+</script>

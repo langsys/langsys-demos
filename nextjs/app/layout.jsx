@@ -2,7 +2,7 @@
 // fetch the catalog on the server with a raw fetch, hand it to the client wrapper.
 import { cookies } from 'next/headers';
 import { LangsysClient } from './LangsysClient';
-import { DEMO_KEY, DEMO_PROJECT_ID, LOCALES, LOCALE_COOKIE } from './langsys';
+import { DEMO_KEY, DEMO_PROJECT_ID, LANGUAGES, LOCALE_COOKIE, offeredLanguages, pickLanguage } from './langsys';
 import './demo.css';
 
 export const metadata = { title: 'Langsys × Next.js — demo' };
@@ -13,6 +13,15 @@ const projectId = process.env.LANGSYS_PROJECT_ID || DEMO_PROJECT_ID;
 const serverKey = process.env.LANGSYS_API_KEY || DEMO_KEY;
 const clientKey = process.env.NEXT_PUBLIC_LANGSYS_API_KEY || DEMO_KEY;
 const apiUrl = process.env.NEXT_PUBLIC_LANGSYS_API_URL || 'https://api.langsys.dev/api';
+
+// Which languages the project serves — read once every five minutes, not on every render.
+async function getProject() {
+    const res = await fetch(`${apiUrl}/authorize-project/${projectId}`, {
+        headers: { 'x-Authorization': serverKey },
+        next: { revalidate: 300 },
+    });
+    return res.ok ? (await res.json()).data : null;
+}
 
 async function getTranslations(locale) {
     const res = await fetch(`${apiUrl}/projects/${projectId}/translations?locale=${locale}`, {
@@ -26,16 +35,19 @@ async function getTranslations(locale) {
 }
 
 export default async function RootLayout({ children }) {
-    // From the cookie the locale switcher writes; a first visit gets English.
+    // From the cookie the locale switcher writes, if the project serves that language; else English.
+    const languages = offeredLanguages(await getProject().catch(() => null));
     const saved = (await cookies()).get(LOCALE_COOKIE)?.value;
-    const locale = LOCALES.includes(saved) ? saved : 'en-US';
+    const locale = pickLanguage(languages, saved)?.code ?? 'en-US';
     const translations = await getTranslations(locale);
+    const dir = pickLanguage(LANGUAGES, locale)?.dir ?? 'ltr';
 
     return (
-        <html lang={locale}>
+        <html lang={locale} data-demo-dir={dir}>
             <body>
                 <LangsysClient
                     locale={locale}
+                    languages={languages}
                     translations={translations}
                     projectId={projectId}
                     apiKey={clientKey} // read-only

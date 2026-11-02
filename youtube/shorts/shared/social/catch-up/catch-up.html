@@ -1,0 +1,97 @@
+<meta charset="utf-8" />
+<title>Langsys — catch up a language that fell behind (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<style>
+    #stage .bars { height: 296px; }
+    #stage .tm { height: 380px; }
+    #stage.r1x1 .bars { height: 226px; padding: 20px 28px; }
+    #stage.r1x1 .tm { height: 280px; padding: 18px 26px; }
+
+    .bars { padding: 28px 28px; display: grid; gap: 24px; align-content: start; }
+    .bar { display: grid; grid-template-columns: 170px 1fr 150px; gap: 16px; align-items: center; font-size: 28px; }
+    #stage.r1x1 .bar { font-size: 23px; grid-template-columns: 140px 1fr 130px; }
+    .track { height: 14px; border-radius: 7px; background: var(--panel-2); overflow: hidden; }
+    .fill { height: 100%; border-radius: 7px; background: var(--accent-2); }
+    .bar.behind .fill { background: var(--warn); }
+    .bar .state { color: var(--muted); font-size: 23px; text-align: right; }
+    .bar.behind .state { color: var(--warn); }
+
+    .tm { padding: 26px 28px; display: grid; gap: 18px; align-content: start; }
+    .menu { display: flex; gap: 12px; flex-wrap: wrap; }
+    .action { border: 1px solid var(--line); border-radius: 12px; padding: 12px 18px; font-size: 24px; color: var(--muted); }
+    .action.on { border-color: var(--accent); background: rgba(124, 108, 245, 0.18); color: var(--ink); }
+    .phrase { display: grid; grid-template-columns: 1fr 1fr auto; gap: 14px; align-items: center; font-size: 28px; padding: 8px 0; }
+    #stage.r1x1 .phrase { font-size: 23px; padding: 2px 0; }
+    .phrase .en { color: var(--muted); }
+    .phrase .fr.empty { color: var(--warn); }
+    .badge { font-size: 19px; font-weight: 600; border-radius: 999px; padding: 5px 12px; border: 1px solid var(--accent-2); color: var(--ink); }
+</style>
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> Store · dashboard</div>
+            <div class="bars" id="bars"></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> Translation Manager · French</div>
+            <div class="tm" id="tm"></div>
+        </div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // From the catch-up tour (assets/tour/narrate_tour.py, "tour-catchup"):
+    // French and Japanese each missing two phrases, AI Translate Pending in
+    // the Manager's menu, drafts arriving seconds later, every language at
+    // 100%, and the drafts waiting for someone to review them.
+    const LANGUAGES = ['Spanish', 'German', 'French', 'Japanese'];
+    const BEHIND = ['French', 'Japanese'];
+    const PHRASES = [
+        ['Free returns within 30 days', 'Retours gratuits sous 30 jours'],
+        ['Track your order', 'Suivre votre commande'],
+    ];
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 14,
+        scenes: [
+            { until: 3.2, done: true, menu: false, caption: 'Two languages behind. <em>Caught up in one action.</em>' },
+            { until: 6.4, done: false, menu: false, caption: 'French and Japanese fell behind, <span class="dim">two phrases each.</span>' },
+            { until: 9.6, done: true, menu: true, caption: '<em>AI Translate Pending</em> drafts them in seconds.' },
+            { until: 12.4, done: true, menu: false, caption: 'The drafts <em>wait for a person</em> to review.' },
+            { until: 14.0, outro: true },
+        ],
+        outro: 'One action for the language in front of you,<br />another for the whole project.',
+        render(scene, { el }) {
+            el('bars').innerHTML = LANGUAGES.map((language) => {
+                const behind = !scene.done && BEHIND.includes(language);
+                return '<div class="bar' + (behind ? ' behind' : '') + '"><span>' + language + '</span>'
+                    + '<div class="track"><div class="fill" style="width:' + (behind ? 84 : 100) + '%"></div></div>'
+                    + '<span class="state">' + (behind ? '2 missing' : '100%') + '</span></div>';
+            }).join('');
+            el('tm').innerHTML = '<div class="menu"><span class="action' + (scene.menu ? ' on' : '') + '">AI Translate Pending</span>'
+                + '<span class="action">Clear Translations</span></div>'
+                + PHRASES.map(([en, fr]) => '<div class="phrase"><span class="en">' + en + '</span>'
+                    + (scene.done ? '<span class="fr">' + fr + '</span><span class="badge">AI draft</span>'
+                                  : '<span class="fr empty">to do</span><span></span>') + '</div>').join('');
+        },
+    });
+</script>

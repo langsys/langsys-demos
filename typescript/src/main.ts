@@ -1,5 +1,5 @@
 import { Phrase, Translate, currentlyLoadedLocale, t, tSignal } from 'langsys-js-typescript';
-import { LOCALES, LOCALE_LABELS, demoBanner, locale } from './langsys';
+import { demoBanner, languages, locale } from './langsys';
 import './demo.css';
 
 /* Demo banner — on the shared read-only project, the default catalog
@@ -8,8 +8,9 @@ import './demo.css';
 if (demoBanner) {
     const message =
         demoBanner === 'shared'
-            ? `<strong>Shared demo project (read-only)</strong> — existing phrases translate; new or edited ones won't. ` +
-              `Drop your own keys in <code>.env</code> to watch discovery register and translate your phrases live. `
+            ? `<strong>Shared demo project (read-only)</strong> — existing phrases translate, but a read-only key can't add new ones. ` +
+              `To watch a phrase you write get translated, <a href="https://github.com/langsys/langsys-demos/tree/main/typescript#use-your-own-project" target="_blank" rel="noopener noreferrer">run this app on your own project</a> ` +
+              `or <a href="https://docs.langsys.dev/learn/quickstart" target="_blank" rel="noopener noreferrer">see it in the quickstart video</a>. `
             : `<strong>No Langsys credentials configured</strong> — showing source text only, nothing translates. ` +
               `Add your project id and key in <code>.env</code> to see it live. `;
     const banner = document.createElement('div');
@@ -17,7 +18,7 @@ if (demoBanner) {
     banner.setAttribute('translate', 'no');
     banner.innerHTML =
         message +
-        `<a href="https://docs.langsys.dev/learn/concepts/keys-and-environments" target="_blank" rel="noopener noreferrer">Get your keys →</a>`;
+        `<a href="https://docs.langsys.dev/learn/concepts/keys-and-environments" target="_blank" rel="noopener noreferrer">Get your keys</a>`;
     document.body.prepend(banner);
 }
 
@@ -59,6 +60,14 @@ document.querySelector('#inbox-plus')!.addEventListener('click', () => {
     renderInbox();
 });
 
+/* t() — values in a sentence are formatted per locale: the date here, numbers too.
+   Local midnight, so no timezone moves the day. */
+const order = document.querySelector<HTMLElement>('#order')!;
+const shipDate = new Date(2026, 7, 15);
+tSignal.subscribe(() => {
+    order.textContent = t('Your order {id} ships on {date}.', 'Checkout', { id: '48213', date: shipDate });
+});
+
 /* Translate — a whole content block, localized as a single unit. */
 new Translate(document.querySelector<HTMLElement>('#hero')!, { category: 'Home' });
 
@@ -85,22 +94,19 @@ document.querySelector('#cart-plus')!.addEventListener('click', () => {
    stays verbatim while the sentence around it translates. */
 new Translate(document.querySelector<HTMLElement>('#signin')!, { category: 'Tour' });
 
-/* Locale switcher pills. */
-const nav = document.getElementById('locales')!;
-for (const code of LOCALES) {
-    const pill = document.createElement('button');
-    pill.className = 'pill';
-    pill.dataset.locale = code;
-    pill.textContent = LOCALE_LABELS[code] ?? code;
-    pill.addEventListener('click', () => locale.set(code));
-    nav.appendChild(pill);
-}
+/* Language picker — the languages the project serves, rebuilt when the SDK has read them. */
+const select = document.querySelector<HTMLSelectElement>('#locale-select')!;
+select.addEventListener('change', () => locale.set(select.value));
+languages.subscribe((list) => {
+    select.replaceChildren(...list.map((l) => new Option(l.label, l.code)));
+    select.value = locale.get();
+});
+locale.subscribe((code) => {
+    if (select.value !== code) select.value = code;
+});
 
 /* Reading signals — currentlyLoadedLocale tracks the catalog actually loaded. */
 const meta = document.getElementById('locale-meta')!;
 currentlyLoadedLocale.subscribe((loaded) => {
     meta.textContent = `loaded ${loaded || 'en-US'}`;
-    for (const pill of nav.querySelectorAll<HTMLButtonElement>('.pill')) {
-        pill.classList.toggle('active', pill.dataset.locale === (loaded || 'en-US'));
-    }
 });

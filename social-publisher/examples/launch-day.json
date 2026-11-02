@@ -1,0 +1,21 @@
+{
+  "to": ["youtube", "x", "linkedin"],
+  "media": ["clip.mp4"],
+  "utm": {"content": "react-hero"},
+  "youtube": {
+    "title": "Translate a React app in 5 minutes",
+    "text": "From npm install to a fully translated app.\n\nStart free: https://langsys.dev",
+    "tags": ["react", "i18n", "localization"],
+    "privacy": "public",
+    "thumbnail": "thumbnail.png"
+  },
+  "x": {
+    "text": "Your React app, in every language your users speak. #React #i18n",
+    "comment": "Full video: {youtube}"
+  },
+  "linkedin": {
+    "text": "Shipping in one language leaves most of the world out.\n\nHere's how a React team translates its app in five minutes. #React #i18n",
+    "title": "Translate a React app in 5 minutes",
+    "comment": "Full video: {youtube}"
+  }
+}

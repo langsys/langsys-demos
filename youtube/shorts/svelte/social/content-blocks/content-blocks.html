@@ -1,0 +1,133 @@
+<meta charset="utf-8" />
+<title>Langsys — content blocks (social)</title>
+<link rel="stylesheet" href="../../../assets/social-kit.css" />
+
+<style>
+    #stage .app { height: 236px; }
+    #stage .code { height: 248px; font-size: 22px; }
+    /* 1:1 keeps the app panel tall enough for the dashed region outline, which
+       sits 6px outside the hero box — trimming it below ~210 clips the outline. */
+    #stage.r1x1 .app { height: 210px; }
+    #stage.r1x1 .code { height: 185px; font-size: 20px; }
+    #stage.r1x1 .safe { height: 80px; }
+
+    /* The live region of markup. Outlined on the beat where the caption says
+       one tag registers the whole thing. */
+    .hero { transition: none; border-radius: 12px; padding: 6px; }
+    .hero.outlined { outline: 3px dashed var(--accent); outline-offset: 6px; }
+    .hero h3 { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; }
+    .hero p { font-size: 24px; margin-top: 14px; color: #c6c6da; line-height: 1.4; }
+    .hero strong { color: var(--ink); font-weight: 700; }
+    .hero a { color: var(--accent-2); text-decoration: underline; }
+    .brand { font-weight: 700; color: var(--ink); border-radius: 5px; padding: 0 3px; }
+    .brand.locked { color: var(--warn); background: rgba(240, 178, 107, 0.15); outline: 1px solid var(--warn); }
+
+    /* One row per extracted phrase. nowrap matters: with the kit's flex-wrap in
+       a column direction, a short container spills phrase 3 into a second
+       column and the list stops reading top-to-bottom. */
+    #stage .chips { flex-direction: column; flex-wrap: nowrap; }
+    #stage.r1x1 .chip { font-size: 17px; padding: 9px 15px; }
+    .chip i { font-style: normal; color: var(--accent-2); font-weight: 700; margin-right: 10px; }
+</style>
+
+<div id="stage">
+    <div class="wrap">
+        <header>
+            <div class="logo">Langsys<span> Realtime i18n</span></div>
+            <div class="locales">
+                <div class="pill" data-loc="en">EN</div>
+                <div class="pill" data-loc="es">ES</div>
+            </div>
+        </header>
+
+        <div class="caption" id="caption"></div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot live"></span> Rendered region</div>
+            <div class="app"><div class="hero" id="hero"></div></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-head"><span class="dot"></span> App.svelte</div>
+            <div class="code" id="code"></div>
+        </div>
+
+        <div class="chips" id="chips"></div>
+
+        <div class="safe"><div class="progress" id="progress"></div></div>
+    </div>
+
+    <div id="outro">
+        <div class="outro-logo">Langsys</div>
+        <div class="outro-line" id="outroLine"></div>
+        <div class="outro-url">app.langsys.dev</div>
+    </div>
+</div>
+
+<script src="../../../assets/social-kit.js"></script>
+<script>
+    // One <Translate> tag registers a region of markup as a content block:
+    // every text run becomes its own phrase, markup position is preserved, and
+    // a DontTranslate subtree comes back verbatim.
+    const HERO = {
+        en: '<h3>Welcome to our store</h3>'
+            + '<p>Browse the <strong>full catalog</strong> in your language.</p>'
+            + '<p><span class="brand BRANDCLS">Flexmark</span> ships worldwide.</p>',
+        es: '<h3>Bienvenido a nuestra tienda</h3>'
+            + '<p>Explora el <strong>catálogo completo</strong> en tu idioma.</p>'
+            + '<p><span class="brand BRANDCLS">Flexmark</span> envía a todo el mundo.</p>',
+    };
+
+    const CODE_LINES = [
+        '<span class="k">&lt;</span><span class="t">Translate</span> category=<span class="s">"Home"</span><span class="k">&gt;</span>',
+        '  &lt;h3&gt;Welcome to our store&lt;/h3&gt;',
+        '  &lt;p&gt;Browse the &lt;strong&gt;full catalog&lt;/strong&gt;…&lt;/p&gt;',
+        '  &lt;p&gt;<span class="k">&lt;</span><span class="t">DontTranslate</span><span class="k">&gt;</span>Flexmark<span class="k">&lt;/</span><span class="t">DontTranslate</span><span class="k">&gt;</span> ships…&lt;/p&gt;',
+        '<span class="k">&lt;/</span><span class="t">Translate</span><span class="k">&gt;</span>',
+    ];
+
+    // The text runs the tokenizer pulls out of that region.
+    const PHRASES = [
+        'Welcome to our store',
+        'Browse the {m0}full catalog{/m0} in your language.',
+        '{dt0} ships worldwide.',
+    ];
+
+    LangsysDemo({
+        fps: 4,
+        seconds: 14,
+        scenes: [
+            {
+                until: 3.4, locale: 'en', outlined: true, chips: [], lockBrand: false,
+                caption: 'One tag wraps <em>a whole region of markup.</em>',
+            },
+            {
+                until: 6.8, locale: 'en', outlined: true, chips: [0, 1, 2], lockBrand: false,
+                caption: 'Every text run becomes its own phrase. <span class="dim">Three here.</span>',
+            },
+            {
+                until: 10.2, locale: 'es', outlined: true, chips: [1], lockBrand: false,
+                caption: 'Switch locale — <em>bold and links land where they belong.</em>',
+            },
+            {
+                until: 12.4, locale: 'es', outlined: true, chips: [2], lockBrand: true,
+                caption: 'And the brand never translates. <em>Flexmark stays Flexmark.</em>',
+            },
+            { until: 14.0, outro: true },
+        ],
+        outro: 'Wrap a hero, a footer, a card — one tag.<br />'
+            + 'Markup structure and brand names come back exactly where they belong.',
+        render(scene, { el }) {
+            el('hero').className = 'hero' + (scene.outlined ? ' outlined' : '');
+            el('hero').innerHTML = HERO[scene.locale].replace('BRANDCLS', scene.lockBrand ? 'locked' : '');
+
+            el('code').innerHTML = CODE_LINES.join('\n');
+
+            el('chips').innerHTML = PHRASES.map((p, i) => {
+                const locked = scene.lockBrand && i === 2;
+                const cls = 'chip' + (locked ? ' locked' : (scene.chips.includes(i) ? ' on' : ''));
+                return '<div class="' + cls + '"><i>phrase ' + (i + 1) + '</i>' + p + '</div>';
+            }).join('');
+        },
+    });
+</script>
