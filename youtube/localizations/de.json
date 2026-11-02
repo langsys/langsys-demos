@@ -1,0 +1,338 @@
+{
+  "labels": {
+    "learn_more": "Mehr erfahren",
+    "get_started": "Loslegen",
+    "start_free": "Kostenlos starten",
+    "docs": "Dokumentation"
+  },
+  "videos": {
+    "explainer": {
+      "title": "Was ist Langsys? Ihre App in jeder Sprache – ohne neues Deployment",
+      "summary": "Langsys in 77 Sekunden: ein SDK in Ihrer App und ein gehosteter Translation Manager. Eine Phrase registriert sich selbst, sobald Ihr Code sie zum ersten Mal ausführt, wird beim Eintreffen maschinell übersetzt und kann von einem Übersetzer ohne Deployment verfeinert werden.\n\nDer Beweis: Ein Blogbeitrag, um 09:00 veröffentlicht, ohne Build und ohne Write-Key, erreicht um 09:03 eine Leserin in Madrid auf Spanisch."
+    },
+    "getting-started": {
+      "title": "Erste Schritte mit Langsys – von Anfang bis Ende",
+      "summary": "In einem Durchgang vom Nichts zur übersetzten App: Projekt und Sprachen anlegen, einen API-Key erstellen, das SDK installieren und initialisieren und zusehen, wie t(), ‹Translate›, ‹Phrase› und ‹DontTranslate› ihre Phrasen registrieren. Die spanische Übersetzung liegt bereits im Translation Manager, und die App wechselt ohne Neuladen auf Spanisch und Französisch."
+    },
+    "pluralization": {
+      "title": "Pluralformen in jeder Sprache – ohne if (count === 1)",
+      "summary": "Warum sich ein Satz mit seiner Zahl ändert, warum das if (count === 1), das ihn auf Englisch repariert, englische Grammatik in Ihrem Code ist, und wie Sie mit einem flach geschriebenen Satz jede Pluralform in jeder Sprache erhalten. Langsys übersetzt ihn flach und baut ihn dann in den ICU-Pluralkategorien jedes Locales neu auf, Englisch eingeschlossen."
+    },
+    "tutorial/workflow": {
+      "title": "Die Übersetzungs-Pipeline – und wie Langsys sie abschafft",
+      "summary": "Konzepte 1 von 5. Übersetzungen durchlaufen meist eine Pipeline: extrahieren, exportieren, übersetzen, importieren, deployen. Langsys macht sie überflüssig."
+    },
+    "tutorial/key-files": {
+      "title": "Schluss mit Key-Dateien: Der Satz ist der Schlüssel",
+      "summary": "Konzepte 2 von 5. Wo ein Projekt beginnt, welchen Key andere i18n-Bibliotheken Sie erfinden lassen und was ihn in Langsys ersetzt."
+    },
+    "tutorial/locale-store": {
+      "title": "Der Locale-Store: aktive Sprache halten und wechseln",
+      "summary": "Konzepte 3 von 5. Wie Langsys das aktive Locale hält und es in Ihrer gesamten App umschaltet."
+    },
+    "tutorial/keys-and-environments": {
+      "title": "API-Keys und Umgebungen: Welcher Key wohin gehört",
+      "summary": "Konzepte 4 von 5. Warum ein Key, der Phrasen registrieren kann, nie ausgeliefert werden darf, warum Read-only eine Sackgasse ist und was ip_write ist: ein Key, dessen Antwort davon abhängt, von wo Sie fragen. Write-Keys bleiben auf Rechnern, die Ihnen gehören, ip_write kommt in jedes öffentliche Bundle, und Read-only ist für Bundles, die niemals etwas verändern dürfen."
+    },
+    "tutorial/adding-a-locale": {
+      "title": "Eine neue Sprache ist nur eine Projekteinstellung",
+      "summary": "Konzepte 5 von 5. Eine neue Sprache ist eine Einstellung, kein Projekt: Neue Phrasen werden beim Eintreffen übersetzt, und ein einziger Lauf ergänzt den Rest."
+    },
+    "managing-translations": {
+      "title": "Übersetzungen verwalten im Langsys Translation Manager",
+      "summary": "Der Translation Manager für alle, die für die Texte verantwortlich sind – ganz ohne Code: die To-do-Liste, ein maschineller Entwurf, von Hand korrigiert, AI Translate mit Auto-next, Never Translate und ein Übersetzer, der nur für Spanisch eingeladen wird. Die Korrektur ist sofort live in der App, ohne Deployment."
+    },
+    "translation-memory": {
+      "title": "Translation Memory: ein neues Projekt, das schon übersetzt ist",
+      "summary": "Ein zweites Projekt in derselben Organisation ist vollständig übersetzt, bevor jemand es anfasst. Das Translation Memory trägt jeden Satz – und wer ihn geschrieben hat – über Projekte hinweg, sodass für das neue Projekt überhaupt kein Modell aufgerufen wird."
+    },
+    "connect-your-ai-assistant": {
+      "title": "Langsys aus Claude Code nutzen – über MCP",
+      "summary": "Langsys in einem KI-Assistenten, über den gehosteten MCP-Server: ein claude mcp add-Befehl, die Freigabe im Browser, und Claude Code beantwortet Fragen zu den Sprachen Ihres Projekts mit Live-Daten. Die Verbindung lässt sich im Security tab Ihres Kontos widerrufen."
+    },
+    "adding-a-language": {
+      "title": "Deutsch für eine Live-App: exakter Preis, kein Deployment",
+      "summary": "Deutsch wird zu einem Live-Shop hinzugefügt. Langsys nennt vorab den exakten Preis für den bestehenden Katalog (29 Wörter, $0.35), übersetzt ihn, und der Shop wechselt auf Deutsch, ohne dass etwas gebaut oder deployt wird."
+    },
+    "catching-up-a-language": {
+      "title": "Eine zurückgefallene Sprache wieder aufholen",
+      "summary": "Massenaktionen im Translation Manager: AI Translate Pending für eine Sprache oder das ganze Projekt, mit einer Bestätigung, die jedes Ziel-Locale und seine Kosten auflistet – und jede Sprache ist wieder vollständig."
+    },
+    "translating-a-content-block": {
+      "title": "Einen ganzen Content-Block in einem Stück übersetzen",
+      "summary": "Ein ‹Translate›-Bereich, als ein Content-Block übersetzt: AI Translate füllt alle Segmente gemeinsam, ein Segment wird von Hand im formellen Register umgeschrieben, und ein ‹DontTranslate›-Satz bleibt auf Englisch, während das Italienische drumherum ergänzt wird."
+    },
+    "ai-translator-settings": {
+      "title": "AI Translator-Einstellungen: jeder Schalter erklärt",
+      "summary": "Der AI Translator-Tab von oben bis unten: KI-Übersetzungen auf Abruf, automatische Übersetzung neuer Phrasen und die automatische Erkennung, die eine bereits spanische Phrase als Never Translate zurückhält."
+    },
+    "api-keys-in-production": {
+      "title": "API-Keys in Produktion: Aktivität, Pausieren und Rotation",
+      "summary": "Ein Key nach dem Release: eine echte Woche Shop-Traffic auf seiner Activity-Seite, einen Key pausieren, ohne ihn zu löschen, und Rotation live vor der Kamera: die drei Key-Typen, ein neuer IP-Write-Key mit Allowlist und das Löschen des alten."
+    },
+    "one-organization-many-projects": {
+      "title": "Eine Organisation, viele Projekte",
+      "summary": "Die Organisation als Ausgangspunkt jedes Projekts: Standard-Locales, AI Translator- und Abrechnungseinstellungen, Projektfinanzierung aus dem Guthaben der Organisation und ein angepasstes Projekt, das wieder auf Vererbung umgestellt wird."
+    },
+    "usage-and-credits": {
+      "title": "Nutzung und Credits: So wird ein Projekt finanziert",
+      "summary": "Die zwei Zähler – API-Nutzungseinheiten und Credits – und wie ein Projekt finanziert wird: ein Credit-Transfer vom Konto auf ein Projekt live vor der Kamera, eine Zeile pro maschineller Übersetzung im Verlauf sowie das monatliche Limit und die automatische Aufladung des Projekts."
+    },
+    "plans-and-payments": {
+      "title": "Tarife und Zahlungen in Langsys",
+      "summary": "Ein Rundgang durch die Abrechnung, ohne etwas abzuschicken: Tarif und Abrechnungszeitraum, der Dialog „Change Plan“, Payment Methods, die mit einer Organisation oder einem Projekt geteilt werden, Adressen und Rechnungen."
+    },
+    "notifications": {
+      "title": "Benachrichtigungen: Was Langsys Ihnen mitteilt – und wo",
+      "summary": "Der Benachrichtigungseingang und seine Einstellungen: Kontostandards für neue Phrasen, Einladungen und Projektzugriff, per In-App und E-Mail, sowie eine Überschreibung pro Projekt."
+    },
+    "svelte/hero": {
+      "title": "Svelte i18n mit Langsys: der komplette Durchgang",
+      "summary": "Was andere i18n-Lösungen Sie synchron halten lassen, ein einziger Aufruf als Ersatz, ein Sprachwechsel, warum flaches Spanisch für die Hälfte Ihrer Nutzer falsch ist und was ICU select dagegen tut."
+    },
+    "svelte/t-string": {
+      "title": "t(phrase, category, params) in Svelte",
+      "summary": "Der t()-Aufruf: das Key-Datei-Problem, das er ersetzt, seine drei Argumente, ICU-Platzhalter und Pluralformen."
+    },
+    "svelte/phrase-tag": {
+      "title": "‹Phrase› in Svelte: ein Satz mit Markup darin",
+      "summary": "Ein Satz mit Markup darin, als eine Phrase erhalten – und warum ‹Phrase›-Parameter als %name% geschrieben werden."
+    },
+    "svelte/translate-tag": {
+      "title": "‹Translate› in Svelte: ein Tag für einen ganzen Bereich",
+      "summary": "Ein ‹Translate›-Tag registriert einen ganzen Bereich – und warum ein Block besser ist als ein Aufruf pro Zeile."
+    },
+    "svelte/donttranslate": {
+      "title": "‹DontTranslate› in Svelte: Markennamen unverändert lassen",
+      "summary": "Markennamen und Bezeichner bleiben wortgetreu erhalten, ohne sie aus dem Satz herauszulösen."
+    },
+    "svelte/content-blocks": {
+      "title": "Was ist ein Content-Block? Ganze Abschnitte in Svelte übersetzen",
+      "summary": "Ein Abschnitt, als Einheit registriert – und trotzdem aus einzeln wiederverwendbaren Phrasen aufgebaut."
+    },
+    "svelte/categories": {
+      "title": "Gleiches Wort, zwei Bedeutungen: Kategorien statt i18n-Keys",
+      "summary": "Warum i18n Keys erfunden hat und was sie ersetzt: dasselbe Wort mit zwei Bedeutungen und die Paare, in die es sich aufteilt."
+    },
+    "svelte/icu-gender": {
+      "title": "Genus-Kongruenz ohne Bedingungen im Code (ICU select)",
+      "summary": "Die Geschlechter-Bedingung, die andere i18n-Lösungen in Ihrer Komponente lassen – und die Zweige, die Langsys stattdessen für jede Sprache erzeugt."
+    },
+    "svelte/attributes": {
+      "title": "Platzhalter, Alt-Texte und ARIA-Labels in Svelte übersetzen",
+      "summary": "Wie ein halb übersetztes Formular auf die Person wirkt, die es benutzt – und wie ein einziges ‹Translate› Platzhalter, Alt-Texte und ARIA-Labels im selben Durchgang erfasst."
+    },
+    "svelte/formatting": {
+      "title": "Zahlen und Datumsangaben in jedem Locale mit Svelte i18n",
+      "summary": "Zahlen und Datumsangaben nach CLDR: die Verzweigung, die Sie sonst von Hand schreiben würden, warum Zifferngruppierung eine Form und kein Trennzeichen ist und warum eine Bestellnummer als String übergeben werden muss."
+    },
+    "svelte/social/phrase-9x16": {
+      "title": "Ihr i18n-Key ist einfach der englische Satz #Shorts",
+      "summary": "Mit Langsys ist der Satz in Ihrem Code der Übersetzungs-Key: keine Key-Datei, nichts zu extrahieren oder zu synchronisieren, und dieselbe Zeile kommt in jeder Sprache zurück. #Shorts"
+    },
+    "svelte/social/icu-gender-9x16": {
+      "title": "Bienvenido oder Bienvenida? Eine Zeile Code #Shorts",
+      "summary": "Im Spanischen richtet sich die Form nach der Person. Langsys erzeugt die ICU select-Zweige: Diego bekommt Bienvenido, Laura bekommt Bienvenida, und bei unbekanntem Geschlecht gibt es die neutrale Form – aus einer einzigen Zeile. #Shorts"
+    },
+    "svelte/social/icu-plurals-9x16": {
+      "title": "Russisch hat 4 Pluralformen. Sie schreiben eine Zeile #Shorts",
+      "summary": "One, few, many und other: Russisch wählt die Pluralform nach der Zahl, und 21 geht zurück in den Singular. Schreiben Sie den Satz flach, und Langsys baut jede Form, die ein Locale braucht. #Shorts"
+    },
+    "svelte/social/content-blocks-9x16": {
+      "title": "Einen ganzen Abschnitt mit einem Tag übersetzen #Shorts",
+      "summary": "Ein Translate-Tag umschließt einen Markup-Bereich: Jeder Textabschnitt wird zu einer eigenen Phrase, Fettdruck und Links landen an der richtigen Stelle, und der Markenname wird nie übersetzt. #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "Um 9:00 veröffentlicht, um 9:03 auf Spanisch gelesen #Shorts",
+      "summary": "Ein Blogbeitrag geht ohne Build und ohne Deploy online. Die App des ersten Lesers schickt Langsys nur die Seitenadresse, Langsys liest die Seite selbst, und Minuten später liest jemand in Madrid sie auf Spanisch. #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "Frag deinen KI-Assistenten, wie es um deine Übersetzungen steht #Shorts",
+      "summary": "Langsys betreibt einen MCP-Server, damit Claude, Codex, Cursor oder GitHub Copilot deine Projekte lesen und Fehlendes übersetzen können. Eine Freigabe im Browser, und der Assistent sieht nie dein Passwort. #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "Ein neues Projekt, das schon übersetzt startet #Shorts",
+      "summary": "Korrigiere eine Übersetzung einmal, und jedes neue Projekt deiner Organisation kennt sie schon. Das Translation Memory hat dieses Projekt auf Spanisch gefüllt, samt Namen der Übersetzerin, ohne dass ein Modell aufgerufen wurde. #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "Im Spanischen wandert der Fettdruck an die richtige Stelle #Shorts",
+      "summary": "Andere i18n-Bibliotheken zerlegen einen Satz mit einem fetten Wort in drei Keys. Mit ‹Phrase› bekommt die Übersetzung einen einzigen Satz samt Markup, und im Spanischen landet der Fettdruck hinter dem Substantiv, auf „no leídos“. #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "Deutsch für einen Live-Shop, ganz ohne Deploy #Shorts",
+      "summary": "Füge die Sprache in den Projekteinstellungen hinzu, nicht im Code. Langsys nennt den genauen Preis für den bestehenden Katalog, bevor etwas ausgegeben wird, übersetzt jede Phrase in Sekunden, und der Shop spricht Deutsch, ohne Build und ohne Deploy. #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "Zwei Sprachen im Rückstand, mit einer Aktion aufgeholt #Shorts",
+      "summary": "Französisch und Japanisch fehlten je zwei Phrasen. AI Translate Pending übersetzt sie in Sekunden, und die Entwürfe warten, bis jemand sie prüft. #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "Dein Markenname, niemals übersetzt #Shorts",
+      "summary": "Wer übersetzt, kann einen Produktnamen nicht von einer Phrase unterscheiden, also liefern andere i18n-Bibliotheken Bright Ledger als Libro Mayor Brillante aus. Mit Langsys markierst du ihn mit ‹DontTranslate› direkt an seiner Stelle, und der Satz drumherum wird weiter übersetzt. #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "Ein englisches Wort, zwei spanische Übersetzungen #Shorts",
+      "summary": "„Free“ ist auf einem Bildschirm ein Preis und auf einem anderen ein freier Abend. Andere i18n-Bibliotheken erfinden einen Key, um beides zu unterscheiden. Langsys behält den Satz und ordnet ihn einer Kategorie zu: Gratis und Libre. #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "Auch Platzhalter und Alt-Texte werden übersetzt #Shorts",
+      "summary": "Andere i18n-Bibliotheken brauchen für jedes Attribut einen eigenen Aufruf, und das vergessene bleibt Englisch. Ein einziges ‹Translate›-Tag deckt den Bereich ab: den Platzhalter, die Bildbeschreibung und das Label, das ein Screenreader vorliest. #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "Jede Zahl und jedes Datum im Format der jeweiligen Sprache #Shorts",
+      "summary": "Übergib die Zahl selbst und das Datum als Datum: Deutsch zeigt 1.234,5 und 14. März 2026, und Hindi gruppiert 1234567 als 12,34,567. Eine Bestellnummer geht als String hinein und bleibt genau so, wie sie ist. #Shorts"
+    },
+    "react/social/react-phrase-9x16": {
+      "title": "Ihr i18n-Key ist einfach der englische Satz (React) #Shorts",
+      "summary": "Mit Langsys ist der Satz in Ihrem Code der Übersetzungs-Key: keine Key-Datei, nichts zu extrahieren oder zu synchronisieren, und dieselbe Zeile kommt in jeder Sprache zurück. #Shorts"
+    },
+    "react/react-hero": {
+      "title": "React i18n mit Langsys: der komplette Durchgang",
+      "summary": "Was andere i18n-Lösungen Sie synchron halten lassen, ein einziger Aufruf als Ersatz, ein Sprachwechsel, warum flaches Spanisch für die Hälfte Ihrer Nutzer falsch ist und was ICU select dagegen tut."
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "title": "Russisch hat 4 Pluralformen. Sie schreiben eine Zeile (React) #Shorts",
+      "summary": "One, few, many und other: Russisch wählt die Pluralform nach der Zahl, und 21 geht zurück in den Singular. Schreiben Sie den Satz flach, und Langsys baut jede Form, die ein Locale braucht. #Shorts"
+    },
+    "react/react-t-string": {
+      "title": "t(phrase, category, params) in React",
+      "summary": "Der t()-Aufruf: das Key-Datei-Problem, das er ersetzt, seine drei Argumente, ICU-Platzhalter und Pluralformen."
+    },
+    "react/react-phrase-tag": {
+      "title": "‹Phrase› in React: ein Satz mit Markup darin",
+      "summary": "Ein Satz mit Markup darin, als eine Phrase erhalten – und warum ‹Phrase›-Parameter als %name% geschrieben werden."
+    },
+    "react/social/react-bold-moves-9x16": {
+      "title": "Im Spanischen wandert der Fettdruck an die richtige Stelle (React) #Shorts",
+      "summary": "Andere i18n-Bibliotheken zerlegen einen Satz mit einem fetten Wort in drei Keys. Mit ‹Phrase› bekommt die Übersetzung einen einzigen Satz samt Markup, und im Spanischen landet der Fettdruck hinter dem Substantiv, auf „no leídos“. #Shorts"
+    },
+    "react/react-translate-tag": {
+      "title": "‹Translate› in React: ein Tag für einen ganzen Bereich",
+      "summary": "Ein ‹Translate›-Tag registriert einen ganzen Bereich – und warum ein Block besser ist als ein Aufruf pro Zeile."
+    },
+    "react/social/react-content-blocks-9x16": {
+      "title": "Einen ganzen Abschnitt mit einem Tag übersetzen (React) #Shorts",
+      "summary": "Ein Translate-Tag umschließt einen Markup-Bereich: Jeder Textabschnitt wird zu einer eigenen Phrase, Fettdruck und Links landen an der richtigen Stelle, und der Markenname wird nie übersetzt. #Shorts"
+    },
+    "react/react-donttranslate": {
+      "title": "‹DontTranslate› in React: Markennamen unverändert lassen",
+      "summary": "Markennamen und Bezeichner bleiben wortgetreu erhalten, ohne sie aus dem Satz herauszulösen."
+    },
+    "react/react-content-blocks": {
+      "title": "Was ist ein Content-Block? Ganze Abschnitte in React übersetzen",
+      "summary": "Ein Abschnitt, als Einheit registriert – und trotzdem aus einzeln wiederverwendbaren Phrasen aufgebaut."
+    },
+    "react/social/react-brand-names-9x16": {
+      "title": "Dein Markenname, niemals übersetzt (React) #Shorts",
+      "summary": "Wer übersetzt, kann einen Produktnamen nicht von einer Phrase unterscheiden, also liefern andere i18n-Bibliotheken Bright Ledger als Libro Mayor Brillante aus. Mit Langsys markierst du ihn mit ‹DontTranslate› direkt an seiner Stelle, und der Satz drumherum wird weiter übersetzt. #Shorts"
+    },
+    "react/react-categories": {
+      "title": "Gleiches Wort, zwei Bedeutungen: Kategorien statt i18n-Keys (React)",
+      "summary": "Warum i18n Keys erfunden hat und was sie ersetzt: dasselbe Wort mit zwei Bedeutungen und die Paare, in die es sich aufteilt."
+    },
+    "react/social/react-icu-gender-9x16": {
+      "title": "Bienvenido oder Bienvenida? Eine Zeile Code (React) #Shorts",
+      "summary": "Im Spanischen richtet sich die Form nach der Person. Langsys erzeugt die ICU select-Zweige: Diego bekommt Bienvenido, Laura bekommt Bienvenida, und bei unbekanntem Geschlecht gibt es die neutrale Form – aus einer einzigen Zeile. #Shorts"
+    },
+    "react/react-icu-gender": {
+      "title": "Genus-Kongruenz ohne Bedingungen im Code (ICU select) (React)",
+      "summary": "Die Geschlechter-Bedingung, die andere i18n-Lösungen in Ihrer Komponente lassen – und die Zweige, die Langsys stattdessen für jede Sprache erzeugt."
+    },
+    "react/react-attributes": {
+      "title": "Platzhalter, Alt-Texte und ARIA-Labels in React übersetzen",
+      "summary": "Wie ein halb übersetztes Formular auf die Person wirkt, die es benutzt – und wie ein einziges ‹Translate› Platzhalter, Alt-Texte und ARIA-Labels im selben Durchgang erfasst."
+    },
+    "react/social/react-two-meanings-9x16": {
+      "title": "Ein englisches Wort, zwei spanische Übersetzungen (React) #Shorts",
+      "summary": "„Free“ ist auf einem Bildschirm ein Preis und auf einem anderen ein freier Abend. Andere i18n-Bibliotheken erfinden einen Key, um beides zu unterscheiden. Langsys behält den Satz und ordnet ihn einer Kategorie zu: Gratis und Libre. #Shorts"
+    },
+    "react/react-formatting": {
+      "title": "Zahlen und Datumsangaben in jedem Locale mit React i18n",
+      "summary": "Zahlen und Datumsangaben nach CLDR: die Verzweigung, die Sie sonst von Hand schreiben würden, warum Zifferngruppierung eine Form und kein Trennzeichen ist und warum eine Bestellnummer als String übergeben werden muss."
+    },
+    "react/social/react-alt-text-9x16": {
+      "title": "Auch Platzhalter und Alt-Texte werden übersetzt (React) #Shorts",
+      "summary": "Andere i18n-Bibliotheken brauchen für jedes Attribut einen eigenen Aufruf, und das vergessene bleibt Englisch. Ein einziges ‹Translate›-Tag deckt den Bereich ab: den Platzhalter, die Bildbeschreibung und das Label, das ein Screenreader vorliest. #Shorts"
+    },
+    "react/social/react-local-formats-9x16": {
+      "title": "Jede Zahl und jedes Datum im Format der jeweiligen Sprache (React) #Shorts",
+      "summary": "Übergib die Zahl selbst und das Datum als Datum: Deutsch zeigt 1.234,5 und 14. März 2026, und Hindi gruppiert 1234567 als 12,34,567. Eine Bestellnummer geht als String hinein und bleibt genau so, wie sie ist. #Shorts"
+    },
+    "vue/vue-hero": {
+      "title": "Vue i18n mit Langsys: der komplette Durchgang",
+      "summary": "Was andere i18n-Lösungen Sie synchron halten lassen, ein einziger Aufruf als Ersatz, ein Sprachwechsel, warum flaches Spanisch für die Hälfte Ihrer Nutzer falsch ist und was ICU select dagegen tut."
+    },
+    "vue/social/vue-phrase-9x16": {
+      "title": "Ihr i18n-Key ist einfach der englische Satz (Vue) #Shorts",
+      "summary": "Mit Langsys ist der Satz in Ihrem Code der Übersetzungs-Key: keine Key-Datei, nichts zu extrahieren oder zu synchronisieren, und dieselbe Zeile kommt in jeder Sprache zurück. #Shorts"
+    },
+    "vue/vue-t-string": {
+      "title": "t(phrase, category, params) in Vue",
+      "summary": "Der t()-Aufruf: das Key-Datei-Problem, das er ersetzt, seine drei Argumente, ICU-Platzhalter und Pluralformen."
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "title": "Russisch hat 4 Pluralformen. Sie schreiben eine Zeile (Vue) #Shorts",
+      "summary": "One, few, many und other: Russisch wählt die Pluralform nach der Zahl, und 21 geht zurück in den Singular. Schreiben Sie den Satz flach, und Langsys baut jede Form, die ein Locale braucht. #Shorts"
+    },
+    "vue/vue-phrase-tag": {
+      "title": "‹Phrase› in Vue: ein Satz mit Markup darin",
+      "summary": "Ein Satz mit Markup darin, als eine Phrase erhalten – und warum ‹Phrase›-Parameter als %name% geschrieben werden."
+    },
+    "vue/vue-translate-tag": {
+      "title": "‹Translate› in Vue: ein Tag für einen ganzen Bereich",
+      "summary": "Ein ‹Translate›-Tag registriert einen ganzen Bereich – und warum ein Block besser ist als ein Aufruf pro Zeile."
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "title": "Im Spanischen wandert der Fettdruck an die richtige Stelle (Vue) #Shorts",
+      "summary": "Andere i18n-Bibliotheken zerlegen einen Satz mit einem fetten Wort in drei Keys. Mit ‹Phrase› bekommt die Übersetzung einen einzigen Satz samt Markup, und im Spanischen landet der Fettdruck hinter dem Substantiv, auf „no leídos“. #Shorts"
+    },
+    "vue/vue-donttranslate": {
+      "title": "‹DontTranslate› in Vue: Markennamen unverändert lassen",
+      "summary": "Markennamen und Bezeichner bleiben wortgetreu erhalten, ohne sie aus dem Satz herauszulösen."
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "title": "Einen ganzen Abschnitt mit einem Tag übersetzen (Vue) #Shorts",
+      "summary": "Ein Translate-Tag umschließt einen Markup-Bereich: Jeder Textabschnitt wird zu einer eigenen Phrase, Fettdruck und Links landen an der richtigen Stelle, und der Markenname wird nie übersetzt. #Shorts"
+    },
+    "vue/vue-content-blocks": {
+      "title": "Was ist ein Content-Block? Ganze Abschnitte in Vue übersetzen",
+      "summary": "Ein Abschnitt, als Einheit registriert – und trotzdem aus einzeln wiederverwendbaren Phrasen aufgebaut."
+    },
+    "vue/vue-categories": {
+      "title": "Gleiches Wort, zwei Bedeutungen: Kategorien statt i18n-Keys (Vue)",
+      "summary": "Warum i18n Keys erfunden hat und was sie ersetzt: dasselbe Wort mit zwei Bedeutungen und die Paare, in die es sich aufteilt."
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "title": "Dein Markenname, niemals übersetzt (Vue) #Shorts",
+      "summary": "Wer übersetzt, kann einen Produktnamen nicht von einer Phrase unterscheiden, also liefern andere i18n-Bibliotheken Bright Ledger als Libro Mayor Brillante aus. Mit Langsys markierst du ihn mit ‹DontTranslate› direkt an seiner Stelle, und der Satz drumherum wird weiter übersetzt. #Shorts"
+    },
+    "vue/vue-icu-gender": {
+      "title": "Genus-Kongruenz ohne Bedingungen im Code (ICU select) (Vue)",
+      "summary": "Die Geschlechter-Bedingung, die andere i18n-Lösungen in Ihrer Komponente lassen – und die Zweige, die Langsys stattdessen für jede Sprache erzeugt."
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "title": "Bienvenido oder Bienvenida? Eine Zeile Code (Vue) #Shorts",
+      "summary": "Im Spanischen richtet sich die Form nach der Person. Langsys erzeugt die ICU select-Zweige: Diego bekommt Bienvenido, Laura bekommt Bienvenida, und bei unbekanntem Geschlecht gibt es die neutrale Form – aus einer einzigen Zeile. #Shorts"
+    },
+    "vue/vue-attributes": {
+      "title": "Platzhalter, Alt-Texte und ARIA-Labels in Vue übersetzen",
+      "summary": "Wie ein halb übersetztes Formular auf die Person wirkt, die es benutzt – und wie ein einziges ‹Translate› Platzhalter, Alt-Texte und ARIA-Labels im selben Durchgang erfasst."
+    },
+    "vue/vue-formatting": {
+      "title": "Zahlen und Datumsangaben in jedem Locale mit Vue i18n",
+      "summary": "Zahlen und Datumsangaben nach CLDR: die Verzweigung, die Sie sonst von Hand schreiben würden, warum Zifferngruppierung eine Form und kein Trennzeichen ist und warum eine Bestellnummer als String übergeben werden muss."
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "title": "Ein englisches Wort, zwei spanische Übersetzungen (Vue) #Shorts",
+      "summary": "„Free“ ist auf einem Bildschirm ein Preis und auf einem anderen ein freier Abend. Andere i18n-Bibliotheken erfinden einen Key, um beides zu unterscheiden. Langsys behält den Satz und ordnet ihn einer Kategorie zu: Gratis und Libre. #Shorts"
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "title": "Auch Platzhalter und Alt-Texte werden übersetzt (Vue) #Shorts",
+      "summary": "Andere i18n-Bibliotheken brauchen für jedes Attribut einen eigenen Aufruf, und das vergessene bleibt Englisch. Ein einziges ‹Translate›-Tag deckt den Bereich ab: den Platzhalter, die Bildbeschreibung und das Label, das ein Screenreader vorliest. #Shorts"
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "title": "Jede Zahl und jedes Datum im Format der jeweiligen Sprache (Vue) #Shorts",
+      "summary": "Übergib die Zahl selbst und das Datum als Datum: Deutsch zeigt 1.234,5 und 14. März 2026, und Hindi gruppiert 1234567 als 12,34,567. Eine Bestellnummer geht als String hinein und bleibt genau so, wie sie ist. #Shorts"
+    }
+  }
+}

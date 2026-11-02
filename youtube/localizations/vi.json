@@ -1,0 +1,338 @@
+{
+  "labels": {
+    "learn_more": "Tìm hiểu thêm",
+    "get_started": "Bắt đầu",
+    "start_free": "Dùng thử miễn phí",
+    "docs": "Tài liệu"
+  },
+  "videos": {
+    "explainer": {
+      "title": "Langsys là gì? Ứng dụng của bạn ở mọi ngôn ngữ, không cần redeploy",
+      "summary": "Langsys trong 77 giây: một SDK trong ứng dụng của bạn và một Translation Manager được lưu trữ sẵn. Một cụm từ tự đăng ký ngay lần đầu code của bạn chạy nó, được dịch máy ngay khi đến, và người dịch có thể tinh chỉnh mà không cần deploy.\n\nBằng chứng: một bài blog đăng lúc 09:00, không build, không write key, đến tay một độc giả ở Madrid bằng tiếng Tây Ban Nha lúc 09:03."
+    },
+    "getting-started": {
+      "title": "Bắt đầu với Langsys, từ đầu đến cuối",
+      "summary": "Một lượt quay từ con số không đến ứng dụng đã được dịch: tạo dự án và các ngôn ngữ, tạo API key, cài đặt và khởi tạo SDK, rồi xem t(), ‹Translate›, ‹Phrase› và ‹DontTranslate› đăng ký các cụm từ của chúng. Bản tiếng Tây Ban Nha đã có sẵn trong Translation Manager, và ứng dụng chuyển sang tiếng Tây Ban Nha và tiếng Pháp mà không cần tải lại."
+    },
+    "pluralization": {
+      "title": "Số nhiều ở mọi ngôn ngữ, không cần if (count === 1)",
+      "summary": "Vì sao câu thay đổi theo con số, vì sao if (count === 1) dùng để sửa nó trong tiếng Anh thực chất là ngữ pháp tiếng Anh nằm trong code của bạn, và cách viết câu ở dạng phẳng giúp bạn có mọi dạng số nhiều ở mọi ngôn ngữ. Langsys dịch ở dạng phẳng, rồi dựng lại theo các nhóm số nhiều ICU riêng của từng locale, kể cả tiếng Anh."
+    },
+    "tutorial/workflow": {
+      "title": "Quy trình dịch thuật, và cách Langsys xóa bỏ nó",
+      "summary": "Khái niệm 1/5. Bản dịch thường phải đi vòng qua cả một quy trình: extract, export, dịch, import, deploy. Langsys loại bỏ quy trình đó."
+    },
+    "tutorial/key-files": {
+      "title": "Tạm biệt file key: chính câu văn là key",
+      "summary": "Khái niệm 2/5. Điểm khởi đầu của một dự án, cái key mà các thư viện i18n khác bắt bạn tự nghĩ ra, và thứ thay thế nó trong Langsys."
+    },
+    "tutorial/locale-store": {
+      "title": "Locale store: lưu giữ và chuyển đổi ngôn ngữ hiện hành",
+      "summary": "Khái niệm 3/5. Cách Langsys lưu giữ locale hiện hành và chuyển đổi nó trên toàn bộ ứng dụng của bạn."
+    },
+    "tutorial/keys-and-environments": {
+      "title": "API key và môi trường: key nào dùng ở đâu",
+      "summary": "Khái niệm 4/5. Vì sao key có thể đăng ký cụm từ không bao giờ được phát hành ra ngoài, vì sao read-only là ngõ cụt, và ip_write là gì: một key có câu trả lời tùy thuộc vào nơi bạn gửi yêu cầu. Write key chỉ nằm trên máy của bạn, ip_write có thể đưa vào bất kỳ bundle công khai nào, còn read-only dành cho các bundle không bao giờ được thay đổi gì."
+    },
+    "tutorial/adding-a-locale": {
+      "title": "Thêm ngôn ngữ mới chỉ là một thiết lập dự án",
+      "summary": "Khái niệm 5/5. Mở rộng sang ngôn ngữ mới chỉ là một thiết lập, không phải cả một dự án: cụm từ mới được dịch ngay khi đến, và một lần chạy sẽ lấp đầy phần còn lại."
+    },
+    "managing-translations": {
+      "title": "Quản lý bản dịch trong Langsys Translation Manager",
+      "summary": "Translation Manager dành cho người phụ trách nội dung, không có dòng code nào trên màn hình: danh sách việc cần làm, bản nháp dịch máy được sửa tay, AI Translate với Auto-next, Never Translate, và một người dịch được mời chỉ cho tiếng Tây Ban Nha. Chỉnh sửa hiển thị ngay trong ứng dụng mà không cần deploy."
+    },
+    "translation-memory": {
+      "title": "Translation memory: dự án mới đã được dịch sẵn từ đầu",
+      "summary": "Dự án thứ hai trong cùng tổ chức mở ra đã được dịch đầy đủ trước khi ai đụng vào. Translation memory mang theo mọi câu, cùng người đã viết nó, sang các dự án khác, nên không cần gọi model nào cho dự án mới."
+    },
+    "connect-your-ai-assistant": {
+      "title": "Dùng Langsys từ Claude Code qua MCP",
+      "summary": "Langsys ngay trong trợ lý AI, qua máy chủ MCP được lưu trữ sẵn: một lệnh claude mcp add, phê duyệt trên trình duyệt, và Claude Code trả lời các câu hỏi về ngôn ngữ của dự án bằng dữ liệu trực tiếp. Có thể thu hồi kết nối từ Security tab trong tài khoản của bạn."
+    },
+    "adding-a-language": {
+      "title": "Thêm tiếng Đức vào ứng dụng đang chạy: báo giá chính xác, không deploy",
+      "summary": "Tiếng Đức được thêm vào một cửa hàng đang hoạt động. Langsys báo giá chính xác cho toàn bộ danh mục hiện có trước khi chạy (29 từ, $0.35), dịch nó, và cửa hàng chuyển sang tiếng Đức mà không cần build hay deploy gì."
+    },
+    "catching-up-a-language": {
+      "title": "Đuổi kịp một ngôn ngữ bị tụt lại",
+      "summary": "Thao tác hàng loạt trong Translation Manager: AI Translate Pending cho một ngôn ngữ hoặc cả dự án, với hộp xác nhận liệt kê từng locale đích và chi phí của nó, cho đến khi mọi ngôn ngữ đều hoàn tất trở lại."
+    },
+    "translating-a-content-block": {
+      "title": "Dịch trọn một content block trong một lần",
+      "summary": "Một vùng ‹Translate› được dịch như một content block: AI Translate điền tất cả các đoạn cùng lúc, một đoạn được viết lại bằng tay theo văn phong trang trọng, và một câu ‹DontTranslate› vẫn giữ tiếng Anh trong khi phần tiếng Ý được điền xung quanh."
+    },
+    "ai-translator-settings": {
+      "title": "Cài đặt AI Translator, giải thích từng tùy chọn",
+      "summary": "Tab AI Translator từ trên xuống dưới: dịch AI theo yêu cầu, tự động dịch cụm từ mới, và tự động nhận diện để đánh dấu never-translate cho cụm từ vốn đã là tiếng Tây Ban Nha."
+    },
+    "api-keys-in-production": {
+      "title": "API key trên production: hoạt động, tạm dừng và xoay vòng",
+      "summary": "Một key sau khi phát hành: lưu lượng thật của cửa hàng trong một tuần trên trang Activity, tạm dừng key mà không xóa, và xoay vòng key ngay trước ống kính: ba loại key, một IP write key mới được tạo kèm allowlist, và key cũ bị xóa."
+    },
+    "one-organization-many-projects": {
+      "title": "Một tổ chức, nhiều dự án",
+      "summary": "Tổ chức là điểm xuất phát của mọi dự án: locale mặc định, cài đặt AI Translator và thanh toán, cấp vốn cho dự án từ số dư của tổ chức, và một dự án đã tùy chỉnh được chuyển về chế độ kế thừa."
+    },
+    "usage-and-credits": {
+      "title": "Mức sử dụng và tín dụng: dự án được cấp vốn thế nào",
+      "summary": "Hai đồng hồ đo, đơn vị sử dụng API và tín dụng, cùng cách một dự án được cấp vốn: chuyển tín dụng từ tài khoản sang dự án ngay trước ống kính, mỗi lần dịch máy là một dòng trong lịch sử, cùng hạn mức hàng tháng và tự động nạp lại của dự án."
+    },
+    "plans-and-payments": {
+      "title": "Gói dịch vụ và thanh toán trong Langsys",
+      "summary": "Một vòng tham quan phần thanh toán mà không gửi gì cả: gói và chu kỳ thanh toán, hộp thoại Change Plan, phương thức thanh toán dùng chung với tổ chức hoặc dự án, địa chỉ và hóa đơn."
+    },
+    "notifications": {
+      "title": "Thông báo: Langsys báo gì cho bạn, và ở đâu",
+      "summary": "Hộp thư thông báo và các cài đặt: mặc định của tài khoản cho cụm từ mới, lời mời và quyền truy cập dự án, qua in-app và email, cùng tùy chỉnh riêng cho từng dự án."
+    },
+    "svelte/hero": {
+      "title": "Svelte i18n với Langsys: hướng dẫn đầy đủ",
+      "summary": "Những thứ mà i18n khác bắt bạn phải giữ đồng bộ, một lệnh gọi để thay thế tất cả, chuyển đổi locale, vì sao tiếng Tây Ban Nha dạng phẳng lại sai với một nửa người dùng, và ICU select giải quyết điều đó thế nào."
+    },
+    "svelte/t-string": {
+      "title": "t(phrase, category, params) trong Svelte",
+      "summary": "Lệnh gọi t(): vấn đề file key mà nó thay thế, ba tham số của nó, placeholder ICU và số nhiều."
+    },
+    "svelte/phrase-tag": {
+      "title": "‹Phrase› trong Svelte: một câu có markup bên trong",
+      "summary": "Một câu có markup bên trong, vẫn được giữ là một cụm từ, và vì sao params của ‹Phrase› được viết là %name%."
+    },
+    "svelte/translate-tag": {
+      "title": "‹Translate› trong Svelte: một tag cho cả một vùng",
+      "summary": "Một tag ‹Translate› đăng ký cả một vùng, và vì sao một khối lại tốt hơn một lệnh gọi cho mỗi dòng."
+    },
+    "svelte/donttranslate": {
+      "title": "‹DontTranslate› trong Svelte: giữ nguyên tên thương hiệu",
+      "summary": "Tên thương hiệu và định danh được giữ nguyên văn, mà không cần tách chúng ra khỏi câu."
+    },
+    "svelte/content-blocks": {
+      "title": "Content block là gì? Dịch trọn một phần trong Svelte",
+      "summary": "Một phần được đăng ký như một đơn vị, nhưng vẫn gồm các cụm từ có thể tái sử dụng riêng lẻ."
+    },
+    "svelte/categories": {
+      "title": "Cùng một từ, hai nghĩa: dùng category thay cho key i18n",
+      "summary": "Vì sao i18n phải sinh ra key, và thứ thay thế chúng: cùng một từ mang hai nghĩa, và các cặp mà nó tách thành."
+    },
+    "svelte/icu-gender": {
+      "title": "Hòa hợp giống mà không cần điều kiện trong code (ICU select)",
+      "summary": "Câu điều kiện về giới tính mà i18n khác để lại trong component của bạn, và các nhánh mà Langsys tự sinh cho từng ngôn ngữ thay vào đó."
+    },
+    "svelte/attributes": {
+      "title": "Dịch placeholder, alt text và aria label trong Svelte",
+      "summary": "Một biểu mẫu dịch nửa vời trông thế nào với người dùng, và cách một ‹Translate› xử lý luôn placeholder, alt text và aria label trong cùng một lượt."
+    },
+    "svelte/formatting": {
+      "title": "Số và ngày tháng ở mọi locale với Svelte i18n",
+      "summary": "Số và ngày tháng theo CLDR: nhánh code bạn vẫn phải tự viết, vì sao cách nhóm chữ số là một khuôn dạng chứ không chỉ là dấu phân cách, và vì sao mã đơn hàng phải được truyền dưới dạng chuỗi."
+    },
+    "svelte/social/phrase-9x16": {
+      "title": "Key i18n của bạn chỉ là câu tiếng Anh #Shorts",
+      "summary": "Với Langsys, câu trong code chính là key dịch: không file key, không cần extract hay đồng bộ, và cùng dòng đó trở lại ở mọi ngôn ngữ. #Shorts"
+    },
+    "svelte/social/icu-gender-9x16": {
+      "title": "Bienvenido hay Bienvenida? Chỉ một dòng code #Shorts",
+      "summary": "Tiếng Tây Ban Nha biến đổi theo người dùng. Langsys sinh các nhánh ICU select, nên Diego nhận Bienvenido, Laura nhận Bienvenida, còn giới tính chưa rõ nhận dạng trung tính, tất cả từ một dòng. #Shorts"
+    },
+    "svelte/social/icu-plurals-9x16": {
+      "title": "Tiếng Nga có 4 dạng số nhiều. Bạn chỉ viết một dòng #Shorts",
+      "summary": "One, few, many và other: tiếng Nga chọn dạng số nhiều theo con số, và 21 lại quay về số ít. Viết câu ở dạng phẳng, Langsys sẽ dựng mọi dạng mà từng locale cần. #Shorts"
+    },
+    "svelte/social/content-blocks-9x16": {
+      "title": "Dịch trọn một phần chỉ với một tag #Shorts",
+      "summary": "Một tag Translate bao trọn một vùng markup: mỗi đoạn văn bản trở thành một cụm từ riêng, chữ đậm và liên kết nằm đúng chỗ, và tên thương hiệu không bao giờ bị dịch. #Shorts"
+    },
+    "shared/social/published-at-nine-9x16": {
+      "title": "Đăng lúc 9:00, được đọc bằng tiếng Tây Ban Nha lúc 9:03 #Shorts",
+      "summary": "Một bài blog được đăng mà không cần build hay deploy. Ứng dụng của người đọc đầu tiên chỉ gửi cho Langsys địa chỉ trang, Langsys tự đọc trang, và vài phút sau một người đọc ở Madrid nhận được bài bằng tiếng Tây Ban Nha. #Shorts"
+    },
+    "shared/social/ask-your-assistant-9x16": {
+      "title": "Hỏi trợ lý AI xem bản dịch của bạn đang thế nào #Shorts",
+      "summary": "Langsys vận hành một máy chủ MCP, nên Claude, Codex, Cursor hay GitHub Copilot có thể đọc dự án của bạn và dịch phần còn thiếu. Chỉ một lần chấp thuận trên trình duyệt, và trợ lý không bao giờ thấy mật khẩu của bạn. #Shorts"
+    },
+    "shared/social/memory-9x16": {
+      "title": "Một dự án mới tinh đã được dịch sẵn ngay từ đầu #Shorts",
+      "summary": "Sửa một bản dịch một lần, mọi dự án mới trong tổ chức của bạn đều đã biết nó. Bộ nhớ dịch đã điền dự án này bằng tiếng Tây Ban Nha, kèm tên người dịch, mà không gọi bất kỳ mô hình nào. #Shorts"
+    },
+    "svelte/social/bold-moves-9x16": {
+      "title": "Trong tiếng Tây Ban Nha, chữ in đậm dời đến đúng chỗ #Shorts",
+      "summary": "Các thư viện i18n khác cắt một câu có chữ in đậm thành ba key. Với ‹Phrase›, người dịch nhận một câu duy nhất kèm cả markup, và trong tiếng Tây Ban Nha chữ đậm rơi vào sau danh từ, trên \"no leídos\". #Shorts"
+    },
+    "shared/social/add-german-9x16": {
+      "title": "Thêm tiếng Đức cho cửa hàng đang chạy, không cần deploy #Shorts",
+      "summary": "Thêm ngôn ngữ trong phần cài đặt dự án, không phải trong code. Langsys báo giá chính xác cho danh mục hiện có trước khi chi bất cứ thứ gì, dịch từng cụm từ trong vài giây, và cửa hàng nói tiếng Đức mà không cần build hay deploy. #Shorts"
+    },
+    "shared/social/catch-up-9x16": {
+      "title": "Hai ngôn ngữ bị chậm, bắt kịp chỉ với một thao tác #Shorts",
+      "summary": "Tiếng Pháp và tiếng Nhật mỗi thứ thiếu hai cụm từ. AI Translate Pending dịch chúng trong vài giây, và các bản nháp chờ ai đó duyệt lại. #Shorts"
+    },
+    "svelte/social/brand-names-9x16": {
+      "title": "Tên thương hiệu của bạn, không bao giờ bị dịch #Shorts",
+      "summary": "Người dịch không thể phân biệt tên sản phẩm với một cụm từ thường, nên các thư viện i18n khác phát hành Bright Ledger thành Libro Mayor Brillante. Với Langsys, bạn đánh dấu nó ngay tại chỗ bằng ‹DontTranslate›, và câu xung quanh vẫn được dịch. #Shorts"
+    },
+    "svelte/social/two-meanings-9x16": {
+      "title": "Một từ tiếng Anh, hai bản dịch tiếng Tây Ban Nha #Shorts",
+      "summary": "\"Free\" là một mức giá ở màn hình này và một buổi tối rảnh ở màn hình khác. Các thư viện i18n khác bịa ra một key để phân biệt chúng. Langsys giữ nguyên câu và xếp nó vào một danh mục: Gratis và Libre. #Shorts"
+    },
+    "svelte/social/alt-text-9x16": {
+      "title": "Placeholder và văn bản thay thế cũng được dịch #Shorts",
+      "summary": "Các thư viện i18n khác cần một lệnh gọi riêng cho mỗi thuộc tính, và thuộc tính bạn quên sẽ còn nguyên tiếng Anh. Một thẻ ‹Translate› bao trọn cả vùng: placeholder, mô tả hình ảnh và nhãn mà trình đọc màn hình đọc lên. #Shorts"
+    },
+    "svelte/social/local-formats-9x16": {
+      "title": "Mọi con số và ngày tháng theo định dạng của từng ngôn ngữ #Shorts",
+      "summary": "Truyền chính con số và ngày tháng dưới dạng ngày: tiếng Đức hiển thị 1.234,5 và 14. März 2026, còn tiếng Hindi nhóm 1234567 thành 12,34,567. Mã đơn hàng được truyền dưới dạng chuỗi nên giữ nguyên như ban đầu. #Shorts"
+    },
+    "react/social/react-phrase-9x16": {
+      "title": "Key i18n của bạn chỉ là câu tiếng Anh (React) #Shorts",
+      "summary": "Với Langsys, câu trong code chính là key dịch: không file key, không cần extract hay đồng bộ, và cùng dòng đó trở lại ở mọi ngôn ngữ. #Shorts"
+    },
+    "react/react-hero": {
+      "title": "React i18n với Langsys: hướng dẫn đầy đủ",
+      "summary": "Những thứ mà i18n khác bắt bạn phải giữ đồng bộ, một lệnh gọi để thay thế tất cả, chuyển đổi locale, vì sao tiếng Tây Ban Nha dạng phẳng lại sai với một nửa người dùng, và ICU select giải quyết điều đó thế nào."
+    },
+    "react/social/react-icu-plurals-9x16": {
+      "title": "Tiếng Nga có 4 dạng số nhiều. Bạn chỉ viết một dòng (React) #Shorts",
+      "summary": "One, few, many và other: tiếng Nga chọn dạng số nhiều theo con số, và 21 lại quay về số ít. Viết câu ở dạng phẳng, Langsys sẽ dựng mọi dạng mà từng locale cần. #Shorts"
+    },
+    "react/react-t-string": {
+      "title": "t(phrase, category, params) trong React",
+      "summary": "Lệnh gọi t(): vấn đề file key mà nó thay thế, ba tham số của nó, placeholder ICU và số nhiều."
+    },
+    "react/react-phrase-tag": {
+      "title": "‹Phrase› trong React: một câu có markup bên trong",
+      "summary": "Một câu có markup bên trong, vẫn được giữ là một cụm từ, và vì sao params của ‹Phrase› được viết là %name%."
+    },
+    "react/social/react-bold-moves-9x16": {
+      "title": "Trong tiếng Tây Ban Nha, chữ in đậm dời đến đúng chỗ (React) #Shorts",
+      "summary": "Các thư viện i18n khác cắt một câu có chữ in đậm thành ba key. Với ‹Phrase›, người dịch nhận một câu duy nhất kèm cả markup, và trong tiếng Tây Ban Nha chữ đậm rơi vào sau danh từ, trên \"no leídos\". #Shorts"
+    },
+    "react/react-translate-tag": {
+      "title": "‹Translate› trong React: một tag cho cả một vùng",
+      "summary": "Một tag ‹Translate› đăng ký cả một vùng, và vì sao một khối lại tốt hơn một lệnh gọi cho mỗi dòng."
+    },
+    "react/social/react-content-blocks-9x16": {
+      "title": "Dịch trọn một phần chỉ với một tag (React) #Shorts",
+      "summary": "Một tag Translate bao trọn một vùng markup: mỗi đoạn văn bản trở thành một cụm từ riêng, chữ đậm và liên kết nằm đúng chỗ, và tên thương hiệu không bao giờ bị dịch. #Shorts"
+    },
+    "react/react-donttranslate": {
+      "title": "‹DontTranslate› trong React: giữ nguyên tên thương hiệu",
+      "summary": "Tên thương hiệu và định danh được giữ nguyên văn, mà không cần tách chúng ra khỏi câu."
+    },
+    "react/react-content-blocks": {
+      "title": "Content block là gì? Dịch trọn một phần trong React",
+      "summary": "Một phần được đăng ký như một đơn vị, nhưng vẫn gồm các cụm từ có thể tái sử dụng riêng lẻ."
+    },
+    "react/social/react-brand-names-9x16": {
+      "title": "Tên thương hiệu của bạn, không bao giờ bị dịch (React) #Shorts",
+      "summary": "Người dịch không thể phân biệt tên sản phẩm với một cụm từ thường, nên các thư viện i18n khác phát hành Bright Ledger thành Libro Mayor Brillante. Với Langsys, bạn đánh dấu nó ngay tại chỗ bằng ‹DontTranslate›, và câu xung quanh vẫn được dịch. #Shorts"
+    },
+    "react/react-categories": {
+      "title": "Cùng một từ, hai nghĩa: dùng category thay cho key i18n (React)",
+      "summary": "Vì sao i18n phải sinh ra key, và thứ thay thế chúng: cùng một từ mang hai nghĩa, và các cặp mà nó tách thành."
+    },
+    "react/social/react-icu-gender-9x16": {
+      "title": "Bienvenido hay Bienvenida? Chỉ một dòng code (React) #Shorts",
+      "summary": "Tiếng Tây Ban Nha biến đổi theo người dùng. Langsys sinh các nhánh ICU select, nên Diego nhận Bienvenido, Laura nhận Bienvenida, còn giới tính chưa rõ nhận dạng trung tính, tất cả từ một dòng. #Shorts"
+    },
+    "react/react-icu-gender": {
+      "title": "Hòa hợp giống mà không cần điều kiện trong code (ICU select) (React)",
+      "summary": "Câu điều kiện về giới tính mà i18n khác để lại trong component của bạn, và các nhánh mà Langsys tự sinh cho từng ngôn ngữ thay vào đó."
+    },
+    "react/react-attributes": {
+      "title": "Dịch placeholder, alt text và aria label trong React",
+      "summary": "Một biểu mẫu dịch nửa vời trông thế nào với người dùng, và cách một ‹Translate› xử lý luôn placeholder, alt text và aria label trong cùng một lượt."
+    },
+    "react/social/react-two-meanings-9x16": {
+      "title": "Một từ tiếng Anh, hai bản dịch tiếng Tây Ban Nha (React) #Shorts",
+      "summary": "\"Free\" là một mức giá ở màn hình này và một buổi tối rảnh ở màn hình khác. Các thư viện i18n khác bịa ra một key để phân biệt chúng. Langsys giữ nguyên câu và xếp nó vào một danh mục: Gratis và Libre. #Shorts"
+    },
+    "react/react-formatting": {
+      "title": "Số và ngày tháng ở mọi locale với React i18n",
+      "summary": "Số và ngày tháng theo CLDR: nhánh code bạn vẫn phải tự viết, vì sao cách nhóm chữ số là một khuôn dạng chứ không chỉ là dấu phân cách, và vì sao mã đơn hàng phải được truyền dưới dạng chuỗi."
+    },
+    "react/social/react-alt-text-9x16": {
+      "title": "Placeholder và văn bản thay thế cũng được dịch (React) #Shorts",
+      "summary": "Các thư viện i18n khác cần một lệnh gọi riêng cho mỗi thuộc tính, và thuộc tính bạn quên sẽ còn nguyên tiếng Anh. Một thẻ ‹Translate› bao trọn cả vùng: placeholder, mô tả hình ảnh và nhãn mà trình đọc màn hình đọc lên. #Shorts"
+    },
+    "react/social/react-local-formats-9x16": {
+      "title": "Mọi con số và ngày tháng theo định dạng của từng ngôn ngữ (React) #Shorts",
+      "summary": "Truyền chính con số và ngày tháng dưới dạng ngày: tiếng Đức hiển thị 1.234,5 và 14. März 2026, còn tiếng Hindi nhóm 1234567 thành 12,34,567. Mã đơn hàng được truyền dưới dạng chuỗi nên giữ nguyên như ban đầu. #Shorts"
+    },
+    "vue/vue-hero": {
+      "title": "Vue i18n với Langsys: hướng dẫn đầy đủ",
+      "summary": "Những thứ mà i18n khác bắt bạn phải giữ đồng bộ, một lệnh gọi để thay thế tất cả, chuyển đổi locale, vì sao tiếng Tây Ban Nha dạng phẳng lại sai với một nửa người dùng, và ICU select giải quyết điều đó thế nào."
+    },
+    "vue/social/vue-phrase-9x16": {
+      "title": "Key i18n của bạn chỉ là câu tiếng Anh (Vue) #Shorts",
+      "summary": "Với Langsys, câu trong code chính là key dịch: không file key, không cần extract hay đồng bộ, và cùng dòng đó trở lại ở mọi ngôn ngữ. #Shorts"
+    },
+    "vue/vue-t-string": {
+      "title": "t(phrase, category, params) trong Vue",
+      "summary": "Lệnh gọi t(): vấn đề file key mà nó thay thế, ba tham số của nó, placeholder ICU và số nhiều."
+    },
+    "vue/social/vue-icu-plurals-9x16": {
+      "title": "Tiếng Nga có 4 dạng số nhiều. Bạn chỉ viết một dòng (Vue) #Shorts",
+      "summary": "One, few, many và other: tiếng Nga chọn dạng số nhiều theo con số, và 21 lại quay về số ít. Viết câu ở dạng phẳng, Langsys sẽ dựng mọi dạng mà từng locale cần. #Shorts"
+    },
+    "vue/vue-phrase-tag": {
+      "title": "‹Phrase› trong Vue: một câu có markup bên trong",
+      "summary": "Một câu có markup bên trong, vẫn được giữ là một cụm từ, và vì sao params của ‹Phrase› được viết là %name%."
+    },
+    "vue/vue-translate-tag": {
+      "title": "‹Translate› trong Vue: một tag cho cả một vùng",
+      "summary": "Một tag ‹Translate› đăng ký cả một vùng, và vì sao một khối lại tốt hơn một lệnh gọi cho mỗi dòng."
+    },
+    "vue/social/vue-bold-moves-9x16": {
+      "title": "Trong tiếng Tây Ban Nha, chữ in đậm dời đến đúng chỗ (Vue) #Shorts",
+      "summary": "Các thư viện i18n khác cắt một câu có chữ in đậm thành ba key. Với ‹Phrase›, người dịch nhận một câu duy nhất kèm cả markup, và trong tiếng Tây Ban Nha chữ đậm rơi vào sau danh từ, trên \"no leídos\". #Shorts"
+    },
+    "vue/vue-donttranslate": {
+      "title": "‹DontTranslate› trong Vue: giữ nguyên tên thương hiệu",
+      "summary": "Tên thương hiệu và định danh được giữ nguyên văn, mà không cần tách chúng ra khỏi câu."
+    },
+    "vue/social/vue-content-blocks-9x16": {
+      "title": "Dịch trọn một phần chỉ với một tag (Vue) #Shorts",
+      "summary": "Một tag Translate bao trọn một vùng markup: mỗi đoạn văn bản trở thành một cụm từ riêng, chữ đậm và liên kết nằm đúng chỗ, và tên thương hiệu không bao giờ bị dịch. #Shorts"
+    },
+    "vue/vue-content-blocks": {
+      "title": "Content block là gì? Dịch trọn một phần trong Vue",
+      "summary": "Một phần được đăng ký như một đơn vị, nhưng vẫn gồm các cụm từ có thể tái sử dụng riêng lẻ."
+    },
+    "vue/vue-categories": {
+      "title": "Cùng một từ, hai nghĩa: dùng category thay cho key i18n (Vue)",
+      "summary": "Vì sao i18n phải sinh ra key, và thứ thay thế chúng: cùng một từ mang hai nghĩa, và các cặp mà nó tách thành."
+    },
+    "vue/social/vue-brand-names-9x16": {
+      "title": "Tên thương hiệu của bạn, không bao giờ bị dịch (Vue) #Shorts",
+      "summary": "Người dịch không thể phân biệt tên sản phẩm với một cụm từ thường, nên các thư viện i18n khác phát hành Bright Ledger thành Libro Mayor Brillante. Với Langsys, bạn đánh dấu nó ngay tại chỗ bằng ‹DontTranslate›, và câu xung quanh vẫn được dịch. #Shorts"
+    },
+    "vue/vue-icu-gender": {
+      "title": "Hòa hợp giống mà không cần điều kiện trong code (ICU select) (Vue)",
+      "summary": "Câu điều kiện về giới tính mà i18n khác để lại trong component của bạn, và các nhánh mà Langsys tự sinh cho từng ngôn ngữ thay vào đó."
+    },
+    "vue/social/vue-icu-gender-9x16": {
+      "title": "Bienvenido hay Bienvenida? Chỉ một dòng code (Vue) #Shorts",
+      "summary": "Tiếng Tây Ban Nha biến đổi theo người dùng. Langsys sinh các nhánh ICU select, nên Diego nhận Bienvenido, Laura nhận Bienvenida, còn giới tính chưa rõ nhận dạng trung tính, tất cả từ một dòng. #Shorts"
+    },
+    "vue/vue-attributes": {
+      "title": "Dịch placeholder, alt text và aria label trong Vue",
+      "summary": "Một biểu mẫu dịch nửa vời trông thế nào với người dùng, và cách một ‹Translate› xử lý luôn placeholder, alt text và aria label trong cùng một lượt."
+    },
+    "vue/vue-formatting": {
+      "title": "Số và ngày tháng ở mọi locale với Vue i18n",
+      "summary": "Số và ngày tháng theo CLDR: nhánh code bạn vẫn phải tự viết, vì sao cách nhóm chữ số là một khuôn dạng chứ không chỉ là dấu phân cách, và vì sao mã đơn hàng phải được truyền dưới dạng chuỗi."
+    },
+    "vue/social/vue-two-meanings-9x16": {
+      "title": "Một từ tiếng Anh, hai bản dịch tiếng Tây Ban Nha (Vue) #Shorts",
+      "summary": "\"Free\" là một mức giá ở màn hình này và một buổi tối rảnh ở màn hình khác. Các thư viện i18n khác bịa ra một key để phân biệt chúng. Langsys giữ nguyên câu và xếp nó vào một danh mục: Gratis và Libre. #Shorts"
+    },
+    "vue/social/vue-alt-text-9x16": {
+      "title": "Placeholder và văn bản thay thế cũng được dịch (Vue) #Shorts",
+      "summary": "Các thư viện i18n khác cần một lệnh gọi riêng cho mỗi thuộc tính, và thuộc tính bạn quên sẽ còn nguyên tiếng Anh. Một thẻ ‹Translate› bao trọn cả vùng: placeholder, mô tả hình ảnh và nhãn mà trình đọc màn hình đọc lên. #Shorts"
+    },
+    "vue/social/vue-local-formats-9x16": {
+      "title": "Mọi con số và ngày tháng theo định dạng của từng ngôn ngữ (Vue) #Shorts",
+      "summary": "Truyền chính con số và ngày tháng dưới dạng ngày: tiếng Đức hiển thị 1.234,5 và 14. März 2026, còn tiếng Hindi nhóm 1234567 thành 12,34,567. Mã đơn hàng được truyền dưới dạng chuỗi nên giữ nguyên như ban đầu. #Shorts"
+    }
+  }
+}
