@@ -7,7 +7,7 @@ One post per publishing day, following the X calendar in the Langsys Launch Medi
 - **Hooks lead with the result**, not with code: what the viewer gets, and what an AI assistant can do where the video shows it.
 - Days are counted from launch Monday ("launch + N"). Every post is under 280 characters; the link lives in the reply, so it does not count.
 
-## Week 1, Monday (launch day · Mon 26 Oct 2026): the launch thread
+## Week 1, Monday (launch day · Mon 9 Nov 2026): the launch thread
 
 Pin this thread to the profile.
 
@@ -86,7 +86,7 @@ And your AI assistant works in Langsys too: ask Claude, Codex, Cursor or Copilot
 https://youtu.be/KafvNJnm-pQ
 ```
 
-## Week 1, Wednesday (launch + 2 · Wed 28 Oct 2026)
+## Week 1, Wednesday (launch + 2 · Wed 11 Nov 2026)
 
 **Video: Svelte i18n with Langsys: the full walkthrough** · 132 characters
 
@@ -105,7 +105,7 @@ https://youtu.be/y-YbRDjV4Wk
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=svelte-hero
 ```
 
-## Week 1, Friday (launch + 4 · Fri 30 Oct 2026)
+## Week 1, Friday (launch + 4 · Fri 13 Nov 2026)
 
 **Video: Managing translations in the Langsys Translation Manager** · 147 characters
 
@@ -126,7 +126,7 @@ Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_cont
 
 > On hold: Filmed against translation-manager MR !1; until it ships, Send on the invite dialog errors on the live app. Post only once the video is public.
 
-## Week 2, Monday (launch + 7 · Mon 2 Nov 2026)
+## Week 2, Monday (launch + 7 · Mon 16 Nov 2026)
 
 **Video: t(phrase, category, params) in Svelte** · 104 characters
 
@@ -145,7 +145,7 @@ https://youtu.be/mqFBw6x7RZg
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=svelte-t-string
 ```
 
-## Week 2, Wednesday (launch + 9 · Wed 4 Nov 2026)
+## Week 2, Wednesday (launch + 9 · Wed 18 Nov 2026)
 
 **Video: Translation memory: a new project that starts already translated** · 160 characters
 
@@ -164,7 +164,7 @@ https://youtu.be/QC2IIRaAyCc
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=translation-memory
 ```
 
-## Week 2, Friday (launch + 11 · Fri 6 Nov 2026)
+## Week 2, Friday (launch + 11 · Fri 20 Nov 2026)
 
 **Video: ‹Phrase› in Svelte: a sentence with markup inside** · 152 characters
 
@@ -183,7 +183,7 @@ https://youtu.be/r85P18fhfCU
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=svelte-phrase-tag
 ```
 
-## Week 3, Monday (launch + 14 · Mon 9 Nov 2026)
+## Week 3, Monday (launch + 14 · Mon 23 Nov 2026)
 
 **Video: Add German to a live app: exact quote, no deploy** · 163 characters
 
@@ -202,7 +202,7 @@ https://youtu.be/65z2J2jiSbY
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=adding-a-language
 ```
 
-## Week 3, Wednesday (launch + 16 · Wed 11 Nov 2026)
+## Week 3, Wednesday (launch + 16 · Wed 25 Nov 2026)
 
 **Video: ‹Translate› in Svelte: one tag for a whole region** · 106 characters
 
@@ -221,7 +221,7 @@ https://youtu.be/krgkcNYw4IY
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=svelte-translate-tag
 ```
 
-## Week 3, Friday (launch + 18 · Fri 13 Nov 2026)
+## Week 3, Friday (launch + 18 · Fri 27 Nov 2026)
 
 **Video: Catching up a language that fell behind** · 116 characters
 
@@ -240,7 +240,7 @@ https://youtu.be/SHHt8ebaH-g
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=catching-up-a-language
 ```
 
-## Week 4, Monday (launch + 21 · Mon 16 Nov 2026)
+## Week 4, Monday (launch + 21 · Mon 30 Nov 2026)
 
 **Video: ‹DontTranslate› in Svelte: keep brand names verbatim** · 132 characters
 
@@ -259,7 +259,7 @@ https://youtu.be/YPyWNGdaAHw
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=svelte-donttranslate
 ```
 
-## Week 4, Wednesday (launch + 23 · Wed 18 Nov 2026)
+## Week 4, Wednesday (launch + 23 · Wed 2 Dec 2026)
 
 **Video: Translating a whole content block as one** · 135 characters
 
@@ -280,7 +280,7 @@ Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_cont
 
 > On hold: Filmed against translation-manager MR !2; until it ships, the live app drops a segment edit and needs a reload to show the AI result. Post only once the video is public.
 
-## Week 4, Friday (launch + 25 · Fri 20 Nov 2026)
+## Week 4, Friday (launch + 25 · Fri 4 Dec 2026)
 
 **Video: What is a content block? Translating a whole section in Svelte** · 139 characters
 
@@ -299,7 +299,7 @@ https://youtu.be/-ZMV0UyKRVk
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=svelte-content-blocks
 ```
 
-## Week 5, Monday (launch + 28 · Mon 23 Nov 2026)
+## Week 5, Monday (launch + 28 · Mon 7 Dec 2026)
 
 **Video: AI Translator settings, every switch explained** · 131 characters
 
@@ -318,7 +318,7 @@ https://youtu.be/PnRoVVfYmKE
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=ai-translator-settings
 ```
 
-## Week 5, Wednesday (launch + 30 · Wed 25 Nov 2026)
+## Week 5, Wednesday (launch + 30 · Wed 9 Dec 2026)
 
 **Video: Same word, two meanings: categories instead of i18n keys** · 144 characters
 
@@ -337,7 +337,7 @@ https://youtu.be/-P963Wj0dno
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=svelte-categories
 ```
 
-## Week 5, Friday (launch + 32 · Fri 27 Nov 2026)
+## Week 5, Friday (launch + 32 · Fri 11 Dec 2026)
 
 **Video: API keys in production: activity, pausing and rotation** · 151 characters
 
@@ -354,7 +354,7 @@ https://youtu.be/jZJRja7n_-c
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=api-keys-in-production
 ```
 
-## Week 6, Monday (launch + 35 · Mon 30 Nov 2026)
+## Week 6, Monday (launch + 35 · Mon 14 Dec 2026)
 
 **Video: Gender agreement without conditionals in your code (ICU select)** · 152 characters
 
@@ -373,7 +373,7 @@ https://youtu.be/AfpNQtvugks
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=svelte-icu-gender
 ```
 
-## Week 6, Tuesday (launch + 36 · Tue 1 Dec 2026)
+## Week 6, Tuesday (launch + 36 · Tue 15 Dec 2026)
 
 **Short: Bienvenido or Bienvenida? One line of code** · 96 characters
 
@@ -392,7 +392,7 @@ https://youtu.be/6bMkgdK1GpU
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=svelte-social-icu-gender-9x16
 ```
 
-## Week 6, Wednesday (launch + 37 · Wed 2 Dec 2026)
+## Week 6, Wednesday (launch + 37 · Wed 16 Dec 2026)
 
 **Video: One organization, many projects** · 135 characters
 
@@ -411,7 +411,7 @@ https://youtu.be/y1kGQkoZ3_w
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=one-organization-many-projects
 ```
 
-## Week 6, Friday (launch + 39 · Fri 4 Dec 2026)
+## Week 6, Friday (launch + 39 · Fri 18 Dec 2026)
 
 **Video: Translating placeholders, alt text and aria labels in Svelte** · 143 characters
 
@@ -430,7 +430,7 @@ https://youtu.be/w9TNoFQ2fpM
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=svelte-attributes
 ```
 
-## Week 7, Monday (launch + 42 · Mon 7 Dec 2026)
+## Week 7, Monday (launch + 42 · Mon 21 Dec 2026)
 
 **Video: Usage and credits: how a project gets funded** · 135 characters
 
@@ -447,7 +447,7 @@ https://youtu.be/TOqn3rfDyGQ
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=usage-and-credits
 ```
 
-## Week 7, Wednesday (launch + 44 · Wed 9 Dec 2026)
+## Week 7, Wednesday (launch + 44 · Wed 23 Dec 2026)
 
 **Video: Numbers and dates in every locale with Svelte i18n** · 111 characters
 
@@ -466,7 +466,7 @@ https://youtu.be/Bc2h2bxaB9M
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=svelte-formatting
 ```
 
-## Week 7, Friday (launch + 46 · Fri 11 Dec 2026)
+## Week 9, Friday (launch + 60 · Fri 8 Jan 2027)
 
 **Video: Plans and payments in Langsys** · 111 characters
 
@@ -485,7 +485,7 @@ https://youtu.be/3Lnmfo0T71Q
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=plans-and-payments
 ```
 
-## Week 8, Monday (launch + 49 · Mon 14 Dec 2026)
+## Week 10, Monday (launch + 63 · Mon 11 Jan 2027)
 
 **Video: Notifications: what Langsys tells you, and where** · 110 characters
 
@@ -502,7 +502,7 @@ https://youtu.be/gpSYSKrmVp0
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=notifications
 ```
 
-## Week 8, Tuesday (launch + 50 · Tue 15 Dec 2026)
+## Week 10, Tuesday (launch + 64 · Tue 12 Jan 2027)
 
 **Video: React i18n with Langsys: the full walkthrough** · 131 characters
 
@@ -521,7 +521,7 @@ https://youtu.be/sp4K9n4krZ4
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=react-react-hero
 ```
 
-## Week 8, Friday (launch + 53 · Fri 18 Dec 2026)
+## Week 10, Friday (launch + 67 · Fri 15 Jan 2027)
 
 **Video: t(phrase, category, params) in React** · 119 characters
 
@@ -542,7 +542,7 @@ https://youtu.be/22OJORE4d8g
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=react-react-t-string
 ```
 
-## Week 9, Monday (launch + 56 · Mon 21 Dec 2026)
+## Week 11, Monday (launch + 70 · Mon 18 Jan 2027)
 
 **Video: ‹Phrase› in React: a sentence with markup inside** · 167 characters
 
@@ -563,7 +563,7 @@ https://youtu.be/U1UoliOjgeE
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=react-react-phrase-tag
 ```
 
-## Week 9, Wednesday (launch + 58 · Wed 23 Dec 2026)
+## Week 11, Wednesday (launch + 72 · Wed 20 Jan 2027)
 
 **Video: ‹Translate› in React: one tag for a whole region** · 121 characters
 
@@ -584,7 +584,7 @@ https://youtu.be/XtjY6UcOoPk
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=react-react-translate-tag
 ```
 
-## Week 11, Friday (launch + 74 · Fri 8 Jan 2027)
+## Week 11, Friday (launch + 74 · Fri 22 Jan 2027)
 
 **Video: ‹DontTranslate› in React: keep brand names verbatim** · 147 characters
 
@@ -605,7 +605,7 @@ https://youtu.be/-njmHFcTn7s
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=react-react-donttranslate
 ```
 
-## Week 12, Monday (launch + 77 · Mon 11 Jan 2027)
+## Week 12, Monday (launch + 77 · Mon 25 Jan 2027)
 
 **Video: What is a content block? Translating a whole section in React** · 154 characters
 
@@ -626,7 +626,7 @@ https://youtu.be/kUws7TofOqE
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=react-react-content-blocks
 ```
 
-## Week 12, Wednesday (launch + 79 · Wed 13 Jan 2027)
+## Week 12, Wednesday (launch + 79 · Wed 27 Jan 2027)
 
 **Video: Same word, two meanings: categories instead of i18n keys (React)** · 159 characters
 
@@ -647,7 +647,7 @@ https://youtu.be/yr8DShqIiJ4
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=react-react-categories
 ```
 
-## Week 12, Friday (launch + 81 · Fri 15 Jan 2027)
+## Week 12, Friday (launch + 81 · Fri 29 Jan 2027)
 
 **Video: Gender agreement without conditionals in your code (ICU select) (React)** · 167 characters
 
@@ -668,7 +668,7 @@ https://youtu.be/H9vX59TgiMw
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=react-react-icu-gender
 ```
 
-## Week 13, Monday (launch + 84 · Mon 18 Jan 2027)
+## Week 13, Monday (launch + 84 · Mon 1 Feb 2027)
 
 **Video: Translating placeholders, alt text and aria labels in React** · 158 characters
 
@@ -689,7 +689,7 @@ https://youtu.be/Qtb1vzKpZw0
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=react-react-attributes
 ```
 
-## Week 13, Wednesday (launch + 86 · Wed 20 Jan 2027)
+## Week 13, Wednesday (launch + 86 · Wed 3 Feb 2027)
 
 **Video: Numbers and dates in every locale with React i18n** · 126 characters
 
@@ -710,7 +710,7 @@ https://youtu.be/gq6qQE_yPss
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=react-react-formatting
 ```
 
-## Week 14, Monday (launch + 91 · Mon 25 Jan 2027)
+## Week 14, Monday (launch + 91 · Mon 8 Feb 2027)
 
 **Video: Vue i18n with Langsys: the full walkthrough** · 129 characters
 
@@ -729,7 +729,7 @@ https://youtu.be/1ROhtDzJWNo
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=vue-vue-hero
 ```
 
-## Week 14, Wednesday (launch + 93 · Wed 27 Jan 2027)
+## Week 14, Wednesday (launch + 93 · Wed 10 Feb 2027)
 
 **Video: t(phrase, category, params) in Vue** · 117 characters
 
@@ -750,7 +750,7 @@ https://youtu.be/sIMXbUnD5ns
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=vue-vue-t-string
 ```
 
-## Week 14, Friday (launch + 95 · Fri 29 Jan 2027)
+## Week 14, Friday (launch + 95 · Fri 12 Feb 2027)
 
 **Video: ‹Phrase› in Vue: a sentence with markup inside** · 165 characters
 
@@ -771,7 +771,7 @@ https://youtu.be/xTBW-x0g2fg
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=vue-vue-phrase-tag
 ```
 
-## Week 15, Monday (launch + 98 · Mon 1 Feb 2027)
+## Week 15, Monday (launch + 98 · Mon 15 Feb 2027)
 
 **Video: ‹Translate› in Vue: one tag for a whole region** · 119 characters
 
@@ -792,7 +792,7 @@ https://youtu.be/WJbebS8J5qg
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=vue-vue-translate-tag
 ```
 
-## Week 15, Wednesday (launch + 100 · Wed 3 Feb 2027)
+## Week 15, Wednesday (launch + 100 · Wed 17 Feb 2027)
 
 **Video: ‹DontTranslate› in Vue: keep brand names verbatim** · 145 characters
 
@@ -813,7 +813,7 @@ https://youtu.be/uF-LHSzYpUU
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=vue-vue-donttranslate
 ```
 
-## Week 15, Friday (launch + 102 · Fri 5 Feb 2027)
+## Week 15, Friday (launch + 102 · Fri 19 Feb 2027)
 
 **Video: What is a content block? Translating a whole section in Vue** · 152 characters
 
@@ -834,7 +834,7 @@ https://youtu.be/vMtUjWo2Ezk
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=vue-vue-content-blocks
 ```
 
-## Week 16, Monday (launch + 105 · Mon 8 Feb 2027)
+## Week 16, Monday (launch + 105 · Mon 22 Feb 2027)
 
 **Video: Same word, two meanings: categories instead of i18n keys (Vue)** · 157 characters
 
@@ -855,7 +855,7 @@ https://youtu.be/jsqNGO2ArBc
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=vue-vue-categories
 ```
 
-## Week 16, Wednesday (launch + 107 · Wed 10 Feb 2027)
+## Week 16, Wednesday (launch + 107 · Wed 24 Feb 2027)
 
 **Video: Gender agreement without conditionals in your code (ICU select) (Vue)** · 165 characters
 
@@ -876,7 +876,7 @@ https://youtu.be/p_hCurEby8o
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=vue-vue-icu-gender
 ```
 
-## Week 16, Friday (launch + 109 · Fri 12 Feb 2027)
+## Week 16, Friday (launch + 109 · Fri 26 Feb 2027)
 
 **Video: Translating placeholders, alt text and aria labels in Vue** · 156 characters
 
@@ -897,7 +897,7 @@ https://youtu.be/O4sXjBN_9xw
 Try it free: https://langsys.dev/?utm_source=x&utm_campaign=launch_2026&utm_content=vue-vue-attributes
 ```
 
-## Week 17, Monday (launch + 112 · Mon 15 Feb 2027)
+## Week 17, Monday (launch + 112 · Mon 1 Mar 2027)
 
 **Video: Numbers and dates in every locale with Vue i18n** · 124 characters
 

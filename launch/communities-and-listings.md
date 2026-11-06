@@ -2,7 +2,7 @@
 
 Copy for the one-off submissions in launch week and the first month. Each is ready to paste; check the site's form on the day, since fields and limits change.
 
-## Svelte Discord · launch + 2 · Wed 28 Oct 2026
+## Svelte Discord · launch + 2 · Wed 11 Nov 2026
 
 Post in the showcase channel (svelte.dev/chat). One message, no @mentions.
 
@@ -16,7 +16,7 @@ MIT on npm (langsys-js-svelte), SvelteKit supported with a server-seeded first r
 Docs: https://docs.langsys.dev/learn?utm_source=discord&utm_campaign=launch_2026&utm_content=svelte-discord
 ```
 
-## Svelte Society · launch + 2 · Wed 28 Oct 2026
+## Svelte Society · launch + 2 · Wed 11 Nov 2026
 
 Submit `langsys-js-svelte` to the Svelte Society packages list (sveltesociety.dev, "Submit" → package). Fields:
 
@@ -63,6 +63,6 @@ alternativeto.net → "Suggest new application".
 
 g2.com → "List your product" (free listing). Category: Translation Management. Use the Product Hunt description and gallery. Ask the first happy users for a review only after they've used it for a few weeks; G2 removes reviews that look solicited in bulk.
 
-## Bluesky and Mastodon · from launch day, Mon 26 Oct 2026 (optional)
+## Bluesky and Mastodon · from launch day, Mon 9 Nov 2026 (optional)
 
 Cross-post the X posts unchanged: same text, same video, YouTube link in the first reply. Both have a 300 and 500 character limit respectively, so every X post fits. On Mastodon, add the hashtags #i18n #localization #webdev, since search there runs on hashtags.

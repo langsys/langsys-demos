@@ -6,13 +6,13 @@ Before posting in each community, read its rules on the day: several allow self-
 
 | Day | Community | Post |
 |---|---|---|
-| Launch + 2 · Wed 28 Oct 2026 | r/sveltejs | Svelte i18n without a keys file |
-| Launch + 14 · Mon 9 Nov 2026 | r/SaaS | Adding German to a live store without a deploy |
-| Launch + 35 · Mon 30 Nov 2026 | r/webdev | Plurals and gender agreement without branching in your code |
-| Launch + 50 · Tue 15 Dec 2026 | r/reactjs | React i18n without a keys file (the day the React walkthrough goes public) |
-| Launch + 91 · Mon 25 Jan 2027 | r/vuejs | Vue i18n without a keys file (the day the Vue walkthrough goes public) |
+| Launch + 2 · Wed 11 Nov 2026 | r/sveltejs | Svelte i18n without a keys file |
+| Launch + 14 · Mon 23 Nov 2026 | r/SaaS | Adding German to a live store without a deploy |
+| Launch + 35 · Mon 14 Dec 2026 | r/webdev | Plurals and gender agreement without branching in your code |
+| Launch + 64 · Tue 12 Jan 2027 | r/reactjs | React i18n without a keys file (the day the React walkthrough goes public) |
+| Launch + 91 · Mon 8 Feb 2027 | r/vuejs | Vue i18n without a keys file (the day the Vue walkthrough goes public) |
 
-## Launch + 2 · Wed 28 Oct 2026 · r/sveltejs
+## Launch + 2 · Wed 11 Nov 2026 · r/sveltejs
 
 **Title:**
 
@@ -49,7 +49,7 @@ The SDK is MIT on npm (`langsys-js-svelte`), works with SvelteKit (the catalog i
 I'd really like feedback from anyone running i18n in a large Svelte app: what would stop you from switching?
 ```
 
-## Launch + 14 · Mon 9 Nov 2026 · r/SaaS
+## Launch + 14 · Mon 23 Nov 2026 · r/SaaS
 
 **Title:**
 
@@ -78,7 +78,7 @@ The whole thing, in under two minutes: https://youtu.be/65z2J2jiSbY
 Happy to answer questions about the pricing model (per source word, quoted up front), how we handle review, or what we got wrong on the way.
 ```
 
-## Launch + 35 · Mon 30 Nov 2026 · r/webdev
+## Launch + 35 · Mon 14 Dec 2026 · r/webdev
 
 **Title:**
 
@@ -106,7 +106,7 @@ There's also a write-up of how ICU select and plural work under the hood in our 
 Curious how others handle this today, especially gender in languages with more than two agreement forms.
 ```
 
-## Launch + 50 · Tue 15 Dec 2026 · r/reactjs
+## Launch + 64 · Tue 12 Jan 2027 · r/reactjs
 
 Posted the day the React walkthrough goes public. The link is the walkthrough's unlisted upload, so it works before that day too.
 
@@ -148,7 +148,7 @@ The SDK is MIT on npm (`langsys-js-react`), works with Next.js (seed the catalog
 I'd really like feedback from anyone running i18n in a large React app: what would stop you from switching?
 ```
 
-## Launch + 91 · Mon 25 Jan 2027 · r/vuejs
+## Launch + 91 · Mon 8 Feb 2027 · r/vuejs
 
 Posted the day the Vue walkthrough goes public. The link is the walkthrough's unlisted upload, so it works before that day too.
 

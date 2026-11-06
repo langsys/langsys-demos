@@ -26,7 +26,7 @@ Docs: https://docs.langsys.dev
 
 ## Publishing the videos
 
-Every video is uploaded and set unlisted, so the Learning Center can embed it before it goes public. Titles, descriptions, tags, thumbnails and playlists are done. Each video's `publish` date in `videos.json` is its day. Nothing goes public before the official launch, so the dates use 2026-10-19 as a stand-in for the launch Monday; once the real date is set, `--reschedule` moves them all.
+Every video is uploaded and set unlisted, so the Learning Center can embed it before it goes public. Titles, descriptions, tags, thumbnails and playlists are done. Each video's `publish` date in `videos.json` is its day. Nothing goes public before the official launch, set for Monday 2026-11-09, so the calendar runs from that day to 2027-03-01, with nothing from 2026-12-24 to 2027-01-06 (holidays). If the date moves again, `--reschedule` moves them all, then re-apply the holiday pause.
 
 - **Launch day:** the starting set at once, so someone arriving can watch the whole path: Start here (3), the concepts track (5) and Connect your AI assistant.
 - **After launch:** one long video every Monday, Wednesday and Friday, alternating Svelte and the Translation Manager so both audiences get something each week.
