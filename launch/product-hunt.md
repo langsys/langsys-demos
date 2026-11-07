@@ -1,6 +1,6 @@
 # Product Hunt
 
-**When:** launch + 8 · Tue 17 Nov 2026 (Tuesday of week 2). A Product Hunt day runs from 00:01 to 23:59 Pacific, so schedule it for 00:01 Pacific; the first hours decide the ranking.
+**When:** launch + 22 · Tue 1 Dec 2026 (Tuesday of week 4, the week after US Thanksgiving). A Product Hunt day runs from 00:01 to 23:59 Pacific, so schedule it for 00:01 Pacific; the first hours decide the ranking.
 **Who:** a founder's personal Product Hunt account as the maker (and hunter, if no one with a following hunts it). Create the account and fill in the profile at least a week before, because brand-new accounts carry less weight.
 **Rules that matter:** never ask for upvotes, and never send a direct link that asks people to vote. "We're live on Product Hunt today, we'd love your feedback" is fine.
 
@@ -85,7 +85,7 @@ I'd love to hear what you'd need before switching your app over, and where you t
 ## Before the day
 
 - [ ] Maker account created, with photo, headline and links
-- [ ] Launch scheduled for launch + 8 · Tue 17 Nov 2026 at 00:01 Pacific, with everything above filled in
+- [ ] Launch scheduled for launch + 22 · Tue 1 Dec 2026 at 00:01 Pacific, with everything above filled in
 - [ ] The explainer is public on YouTube (it goes public on launch day, Mon 9 Nov 2026)
 - [ ] A short "We're on Product Hunt today" post ready for X and LinkedIn, posted mid-morning Pacific, linking the Product Hunt page
 - [ ] Someone free to answer every comment through the day

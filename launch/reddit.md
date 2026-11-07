@@ -6,13 +6,13 @@ Before posting in each community, read its rules on the day: several allow self-
 
 | Day | Community | Post |
 |---|---|---|
-| Launch + 2 · Wed 11 Nov 2026 | r/sveltejs | Svelte i18n without a keys file |
-| Launch + 14 · Mon 23 Nov 2026 | r/SaaS | Adding German to a live store without a deploy |
+| Launch + 16 · Wed 25 Nov 2026 | r/sveltejs | Svelte i18n without a keys file |
+| Launch + 21 · Mon 30 Nov 2026 | r/SaaS | Adding German to a live store without a deploy |
 | Launch + 35 · Mon 14 Dec 2026 | r/webdev | Plurals and gender agreement without branching in your code |
 | Launch + 64 · Tue 12 Jan 2027 | r/reactjs | React i18n without a keys file (the day the React walkthrough goes public) |
 | Launch + 91 · Mon 8 Feb 2027 | r/vuejs | Vue i18n without a keys file (the day the Vue walkthrough goes public) |
 
-## Launch + 2 · Wed 11 Nov 2026 · r/sveltejs
+## Launch + 16 · Wed 25 Nov 2026 · r/sveltejs
 
 **Title:**
 
@@ -49,7 +49,7 @@ The SDK is MIT on npm (`langsys-js-svelte`), works with SvelteKit (the catalog i
 I'd really like feedback from anyone running i18n in a large Svelte app: what would stop you from switching?
 ```
 
-## Launch + 14 · Mon 23 Nov 2026 · r/SaaS
+## Launch + 21 · Mon 30 Nov 2026 · r/SaaS
 
 **Title:**
 

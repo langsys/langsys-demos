@@ -1,8 +1,8 @@
 # Communities, newsletters and listings
 
-Copy for the one-off submissions in launch week and the first month. Each is ready to paste; check the site's form on the day, since fields and limits change.
+Copy for the one-off submissions from week 3 (Mon 23 Nov 2026), when the campaign widens beyond YouTube and X, and the month after. Each is ready to paste; check the site's form on the day, since fields and limits change.
 
-## Svelte Discord · launch + 2 · Wed 11 Nov 2026
+## Svelte Discord · launch + 16 · Wed 25 Nov 2026
 
 Post in the showcase channel (svelte.dev/chat). One message, no @mentions.
 
@@ -16,7 +16,7 @@ MIT on npm (langsys-js-svelte), SvelteKit supported with a server-seeded first r
 Docs: https://docs.langsys.dev/learn?utm_source=discord&utm_campaign=launch_2026&utm_content=svelte-discord
 ```
 
-## Svelte Society · launch + 2 · Wed 11 Nov 2026
+## Svelte Society · launch + 16 · Wed 25 Nov 2026
 
 Submit `langsys-js-svelte` to the Svelte Society packages list (sveltesociety.dev, "Submit" → package). Fields:
 
@@ -27,7 +27,7 @@ Submit `langsys-js-svelte` to the Svelte Society packages list (sveltesociety.de
 - **Tags:** i18n, translation, sveltekit
 - **Description:** `i18n where the sentence is the key: phrases register at runtime, are AI-drafted in every language, and can be refined without a redeploy.`
 
-## Newsletters · launch week
+## Newsletters · launch + 14 · Mon 23 Nov 2026
 
 Submit links; the editors decide what goes in. One line each, no hype.
 
@@ -46,7 +46,7 @@ Langsys: open-source SDKs (TypeScript, React, Vue, Svelte, PHP) for i18n where t
 
 Replace LINK with that newsletter's link from the table, so a sign-up from it is counted.
 
-## AlternativeTo · launch week
+## AlternativeTo · launch + 14 · Mon 23 Nov 2026
 
 alternativeto.net → "Suggest new application".
 
@@ -59,10 +59,10 @@ alternativeto.net → "Suggest new application".
 - **Tags:** translation, localization, i18n, developer tools
 - **Features to tick:** machine translation, translation memory, API, team collaboration
 
-## G2 · launch week
+## G2 · launch + 14 · Mon 23 Nov 2026
 
 g2.com → "List your product" (free listing). Category: Translation Management. Use the Product Hunt description and gallery. Ask the first happy users for a review only after they've used it for a few weeks; G2 removes reviews that look solicited in bulk.
 
-## Bluesky and Mastodon · from launch day, Mon 9 Nov 2026 (optional)
+## Bluesky and Mastodon · from week 3, Mon 23 Nov 2026 (optional)
 
 Cross-post the X posts unchanged: same text, same video, YouTube link in the first reply. Both have a 300 and 500 character limit respectively, so every X post fits. On Mastodon, add the hashtags #i18n #localization #webdev, since search there runs on hashtags.

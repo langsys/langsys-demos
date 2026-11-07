@@ -1,6 +1,6 @@
 # LinkedIn posts for the publishing calendar
 
-One post per publishing day, on the same days as `x/posts.md`, from the Langsys company page. Nothing here goes out before the official launch.
+LinkedIn joins two weeks after YouTube and X: the launch post goes out on week 3, Monday (Mon 23 Nov 2026), and from then on one post per publishing day, on the same days as `x/posts.md`, from the Langsys company page. Weeks 1 and 2 are YouTube and X only, so sign-up, attribution and the posts are tried on a smaller audience first; the week 1 and 2 posts below are kept, marked **Not posted**, in case any is worth reusing later.
 
 - **Video goes up on LinkedIn itself.** LinkedIn shows posts with outside links to fewer people, so the post carries the video and the YouTube link goes in the first comment.
 - **Shorts** go up as their silent 1:1 cut (it has no sound, so the on-screen text carries it). **Long videos** go up as the same captioned clip as on X.
@@ -8,36 +8,9 @@ One post per publishing day, on the same days as `x/posts.md`, from the Langsys 
 - Three hashtags at the end, no more. Days are counted from launch Monday ("launch + N").
 - A post marked **On hold** goes out only once its video is public.
 
-## Week 1, Monday (launch day · Mon 9 Nov 2026)
-
-**Launch post** · upload the full 77-second explainer (`videos/explainer.mp4`)
-
-```
-Your app, in every language. No keys file, no extraction step, no redeploy.
-
-Today we're launching Langsys.
-
-Most teams translate their app the same way: extract the strings, export a file, wait for translators, import it back, ship a release. Every new sentence starts the loop again.
-
-With Langsys, a phrase registers itself the first time your code runs it, is drafted by AI the moment it arrives, and can be reviewed and refined by a person in the Translation Manager. The fix is live in the app with nothing deployed.
-
-A blog post published at 09:00 reaches a reader in Madrid, in Spanish, at 09:03.
-
-The whole starting path is on YouTube today: getting started, plurals, the five concepts, and connecting your AI assistant. Links in the first comment.
-
-#Localization #i18n #SaaS
-```
-
-First comment:
-
-```
-What is Langsys, in 77 seconds: https://youtu.be/q_a37CzxWrk
-Getting started, end to end: https://youtu.be/Fo1HCybAHg0
-Every video, in order, in the Learning Center: https://docs.langsys.dev/learn?utm_source=linkedin&utm_campaign=launch_2026&utm_content=launch-post
-Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=launch-post
-```
-
 ## Week 1, Wednesday (launch + 2 · Wed 11 Nov 2026)
+
+> **Not posted:** LinkedIn starts on week 3, Monday. YouTube and X carry weeks 1 and 2.
 
 **Video: Svelte i18n with Langsys: the full walkthrough**
 
@@ -61,6 +34,8 @@ Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&u
 ```
 
 ## Week 1, Friday (launch + 4 · Fri 13 Nov 2026)
+
+> **Not posted:** LinkedIn starts on week 3, Monday. YouTube and X carry weeks 1 and 2.
 
 **Video: Managing translations in the Langsys Translation Manager**
 
@@ -87,6 +62,8 @@ Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&u
 
 ## Week 2, Monday (launch + 7 · Mon 16 Nov 2026)
 
+> **Not posted:** LinkedIn starts on week 3, Monday. YouTube and X carry weeks 1 and 2.
+
 **Video: t(phrase, category, params) in Svelte**
 
 ```
@@ -109,6 +86,8 @@ Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&u
 ```
 
 ## Week 2, Wednesday (launch + 9 · Wed 18 Nov 2026)
+
+> **Not posted:** LinkedIn starts on week 3, Monday. YouTube and X carry weeks 1 and 2.
 
 **Video: Translation memory: a new project that starts already translated**
 
@@ -133,6 +112,8 @@ Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&u
 
 ## Week 2, Friday (launch + 11 · Fri 20 Nov 2026)
 
+> **Not posted:** LinkedIn starts on week 3, Monday. YouTube and X carry weeks 1 and 2.
+
 **Video: ‹Phrase› in Svelte: a sentence with markup inside**
 
 ```
@@ -155,6 +136,37 @@ Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&u
 ```
 
 ## Week 3, Monday (launch + 14 · Mon 23 Nov 2026)
+
+**Launch post** · upload the full 77-second explainer (`videos/explainer.mp4`)
+
+```
+Your app, in every language. No keys file, no extraction step, no redeploy.
+
+Langsys is live.
+
+Most teams translate their app the same way: extract the strings, export a file, wait for translators, import it back, ship a release. Every new sentence starts the loop again.
+
+With Langsys, a phrase registers itself the first time your code runs it, is drafted by AI the moment it arrives, and can be reviewed and refined by a person in the Translation Manager. The fix is live in the app with nothing deployed.
+
+A blog post published at 09:00 reaches a reader in Madrid, in Spanish, at 09:03.
+
+The whole starting path is on YouTube: getting started, plurals, the five concepts, and connecting your AI assistant. Links in the first comment.
+
+#Localization #i18n #SaaS
+```
+
+First comment:
+
+```
+What is Langsys, in 77 seconds: https://youtu.be/q_a37CzxWrk
+Getting started, end to end: https://youtu.be/Fo1HCybAHg0
+Every video, in order, in the Learning Center: https://docs.langsys.dev/learn?utm_source=linkedin&utm_campaign=launch_2026&utm_content=launch-post
+Try it free: https://langsys.dev/?utm_source=linkedin&utm_campaign=launch_2026&utm_content=launch-post
+```
+
+## Week 3, Tuesday (launch + 15 · Tue 24 Nov 2026)
+
+> Posted a day after the video goes public, because Monday carries the LinkedIn launch post.
 
 **Video: Add German to a live app: exact quote, no deploy**
 
